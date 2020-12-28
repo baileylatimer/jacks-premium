@@ -128,7 +128,7 @@
 
               <div class="medium-down--hidden">
                 <h2 class="product_name title">
-                  <a href="{{ product.url }}">{{ 'homepage.onboarding.product_title' | t }}</a>
+                  <a href="{{ product.url  }}">{{ 'homepage.onboarding.product_title' | t }}</a>
                 </h2>
 
                 <p class="modal_price subtitle" itemscope itemtype="http://schema.org/Offer">
@@ -188,7 +188,7 @@
               {% endif %}
 
               <h2 class="product-thumbnail__title title">
-                <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+                <a href="{{ product.url   }}">{{ product.title }}</a>
               </h2>
 
               {% comment %} Price {% endcomment %}

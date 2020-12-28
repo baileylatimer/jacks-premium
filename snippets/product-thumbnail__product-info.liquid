@@ -3,7 +3,7 @@
     <span class="product-thumbnail__vendor">{{ product.vendor }}</span>
   {% endif %}
 
-  <a href="{{ product.url | within: collection }}" class="product-thumbnail__title">{{ product.title }}</a>
+  <a href="{{ product.url   }}" class="product-thumbnail__title text-is-large font-semibold">{{ product.title }}</a>
 
   {% if collection_handles contains 'coming-soon' %}
     {% if settings.stickers_enabled == false %}

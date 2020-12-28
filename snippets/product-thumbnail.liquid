@@ -73,7 +73,7 @@
 
       <div class="product-image__wrapper">
         <div class="image__container product__imageContainer">
-          <a href="{{ product.url | within: collection }}">
+          <a href="{{ product.url   }}">
             {% if settings.stickers_enabled %}
               {% render 'product-thumbnail__sticker',
                       product: product,
@@ -116,7 +116,7 @@
 
         {% if hover_enabled or settings.enable_quickshop %}
           <div class="thumbnail-overlay__container">
-            <a class="hidden-product-link" href="{{ product.url | within: collection }}">{{ product.title }}</a>
+            <a class="hidden-product-link" href="{{ product.url   }}">{{ product.title }}</a>
 
             {% if hover_enabled %}
               <div class="quick-shop__info animated fadeInDown">
@@ -126,7 +126,7 @@
                       <span class="product-thumbnail__vendor">{{ product.vendor }}</span>
                     {% endif %}
 
-                    <p class="product-thumbnail__title">{{ product.title }}</p>
+                    <p class="product-thumbnail__title text-is-large font-semibold">{{ product.title }}</p>
 
                     {% if collection_handles contains 'coming-soon' %}
                       <span>{{ 'collections.general.coming_soon' | t }}</span>

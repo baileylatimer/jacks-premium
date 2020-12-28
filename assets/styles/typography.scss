@@ -3,6 +3,35 @@
 
 // Base typography
 
+/* #Font-Face
+================================================== */
+/*     This is the proper syntax for an @font-face file.
+    Upload your font files to Assets and then
+        copy your FontName into code below and remove
+        comment brackets */
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskBold.woff') format('woff');
+        //   font-weight: 700;
+        //   font-style: normal; }
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskMedium.woff') format('woff');
+        //   font-weight: 500;
+        //   font-style: normal; }
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskRegular.woff') format('woff');
+        //   font-weight: 400;
+        //   font-style: normal; }
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskLight.woff') format('woff');
+        //   font-weight: 300;
+        //   font-style: normal; }
+
+          h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, #nav li a, div.title a, .headline, .subtitle, a, span { font-family: 'roc-grotesk' !important; }
+
 body {
   font-family: {{ settings.regular__font.family }}, {{ settings.regular__font.fallback_families }};
   font-weight: {{ settings.regular__font.weight }};
@@ -267,3 +296,77 @@ $subtitle-negative-margin: -1.25rem !default;
   width: {{settings.heading_divider_width}}px;
   height: 40px;
 }
+
+
+// --------------------------------
+
+  // Text Transform
+
+  // --------------------------------
+
+  .text-uppercase  { text-transform: uppercase; }
+  .text-capitalize { text-transform: capitalize; }
+
+  // --------------------------------
+
+  // Letter Spacing
+
+  // --------------------------------
+
+  .letter-spacing-sm { letter-spacing: -0.05em; }
+  .letter-spacing-md { letter-spacing: 0.05em; }
+  .letter-spacing-lg { letter-spacing: 0.1em; }
+
+  // --------------------------------
+
+  // Font Weight
+
+  // --------------------------------
+
+  .font-light    { font-weight: 300; }
+  .font-normal   { font-weight: 400; }
+  .font-medium   { font-weight: 500; }
+  .font-semibold { font-weight: 600; }
+  .font-bold, .text-bold { font-weight: 700; }
+
+  // --------------------------------
+
+  // Font Style
+
+  // --------------------------------
+
+  .font-italic { font-style: italic; }
+
+  // --------------------------------
+
+  // Font Smooth
+
+  // --------------------------------
+
+  .font-smooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+  // --------------------------------
+
+  // Text Align
+
+  // --------------------------------
+
+  .text-center  { text-align: center; }
+  .text-left    { text-align: left; }
+  .text-right   { text-align: right; }
+  .text-justify { text-align: justify; }
+
+  // --------------------------------
+
+  // Text Decoration
+
+  // --------------------------------
+
+  .text-line-through    { text-decoration: line-through; }
+  .text-underline       { text-decoration: underline; }
+  .text-decoration-none { text-decoration: none; }

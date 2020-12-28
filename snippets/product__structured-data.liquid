@@ -4,7 +4,7 @@
   "@context": "http://schema.org/",
   "@type": "Product",
   "name": "{{ product.title | escape }}",
-  "url": "{{ shop.url }}{{ product.url }}",
+  "url": "{{ shop.url }}{{ product.url  }}",
   {%- if product.featured_image -%}
     {%- assign image_size = product.featured_image.width | append: 'x' -%}
     "image": [

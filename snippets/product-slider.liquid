@@ -62,7 +62,7 @@ product_recommendations: <boolean>
         <div class="product-wrap">
           <div class="product-image__wrapper">
             <div class="image__container product__imageContainer">
-              <a href="{{ product.url | within: collection }}">
+              <a href="{{ product.url   }}">
                 {% if settings.stickers_enabled == true %}
                   {% render 'product-thumbnail__sticker',
                           product: product,
@@ -92,7 +92,7 @@ product_recommendations: <boolean>
             </div>
 
             {% if hover_enabled or settings.enable_quickshop %}
-              <a href="{{ product.url | within: collection }}">
+              <a href="{{ product.url   }}">
                 <div class="thumbnail-overlay__container">
                   {% if hover_enabled %}
                     <div class="quick-shop__info animated fadeInDown">

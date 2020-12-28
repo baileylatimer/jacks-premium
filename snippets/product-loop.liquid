@@ -53,7 +53,7 @@
           {
             "@type": "ListItem",
             "position": "{{ forloop.index | json }}",
-            "url": "{{ shop.url }}{{ product.url }}",
+            "url": "{{ shop.url }}{{ product.url  }}",
             "name": "{{ product.title }}"
           } {%- unless forloop.last -%},{%- endunless -%}
         {% endfor %}

@@ -53,6 +53,7 @@
 .product-gallery__image {
   width: 100%;
   height: auto;
+  @include filter-bg();
 
   img {
     width: 100%;

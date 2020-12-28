@@ -1261,6 +1261,19 @@ $drop-down-menu-letter-spacing: {{ settings.dropdown_letter_spacing }}px !defaul
   color: set-text-color($preorder-sticker-color);
 }
 
+
+// Media 
+@mixin border {
+  border: 3px solid $color-black;
+  &:hover {
+    box-shadow: 6px 6px $color-black;
+  }
+  
+}
+
+@mixin filter-bg {
+  filter: brightness(.9) sepia(.08);
+}
 /* # Reset
 ================================================== */
 
@@ -1609,6 +1622,35 @@ table {
 
 // Base typography
 
+/* #Font-Face
+================================================== */
+/*     This is the proper syntax for an @font-face file.
+    Upload your font files to Assets and then
+        copy your FontName into code below and remove
+        comment brackets */
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskBold.woff') format('woff');
+        //   font-weight: 700;
+        //   font-style: normal; }
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskMedium.woff') format('woff');
+        //   font-weight: 500;
+        //   font-style: normal; }
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskRegular.woff') format('woff');
+        //   font-weight: 400;
+        //   font-style: normal; }
+        // @font-face {
+        //   font-family: 'RocGrotesk';
+        //   src: url('RocGroteskLight.woff') format('woff');
+        //   font-weight: 300;
+        //   font-style: normal; }
+
+          h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, #nav li a, div.title a, .headline, .subtitle, a, span { font-family: 'roc-grotesk' !important; }
+
 body {
   font-family: {{ settings.regular__font.family }}, {{ settings.regular__font.fallback_families }};
   font-weight: {{ settings.regular__font.weight }};
@@ -1873,6 +1915,80 @@ $subtitle-negative-margin: -1.25rem !default;
   width: {{settings.heading_divider_width}}px;
   height: 40px;
 }
+
+
+// --------------------------------
+
+  // Text Transform
+
+  // --------------------------------
+
+  .text-uppercase  { text-transform: uppercase; }
+  .text-capitalize { text-transform: capitalize; }
+
+  // --------------------------------
+
+  // Letter Spacing
+
+  // --------------------------------
+
+  .letter-spacing-sm { letter-spacing: -0.05em; }
+  .letter-spacing-md { letter-spacing: 0.05em; }
+  .letter-spacing-lg { letter-spacing: 0.1em; }
+
+  // --------------------------------
+
+  // Font Weight
+
+  // --------------------------------
+
+  .font-light    { font-weight: 300; }
+  .font-normal   { font-weight: 400; }
+  .font-medium   { font-weight: 500; }
+  .font-semibold { font-weight: 600; }
+  .font-bold, .text-bold { font-weight: 700; }
+
+  // --------------------------------
+
+  // Font Style
+
+  // --------------------------------
+
+  .font-italic { font-style: italic; }
+
+  // --------------------------------
+
+  // Font Smooth
+
+  // --------------------------------
+
+  .font-smooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+  // --------------------------------
+
+  // Text Align
+
+  // --------------------------------
+
+  .text-center  { text-align: center; }
+  .text-left    { text-align: left; }
+  .text-right   { text-align: right; }
+  .text-justify { text-align: justify; }
+
+  // --------------------------------
+
+  // Text Decoration
+
+  // --------------------------------
+
+  .text-line-through    { text-decoration: line-through; }
+  .text-underline       { text-decoration: underline; }
+  .text-decoration-none { text-decoration: none; }
 
 @keyframes spinAround {
   from {
@@ -5562,7 +5678,7 @@ Descr: Container of information used as teaser for further content exploration
       // background: rgba(27, 53, 80, 0.5) !important;
       // background-blend-mode: multiply;
       background: $color-primary-lighter;
-      border: 6px solid $color-black;
+      @include border();
       padding: 20px;
     }
   }
@@ -8163,6 +8279,7 @@ ul.tabs {
 .product-gallery__image {
   width: 100%;
   height: auto;
+  @include filter-bg();
 
   img {
     width: 100%;
@@ -9646,7 +9763,7 @@ $product-media-bg-color: {{ settings.shop_bg_color }};
 ================================================== */
 
 $product-hover-text: {{ settings.product_hover_text_color }};
-$product-hover-bg: {{ settings.product_hover_bg_color | color_modify: 'alpha', 0.7 }};
+$product-hover-bg: {{ settings.product_hover_bg_color | color_modify: 'alpha', 0.0 }};
 
 
 .product__thumbnail.has-padding-bottom {
@@ -9655,16 +9772,36 @@ $product-hover-bg: {{ settings.product_hover_bg_color | color_modify: 'alpha', 0
   }
 }
 
+
+// Hover effects
+.product__thumbnail, .list-collection__thumbnail {
+  padding: 20px 0 20px 20px;
+  @include filter-bg();
+  @include border;
+  &:hover {
+    // @include border;
+    filter: unset;
+    background: $color-white;
+    .product-image__wrapper, .product-wrap {
+      filter: unset;
+      -webkit-filter: unset;
+}
+  }
+}
+
+
 .product-image__wrapper {
   position: relative;
-
+  background: $color-white;
+  // @include filter-bg();
   video,
   iframe {
     width: 100%;
   }
 
   &:hover {
-
+    
+    
     .thumbnail-overlay__container {
       @include flexbox();
 
@@ -12255,13 +12392,14 @@ header.header {
 
 .header,
 .mobile-header {
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
   font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
   font-weight: {{ settings.nav__font.weight }};
   font-style: {{ settings.nav__font.style }};
   letter-spacing: {{ settings.nav_letter_spacing }}px;
   font-size: {{ settings.nav_font_size }}px;
   text-transform: {{ settings.nav_font_style }};
+  border-bottom: 3px solid $color-black;
 }
 
 .dropdown-style-horizontal {
@@ -12997,6 +13135,8 @@ $banner-font-size: {{ settings.banner_text_size }}px;
   .product-wrap {
     position: relative;
     overflow: hidden;
+    min-height: 400px;
+    background: $color-white;
 
     &:hover img,
     &:hover svg {
@@ -13006,6 +13146,8 @@ $banner-font-size: {{ settings.banner_text_size }}px;
 
   img,
   svg {
+    max-height: 300px !important;
+    object-fit: contain !important;
     transition: all 0.3s ease-in-out;
   }
 }
@@ -13048,8 +13190,6 @@ $banner-font-size: {{ settings.banner_text_size }}px;
     text-align: center;
   }
 }
-
-
 
 /* # Logo list
 ================================================== */

@@ -9,13 +9,14 @@ header.header {
 
 .header,
 .mobile-header {
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
   font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
   font-weight: {{ settings.nav__font.weight }};
   font-style: {{ settings.nav__font.style }};
   letter-spacing: {{ settings.nav_letter_spacing }}px;
   font-size: {{ settings.nav_font_size }}px;
   text-transform: {{ settings.nav_font_style }};
+  border-bottom: 3px solid $color-black;
 }
 
 .dropdown-style-horizontal {

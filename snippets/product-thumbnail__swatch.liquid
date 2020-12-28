@@ -15,7 +15,7 @@
             {% assign values = values | append: ',' | append: value %}
             {% assign values = values | split: ',' %}
 
-            <a href="{{ variant.url | within: collection }}" class="swatch swatch__style--{{ settings.collection_swatches_shape }}" data-swatch-name="meta-{{ downcased_option }}_{{ value | replace: ' ', '_' | downcase }}">
+            <a href="{{ variant.url  }}" class="swatch swatch__style--{{ settings.collection_swatches_shape }}" data-swatch-name="meta-{{ downcased_option }}_{{ value | replace: ' ', '_' | downcase }}">
               <span {% if section.settings.products_per_row == '2'%}
                       data-image="{{ variant.featured_image | img_url: '600x' }}"
                     {% elsif section.settings.products_per_row == '3' %}

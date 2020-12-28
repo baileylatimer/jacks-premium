@@ -52,7 +52,7 @@
   data-id="{{ product.id }}"
   data-handle="{{ product.handle }}"
   data-single-variant="{% if product.has_only_default_variant %}true{% else %}false{% endif %}"
-  data-url="{{ product.url | within: collection }}"
+  data-url="{{ product.url   }}"
   data-title="{{ product.title | escape }}"
   data-details-text="{{ 'collections.general.view_product_details_html' | t | escape}}"
   data-full-description="{{ product.description | split: '<!-- split -->' | first | escape }}"

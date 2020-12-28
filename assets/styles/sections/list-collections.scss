@@ -18,6 +18,8 @@
   .product-wrap {
     position: relative;
     overflow: hidden;
+    min-height: 400px;
+    background: $color-white;
 
     &:hover img,
     &:hover svg {
@@ -27,6 +29,8 @@
 
   img,
   svg {
+    max-height: 300px !important;
+    object-fit: contain !important;
     transition: all 0.3s ease-in-out;
   }
 }
@@ -69,5 +73,3 @@
     text-align: center;
   }
 }
-
-

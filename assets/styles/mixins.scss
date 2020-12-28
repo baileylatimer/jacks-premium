@@ -730,3 +730,17 @@
   background-color: $preorder-sticker-color;
   color: set-text-color($preorder-sticker-color);
 }
+
+
+// Media 
+@mixin border {
+  border: 3px solid $color-black;
+  &:hover {
+    box-shadow: 6px 6px $color-black;
+  }
+  
+}
+
+@mixin filter-bg {
+  filter: brightness(.9) sepia(.08);
+}

@@ -1,0 +1,19 @@
+/* # Featured collection
+================================================== */
+
+.featured-collection-section,
+.block__featured-collection {
+
+  .slider-gallery {
+    width: 100%;
+  }
+
+  .flickity-prev-next-button {
+    @include respond-to('medium-down') {
+      display: none;
+    }
+  }
+}
+
+
+

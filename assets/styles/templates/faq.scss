@@ -1,0 +1,141 @@
+/* #FAQ
+================================================== */
+
+.page-faq__column-wrap {
+  width: 100%;
+}
+
+.column-wrapper {
+
+  .faq:first-of-type {
+    @include respond-to('medium-down') {
+      margin-bottom: 20px;
+    }
+  }
+
+  .faq-accordion {
+    width: 100%;
+
+    .image-element__wrap {
+      padding: 0;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .faq-title {
+    margin-bottom: 10px;
+  }
+
+  .faq-title:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .faq--image {
+    padding-left: 36px;
+
+    @include respond-to('medium-down') {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+  }
+}
+
+.accordion dt,
+.faq-accordion dt {
+  border-bottom: 1px solid {{ settings.border_color }};
+  position: relative;
+
+  a,
+  button {
+    background: none;
+    border: 0;
+    color: {{ settings.regular_color }};
+    cursor: pointer;
+    display: block;
+    font-size: 1.2rem;
+    padding: 20px 20px 20px 40px;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.2s linear;
+  }
+
+  .accordion [aria-expanded="true"] small,
+  .accordion-style--carets[aria-expanded="true"] .icon {
+    transform: translateY(-60%) rotate(180deg);
+  }
+
+  small,
+  .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s linear;
+  }
+
+  .accordion-style--plus_and_minus .icon {
+    display: none;
+
+    &.icon--active {
+      display: block;
+    }
+  }
+}
+
+.accordion dt a[aria-expanded="true"],
+.accordion dt a:hover,
+.faq-accordion dt button[aria-expanded="true"],
+.faq-accordion dt button:hover {
+  background-color: {{ settings.heading_color | color_modify: 'alpha', 0.03 }};
+}
+
+.accordion dd,
+.faq-accordion dd {
+  display: none;
+  padding: 20px 20px 20px 40px;
+}
+
+.faq-accordion dt .icon {
+  color: {{ settings.link_color }};
+}
+
+// Content creator accordion
+
+.accordion dt:first-of-type {
+
+  small,
+  [aria-expanded="true"] small {
+    transform: translateY(-60%) rotate(270deg);
+  }
+
+  [aria-expanded="false"] small {
+    transform: translateY(-60%) rotate(180deg);
+  }
+}
+
+.accordion dd {
+  margin-left: 0;
+  display: none;
+
+  &[aria-hidden="false"] {
+    display: block;
+  }
+}
+
+.accordion dt a small.right {
+  font-family: "Arial"; /* Force font family to ensure accordion carets are displayed on iOS devices */
+}
+
+.accordion dd:not([aria-hidden="true"]):first-of-type {
+  display: block;
+}
+
+.accordion [aria-expanded="false"] small {
+  transform: translateY(-60%) rotate(180deg);
+}
+
+.accordion [aria-expanded="true"] small {
+  transform: translateY(-60%) rotate(270deg);
+}

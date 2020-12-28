@@ -1,0 +1,66 @@
+/* # Collection
+================================================== */
+
+.collection__filters {
+  margin-bottom: 20px;
+
+  .select {
+    max-width: 50%;
+
+    @include respond-to('small-down') {
+      max-width: 100%;
+    }
+  }
+
+  .select:first-child {
+
+    @include respond-to('small-down') {
+      margin-bottom: 10px;
+    }
+  }
+
+  .select,
+  select {
+
+    @include respond-to('small-down') {
+      width: 100%;
+    }
+  }
+
+  .is-grouped {
+    @include justify-content(flex-end);
+
+    @include respond-to('medium-down') {
+      @include justify-content(flex-start);
+    }
+  }
+}
+
+.collection-main {
+
+  .banner__text {
+    margin: 0;
+  }
+
+  .banner__content {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+  }
+}
+
+
+.collection__sort-by-filter {
+  @include respond-to('small-up') {
+    margin-left: 10px;
+  }
+}
+
+.sub-collection-main main {
+  min-height: 0;
+}
+
+.collection__loading-icon {
+  width: 100%;
+  display: none;
+}

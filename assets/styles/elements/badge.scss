@@ -1,0 +1,30 @@
+/* # Badge
+================================================== */
+$badge-border-size: 0.1rem !default;
+$badge-border-radius: 1rem !default;
+$badge-color: {{ settings.header_cart_badge_color }};
+$badge-size: 1rem;
+
+.header-cart__icon {
+  @include flexbox();
+  @include justify-content(center);
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.badge {
+  height: $badge-size;
+  width: $badge-size;
+  position: absolute;
+  top: calc(#{$badge-size} * -0.3);
+  left: calc(65% - 0.2rem);
+  font-size: 0.7rem;
+  background: $badge-color;
+  color: $background;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  border-radius: 50%;
+  letter-spacing: 0;
+}

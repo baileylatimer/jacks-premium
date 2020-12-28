@@ -1,0 +1,17 @@
+/* # Logo list
+================================================== */
+
+.logo-list {
+
+  .has-background {
+    padding-top: 20px;
+  }
+
+
+  .logo-list__wrapper {
+    @include respond-to('small-down') {
+      max-width: $site-max-width;
+      width: $site-width;
+    }
+  }
+}

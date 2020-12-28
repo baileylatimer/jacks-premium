@@ -1,0 +1,401 @@
+/* # Helpers
+================================================== */
+
+// Flexbox
+
+.is-flex {
+  @include flexbox();
+}
+
+.is-inline-flex {
+  @include inline-flexbox();
+}
+
+.is-align-start,
+.is-align-left {
+  @include align-items(flex-start);
+}
+
+.is-align-end,
+.is-align-right {
+  @include align-items(flex-end);
+}
+
+.is-align-self-end,
+.is-align-self-right {
+  @include align-self(flex-end);
+}
+
+.is-align-baseline {
+  @include align-items(baseline);
+}
+
+.is-align-center {
+  @include align-items(center);
+}
+
+.is-align-stretch {
+  @include align-items(stretch);
+}
+
+.is-justify-start,
+.is-justify-left {
+  @include justify-content(flex-start);
+}
+
+.is-justify-end,
+.is-justify-right {
+  @include justify-content(flex-end);
+}
+
+.is-justify-center {
+  @include justify-content(center);
+}
+
+.is-justify-space-around {
+  @include justify-content(space-around);
+}
+
+.is-justify-space-between {
+  @include justify-content(space-between);
+}
+
+.is-flex-nowrap {
+  @include flex-wrap(nowrap);
+}
+
+.is-flex-wrap {
+  @include flex-wrap(wrap);
+}
+
+.is-flex-wrap-reverse {
+  @include flex-wrap(wrap-reverse);
+}
+
+.is-flex-row {
+  @include flex-direction(row);
+}
+
+.is-flex-row-reverse {
+  @include flex-direction(row-reverse);
+}
+
+.is-flex-column {
+  @include flex-direction(column);
+}
+
+.is-flex-column-reverse {
+  @include flex-direction(column-reverse);
+}
+
+.is-flex-column--mobile {
+  @include respond-to('small-down') {
+    @include flex-direction(column);
+  }
+}
+
+.is-flex-column-reverse-mobile {
+  @include respond-to('small-down') {
+    @include flex-direction(column-reverse);
+  }
+}
+
+// Flex position order
+
+.is-order-aligned-left {
+  @include order(-1);
+
+  @include respond-to('small-down') {
+    @include order(inherit);
+  }
+}
+
+.is-order-aligned-right {
+  @include order(1);
+
+  @include respond-to('small-down') {
+    @include order(inherit);
+  }
+}
+
+// Float
+
+.is-pulled-left {
+  float: left !important;
+}
+
+.is-pulled-right {
+  float: right !important;
+}
+
+// Overflow
+
+.is-clipped {
+  overflow: hidden !important;
+}
+
+// Visibility
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-visible {
+  display: block !important;
+}
+
+.is-sr-only {
+  border: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 0.01em !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 0.01em !important;
+}
+
+.is-invisible {
+  visibility: hidden !important;
+}
+
+@include respond-to('small') {
+  .is-hidden-small {
+    display: none !important;
+  }
+}
+
+@include respond-to('medium') {
+  .is-hidden-medium {
+    display: none !important;
+  }
+}
+
+
+@include respond-to('large') {
+  .is-hidden-large {
+    display: none !important;
+  }
+}
+
+@include respond-to('medium-down') {
+  .is-hidden-mobile-only {
+    display: none !important;
+  }
+}
+
+@include respond-to('medium-up') {
+  .is-hidden-desktop-only {
+    display: none !important;
+  }
+}
+
+
+@include respond-to('widescreen') {
+  .is-hidden-widescreen {
+    display: none !important;
+  }
+}
+
+.is-invisible {
+  visibility: hidden !important;
+}
+
+// Padding helpers
+
+.has-padding-top {
+  padding-top: $gutter;
+}
+
+.has-padding-bottom {
+  padding-bottom: $gutter;
+}
+
+.has-padding-left {
+  padding-left: $gutter;
+}
+
+.has-padding-right {
+  padding-right: $gutter;
+}
+
+.has-padding {
+  padding: $gutter;
+}
+
+.has-large-padding-top {
+  padding-top: calc(#{$gutter} * 2);
+}
+
+.has-large-padding-bottom {
+  padding-bottom: calc(#{$gutter} * 2);
+}
+
+.has-small-padding-top {
+  padding-top: calc(#{$gutter} / 2);
+}
+
+.has-small-padding-bottom {
+  padding-bottom: calc(#{$gutter} / 2);
+}
+
+// Margin helpers
+
+.has-margin-top {
+  margin-top: $gutter;
+}
+
+.has-margin-bottom {
+  margin-bottom: $gutter;
+}
+
+.has-margin-left {
+  margin-left: $gutter;
+}
+
+.has-margin-right {
+  margin-right: $gutter;
+}
+
+.has-margin {
+  margin: $gutter;
+}
+
+// Border helpers
+
+.border--true {
+  border: 1px solid $border;
+}
+
+.border-top {
+  border: none;
+  border-top: 1px solid $border;
+}
+
+.border-bottom {
+  border: none;
+  border-bottom: 1px solid $border;
+}
+
+.border-right {
+  border: none;
+  border-right: 1px solid $border;
+}
+
+.border-left {
+  border: none;
+  border-left: 1px solid $border;
+}
+
+// Styling for box
+
+.box {
+  border-radius: 6px;
+  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+}
+
+// Can be used on inner div inside container element to apply borders (that maintain the same width as columns)
+
+.container-border--top::before {
+  display: block;
+  content: '';
+  height: 0;
+  width: calc(100% - #{$gutter});
+  border-top: thin solid {{ settings.border_color }};
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  float: left;
+
+  @include respond-to('small-down') {
+    width: 100%;
+  }
+}
+
+.container-border--bottom::after {
+  display: block;
+  content: '';
+  height: 0;
+  width: calc(100% - #{$gutter});
+  border-top: thin solid {{ settings.border_color }};
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  clear: both;
+
+  @include respond-to('small-down') {
+    width: 100%;
+  }
+}
+
+// Applied to parent element to control columns on inner text
+
+.has-columns--2 {
+  column-count: 2;
+
+  @include respond-to('small-down') {
+    column-count: 1;
+  }
+}
+
+.has-columns--3 {
+  column-count: 3;
+
+  @include respond-to('small-down') {
+    column-count: 1;
+  }
+}
+
+// Other
+
+.is-marginless {
+  margin: 0 !important;
+}
+
+.is-paddingless {
+  padding: 0 !important;
+}
+
+.is-radiusless {
+  border-radius: 0 !important;
+}
+
+.is-shadowless {
+  box-shadow: none !important;
+}
+
+.is-unselectable {
+  @extend %unselectable;
+}
+
+.is-relative {
+  position: relative;
+}
+
+.visuallyhidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.is-fullwidth-mobile {
+
+  @include respond-to('medium-down') {
+    width: 100vw !important;
+    padding: 20px !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+  }
+}

@@ -1,0 +1,49 @@
+/* # Social share
+================================================== */
+
+$twitter: #1DA1F1;
+$facebook: #4266B2;
+$pinterest: #E50122;
+$mail: #F14336;
+
+.share-btn {
+  &.share-btn--twitter .button {
+    color: $twitter;
+    &:hover {
+      border-color: $twitter;
+      background-color: $twitter;
+    }
+  }
+  &.share-btn--facebook .button {
+    color: $facebook;
+    &:hover {
+      border-color: $facebook;
+      background-color: $facebook;
+    }
+  }
+  &.share-btn--pinterest .button {
+    color: $pinterest;
+    &:hover {
+      border-color: $pinterest;
+      background-color: $pinterest;
+    }
+  }
+  &.share-btn--mail .button {
+    color: $mail;
+    &:hover {
+      border-color: $mail;
+      background-color: $mail;
+    }
+  }
+  .button {
+    width: 38px;
+    height: 38px;
+    &:hover {
+      color: #FFFFFF;
+    }
+  }
+}
+
+.social-share-buttons--rounded .button {
+  border-radius: 50%;
+}

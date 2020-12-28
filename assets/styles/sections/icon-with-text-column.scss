@@ -1,0 +1,28 @@
+/* # Icon with text column
+================================================== */
+
+.icon-with-text-column {
+
+  .icon {
+    margin-bottom: 20px;
+    @include respond-to('medium-down') {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+
+    &.is-small {
+      height: 2.8rem;
+      width: 2.8rem;
+    }
+
+    &.is-medium {
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+
+    &.is-large {
+      height: 5.4rem;
+      width: 5.4rem;
+    }
+  }
+}

@@ -1,0 +1,236 @@
+/* #Currency / Language switcher
+================================================== */
+
+$input-border-color: {{ settings.border_color }};
+
+.selectors-form {
+  margin-bottom: 0;
+}
+
+.selectors-form__wrap {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+
+  @include respond-to('medium') {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+.selectors-form__item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.disclosure {
+  position: relative;
+}
+
+.disclosure .disclosure__list-wrap {
+  min-width: 100%; // Ensure dropdown width is same as parent to avoid skinny dropdown
+}
+
+.disclosure--i18n,
+.disclosure--currency {
+  @include respond-to('medium') {
+    margin-right: 0;
+  }
+}
+
+// fix for capitalization issue in cross border
+.disclosure-text-style-none {
+
+  button.disclosure__toggle,
+  button.disclosure__button {
+    text-transform: capitalize;
+  }
+}
+
+.disclosure-text-style-uppercase {
+
+  button.disclosure__toggle,
+  button.disclosure__button {
+    text-transform: uppercase;
+  }
+}
+
+.disclosure-text-style-lowercase {
+
+  button.disclosure__toggle,
+  button.disclosure__button {
+    text-transform: lowercase;
+  }
+}
+
+
+.disclosure__toggle {
+  @include flexbox();
+  @include align-items(center);
+  background-color: {{ settings.shop_bg_color }};
+  border: 1px solid $input-border-color;
+  border-radius: 2px;
+  color: {{ settings.regular_color }};
+  cursor: pointer;
+  font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
+  font-size: {{ settings.nav_font_size }}px;
+  font-weight: {{ settings.nav__font.weight }};
+  font-style: {{settings.nav__font.style }};
+  margin-top: 5px;
+  padding: 10px;
+  position: relative;
+  text-transform: {{ settings.nav_font_style }};
+  white-space: nowrap;
+  z-index: 2;
+
+  &:active {
+    border-color: $input-border-color;
+    box-shadow: none;
+  }
+
+  &.is-clicked,
+  &:focus,
+  &:hover,
+  &:focus-within {
+    background-color: {{ settings.shop_bg_color }};
+    border-color: $input-border-color;
+    color: {{ settings.regular_color | color_modify: 'alpha', 0.33 }};
+
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.is-clicked + .disclosure__list-wrap,
+  &:focus + .disclosure__list-wrap,
+  &:focus-within + .disclosure__list-wrap {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .icon {
+    height: 1rem;
+    margin-left: 10px;
+    pointer-events: none;
+    transform: rotate(0deg);
+    transition: transform 0.2s linear;
+    width: 1rem;
+  }
+}
+
+.disclosure-list {
+  background-color: {{ settings.shop_bg_color }};
+  border: 1px solid $input-border-color;
+  border-radius: 2px;
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+li.disclosure-list__item {
+  line-height: 1;
+  list-style: none;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.disclosure__list-wrap {
+  bottom: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  padding-bottom: 10px;
+  position: absolute;
+  z-index: 10;
+
+  &.animated {
+    animation-duration: 0.5s;
+  }
+}
+
+button.disclosure__button {
+  background-color: transparent;
+  border: 0;
+  color: {{ settings.regular_color }};
+  cursor: pointer;
+  display: block;
+  font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
+  font-size: {{ settings.nav_font_size }}px;
+  font-style: {{settings.nav__font.style }};
+  font-weight: {{ settings.nav__font.weight }};
+  padding: 10px 0;
+  text-align: left;
+  text-transform: {{ settings.nav_font_style }};
+  width: 100%;
+
+  &:hover,
+  &[aria-current="true"] {
+    color: {{ settings.regular_color | color_modify: 'alpha', 0.33 }};
+  }
+}
+
+/* Mobile currency/language switcher */
+
+.selectors-form--mobile {
+  padding: 0.5rem 1.5rem;
+
+  .selectors-wrap {
+    @include justify-content(flex-start);
+  }
+
+  .disclosure {
+    @include flexbox();
+    @include align-items(center);
+    background-color: {{ settings.shop_bg_color }};
+    border: 1px solid $input-border-color;
+    border-radius: 2px;
+    color: {{ settings.regular_color }};
+    cursor: pointer;
+    margin-top: 5px;
+    position: relative;
+    white-space: nowrap;
+    z-index: 2;
+
+    &:hover,
+    &[aria-current="true"] {
+      color: {{ settings.regular_color | color_modify: 'alpha', 0.33 }};
+    }
+
+    &.is-clicked .icon{
+      transform: rotate(180deg);
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      background-color: transparent;
+      border: 0;
+      padding: 10px 30px 10px 10px;
+      text-transform: capitalize;
+      z-index: 2;
+      font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
+      font-size: {{ settings.nav_font_size }}px;
+      font-weight: {{ settings.nav__font.weight }};
+      font-style: {{settings.nav__font.style }};
+
+      option {
+        text-transform: capitalize;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      right: 10px;
+      transform: rotate(0deg);
+      transition: transform 0.2s linear;
+    }
+  }
+}

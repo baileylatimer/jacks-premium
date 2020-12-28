@@ -1,0 +1,36 @@
+/* # Article (blog posts)
+================================================== */
+
+//author
+.author-share-wrap {
+
+  .blog-share > div {
+    @include respond-to('medium-up') {
+      @include justify-content(flex-end);
+    }
+  }
+}
+
+.comment-section {
+  display: block;
+}
+
+.blog-author {
+  padding-left: 0;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+}
+
+.comment-section--cards img {
+  @include respond-to('medium-down') {
+    width: 100px;
+  }
+}

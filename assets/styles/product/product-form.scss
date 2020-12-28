@@ -1,0 +1,681 @@
+/* # Product form
+================================================== */
+
+{% if settings.button_cart_padding == 'small' %}
+  $atc-button-height: 35px;
+  $atc-button-width: calc(50% - 12px);
+  $atc-button-margin: 0 6px 0 0;
+  $atc-button-spb-margin: 0 0 0 6px;
+{% elsif settings.button_cart_padding == 'regular' %}
+  $atc-button-height: 44px;
+  $atc-button-width: calc(50% - 12px);
+  $atc-button-margin: 0 6px 0 0;
+  $atc-button-spb-margin: 0 0 0 6px;
+{% else %}
+  $atc-button-height: 60px;
+  $atc-button-width: 100%;
+  $atc-button-margin: 0 0 0 0;
+  $atc-button-spb-margin: 12px 0 0 0;
+{% endif %}
+
+$input-border-width: thin !default;
+$input-border-color: {{ settings.border_color }};
+$input-border-radius: {{ settings.qty_border_radius }}px;
+
+$quantity-background-color: {{ settings.qty_background_color }} !default;
+$quantity-background-color-disabled: {{ settings.qty_background_color | color_modify: 'alpha', 0.5 }} !default;
+$quantity-background-hover-color: {{ settings.qty_background_hover_color }} !default;
+
+$quantity-box-stacked-control-width: 48px;
+$quantity-box-control-width: 44px;
+
+// Size chart
+.product__size-chart {
+  float: right;
+}
+
+// Notify form
+.product__notify-form {
+  margin-bottom: 1.5rem;
+  max-width: 350px; // specific size to keep the BIS form consistent no matter the size of the product description
+}
+
+.notify-form__success-message {
+  margin: 0;
+}
+
+// Multiple options
+.selector-wrapper {
+  margin-bottom: 10px;
+  @include flexbox();
+  @include align-items(center);
+
+  &:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    margin-right: 10px;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.product_form--swatches {
+
+  .select-container {
+    display: none;
+  }
+}
+
+// Inventory
+.items_left {
+  margin-bottom: 1.5rem;
+}
+
+// Quantity box
+.quantity-wrapper {
+
+  .quantity-element {
+    min-height: $atc-button-height;
+  }
+
+  .quantity-input {
+    text-align: center;
+    width: 100%;
+  }
+
+  .quantity-plus,
+  .quantity-minus {
+
+    .icon {
+      padding: 0.3em;
+    }
+  }
+}
+
+.cart-warning {
+  margin-top: 20px;
+}
+
+// Smart payment button
+.add_to_cart.action_button {
+  margin-bottom: 0;
+}
+
+.shopify-payment-button {
+  position: relative;
+}
+
+.shopify-payment-button button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+
+div.shopify-payment-button__button {
+  {% if settings.button_style == 'rounded' %}
+    border-radius: 3px;
+  {% elsif settings.button_style == 'pill_shaped' %}
+    border-radius: 100px;
+  {% else %}
+    border-radius: 0;
+  {% endif %}
+}
+
+.shopify-payment-button__button--branded,
+.shopify-payment-button__button--unbranded {
+  overflow: hidden;
+  min-height: $atc-button-height;
+}
+
+button.shopify-payment-button__more-options {
+  color: {{ settings.regular_color }};
+  box-shadow: none;
+  text-transform: none;
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  padding: 16px 0 28px;
+  max-width: 80%;
+  margin: 0 auto;
+  font-weight: normal;
+  font-family: {{ settings.regular__font.family }}, {{ settings.regular__font.fallback_families }};
+  font-style: {{ settings.regular__font.style }};
+
+  &:hover {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.purchase-details {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-wrap(wrap);
+}
+
+.product_section .smart-payment-button--true.product_form {
+  max-width: 100%;
+}
+
+.product-quantity-box.purchase-details__quantity {
+  margin-top: 12px;
+}
+
+.smart-payment-button--true {
+
+  .purchase-details {
+    @include respond-to('medium-down') {
+      padding-bottom: 10px;
+    }
+  }
+
+  .product-quantity-box.purchase-details__quantity {
+    @include respond-to('medium-down') {
+      width: 100%;
+      margin-right: 0;
+
+      .input.quantity {
+        width: calc(100% - 88px);
+      }
+    }
+  }
+}
+
+.smart-payment-button--false .purchase-details {
+  @include align-items(flex-start);
+}
+
+
+// Quantity boxes
+
+.quantity-input.input {
+  -moz-appearance: textfield;
+  box-shadow: none;
+  border: 0;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance:         none;
+  }
+}
+
+.quantity-plus.button,
+.quantity-minus.button {
+  background-color: $quantity-background-color;
+
+  &:hover {
+    background-color: $quantity-background-hover-color;
+
+    .icon {
+      fill: {{ settings.qty_icon_hover_color }};
+    }
+  }
+
+  .icon {
+    fill: {{ settings.qty_icon_color }};
+  }
+}
+
+.quantity-plus.button[disabled],
+.quantity-minus.button[disabled] {
+  opacity: 1;
+  background-color: $quantity-background-color-disabled;
+}
+
+// Used to remove width shifting on hover
+.quantity-wrapper.field.has-addons .control:not(:last-child) {
+  margin-right: 0;
+}
+
+.quantity-wrapper.quantity-style--box {
+  border-radius: $input-border-radius;
+
+  .quantity-minus {
+    width: $quantity-box-control-width;
+    border-top-left-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+  }
+
+  .minus-control {
+    border-top-left-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+  }
+
+  .quantity-plus {
+    width: $quantity-box-control-width;
+    border-top-right-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+  }
+
+  .plus-control {
+    border-top-right-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+  }
+
+  .quantity-input-control {
+    width: 100%;
+    input {
+      border-top: $input-border-width solid $input-border-color;
+      border-bottom: $input-border-width solid $input-border-color;
+    }
+  }
+
+  .quantity-input-control--fill {
+    width: 100%;
+  }
+
+  .quantity-input {
+    width: 100%;
+  }
+
+  &.is-medium {
+    .quantity-element {
+      min-height: auto;
+      min-width: 38px;
+      height: 38px;
+    }
+
+    .quantity-plus,
+    .quantity-minus {
+      width: 38px;
+    }
+  }
+}
+
+.quantity-wrapper.quantity-style--stacked {
+  position: relative;
+  border-radius: $input-border-radius !important; //Used to overwrite default styling
+
+  .quantity-input-control {
+    width: calc(100% - #{$quantity-box-stacked-control-width});
+  }
+
+  .minus-control {
+    position: absolute;
+    height: calc(#{$atc-button-height} / 2);
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    margin-right: 0;
+    width: $quantity-box-stacked-control-width;
+  }
+
+  .plus-control {
+    position: absolute;
+    min-height: calc(#{$atc-button-height} / 2);
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: $quantity-box-stacked-control-width;
+  }
+
+  .quantity-input {
+    border-left: $input-border-width solid $input-border-color;
+    border-top: $input-border-width solid $input-border-color;
+    border-bottom: $input-border-width solid $input-border-color;
+    border-top-left-radius: $input-border-radius !important; //Used to overwrite default styling
+    border-bottom-left-radius: $input-border-radius !important; //Used to overwrite default styling
+    text-align: center;
+    width: 100%;
+  }
+
+  .quantity-minus {
+    height: calc(#{$atc-button-height} / 2);
+    min-height: calc(#{$atc-button-height} / 2);
+    width: $quantity-box-stacked-control-width;
+    border-radius: 0;
+    border-left: 0;
+    border-bottom: $input-border-width solid $input-border-color;
+    border-right: $input-border-width solid $input-border-color;
+    border-bottom-right-radius: $input-border-radius !important; //Used to overwrite default styling
+    margin-right: 1px;
+    z-index: 4;
+    opacity: 1.0 !important; // Overwrites disabled button styling
+  }
+
+  .quantity-plus {
+    height: calc(#{$atc-button-height} / 2);
+    min-height: calc(#{$atc-button-height} / 2);
+    width: $quantity-box-stacked-control-width;
+    border: 0;
+    border-left: 0;
+    border-top: $input-border-width solid $input-border-color;
+    border-right: $input-border-width solid $input-border-color;
+    border-top-right-radius: $input-border-radius;
+    border-bottom-right-radius: 0;
+    z-index: 4;
+  }
+}
+
+.product-quantity-box.purchase-details__quantity {
+  margin-right: 10px;
+  width: calc(50% - 12px);
+
+  @include respond-to('small-down') {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  input.quantity {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    line-height: 1.4;
+    margin-bottom: 0;
+    width: calc(100% - 88px);
+    min-height: $atc-button-height;
+  }
+}
+
+.smart-payment-button--true .product-quantity-box.purchase-details__quantity {
+
+  @include respond-to('medium-down') {
+    width: 100%;
+    margin-right: 0;
+    .input.quantity {
+      width: calc(100% - 88px);
+    }
+  }
+}
+
+.purchase-details__buttons {
+  @include flexbox;
+  @include flex(1 0 calc(50% - 12px));
+  @include align-items(flex-end);
+  @include flex-wrap(wrap);
+  margin-left: 6px;
+
+  @include respond-to('medium-down') {
+    margin-top: 20px;
+    margin-left: 12px;
+    @include flex(1 0 calc(50% - 12px));
+  }
+
+  @include respond-to('small-down') {
+    margin-top: 12px;
+    margin-left: 0;
+    @include flex(1 0 100%);
+  }
+
+  .button {
+    width: 100%;
+    height: auto;
+    @include align-items(center);
+    min-height: $atc-button-height;
+
+    {% if settings.button_cart_padding == 'large' %}
+      width: 100%;
+    {% endif %}
+  }
+
+  .shopify-payment-button {
+    @include flex(1 0 100%);
+    margin-bottom: 0;
+    max-width: 100%;
+
+    @include respond-to('widescreen-up') {
+      @include flex(1 0 calc(50% - 12px));
+      max-width: calc(50% - 12px);
+    }
+  }
+  .action_button.action_button--secondary {
+    background-color: transparent;
+    border: 1px solid $border;
+    color: $text;
+    box-shadow: none;
+    line-height: 1.2;
+    padding: 10px 0;
+    @include flex(1 0 100%);
+    margin: 0;
+    max-width: 100%;
+
+    @include respond-to('widescreen-up'){
+      @include flex(1 0 calc(50% - 12px));
+      max-width: calc(50% - 12px);
+      margin-right: 8px;
+    }
+
+    @include respond-to('medium-down') {
+      margin-bottom: 12px;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $btn-add-to-cart-bg-color;
+      background-color: $btn-add-to-cart-bg-color;
+      color: $btn-add-to-cart-text-color;
+    }
+  }
+}
+
+.purchase-details {
+
+  .purchase-details__spb--true {
+    @include flex(1 0 100%);
+    @include align-items(flex-start);
+    margin-top: 12px;
+    margin-left: 0;
+
+    // Used to overwrite styling issues on IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 100%;
+    }
+
+    @include respond-to('medium-down') {
+    margin-left: 0;
+    margin-bottom: 0;
+    }
+
+    .action_button.action_button--secondary {
+      @include flex(1 0 #{$atc-button-width});
+      margin: $atc-button-margin;
+      max-width: calc(#{$atc-button-width});
+
+      // Used to overwrite styling issues on IE11
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: 100% !important;
+        max-width: #{$atc-button-width} !important;
+      }
+
+      @include respond-to('medium-down') {
+        @include flex(1 0 100%);
+        margin-right: 0px;
+        margin-top: 0;
+        margin-bottom: 12px;
+        max-width: 100%;
+      }
+    }
+
+    .shopify-payment-button {
+      margin: $atc-button-spb-margin;
+      max-width: calc(#{$atc-button-width});
+      line-height: 1.2;
+
+      // Used to overwrite styling issues on IE11
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: 100% !important;
+        max-width: #{$atc-button-width} !important;
+      }
+
+      @include respond-to('medium-down') {
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+
+      .shopify-payment-button__button--unbranded {
+        @include btn-add-to-cart;
+        font-family: $button-font, $button-font-fallback;
+        font-weight: $button-font-weight;
+        font-style: $button-font-style;
+        letter-spacing: $button-letter-spacing;
+        text-transform: $button-font-capitalization;
+        border: 1px solid $btn-add-to-cart-border-color;
+      }
+
+      .shopify-paymeny-button__button--branded {
+        border-radius: $btn-add-to-cart-border-radius;
+      }
+    }
+  }
+
+  .purchase-details__spb--false {
+    height: $atc-button-height;
+    margin: 12px 0 0;
+    display: inline-block;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 100%;
+    }
+
+    .button--add-to-cart {
+      height: inherit;
+      width: 50%;
+
+      @include respond-to('medium-down') {
+        width: 100%;
+      }
+    }
+  }
+
+  &.has-quantity-box .purchase-details__spb--false {
+    max-width: 50%;
+
+    @include respond-to('medium-down') {
+      max-width: 100%;
+    }
+
+    .button--add-to-cart {
+      width: 100%;
+    }
+  }
+}
+
+/* Animation for checkmark on add to cart button */
+.button--add-to-cart {
+  position: relative;
+
+  .text {
+    display: block;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  }
+
+  .fadeInDown.text {
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    path {
+      stroke-dasharray: 19.79 19.79;
+      stroke-dashoffset: 19.79;
+      stroke: $btn-add-to-cart-text-color-highlight;
+      opacity: 0;
+    }
+
+    &.checkmark-active path {
+      -webkit-animation: drawCheckmark 0.5s linear alternate forwards;
+      animation: drawCheckmark 0.5s linear alternate forwards;
+    }
+  }
+}
+
+@keyframes drawCheckmark {
+
+  from {
+    stroke-dashoffset: 19.79;
+    opacity: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes drawCheckmark {
+
+  from {
+    stroke-dashoffset: 19.79;
+    opacity: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.ie button .checkmark {
+
+  path {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+
+  &.checkmark-active path {
+    -webkit-animation: fadeCheckmark 0.5s linear alternate forwards;
+    animation: fadeCheckmark 0.5s linear alternate forwards;
+  }
+}
+
+@-webkit-keyframes fadeCheckmark {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeCheckmark {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  button .checkmark {
+
+    path {
+      stroke-dashoffset: 0;
+      opacity: 0;
+    }
+
+    &.checkmark-active path {
+      animation: fadeCheckmark 0.5s linear alternate forwards;
+    }
+  }
+
+  @keyframes fadeCheckmark {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

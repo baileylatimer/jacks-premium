@@ -1,0 +1,252 @@
+/* # Image with text overlay
+================================================== */
+
+$banner-font-family: {{ settings.banner_text__font.family }}, {{ settings.regular__font.fallback_families }};
+$banner-font-weight: {{ settings.banner_text__font.weight }};
+$banner-font-size: {{ settings.banner_text_size }}px;
+$banner-letter-spacing: {{ settings.banner_text_letter_spacing }}px;
+
+$banner-heading-font-family: {{ settings.banner_heading__font.family }}, {{ settings.regular__font.fallback_families }};
+$banner-heading-font-weight: {{ settings.banner_heading__font.weight }};
+$banner-heading-style: {{ settings.banner_heading_style }};
+$banner-heading-font-size: {{ settings.banner_heading_size }}px;
+
+$banner-font-family: {{ settings.banner_text__font.family }}, {{ settings.regular__font.fallback_families }};
+$banner-font-weight: {{ settings.banner_text__font.weight }};
+$banner-spacing: {{ settings.banner_text_letter_spacing }};
+$banner-font-size: {{ settings.banner_text_size }}px;
+
+.block__image-with-overlay,
+.image-with-text-overlay,
+.image-slideshow {
+
+  .image-with-text-overlay__container {
+    width: 100%;
+  }
+
+  .caption-content {
+    padding: 30px;
+    min-width: 350px;
+
+    @include respond-to('small-down') {
+      min-width: auto;
+    }
+  }
+
+  .mobile-text--below-media {
+
+    @include respond-to('small-down') {
+
+      & > .container {
+        display: block;
+      }
+
+      .caption {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .caption-content {
+        padding: 20px 0;
+      }
+
+      &.has-background .caption-content,
+      &.has-border .caption-content {
+        padding: 30px;
+      }
+    }
+
+    .is-width-half {
+      // moves breakpoint for half width earlier
+      @include respond-to('large-down') {
+        .caption {
+          position: static;
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          top: 0;
+          transform: none;
+        }
+
+        .caption-content {
+          padding: 20px 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mobile-text--over-media {
+
+    @include respond-to('small-down') {
+
+      .caption {
+        top: 50%;
+        bottom: auto;
+        @include prefix(transform, translate(0, -50%), ms webkit spec);
+
+        .caption-content {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+
+  .image-crop-left img {
+    min-height: 60vh;
+    @include object-fit(cover, left);
+  }
+
+  .image-crop-center img {
+    min-height: 60vh;
+    @include object-fit(cover, center);
+  }
+
+  .image-crop-right img {
+    min-height: 60vh;
+    @include object-fit(cover, right);
+  }
+
+  .pretext,
+  .subtitle {
+    font-size: $banner-font-size;
+    font-family: $banner-font-family;
+    font-weight: $banner-font-weight;
+    letter-spacing: $banner-letter-spacing;
+  }
+
+  .subtitle.image-with-text-overlay__subheading {
+    padding-top: 10px;
+  }
+
+  .title {
+    padding-top: 10px;
+  }
+
+  .image-with-text-overlay__banner {
+    overflow: hidden;
+    position: relative;
+
+    @include respond-to('medium-down') {
+      overflow: visible;
+    }
+
+    h1.title {
+      @include headline-style($headline-font-size*2);
+    }
+
+    .placeholder-svg {
+      min-height: 400px;
+    }
+  }
+
+  .caption {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: block;
+    padding: 1%;
+    pointer-events: none;
+    @include respond-to('medium-up') {
+      transform: translateY(-50%);
+    }
+
+    &.align-middle {
+
+      @include respond-to('small-up') {
+        top: 50%;
+        @include prefix(transform, translate(0, -50%), ms webkit spec);
+      }
+    }
+
+    &.align-top {
+      top: 0;
+      @include prefix(transform, none, ms webkit spec);
+    }
+
+    &.align-bottom {
+      bottom: 0;
+      top: auto;
+      @include prefix(transform, none, ms webkit spec);
+    }
+  }
+
+  .caption-content {
+    pointer-events: all;
+    display: inline-block;
+  }
+
+  .caption-overlay-true {
+    z-index: 3;
+  }
+
+  .dark-overlay-true:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .banner--full-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.image-with-text-overlay__buttons {
+  @include justify-content(space-between);
+
+  &.are-small {
+    max-width: 300px;
+  }
+
+  &.are-regular {
+    max-width: 400px;
+  }
+
+  &.are-large {
+    max-width: 500px;
+  }
+
+  &.is-justify-left {
+    @include justify-content(flex-start);
+  }
+
+  &.is-justify-right {
+    @include justify-content(flex-end);
+  }
+
+  &.is-justify-center {
+    @include justify-content(center);
+  }
+
+  .button {
+    @include flex(0 0 calc(50% - 6px));
+    margin-bottom: 12px;
+    white-space: normal;
+    margin-left: 0;
+    margin-right: 0;
+
+    // Used to overwrite styling issues on IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 100% !important;
+      max-width: calc(50% - 6px) !important;
+      margin: 0px auto;
+    }
+
+    @include respond-to('small-down') {
+      flex: 1 0 100%;
+    }
+  }
+}

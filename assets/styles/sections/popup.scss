@@ -1,0 +1,133 @@
+/* # Popup
+================================================== */
+
+
+.popup-modal {
+
+  .fancybox-bg {
+    opacity: 1;
+  }
+
+  .fancybox-slide {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    padding: 40px;
+
+    @include respond-to('small-down') {
+      @include align-items(flex-end);
+      padding: 0;
+    }
+  }
+}
+
+.popup__wrapper {
+  display: none;
+  padding: 0;
+  max-width: 900px;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+
+  @include respond-to('small-down') {
+    width: 100%;
+  }
+
+  &.animated {
+    opacity: 0;
+  }
+
+  &.has-image .newsletter-form {
+    max-width: 100%;
+  }
+}
+
+.popup__text {
+  font-size: 1rem;
+}
+
+.popup__close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  cursor: pointer;
+
+  .icon--vertical-align {
+    @include flexbox();
+    @include justify-content(center);
+    margin: auto;
+  }
+}
+
+// Form
+
+.newsletter-section--popup {
+  margin: 0;
+  padding-top: 20px;
+  width: 100%;
+  max-width: none;
+
+  .newsletter__wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+// Image
+.popup__image {
+  @include align-items(center);
+  position: relative;
+  min-width: 200px;
+  width: 40%;
+
+  &.has-image-crop img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform, translate(-50%, -50%), ms webkit spec);
+    margin: auto;
+    width: 100%;
+  }
+
+  @include respond-to('small-down') {
+    display: none;
+  }
+}
+
+.image-position-right {
+
+  .popup__image {
+    @include order(1);
+  }
+
+  .popup__close {
+    left: 0;
+    right: auto;
+  }
+}
+
+// Text
+.popup__content {
+  max-width: calc(75% - 80px);
+  margin: 0 auto;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include flex(1 0 60%);
+  padding: 40px;
+
+  @include respond-to('medium-down') {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+.popup__header {
+  width: calc(100% - 12px);
+
+  @include respond-to('medium-down') {
+    margin: 0 10px;
+  }
+}

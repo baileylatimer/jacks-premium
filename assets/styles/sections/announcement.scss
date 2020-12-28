@@ -1,0 +1,96 @@
+/* # Announcement bar
+================================================== */
+
+.announcement-bar {
+  width: 100%;
+  position: absolute;
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-regular {
+    font-size: $size-normal;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+
+    @include respond-to('small-down') {
+      font-size: $size-normal;
+    }
+  }
+
+  .is-width-standard .message-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .is-width-wide .close {
+    right: 10px;
+  }
+
+  .announcement-bar__close {
+    position: absolute;
+    right: 0;
+  }
+
+  .padding {
+    @include respond-to('medium-down') {
+      display: none;
+    }
+  }
+}
+
+.announcement-bar__text {
+  @include flexbox();
+  @include align-items(center);
+}
+
+.announcement-bar__icon {
+  line-height: 0;
+}
+
+.show-close-icon-true {
+  padding-left: 20px;
+}
+
+.announcement-bar__content {
+  @include flex(1 1 auto);
+  @include flexbox();
+  @include align-items(center);
+
+  p {
+    padding: 0 0.5em;
+    display: inline-block;
+  }
+}
+
+.announcement-bar__shadow {
+  opacity: 0;
+  visibility: hidden;
+  min-height: 20px;
+}
+
+.announcement-bar--visible {
+
+  .announcement-container {
+    transition: all 0s linear;
+    height: auto;
+  }
+
+}
+
+.announcement-container {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+{% if settings.header_layout == "vertical" %}
+  .announcement-bar {
+    margin-left: 20%;
+    width: 80%;
+  }
+{% endif %}

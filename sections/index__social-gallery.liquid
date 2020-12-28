@@ -1,0 +1,156 @@
+<section class="container padding-y-xl">
+
+  <div class="one-whole column">
+    <div class="heading-section__content
+                is-flex
+                is-flex-column
+                is-align-{{ heading_alignment }}
+                text-align-{{ heading_alignment }}
+                vertical-spacing-{{ vertical_spacing }}">
+                  <div class="heading-section__content
+                  is-flex
+                  is-flex-column
+                  is-align-center
+                  text-align-center
+                  vertical-spacing-medium"> 
+                    <h2 class="heading-section__heading title"> {{ section.settings.title }} <a href="{{ settings.instagram_link }}" target="_blank"><span class="color-gradient-accent">#{{ section.settings.hashtag }}</span></a></h2>
+    </div>
+  </div>
+  <div class="grid gap-sm padding-top-md container">
+  {% if section.blocks.size > 0 %}
+  {% for block in section.blocks %}
+    {%- assign product = all_products[block.settings.featured_product] -%}
+
+    {%- assign collection_handles = product.collections | map: 'handle' -%}
+    {% if product.empty? %}
+      {%- assign section_onboarding = true -%}
+    {% else %}
+      {%- assign section_onboarding = false -%}
+    {% endif %}
+
+    <a href="{{ product.url }}" class="card-v9 card-v9--overlay-bg margin-y-md column {% cycle 'two-thirds', 'one-third', 'one-third', 'two-thirds' %} product-{{ product.id }} 
+    {% if block.settings.title != blank %} filter-bottom {% endif %}" aria-labelledby="card-title-1" style="background-image: url( {{ block.settings.image |  img_url: '600x' }} )" alt="{{ alt | escape }}"  itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+
+      {{ block.shopify_attributes }}
+
+    
+        <div class="card-v9__content padding-md adv-gallery-v3__img-link reveal-content z-index-3">
+
+          <div class="padding-bottom-xxxl max-width-xxs padding-right-md">
+            <h2 class="margin-bottom-xxs text-md text-lg@lg"><span class="color-gradient-accent">@{{ block.settings.handle }}</span></h2>
+            <h3 class="color-contrast-higher text-md text-lg@lg" id="card-title-2">{{ block.settings.description }}</h3>
+          </div>
+          
+          <div class="b10 z-index-3">
+            <span class="text-base gallery-caption">
+              <p itemprop="name" class="block color-white text-bold text-md@lg link-fx-5"><span class="color-gradient-accent">Shop&nbsp;{{ product.title }} ➞</span></p>
+            </span>
+          </div>
+
+        </div>
+
+        <div class="padding-x-md b10 z-index-3 hide-content">
+          <span class="text-base gallery-caption">
+            <p itemprop="name" class="block color-white text-bold text-md@lg link-fx-5" style="color: white;">{{ block.settings.title | capitalize }}&nbsp;loves the&nbsp;<span class="color-gradient-accent">{{ product.title }}</span></p>
+          </span>
+        </div>
+
+
+    </a>
+  {% endfor %}
+  {% endif %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Social Gallery v2",
+  "class": "section is-width-standard",
+  "settings": [
+  {
+    "type":      "header",
+    "content":   "Created by [Latimer Design](https:\/\/latimer.me)",
+    "info":      "Need help? [Send an email.](mailto:\/\/bailey@latimer.me)"
+  },
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Heading",
+    "default": "See why customers love ___"
+  },
+  {
+    "type": "text",
+    "id": "hashtag",
+    "label": "Hashtag",
+    "default": "___"
+  }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "800 x 800px recommended"
+      },
+        {
+          "type": "product",
+          "id": "featured_product",
+          "label": "Product"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "unit": "★",
+          "min": 1,
+          "max": 5,
+          "step": 0.5,
+          "default": 1
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Dog name",
+          "default": "Lucy"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ut arcu mattis integer laoreet."
+        },
+        {
+          "type": "text",
+          "id": "handle",
+          "label": "Handle",
+          "info": "@username"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Social Gallery v2",
+    "category": "Value Props",
+    "blocks": [ 
+      {
+        "type": "product"
+      },
+      {
+        "type": "product"
+      },
+      {
+        "type": "product"
+      },
+      {
+        "type": "product"
+      }
+    ]
+  }]
+}
+{% endschema %}
+ 

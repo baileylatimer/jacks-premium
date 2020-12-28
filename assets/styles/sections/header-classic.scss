@@ -1,0 +1,82 @@
+/* # Header - Classic
+================================================== */
+
+{% if settings.header_layout == "classic" %}
+
+.header {
+  background-color: $header-background;
+  transition: background-color 0.3s linear, height 0.2s linear;
+}
+
+.header__brand {
+  @include flex(0 0 auto);
+  @include flexbox();
+  @include align-items(center);
+  padding: 1rem 0.75rem;
+}
+
+.primary-logo {
+  transition: all 0.1s linear;
+
+  + .header__logo-text {
+    display: none;
+  }
+}
+
+.header__logo {
+  transition: $transition-default;
+}
+
+.header__menu {
+  @include flex(1 1 auto);
+  @include flexbox();
+  @include flex-wrap(wrap);
+}
+
+.action-area__link.has-cart-count {
+  padding-right: 1.8em;
+}
+
+// Overlay header
+
+[data-enable_overlay="false"] .overlay-logo {
+  display: none;
+}
+
+[data-enable_overlay="true"] {
+  position: absolute;
+  width: 100%;
+
+  .header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .overlay-logo {
+    display: block;
+  }
+
+  .overlay-logo + .primary-logo {
+    display: none;
+  }
+
+  .overlay-logo + .header__logo-text {
+    display: none;
+  }
+
+}
+
+// Sticky header
+
+[data-enable_sticky="true"] .header {
+  z-index: 200 !important;
+}
+
+.has-overlaid-header {
+  position: absolute;
+  width: 100%;
+}
+
+{% endif %}

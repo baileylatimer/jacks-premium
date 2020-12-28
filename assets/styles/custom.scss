@@ -1,0 +1,218 @@
+/* # Font-Face
+================================================== */
+/*  This is the proper syntax for an @font-face file.
+    Upload your font files to Assets and then
+    copy your FontName into code below and remove
+    comment brackets */
+
+/*  @font-face {
+      font-family: 'FontName';
+      src: url('FontName.eot');
+      src: url('FontName.eot?iefix') format('eot'),
+           url('FontName.woff') format('woff'),
+           url('FontName.ttf') format('truetype'),
+           url('FontName.svg#webfontZam02nTh') format('svg');
+      font-weight: normal;
+      font-style: normal; }
+*/
+
+/* # Custom Styles
+================================================== */
+
+$color-primary: hsl(41, 44%, 37%);
+
+// Layout
+.b10 {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.margin-y-md {
+  margin-top: $half-gutter;
+  margin-bottom: $half-gutter;
+}
+
+// Style
+.blend {
+  mix-blend-mode: difference;
+}
+.noise {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  overflow: hidden;
+  position: fixed;
+  pointer-events: none;
+}
+.noise:after {
+  top: -10rem;
+  left: -10rem;
+  width: calc(100% + 20rem);
+  height: calc(100% + 20rem);
+  content: "";
+  position: absolute;
+  animation: noise 1s steps(2) infinite;
+  background-image: url(https://cdn.shopify.com/s/files/1/0522/0640/3776/files/noise.png?v=1608751486);
+  background-position: 50%;
+}
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 9rem, 0);
+  }
+  10% {
+    transform: translate3d(-1rem, -4rem, 0);
+  }
+  20% {
+    transform: translate3d(-8rem, 2rem, 0);
+  }
+  30% {
+    transform: translate3d(9rem, -9rem, 0);
+  }
+  40% {
+    transform: translate3d(-2rem, 7rem, 0);
+  }
+  50% {
+    transform: translate3d(-9rem, -4rem, 0);
+  }
+  60% {
+    transform: translate3d(2rem, 6rem, 0);
+  }
+  70% {
+    transform: translate3d(7rem, -8rem, 0);
+  }
+  80% {
+    transform: translate3d(-9rem, 1rem, 0);
+  }
+  90% {
+    transform: translate3d(6rem, -5rem, 0);
+  }
+  to {
+    transform: translate3d(-7rem, 0, 0);
+  }
+}
+
+// Hero
+.image-element__wrap img {
+  max-height: 600px;
+  object-fit: cover;
+}
+// --------------------------------
+
+// (START) Global editor code https://codyhouse.co/ds/globals/colors
+
+// --------------------------------
+
+// :root,
+// [data-theme="default"] {
+//   // main
+//   --color-primary-darker: hsl(41, 44%, 37%);
+//   --color-primary-dark: hsl(41, 44%, 47%);
+//   --color-primary: hsl(41, 44%, 57%);
+//   --color-primary-light: hsl(41, 44%, 67%);
+//   --color-primary-lighter: hsl(41, 44%, 77%);
+
+//   // color contrasts
+//   --color-bg: hsl(50, 13%, 91%);
+//   --color-contrast-lower: hsl(50, 8%, 86%);
+//   --color-contrast-low: hsl(48, 4%, 74%);
+//   --color-contrast-medium: hsl(40, 2%, 38%);
+//   --color-contrast-high: hsl(60, 2%, 11%);
+//   --color-contrast-higher: hsl(0, 0%, 0%);
+// }
+
+// body,
+// [data-theme="default"] {
+//   // font rendering
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// // --------------------------------
+
+// // (END) Global editor code
+
+// // --------------------------------
+
+// // --------------------------------
+
+// // Color
+
+// // --------------------------------
+
+// [class*="color-"] {
+//   --color-o: 1;
+// }
+
+// .color-inherit {
+//   color: inherit;
+// }
+// .color-bg {
+//   color: alpha(var(--color-bg), var(--color-o, 1));
+// }
+// .color-contrast-lower {
+//   color: alpha(var(--color-contrast-lower), var(--color-o, 1));
+// }
+// .color-contrast-low {
+//   color: alpha(var(--color-contrast-low), var(--color-o, 1));
+// }
+// .color-contrast-medium {
+//   color: alpha(var(--color-contrast-medium), var(--color-o, 1));
+// }
+// .color-contrast-high {
+//   color: alpha(var(--color-contrast-high), var(--color-o, 1));
+// }
+// .color-contrast-higher {
+//   color: alpha(var(--color-contrast-higher), var(--color-o, 1));
+// }
+// .color-primary-darker {
+//   color: alpha(var(--color-primary-darker), var(--color-o, 1));
+// }
+// .color-primary-dark {
+//   color: alpha(var(--color-primary-dark), var(--color-o, 1));
+// }
+// .color-primary {
+//   color: alpha(var(--color-primary), var(--color-o, 1));
+// }
+// .color-primary-light {
+//   color: alpha(var(--color-primary-light), var(--color-o, 1));
+// }
+// .color-primary-lighter {
+//   color: alpha(var(--color-primary-lighter), var(--color-o, 1));
+// }
+
+// @supports (--css: variables) {
+//   .color-opacity-0 {
+//     --color-o: 0;
+//   }
+//   .color-opacity-10\% {
+//     --color-o: 0.1;
+//   }
+//   .color-opacity-20\% {
+//     --color-o: 0.2;
+//   }
+//   .color-opacity-30\% {
+//     --color-o: 0.3;
+//   }
+//   .color-opacity-40\% {
+//     --color-o: 0.4;
+//   }
+//   .color-opacity-50\% {
+//     --color-o: 0.5;
+//   }
+//   .color-opacity-60\% {
+//     --color-o: 0.6;
+//   }
+//   .color-opacity-70\% {
+//     --color-o: 0.7;
+//   }
+//   .color-opacity-80\% {
+//     --color-o: 0.8;
+//   }
+//   .color-opacity-90\% {
+//     --color-o: 0.9;
+//   }
+// }

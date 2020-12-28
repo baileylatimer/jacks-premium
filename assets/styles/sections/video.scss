@@ -1,0 +1,117 @@
+/* # Video
+================================================== */
+
+.featured-video.is-width-half.has-video-added {
+
+  @include respond-to('small-down') {
+    background-color: transparent;
+  }
+
+  .video-wrapper {
+    @include flex(1);
+  }
+}
+
+.video__container {
+  width: 100%;
+}
+
+// Allows users to click embedded iframe ui when video paused
+.video-wrapper .plyr--video.plyr--paused .plyr__video-embed iframe {
+  @include respond-to('medium-up') {
+    z-index: 5;
+  }
+}
+
+.video-controls--false .plyr__controls {
+  display: none;
+}
+
+.video-present--false {
+  [data-video-element] {
+    display: none;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+
+  &.overlay--text_only {
+    .video__text-wrapper {
+      position: relative;
+    }
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .video__text-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 5;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: -1;
+    }
+
+    @include respond-to('small-down') {
+      position: relative;
+      margin: 0;
+    }
+  }
+
+  .video__text {
+    height: 100%;
+    text-align: center;
+    @include flexbox();
+    @include flex-direction(column);
+  }
+
+  .video__text-wrapper {
+    margin: 0;
+    padding: 30px;
+
+    .button {
+      max-width: 50%;
+
+      @include respond-to('small-down') {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @include respond-to('small-down') {
+    @include flexbox();
+    @include flex-direction(column);
+  }
+}
+
+.mobile-text--over-media {
+  @include respond-to('small-down') {
+    .video__text-container {
+      position: absolute;
+    }
+  }
+}
+
+.mobile-text--below-media {
+  @include respond-to('small-down') {
+    .video__text-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

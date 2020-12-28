@@ -1,0 +1,195 @@
+/* #Swatch Styles
+================================================== */
+
+// Product page swatches
+{% if settings.product_form_style == "swatches" %}
+
+$swatch-element-size: 40px;
+$swatch-label-size: 34px;
+
+.swatch-element.swatch--active {
+  border-color: black;
+  box-shadow: 0px 0px 0px 2px rgba(255,255,255,1);
+}
+
+.selector-wrapper label {
+  margin-bottom: 0.5rem;
+}
+
+  .selector-wrapper {
+    display: none;
+  }
+
+  .swatch_options {
+    margin-bottom: 1.5rem;
+  }
+
+  .swatch .option-title {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  // Hide radio buttons
+  .swatch input {
+    display: none;
+  }
+
+  .swatch label {
+    float: left;
+    min-width: $swatch-element-size;
+    height: $swatch-element-size;
+    margin: 0;
+    font-size: 13px;
+    text-align: center;
+    line-height: $swatch-element-size;
+    white-space: nowrap;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+
+  .swatch .color label {
+    min-width: $swatch-label-size;
+    height: $swatch-label-size !important;
+    line-height: $swatch-label-size;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swatch-element {
+    border: #e2e2e2 thin solid;
+    min-width: $swatch-element-size;
+    min-height: $swatch-element-size;
+    {% if settings.swatch_style != 'square' %}
+      border-radius: 3px;
+    {% endif %}
+  }
+
+  .swatch-element.color {
+    padding: 3px;
+  }
+
+  .swatch-element.color,
+  .swatch-element.color label {
+    {% if settings.swatch_style != 'square' %}
+      border-radius: 50%;
+    {% endif %}
+    border: #e2e2e2 thin solid;
+  }
+
+  .swatch-element.color label {
+    padding:0;
+    margin: 0;
+    width: $swatch-label-size;
+    height: $swatch-label-size;
+    overflow: hidden;
+  }
+
+  .swatch_options input:checked + .swatch-element {
+    border-color: black ;
+    box-shadow: 0px 0px 0px 2px rgba(255,255,255,1);
+  }
+
+  .swatch .swatch-element {
+    float:left;
+    transform: translateZ(0);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0px 8px 8px 0;
+    position: relative;
+    outline: none;
+  }
+
+  .crossed-out {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .swatch .swatch-element .crossed-out {
+    display: none;
+  }
+
+  .swatch .swatch-element.soldout .crossed-out {
+    {% if settings.swatch_style != 'square' %}
+      border-radius: 50%;
+    {% endif %}
+    display:block;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .swatch .swatch-element.soldout label {
+    opacity: 0.6;
+  }
+
+  // Tooltips
+  .swatch .tooltip {
+    text-align: center;
+    background: #333;
+    background: rgba(#333, 0.9);
+    color: #fff;
+    bottom: 100%;
+    padding: 5px 10px;
+    display: block;
+    position: absolute;
+    width: 120px;
+    font-size: 13px;
+    left: {{ 30 | divided_by: 2 | minus: 50 }}px;
+    margin-bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all .25s ease-out;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    z-index: 60;
+  }
+
+  .swatch .tooltip:before {
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  // CSS triangle
+  .swatch .tooltip:after {
+    border-left: solid transparent 10px;
+    border-right: solid transparent 10px;
+    border-top: solid rgba(#333, 0.9) 10px;
+    bottom: -10px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position:absolute;
+    width: 0;
+  }
+
+  .swatch .swatch-element:hover .tooltip {
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0px);
+  }
+
+  .soldout {
+    opacity: 0.5;
+  }
+
+  .swatch-element img[src*="no-image-50"],
+  .swatch__image--empty {
+    opacity: 0;
+  }
+
+  .swatch-element .swatch__image {
+    height: 100%;
+    @include object-fit(cover);
+  }
+{% endif %}

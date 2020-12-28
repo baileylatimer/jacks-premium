@@ -1,0 +1,79 @@
+/* # Contact form
+================================================== */
+
+.contact-form {
+
+  .contact-form__form {
+    padding: 40px;
+    @include respond-to('medium-down') {
+      margin: 30px 0;
+    }
+  }
+
+  .contact-form__image {
+    margin-bottom: 25px;
+  }
+
+  .contact-form__blocks .contact-form__block {
+    margin-bottom: 20px;
+
+    label {
+      color: inherit !important; // Inherit color of parent;
+    }
+  }
+
+  .contact-form__block--radio,
+  .contact-form__block--checkbox {
+    .contact-form__list {
+      margin: 0;
+      list-style: none;
+      li {
+        @include flexbox;
+        @include align-items(baseline);
+        margin-bottom: 10px;
+        input {
+          top: 2px;
+          margin-right: 7px;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .contact-form__social {
+    .social-icons {
+      list-style: none;
+      margin: 20px 0 0 0;
+      @include align-items(baseline);
+      li {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .text-align-right .social-icons {
+    @include justify-content(flex-end);
+  }
+
+  .text-align-center .social-icons {
+    @include justify-content(center);
+  }
+}
+
+.contact-form--left {
+  @include flex-direction(row-reverse);
+}
+
+.contact-form--right,
+.contact-form--left {
+  .contact-form__form {
+    @include respond-to('medium-down') {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.contact-form--center {
+  @include justify-content(center);
+}

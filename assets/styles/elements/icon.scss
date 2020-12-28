@@ -1,0 +1,37 @@
+/* # Icon
+================================================== */
+
+$icon-dimensions: 1.2rem !default;
+$icon-dimensions-small: 1rem !default;
+$icon-dimensions-medium: 1.2rem !default;
+$icon-dimensions-large: 1.8rem !default;
+
+.icon {
+  @include align-items(center);
+  @include inline-flexbox();
+  @include justify-content(center);
+  height: $icon-dimensions;
+  width: $icon-dimensions;
+  fill: currentColor;
+
+  // Sizes
+  .is-large & {
+    height: $icon-dimensions-large;
+    width: $icon-dimensions-large;
+  }
+
+  .is-medium & {
+    height: $icon-dimensions-medium;
+    width: $icon-dimensions-medium;
+  }
+
+  .is-small & {
+    height: $icon-dimensions-small;
+    width: $icon-dimensions-small;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

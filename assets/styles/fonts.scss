@@ -1,0 +1,64 @@
+/* # Fonts
+================================================== */
+
+{%- capture font_settings_list -%}
+  {{ settings.regular__font | font_face: font_display: 'block' }}~
+  {{ settings.regular__font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.regular__font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.regular__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.logo__font | font_face: font_display: 'block' }}~
+  {{ settings.logo__font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.logo__font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.logo__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.heading__font | font_face: font_display: 'block' }}~
+  {{ settings.heading__font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.heading__font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.heading__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.preheading_font | font_face: font_display: 'block' }}~
+  {{ settings.preheading_font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.preheading_font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.preheading_font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.subheading_font | font_face: font_display: 'block' }}~
+  {{ settings.subheading_font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.subheading_font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.subheading_font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.nav__font | font_face: font_display: 'block' }}~
+  {{ settings.nav__font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.nav__font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.nav__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.nav__font | font_modify: 'weight', 'lighter' | font_face: font_display: 'block' }}~
+  {{ settings.nav__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'lighter' | font_face: font_display: 'block' }}~
+  {{ settings.button__font | font_face: font_display: 'block' }}~
+  {{ settings.button__font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.button__font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.button__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.button__font | font_modify: 'weight', 'lighter' | font_face: font_display: 'block' }}~
+  {{ settings.button__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'lighter' | font_face: font_display: 'block' }}~
+  {{ settings.banner_heading__font | font_face: font_display: 'block' }}~
+  {{ settings.banner_heading__font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.banner_heading__font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.banner_heading__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.banner_text__font | font_face: font_display: 'block' }}~
+  {{ settings.banner_text__font | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}~
+  {{ settings.banner_text__font | font_modify: 'style', 'italic' | font_face: font_display: 'block' }}~
+  {{ settings.banner_text__font | font_modify: 'style', 'italic' | font_modify: 'weight', 'bolder' | font_face: font_display: 'block' }}
+
+{%- endcapture -%}
+{%- assign font_array = font_settings_list | split: '~' -%}
+
+{%- for name in font_array -%}
+  {%- unless name contains 'error' -%}
+    {{ name }}
+  {%- endunless -%}
+{%- endfor -%}
+
+@font-face {
+  font-family: 'flex-icon';
+  src:
+    url('{{ "flex-icon.ttf" | asset_url }}') format('truetype'),
+    url('{{ "flex-icon.woff" | asset_url }}') format('woff'),
+    url('{{ "flex-icon.svg" | asset_url }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

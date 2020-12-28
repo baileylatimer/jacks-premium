@@ -1,0 +1,732 @@
+/* # Mixins
+================================================== */
+
+// Change background opacity with any color value
+
+@mixin background-opacity($color, $opacity: 0.5) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+// Change text opacity with any color value
+
+@mixin text-opacity($color, $opacity: 0.5) {
+  color: $color;
+  color: rgba($color, $opacity);
+}
+
+// Clearfix for parents with floated children
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  *zoom: 1;
+}
+
+// Media query mixin
+
+@mixin respond-to($media-query) {
+  $breakpoint-found: false;
+
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @if $media-query == $name and $declaration {
+      $breakpoint-found: true;
+
+      @media only screen and #{$declaration} {
+        @content;
+      }
+    }
+  }
+
+  @if $breakpoint-found == false {
+    @warn 'Breakpoint "#{$media-query}" does not exist';
+  }
+}
+
+// Responsive Show/Hide Helper
+
+@mixin responsive-display-helper($breakpoint: '') {
+  .#{$breakpoint}show {
+    display: block !important;
+  }
+
+  .#{$breakpoint}hide {
+    display: none !important;
+  }
+}
+
+// Responsive Text Alignment Helper
+@mixin responsive-text-align-helper($breakpoint: '') {
+  .#{$breakpoint}text-left {
+    text-align: left !important;
+  }
+
+  .#{$breakpoint}text-right {
+    text-align: right !important;
+  }
+
+  .#{$breakpoint}text-center {
+    text-align: center !important;
+  }
+}
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+   or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+     object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+       object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}
+
+/*
+  Prefix mixin for generating vendor prefixes.
+  Based on https://github.com/thoughtbot/bourbon/blob/v4-stable/app/assets/stylesheets/addons/_prefixer.scss
+
+  Usage:
+    // Input:
+    .element {
+      @include prefix(transform, scale(1), ms webkit spec);
+    }
+
+    // Output:
+    .element {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+*/
+
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == webkit {
+      -webkit-#{$property}: $value;
+    } @else if $prefix == moz {
+      -moz-#{$property}: $value;
+    } @else if $prefix == ms {
+      -ms-#{$property}: $value;
+    } @else if $prefix == o {
+      -o-#{$property}: $value;
+    } @else if $prefix == spec {
+      #{$property}: $value;
+    } @else  {
+      @warn 'Unrecognized prefix: #{$prefix}';
+    }
+  }
+}
+
+//Flexbox
+// Flexbox display
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Inline flexbox display
+
+@mixin inline-flexbox() {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+     -moz-box-flex: $values;
+      -webkit-flex: $values;
+      -ms-flex: $values;
+          flex: $values;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+     -moz-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+     -moz-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+     -moz-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+     -moz-box-ordinal-group: $val;
+         -ms-flex-order: $val;
+          -webkit-order: $val;
+            order: $val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+     -moz-flex-grow: $grow;
+      -ms-flex-grow: $grow;
+          flex-grow: $grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+     -moz-flex-shrink: $shrink;
+      -ms-flex-shrink: $shrink;
+          flex-shrink: $shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+     -moz-align-self: $align;
+      -ms-align-self: $align;
+          align-self: $align;
+}
+
+// Logo text styles
+@mixin logo-text-style() {
+  font-family: {{ settings.logo__font.family }}, {{ settings.logo__font.fallback_families }};
+  font-weight: {{ settings.logo__font.weight }};
+  font-style: {{ settings.logo__font.style }};
+  font-size: {{ settings.logo_font_size }}px;
+  text-transform: {{ settings.logo_font_style }};
+}
+
+// Headline base styles for h1-h6
+
+@mixin headline-style($font-size: $font-size-header) {
+  font-family: {{ settings.heading__font.family }}, {{ settings.heading__font.fallback_families }};
+  font-weight: {{ settings.heading__font.weight }};
+  font-style: {{ settings.heading__font.style }};
+  font-size: $font-size * 1px;
+  text-transform: {{ settings.heading_font_style }};
+  line-height: 1.5;
+  color: {{ settings.heading_color }};
+  display: block;
+  letter-spacing: {{ settings.heading_letter_spacing }}px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include respond-to('medium-down') {
+    font-size: floor($font-size * 0.8) * 1px;
+  }
+
+  > a,
+  > a:link,
+  > a:visited {
+    color: {{ settings.heading_color }};
+  }
+
+  > a:hover,
+  > a:focus, {
+    color: $link-hover;
+  }
+}
+
+// Vendor prefixed word-wrap for long text strings (eg. urls)
+
+@mixin word-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-word;
+  word-break: break-word;
+}
+
+// Absolutely positioned center elements (vertical and horizontal)
+
+@mixin center($width, $height: 0) {
+  position: absolute;
+
+  @if $height != 0 {
+    left: calc(50% - (#{$width} / 2));
+    top: calc(50% - (#{$height} / 2));
+  }
+  @else {
+    left: calc(50% - (#{$width} / 2));
+    top: calc(50% - (#{$width} / 2));
+  }
+}
+
+// Icon mixin for alignment
+
+@mixin icon($size, $dimensions) {
+  display: inline-block;
+  font-size: $size;
+  height: $dimensions;
+  line-height: $dimensions;
+  text-align: center;
+  vertical-align: top;
+  width: $dimensions;
+}
+
+// Create non-icon hamburger menu
+
+@mixin hamburger($dimensions) {
+  cursor: pointer;
+  display: block;
+  height: $dimensions;
+  position: relative;
+  width: $dimensions;
+
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 1px;
+    left: calc(50% - 8px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: $speed;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: $easing;
+    width: 16px;
+
+    &:nth-child(1) {
+      top: calc(50% - 6px);
+    }
+
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+
+    &:nth-child(3) {
+      top: calc(50% + 4px);
+    }
+  }
+
+  &:hover {
+    background-color: rgba(black, 0.05);
+  }
+
+  // Modifers
+  &.is-active {
+    span {
+      &:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@mixin overflow-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+// Vendor prefix for placeholders
+
+@mixin placeholder {
+  $placeholders: ":-moz" ":-webkit-input" "-moz" "-ms-input";
+
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+// Disabled placeholders
+
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+%unselectable {
+  @include unselectable;
+}
+
+{% case settings.icon %}
+  {% when 'icon_solid' %}
+    {% assign icon_down_caret = '\e902' %}
+    {% assign icon_x = '\e903' %}
+  {% when 'icon_outline' %}
+    {% assign icon_down_caret = '\e904' %}
+    {% assign icon_x = '\e905' %}
+  {% when 'icon_brush' %}
+    {% assign icon_down_caret = '\e900' %}
+    {% assign icon_x = '\e901' %}
+{% endcase %}
+
+@mixin arrow($color: transparent) {
+  font-family: 'flex-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '{{ icon_down_caret }}';
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+
+%arrow {
+  @include arrow;
+}
+
+@mixin block {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+%block {
+  @include block;
+}
+
+// Delete icon
+
+@mixin delete {
+  @extend %unselectable;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba($black, 0.2);
+  border: none;
+  border-radius: $radius-rounded;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  @include flex-grow(0);
+  @include flex-shrink(0);
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+
+  &::before,
+  &::after {
+    background-color: $white;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+
+  &::before {
+    height: 2px;
+    width: 50%;
+  }
+
+  &::after {
+    height: 50%;
+    width: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($black, 0.3);
+  }
+
+  &:active {
+    background-color: rgba($black, 0.4);
+  }
+
+  // Sizes
+  &.is-small {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px;
+  }
+
+  &.is-medium {
+    height: 24px;
+    max-height: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    width: 24px;
+  }
+
+  &.is-large {
+    height: 32px;
+    max-height: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    width: 32px;
+  }
+}
+
+%delete {
+  @include delete;
+}
+
+// Close icon
+
+@mixin close {
+  @extend %unselectable;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba($black, 0.2);
+  border: none;
+  border-radius: $radius-rounded;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  @include inline-flexbox();
+  @include flex-grow(0);
+  @include flex-shrink(0);
+  @include justify-content(center);
+  @include align-items(center);
+  position: relative;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  width: 20px;
+  padding: 0;
+  color: currentColor;
+  transition: 0.2s linear;
+
+  .icon {
+    fill: currentColor;
+    height: 50%;
+    max-height: 50%;
+    max-width: 50%;
+    min-height: 50%;
+    min-width: 50%;
+    width: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($black, 0.3);
+  }
+
+  &:active {
+    background-color: rgba($black, 0.4);
+  }
+
+  // Sizes
+  &.is-small {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px;
+  }
+
+  &.is-medium {
+    height: 24px;
+    max-height: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    width: 24px;
+  }
+
+  &.is-large {
+    height: 32px;
+    max-height: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    width: 32px;
+  }
+}
+
+%close {
+  @include close;
+}
+
+// Animated loader
+
+@mixin loader {
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid $grey-lighter;
+  border-radius: $radius-rounded;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+
+%loader {
+  @include loader;
+}
+
+@mixin overlay($offset: 0) {
+  bottom: $offset;
+  left: $offset;
+  position: absolute;
+  right: $offset;
+  top: $offset;
+}
+
+%overlay {
+  @include overlay;
+}
+
+// Product stickers
+
+@mixin sale-sticker {
+  background-color: $sale-sticker-color;
+  color: set-text-color($sale-sticker-color);
+}
+
+@mixin new-sticker {
+  background-color: $new-sticker-color;
+  color: set-text-color($new-sticker-color);
+}
+
+@mixin bestseller-sticker {
+  background-color: $bestseller-sticker-color;
+  color: set-text-color($bestseller-sticker-color);
+}
+
+@mixin comingsoon-sticker {
+  background-color: $comingsoon-sticker-color;
+  color: set-text-color($comingsoon-sticker-color);
+}
+
+@mixin staffpick-sticker {
+  background-color: $staffpick-sticker-color;
+  color: set-text-color($staffpick-sticker-color);
+}
+
+@mixin preorder-sticker {
+  background-color: $preorder-sticker-color;
+  color: set-text-color($preorder-sticker-color);
+}

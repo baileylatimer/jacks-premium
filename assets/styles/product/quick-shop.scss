@@ -1,0 +1,127 @@
+/* # Quick shop
+================================================== */
+
+$quick-shop-popup-bg: {{ settings.qs_popup_color}};
+
+.quick-shop__popup,
+.quickshop-forms__container {
+  display: none;
+}
+
+.quick-shop {
+
+  .product-gallery,
+  .product-gallery__nav {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  &.quick-shop--loaded {
+    .product-gallery,
+    .product-gallery__nav {
+      opacity: 1;
+    }
+  }
+}
+
+.quick-shop__buttons {
+  z-index: 12;
+}
+
+// Popup elements
+
+.quickshop__gallery--right {
+  @include flex-direction(row-reverse);
+}
+
+.quick-shop__popup {
+  padding: 40px 10px;
+
+  .fancybox-close-small svg {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 50%;
+  }
+
+  .modal_price {
+    font-size: 1.2em;
+  }
+
+  .product_form {
+    padding: 20px 0;
+  }
+
+  .purchase-details__buttons {
+
+    @include respond-to('medium-down') {
+      margin-top: 12px;
+    }
+  }
+
+  .select,
+  .select select {
+
+    @include respond-to('medium-down') {
+      width: auto;
+    }
+  }
+
+  .select-container {
+    clear: both;
+    overflow: hidden; // Used to display dynamically generated selects properly
+  }
+
+  .select {
+    display: block;
+    float: left;
+    clear: both;
+    margin-bottom: 10px;
+  }
+}
+
+.quick-shop__gallery {
+  padding-right: 10px;
+}
+
+.quick-shop__text-wrap {
+  padding-left: 10px;
+}
+
+// Quick shop product gallery
+.quick-shop .product-gallery__thumbnails--bottom-thumbnails {
+  margin-top: 20px;
+}
+
+.quick-shop .product-gallery__nav {
+  @include respond-to('medium-down') {
+    margin-top: 60px;
+  }
+}
+
+.quick-shop .quickshop__arrows--false {
+  @include respond-to('medium-up') {
+    .flickity-viewport:hover .flickity-prev-next-button,
+    .flickity-prev-next-button {
+      display: none !important; // Ensure navigation arrows do not display
+    }
+  }
+}
+
+// Fancybox elements
+
+.quick-shop__lightbox .fancybox-content {
+  width: 90%;
+  max-width: 900px;
+  background-color: $quick-shop-popup-bg;
+  cursor: pointer !important;
+}
+
+// Quick shop sale banners
+
+.quick-shop__popup .sticker-shape-square .sticker-holder__content,
+.quick-shop__popup .sticker-shape-round .sticker-holder__content {
+  max-width: 100%;
+  font-size: 13px;
+}
+
+
+

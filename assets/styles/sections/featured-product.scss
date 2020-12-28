@@ -1,0 +1,25 @@
+/* # Featured product
+================================================== */
+
+.featured-product {
+
+  .product-thumbnail__title {
+    display: block;
+    padding-top: 0.5em;
+  }
+
+  .slideshow-enabled--false {
+
+    .product-gallery__image:not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+.featured-product-section {
+
+  .select,
+  .select select {
+    height: 44px;
+  }
+}

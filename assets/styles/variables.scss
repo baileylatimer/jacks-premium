@@ -1,0 +1,191 @@
+/* # Variables
+================================================== */
+
+$site-max-width: 1200px;
+$site-width: 95%;
+$transition-default: all 0.3s ease;
+
+$gutter: 20px;
+$half-gutter: $gutter / 2;
+
+// Responsiveness
+
+$grid-small: 480px;
+$grid-medium: 798px;
+$grid-large: 1024px;
+$grid-widescreen: 1400px;
+
+$small: 'small';
+$small-down: 'small-down';
+$small-up: 'small-up';
+$medium: 'medium';
+$medium-down: 'medium-down';
+$medium-up: 'medium-up';
+$large: 'large';
+$large-down: 'large-down';
+$large-up: 'large-up';
+$widescreen-up: 'widescreen-up';
+$widescreen-down: 'widescreen-down';
+
+// The `$breakpoints` list is used to build our media queries.
+// You can use these in the media-query mixin.
+$breakpoints: (
+  $small-down '(max-width: #{$grid-small})',
+  $small '(min-width: #{$grid-small + 1}) and (max-width: #{$grid-medium})',
+  $small-up '(min-width: #{$grid-small + 1})',
+  $medium-down '(max-width: #{$grid-medium})',
+  $medium '(min-width: #{$grid-medium + 1}) and (max-width: #{$grid-large})',
+  $medium-up '(min-width: #{$grid-medium + 1})',
+  $large-down '(max-width: #{$grid-large})',
+  $large '(min-width: #{$grid-large + 1}) and (max-width: #{$grid-widescreen})',
+  $large-up '(min-width: #{$grid-large + 1})',
+  $widescreen-down '(max-width: #{$grid-widescreen})',
+  $widescreen-up '(min-width: #{$grid-widescreen + 1})'
+);
+
+// Fonts
+
+$headline-font-size: {{ settings.heading_size }};
+$nav-font-size: {{ settings.nav_font_size}}px;
+$footer-font-size: {{ settings.footer_font_size }};
+
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+
+$family-primary: $family-sans-serif !default;
+$family-secondary: $family-sans-serif !default;
+$family-code: $family-monospace !default;
+
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
+$size-8: 0.5rem !default;
+
+$size-very-small: $size-8 !default;
+$size-small: $size-7 !default;
+$size-normal: $size-6 !default;
+$size-medium: $size-5 !default;
+$size-large: $size-4 !default;
+
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
+
+// Colors
+
+$black: hsl(0, 0%, 4%) !default;
+$black-bis: hsl(0, 0%, 7%) !default;
+$black-ter: hsl(0, 0%, 14%) !default;
+
+$grey-darker: hsl(0, 0%, 21%) !default;
+$grey-dark: hsl(0, 0%, 29%) !default;
+$grey: hsl(0, 0%, 48%) !default;
+$grey-light: hsl(0, 0%, 71%) !default;
+$grey-lighter: hsl(0, 0%, 86%) !default;
+
+$white-ter: hsl(0, 0%, 96%) !default;
+$white-bis: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+$orange: hsl(14, 100%, 53%) !default;
+$yellow: hsl(48, 100%, 67%) !default;
+$green: hsl(141, 71%, 48%) !default;
+$turquoise: hsl(171, 100%, 41%) !default;
+$cyan: hsl(204, 86%, 53%) !default;
+$blue: hsl(217, 71%, 53%) !default;
+$purple: hsl(271, 100%, 71%) !default;
+$red: hsl(348, 100%, 61%) !default;
+
+// General colors
+
+$background: {{ settings.shop_bg_color }};
+
+$border: {{ settings.border_color }} !default;
+$border-hover: lighten({{ settings.border_color }}, 0.5) !default;
+
+// Text colors
+
+$text: {{ settings.regular_color }} !default;
+$text-light-opacity: {{ settings.regular_color | color_modify: 'alpha', 0.3 }};
+$text-invert: set-text-color($text) !default;
+$text-light: $grey !default;
+$text-strong: $grey-darker !default;
+
+// Code colors
+
+$code: $red !default;
+$code-background: $background !default;
+
+$pre: $text !default;
+$pre-background: $background !default;
+
+// Link colors
+
+$link: {{ settings.link_color }} !default;
+$link-invert: set-text-color($link) !default;
+$link-visited: {{ settings.link_color }} !default;
+
+$link-hover: {{ settings.link_hover_color }} !default;
+$link-hover-border: {{ settings.link_hover_color }} !default;
+
+$link-focus: {{ settings.link_hover_color }} !default;
+$link-focus-border: {{ settings.link_hover_color }} !default;
+
+$link-active: {{ settings.link_hover_color }} !default;
+$link-active-border: {{ settings.link_hover_color }} !default;
+
+$tag-solid-light: {{ settings.link_color | color_modify: 'alpha', 0.10 }} !default;
+$tag-solid-dark: {{ settings.link_color | color_modify: 'alpha', 1 }} !default;
+
+// Header colors
+
+$header-logo-text-color: {{ settings.logo_text }};
+$header-link: {{ settings.header_link_color }};
+$header-link-hover: {{ settings.header_link_hover_color }};
+$header-background: {{ settings.header_background }};
+
+// Thumbnails
+
+$sale-sticker-color: {{ settings.banner_sale }};
+$new-sticker-color: {{ settings.banner_new }};
+$bestseller-sticker-color: {{ settings.banner_bestseller }};
+$comingsoon-sticker-color: {{ settings.banner_comingsoon }};
+$staffpick-sticker-color: {{ settings.banner_staffpick }};
+$preorder-sticker-color: {{ settings.banner_preorder }};
+$thumbnail-text-alignment: {{ settings.thumbnail_text_alignment }};
+
+// Transition effect variables
+
+$transition-speed: 0.3s;
+$transition-zoom: scale(1.1);
+
+// Miscellaneous
+
+$easing: ease-out !default;
+$radius-small: 2px !default;
+$radius: 4px !default;
+$radius-large: 6px !default;
+$radius-rounded: 290486px !default;
+$speed: 86ms !default;
+$truncation-fade: linear-gradient(to bottom, {{ settings.shop_bg_color | color_to_rgb | color_modify: 'alpha', 0 }}, {{ settings.shop_bg_color | color_to_rgb | color_modify: 'alpha', 1 }});
+
+// Box Shadows
+$overlay-box-shadow: 0 0 0 999em rgba(0,0,0,0.8);
+
+//Menu dropdowns
+
+$drop-down-menu-heading-font-size: {{ settings.dropdown_heading_font_size }}px !default;
+$drop-down-menu-font-size: {{ settings.dropdown_font_size }}px !default;
+$drop-down-menu-font-style: {{ settings.dropdown_font_style }} !default;
+$drop-down-menu-hover-color: {{ settings.dropdown_link_hover_color }} !default;
+$drop-down-menu-active-color: {{ settings.dropdown_link_color }} !default;
+$drop-down-menu-letter-spacing: {{ settings.dropdown_letter_spacing }}px !default;

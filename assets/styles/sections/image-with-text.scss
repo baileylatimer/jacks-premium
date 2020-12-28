@@ -1,0 +1,84 @@
+/* # Image with text
+================================================== */
+
+.image-with-text {
+
+  .has-gutter-enabled {
+
+    .image-with-text__column:not(:last-child) {
+      @include respond-to('medium-down') {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.image-with-text__image-column {
+
+  .image-element__wrap {
+    width: 100%;
+  }
+
+  &.has-image-crop:not(.image-crop--none) {
+    @include respond-to('medium-down') {
+      height: 100vw;
+    }
+  }
+}
+
+.image-with-text__text-column {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &.has-background {
+    padding: 30px;
+  }
+
+  @include respond-to('medium-down') {
+    @include order(1);
+  }
+}
+
+.image-with-text__container {
+  width: 100%;
+}
+
+.image-with-text__heading {
+  padding-bottom: 20px;
+  line-height: 1.2;
+
+  // Sizes
+  &.is-small {
+    font-size: floor($headline-font-size*0.8px);
+  }
+
+  &.is-regular {
+    font-size: floor($headline-font-size*1px);
+  }
+
+  &.is-large {
+    font-size: floor($headline-font-size*1.5px);
+  }
+}
+
+.image-with-text__link {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.image-with-text__link:hover .image-with-text__image,
+.image-with-text__link:hover svg {
+  transform: $transition-zoom;
+}
+
+.image-with-text__image,
+.image-with-text__link svg {
+  transition: transform $transition-speed ease-in-out;
+}
+
+.block__image-with-text .has-gutter-enabled .image-with-text__column {
+  @include respond-to('medium-down') {
+    margin-bottom: 20px;
+  }
+}

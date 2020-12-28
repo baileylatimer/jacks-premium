@@ -1,0 +1,27 @@
+/* # Functions
+================================================== */
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return {{ settings.regular_color }}; // Lighter background, return dark color
+  } @else {
+    @return #ffffff; // Darker background, return light color
+  }
+}
+
+@function set-text-hover-color($color) {
+  @if (lightness($color) > 50) {
+    @return lighten({{ settings.regular_color }}, 40%); // Lighter background, return dark color
+  } @else {
+    @return darken(#ffffff, 40%); // Darker background, return light color
+  }
+}
+
+@function secondary-button-color($color) {
+  @if (lightness($color) > 80) {
+    @return {{ settings.regular_color }}; // Too light, send something darker
+  } @else {
+    @return $color; // Normal color
+  }
+}
+

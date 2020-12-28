@@ -1,0 +1,101 @@
+/* # Banner
+================================================== */
+
+.banner__wrapper {
+  overflow: hidden;
+  position: relative;
+  max-height: 100vh;
+
+  img {
+    @include object-fit(cover);
+    height: 100%;
+  }
+
+  &.is-small {
+
+    .image-element__wrap {
+      height: 30vh;
+
+      @include respond-to('medium-down') {
+        height: auto;
+      }
+    }
+  }
+
+  &.is-medium {
+
+    .image-element__wrap {
+      height: 60vh;
+
+      @include respond-to('medium-down') {
+        height: auto;
+      }
+    }
+  }
+
+  &.is-large {
+    .image-element__wrap {
+      height: 90vh;
+
+      @include respond-to('medium-down') {
+        height: auto;
+      }
+    }
+  }
+}
+
+.banner__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include prefix(transform, translate(-50%, -50%), ms webkit spec);
+  margin: auto;
+  z-index: 3;
+  width: 100%;
+}
+
+.banner__text {
+  margin: auto;
+  max-width: 900px;
+}
+
+.banner__heading {
+  font-family: {{ settings.banner_heading__font.family }}, {{ settings.banner_heading__font.fallback_families }};
+  font-weight: {{ settings.banner_heading__font.weight }};
+  font-style: {{ settings.banner_heading__font.style }};
+  font-size: {{ settings.banner_heading_size }}px;
+  text-transform: {{ settings.banner_heading_style }};
+  color: {{ settings.banner_heading_color }};
+
+  @include respond-to('large-down') {
+    font-size: 2.5em;
+  }
+
+  @include respond-to('small-down') {
+    font-size: 2em;
+  }
+}
+
+.banner__subheading {
+  font-family: {{ settings.banner_text__font.family }}, {{ settings.banner_text__font.fallback_families }};
+  font-weight: {{ settings.banner_text__font.weight }};
+  font-style: {{ settings.banner_text__font.style }};
+  font-size: {{ settings.banner_text_size }}px;
+  letter-spacing: {{ settings.banner_text_letter_spacing }}px;
+  color: {{ settings.banner_heading_color }};
+}
+
+.dark-overlay-true {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

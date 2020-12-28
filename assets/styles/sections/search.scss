@@ -1,0 +1,367 @@
+/* # Search
+================================================== */
+
+$search-border: thin solid $border !default;
+$search-border-radius: 0;
+
+.search-form {
+  position: relative;
+
+  @include respond-to('medium-down') {
+    padding-top: $gutter;
+  }
+
+  .search__fields {
+    input[type="text"] {
+      outline: none;
+      border-radius: $search-border-radius;
+      border: $search-border;
+      color: $grey;
+
+      &:active,
+      &:focus {
+        color: $black;
+        box-shadow: none;
+      }
+    }
+
+    [data-icon="search"] {
+      padding: 5px;
+      color: $black;
+    }
+
+    .field {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* # Search page - default view and results
+================================================== */
+
+.search-result__image-container {
+  @include respond-to('small-down') {
+    padding-bottom: 20px;
+  }
+}
+
+.search-result__description {
+  @include flexbox();
+  @include justify-content(center);
+  @include flex-direction(column);
+}
+
+.search__content .search__results-wrapper {
+  position: relative;
+}
+
+/* # Search overlay & Popup
+================================================== */
+
+{% assign dropdown_alpha = settings.dropdown_background_opacity | divided_by: 100.00 %}
+
+$search-overlay-bg-color: {{ settings.dropdown_background | color_modify: 'alpha', dropdown_alpha }};
+$search-menu-link: {{ settings.dropdown_link_color }};
+$search-menu-hover-link: {{ settings.dropdown_link_hover_color }};
+$search-menu-title: {{ settings.search_heading_color }};
+$search-popup-bg-color: {{ settings.search_popup_bg }};
+$search-item-border: {{ settings.border_color }};
+
+// Shared
+
+[data-show-search-trigger] {
+  cursor: pointer;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+.search-overlay__title,
+.search-popup__title {
+  color: $search-menu-title;
+}
+
+.search-overlay__form,
+.search-popup__form {
+  padding: 20px 0;
+
+  .field:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.search-menu__list {
+  display: inline;
+  list-style: none;
+  padding-left: 5px;
+
+  @include respond-to('medium-down') {
+    padding-left: 0;
+    padding-top: 5px;
+  }
+}
+
+.search-menu__item {
+  display: inline-block;
+  padding: 0 5px;
+
+  @include respond-to('medium-down') {
+    width: 100%;
+    padding: 0;
+  }
+
+  a,
+  a:visited {
+    color: $search-menu-link;
+
+    &:hover,
+    &:focus {
+      color: $search-menu-hover-link
+    }
+  }
+}
+
+// Overlay
+
+.search-overlay {
+  background-color: $search-overlay-bg-color;
+  color: $search-menu-title;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  width: 100%;
+  z-index: 60;
+
+  &.sticky-search {
+    position: fixed;
+  }
+
+  &.is-opened {
+    display: block;
+  }
+
+  .search-menu {
+
+    @include respond-to('large-up') {
+      max-width: 70%;
+      margin: 0px auto;
+    }
+  }
+}
+
+.search-overlay__close {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.search-overlay__wrapper {
+  padding: 60px 0;
+}
+
+// Popup
+
+.search-popup {
+  display: none;
+  background-color: $search-popup-bg-color;
+  color: $search-menu-title;
+  max-width: 600px;
+  padding: 60px 0 45px;
+  font-size: 1.2em;
+
+  .search-overlay__wrapper {
+    padding: 0 45px;
+  }
+
+  .search-menu {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+  }
+
+  .search-menu__title {
+    padding-bottom: 20px;
+
+    @include respond-to('medium-down') {
+      padding-bottom: 0;
+    }
+  }
+
+  .search-menu__item {
+    width: 45%;
+    padding: 0;
+    display: block;
+
+    @include respond-to('medium-down') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.search-popup__form {
+
+  @include respond-to('large-up') {
+    margin: 0px auto;
+  }
+}
+
+/* # Search autocomplete
+================================================== */
+
+.search__results-wrapper {
+  display: none;
+  position: relative;
+}
+
+.search__results {
+  width: 100%;
+  right: 0;
+  left: auto;
+  z-index: 30;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 8px rgba($black, 0.1);
+
+  @include respond-to('medium-down') {
+    position: relative;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid {{ settings.border_color }};
+    overflow: hidden;
+    &:nth-child(-n+2) {
+      border-top: none;
+    }
+  }
+
+  li a,
+  li .no-results {
+    @include flexbox();
+    @include align-items(center);
+    color: {{ settings.regular_color }};
+    font-size: 15px;
+    padding: 10px 0;
+
+    &:hover {
+      color: $header-link-hover;
+    }
+  }
+
+  .thumbnail {
+    padding: 0;
+    max-width: 12%;
+    margin-right: 20px;
+
+    @include respond-to('medium-down') {
+      max-width: 20%;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  .all-results .icon {
+    margin-left: 4px;
+  }
+}
+
+// Vertical header search
+
+.vertical-header__block .search__results-wrapper {
+  background-color: white;
+  max-width: 40%;
+}
+
+.header--vertical .vertical-search__title {
+  display: block;
+}
+
+.vertical-search__title {
+  padding: 10px 20px 0;
+  display: none; // ensure hidden within other search dropdowns
+}
+
+// 404 page
+.page-not-found-page .content .search__results {
+  margin: 0;
+}
+
+/* #Mobile search
+================================================== */
+
+.mobile-search {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999999;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+
+  @include respond-to('medium-up') {
+    display: none !important; // Ensure it does not display on larger screens
+  }
+
+  form {
+    background-color: white;
+    margin: 0;
+    padding: 10px 20px 0;
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
+  }
+
+  input#q {
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    border: 0;
+    border-bottom: 1px solid {{ settings.border_color }};
+    &:focus,
+    &:active {
+      border-bottom: 1px solid {{ settings.border_color }};
+    }
+  }
+
+  .control .icon {
+    top: 4px;
+    transform: none;
+    padding: 0;
+    pointer-events: initial;
+    z-index: 2;
+    cursor: pointer;
+    color: $input-icon-active-color;
+  }
+
+  .search__results-wrapper {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .search__results {
+    background-color: white;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .item-result:last-child {
+    padding-bottom: 10px;
+  }
+}

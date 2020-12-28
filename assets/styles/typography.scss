@@ -1,0 +1,269 @@
+/* # Typography
+================================================== */
+
+// Base typography
+
+body {
+  font-family: {{ settings.regular__font.family }}, {{ settings.regular__font.fallback_families }};
+  font-weight: {{ settings.regular__font.weight }};
+  font-size: {{ settings.regular_font_size }}px;
+  color: {{ settings.regular_color }};
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+// Headings
+
+h1,
+.h1 {
+  @include headline-style($headline-font-size);
+}
+
+h2,
+.h2 {
+  @include headline-style(floor($headline-font-size*0.9));
+}
+
+h3,
+.h3 {
+  @include headline-style(floor($headline-font-size*0.8));
+}
+
+h4,
+.h4 {
+  @include headline-style(floor($headline-font-size*0.7));
+}
+
+h5,
+.h5 {
+  @include headline-style(floor($headline-font-size*0.65));
+}
+
+h6,
+.h6 {
+  @include headline-style(floor($headline-font-size*0.6));
+}
+
+a {
+  color: $link;
+  cursor: pointer;
+  text-decoration: none;
+
+  strong {
+    color: currentColor;
+  }
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+sub {
+  font-size: smaller;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+small {
+  font-size: smaller;
+}
+
+// Blockquotes
+
+blockquote {
+  font-size: larger;
+  line-height: 1.2;
+  font-style: italic;
+  cite {
+    display: block;
+    font-size: smaller;
+    &:before {
+      content: "\2014 \0020";
+    }
+  }
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left,
+.text-align-start {
+  text-align: left;
+}
+
+.text-align-right,
+.text-align-end {
+  text-align: right;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+.is-capitalized {
+  text-transform: capitalize;
+}
+
+.is-lowercase {
+  text-transform: lowercase;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+.is-italic {
+  font-style: italic !important;
+}
+
+.text-is-large {
+  font-size: larger;
+}
+
+.text-is-medium {
+  font-size: initial;
+}
+
+.text-is-small {
+  font-size: smaller;
+}
+
+// Titles
+
+$title-color: {{ settings.heading_color }} !default;
+$title-size: {{ settings.heading_size }}px !default;
+$title-weight: {{ settings.heading__font.weight }} !default;
+$title-line-height: 1.125 !default;
+$title-strong-color: inherit !default;
+$title-strong-weight: inherit !default;
+$title-sub-size: 0.75em !default;
+$title-sup-size: 0.75em !default;
+
+$subtitle-color: {{ settings.heading_color }} !default;
+$subtitle-size: $size-5 !default;
+$subtitle-weight: $weight-normal !default;
+$subtitle-line-height: 1.25 !default;
+$subtitle-strong-color: inherit !default;
+$subtitle-strong-weight: $weight-semibold !default;
+$subtitle-negative-margin: -1.25rem !default;
+
+.title,
+.subtitle {
+  @extend %block;
+
+  overflow-wrap: break-word;
+
+  em,
+  span {
+    font-weight: inherit;
+  }
+
+  sub {
+    font-size: $title-sub-size;
+  }
+
+  sup {
+    font-size: $title-sup-size;
+  }
+
+  .tag {
+    vertical-align: middle;
+  }
+}
+
+.title {
+  color: $title-color;
+  font-size: $title-size;
+  font-weight: $title-weight;
+  line-height: $title-line-height;
+
+  strong {
+    color: $title-strong-color;
+    font-weight: $title-strong-weight;
+  }
+
+  & + .highlight {
+    margin-top: -0.75rem;
+  }
+
+  &:not(.is-spaced) + .subtitle:not(.modal_price) {
+    margin-top: $subtitle-negative-margin;
+  }
+
+  // Sizes
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+
+    &.is-#{$i} {
+      font-size: $size;
+    }
+  }
+}
+
+.subtitle {
+  color: $subtitle-color;
+  font-size: $subtitle-size;
+  font-weight: $subtitle-weight;
+  line-height: $subtitle-line-height;
+
+  strong {
+    color: $subtitle-strong-color;
+    font-weight: $subtitle-strong-weight;
+  }
+
+  &:not(.is-spaced) + .title {
+    margin-top: $subtitle-negative-margin;
+  }
+
+  // Sizes
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+
+    &.is-#{$i} {
+      font-size: $size;
+    }
+  }
+}
+
+.large-heading {
+  padding-bottom: 40px;
+}
+
+.signature {
+  font-family: fantasy;
+}
+
+// Divider
+
+.heading-divider:not(.heading-divider--vertical) {
+  border-style: solid;
+  border-color: {{ settings.divider_color }};
+  border-width: {%- if settings.heading_divider_width == 1 -%}thin{%- else -%}{{settings.heading_divider_width }}px{%- endif -%};
+  border-bottom: none;
+}
+
+.heading-divider--short {
+  width: 70px;
+}
+
+.heading-divider--long {
+  width: 100%;
+}
+
+.heading-divider--vertical {
+  background: {{ settings.divider_color }};
+  width: {{settings.heading_divider_width}}px;
+  height: 40px;
+}

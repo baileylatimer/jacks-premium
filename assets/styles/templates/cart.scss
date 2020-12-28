@@ -1,0 +1,553 @@
+/* # Cart
+================================================== */
+
+$sale-color: {{ settings.sale_color }};
+$subtotal-bg-color: #F2F2F2;
+
+//Enabled quantity box
+.quantity-box-enabled-true {
+  .cart__product-title {
+    width: 49%;
+  }
+
+  .cart__price-title,
+  .cart__quantity-title,
+  .cart__total-title {
+    width: 17%;
+  }
+}
+
+//Disabled quantity box
+.quantity-box-enabled-false {
+
+  .cart__product-title {
+    width: 66%;
+  }
+
+  .cart__price-title,
+  .cart__total-title {
+    width: 17%;
+  }
+
+  .cart__description {
+    width: 60%;
+    @include respond-to('small-down') {
+      width: 100%;
+    }
+  }
+}
+
+// Table headings
+
+.cart__headings {
+  @include flexbox();
+  @include justify-content(space-between);
+  width: 100%;
+  padding-bottom: 10px;
+
+  @include respond-to('large-down') {
+    display: none;
+  }
+}
+
+.cart__price-title,
+.cart__quantity-title,
+.cart__total-title {
+  text-align: center;
+}
+
+// Cart items
+
+.cart__card {
+  @include flexbox();
+  @include align-items(center);
+  border-top: 1px solid $border;
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  @include respond-to('medium-down') {
+    @include align-items(flex-start);
+  }
+}
+
+.item__title {
+  font-size: 1.25em;
+}
+
+.item__properties {
+  padding-top: 20px;
+
+  @include respond-to($medium-down) {
+    padding-top: 0px;
+    font-size: 0.7em;
+  }
+}
+
+.cart__info {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-items(center);
+  width: 85%;
+
+  @include respond-to($medium-down) {
+    @include flex-direction(column);
+    width: 60%;
+    padding-left: 20px;
+  }
+}
+
+.cart__total,
+.cart__price {
+  @include flex-direction(row);
+  text-align: center;
+
+  span {
+    display: block;
+  }
+}
+
+.cart__total {
+  @include respond-to($medium-down) {
+    display: none;
+  }
+}
+
+.cart__image {
+  width: 15%;
+  @include respond-to($medium-down) {
+    width: 30%;
+  }
+}
+
+.cart__description {
+  width: 40%;
+  padding: 0 20px;
+  @include respond-to($medium-down) {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.cart__total,
+.cart__quantity,
+.cart__price {
+  width: 20%;
+  @include respond-to($medium-down) {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.cart__price .sale,
+.cart__price .original-price {
+  @include respond-to('medium-down') {
+    display: inline-block;
+  }
+}
+
+.cart__quantity {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  position: relative;
+
+  .purchase-details__quantity.product-quantity-box {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .quantity-wrapper.quantity-style--box .quantity-input-control--fill {
+    width: auto;
+  }
+
+  @include respond-to('large-up') {
+    @include justify-content(center);
+
+    .quantity-input {
+      width: 50px;
+    }
+  }
+
+  @include respond-to($medium-down) {
+    margin-top: 20px;
+
+    .purchase-details__quantity {
+      width: 50%;
+      max-width: 100px;
+      margin-top: 0;
+    }
+  }
+
+  @include respond-to('small-down') {
+
+    .quantity-style--stacked .quantity-input {
+      width: 65px;
+    }
+  }
+
+  .quantity-style--box {
+    max-width: 75%;
+    margin: 0 auto;
+    @include respond-to('medium-down') {
+      max-width: 100%;
+    }
+  }
+}
+
+.cart__quantity-warning {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cart__remove {
+  position: absolute;
+  right: 0;
+  top: 10%;
+
+  @include respond-to('medium-down') {
+    position: static;
+    margin-left: 5px;
+  }
+}
+
+// Line item discounts
+.original-price {
+  opacity: 0.2;
+}
+
+.line-item-discount__container {
+  color: $sale-color;
+  background: rgba(199, 0, 0, 0.1);
+  border-radius: 3px;
+  font-size: 0.8em;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+// Total pricing
+
+.cart__cost-summary {
+  background: $subtotal-bg-color;
+  padding: 20px;
+  margin-top: 20px;
+
+  @include respond-to('medium-down') {
+    padding: 20px 15px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    @include align-items(center);
+
+    .offset-by-eight {
+      left: 0;
+    }
+  }
+
+  .cart__discount-title {
+    @include respond-to('medium-down') {
+      max-width: 75%;
+    }
+  }
+
+  .cart__discounts p,
+  .cart__total-savings p {
+    color: $sale-color;
+  }
+
+  .cart__subtotal-container p {
+    font-weight: bold;
+  }
+
+  .cart__row {
+    @include flexbox();
+    @include justify-content(space-between);
+    padding-top: 14px;
+    text-align: right;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    @include respond-to('medium-down') {
+      text-align: left;
+    }
+
+    .cart__row-description {
+      width: 60%;
+
+      @include respond-to('medium-down') {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.cart__savings {
+  @include justify-content(flex-end);
+  padding: 20px 0;
+  text-align: right;
+
+  @include respond-to($medium-down) {
+    @include justify-content(center);
+    font-size: 1.5em;
+    padding: 20px 0 0;
+  }
+}
+
+.cart__savings,
+.sale {
+  color: {{ settings.sale_color }};
+}
+
+.was-price {
+  color: {{ settings.was_price_color }};
+}
+
+// Cart notes and messages
+
+.cart__notes {
+  width: 100%;
+}
+
+.cart__tos {
+  padding-bottom: 20px;
+
+  .tos_agree {
+    margin-right: 5px;
+  }
+}
+
+.cart__view-terms-container {
+  display: inline-block;
+}
+
+.cart__cart-message {
+  margin: 20px 0 0;
+  text-align: right;
+  display: block;
+
+  @include respond-to($medium-down) {
+    text-align: center;
+  }
+}
+
+// Continue Shopping
+
+.cart__featured-links {
+  min-width: 236px; /* Set a minimum width to match the width of the checkout button */
+  margin-top: 15px;
+  text-align: center;
+
+  @include respond-to($medium-down) {
+    min-width: 100%;
+  }
+}
+
+// Checkout
+
+.cart__checkout {
+  min-width: 236px; /* Set a minimum width to match the width of additional checkout buttons */
+  margin-left: 20px;
+
+  .checkout {
+    @include btn-add-to-cart;
+    width: 100%;
+    min-height: 42px; /* Set a minimum height to match the height of additional checkout buttons */
+
+    @include respond-to($medium-down) {
+      min-height: 52px;
+      margin-bottom: 15px;
+    }
+
+    &.button .icon {
+      width: 1em;
+      height: 1em;
+
+      &:first-child:last-child {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  @include respond-to($medium-down) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.cart__checkout-elements {
+  @include justify-content(flex-end);
+
+  @include respond-to($medium-down) {
+    @include justify-content(center);
+  }
+}
+
+.cart__buttons {
+  @include respond-to($medium-down) {
+    @include flex-direction(column-reverse);
+    @include flex-wrap(wrap);
+  }
+}
+
+// Additional checkout buttons
+
+.additional-checkout-buttons {
+  width: 100%;
+  margin-top: 10px;
+}
+
+[data-shopify-buttoncontainer] {
+  @include justify-content(flex-end);
+}
+
+// Shipping calculator
+
+.shipping-calculator {
+
+  select,
+  .select {
+    width: 100%;
+  }
+
+  @include respond-to($medium-down) {
+    @include flex-direction(column);
+
+    .control {
+      min-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .select,
+    select,
+    input {
+      @include respond-to('medium-down') {
+        height: 3.25em;
+      }
+    }
+  }
+}
+
+.cart__shipping-calculator {
+  width: 100%;
+
+  @include respond-to('medium-down') {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .cart__shipping-calculator-form {
+    @include respond-to('medium-down') {
+      text-align: left;
+    }
+
+    .select {
+      @include respond-to('medium-down') {
+        width: 100%;
+      }
+    }
+  }
+
+  .cart__shipping-title {
+    padding-bottom: 50px;
+
+    @include respond-to('medium-down') {
+      text-align: center;
+    }
+  }
+
+  label {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    opacity: 0.5;
+
+    @include respond-to('medium-down') {
+      padding-bottom: 10px;
+    }
+  }
+
+  .calc-field {
+    margin-left: 0;
+    margin-right: 20px;
+    @include flexbox();
+    @include flex-direction(column);
+
+    @include respond-to('medium-down') {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+#get-rates-container {
+  @include respond-to('medium-down') {
+    width: 100%;
+  }
+}
+
+.get-rates {
+
+  @include respond-to($medium-down) {
+    margin-top: 10px;
+    @include flex(1);
+  }
+}
+
+.shipping-calculator__response-container {
+  display: none;
+}
+
+.heading-wrapper--shipping-rates {
+  margin-left: 0;
+  margin-right: 0;
+
+  @include respond-to('medium-down') {
+    @include align-items(center);
+  }
+}
+
+.shipping-rates__title {
+  padding-top: 45px;
+
+  @include respond-to('medium-down') {
+    padding-top: 25px;
+  }
+}
+
+.shipping-calculator__response {
+
+  ul > li {
+    padding-bottom: 20px;
+    @include flexbox();
+    @include align-items(center);
+
+    @include respond-to('medium-down') {
+      @include justify-content(center);
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+
+  .shipping-calculator__message {
+    padding-bottom: 20px;
+  }
+}
+
+.shipping_calculator__response--visible {
+  display: block;
+}
+
+.cart__price .discount-area span {
+  display: inline;
+}

@@ -1,0 +1,98 @@
+/* # Heading
+================================================== */
+
+.heading-section__preheading {
+  font-family: {{ settings.preheading_font.family }}, {{ settings.preheading_font.fallback_families }};
+  font-size: {{ settings.preheading_size }}px;
+  font-weight: {{ settings.preheading_font.weight }};
+  font-style: {{ settings.preheading_font.style }};
+  text-transform: {{ settings.preheading_style }};
+}
+
+.heading-section__subheading {
+  font-family: {{ settings.subheading_font.family }}, {{ settings.subheading_font.fallback_families }};
+  font-size: {{ settings.subheading_size }}px;
+  font-weight: {{ settings.subheading_font.weight }};
+  font-style: {{ settings.subheading_font.style }};
+  text-transform: {{ settings.subheading_style }};
+}
+
+.heading-section__content {
+  padding: 1.5rem 0;
+}
+
+// Vertical spacing
+
+.vertical-spacing-medium {
+
+  .heading-section__preheading + .heading-section__heading {
+    padding-top: 10px;
+  }
+
+  .heading-section__preheading + .heading-section__subheading {
+    padding-top: 10px;
+  }
+
+  .heading-section__heading + .heading-section__subheading {
+    padding-top: 10px;
+  }
+
+  .heading-divider {
+    margin-top: 10px;
+  }
+
+}
+
+.vertical-spacing-large {
+
+  .heading-section__preheading + .heading-section__heading {
+    padding-top: 20px;
+  }
+
+  .heading-section__preheading + .heading-section__subheading {
+    padding-top: 20px;
+  }
+
+  .heading-section__heading + .heading-section__subheading {
+    padding-top: 20px;
+  }
+
+  .heading-divider {
+    margin-top: 20px;
+  }
+}
+
+// Global heading style
+.heading-wrapper {
+  margin-bottom: 40px;
+
+  @include respond-to('medium-down') {
+    margin-bottom: 20px;
+  }
+
+  &.text-align-center .heading-divider {
+    margin: 0 auto;
+  }
+
+  &.text-align-right .heading-divider {
+    margin: 0 0 0 auto;
+  }
+}
+
+.has-heading-divider-below {
+  @include respond-to('medium-up') {
+    .heading-wrapper:not(.heading-divider-below) {
+      margin-bottom: 0;
+    }
+
+    .heading-wrapper:not(.heading-divider-below) .heading-divider {
+      display: none;
+    }
+  }
+}
+
+.heading-divider-below {
+  @include respond-to('medium-down') {
+    display: none;
+  }
+}

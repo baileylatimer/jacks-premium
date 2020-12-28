@@ -1,0 +1,220 @@
+/* # Pagination
+================================================== */
+
+$pagination-color: $grey-darker !default;
+$pagination-border-color: $grey-lighter !default;
+$pagination-margin: -0.25rem !default;
+$pagination-min-width: $control-height !default;
+
+$pagination-hover-color: $link-hover !default;
+$pagination-hover-border-color: $link-hover-border !default;
+
+$pagination-focus-color: $link-focus !default;
+$pagination-focus-border-color: $link-focus-border !default;
+
+$pagination-active-color: $link-active !default;
+$pagination-active-border-color: $link-active-border !default;
+
+$pagination-disabled-color: $grey !default;
+$pagination-disabled-background-color: $grey-lighter !default;
+$pagination-disabled-border-color: $grey-lighter !default;
+
+$pagination-current-color: $link-invert !default;
+$pagination-current-background-color: $link !default;
+$pagination-current-border-color: $link !default;
+
+$pagination-ellipsis-color: $grey-light !default;
+
+$pagination-shadow-inset: inset 0 1px 2px rgba($black, 0.2);
+
+.paginate {
+  display: inline-block;
+  @include respond-to('medium-down') {
+    width: 100%;
+    margin-bottom: $gutter;
+  }
+}
+
+.pagination {
+  font-size: $size-normal;
+  margin: $pagination-margin;
+
+  .pagination-previous {
+    margin-right: 16px;
+  }
+
+  .pagination-next {
+    margin-left: 16px;
+  }
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $size-medium;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+  }
+
+  &.is-rounded {
+    .pagination-previous,
+    .pagination-next {
+      padding-left: 1em;
+      padding-right: 1em;
+      border-radius: $radius-rounded;
+    }
+
+    .pagination-link {
+      border-radius: $radius-rounded;
+    }
+  }
+}
+
+.pagination,
+.pagination-list {
+  @include align-items(center);
+  @include flexbox();
+  @include justify-content(center);
+  text-align: center;
+}
+
+.pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis {
+  @extend %control;
+
+  @extend %unselectable;
+
+  font-size: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  @include justify-content(center);
+  margin: 0.25rem;
+  text-align: center;
+}
+
+.pagination-previous,
+.pagination-next,
+.pagination-link {
+  border-color: {{ settings.regular_color | color_modify: 'alpha', 0.2 }};;
+  color: $text;
+  min-width: $pagination-min-width;
+
+  &:hover {
+    border-color: $pagination-hover-border-color;
+    color: $pagination-hover-color;
+  }
+
+  &:focus {
+    border-color: $pagination-focus-border-color;
+  }
+
+  &:active {
+    box-shadow: $pagination-shadow-inset;
+  }
+
+  &[disabled] {
+    background-color: $pagination-disabled-background-color;
+    border-color: $pagination-disabled-border-color;
+    box-shadow: none;
+    color: $pagination-disabled-color;
+    opacity: 0.5;
+  }
+}
+
+.pagination-previous,
+.pagination-next {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+}
+
+.pagination-link {
+  &.is-current {
+    background-color: $pagination-current-background-color;
+    border-color: $pagination-current-border-color;
+    color: $pagination-current-color;
+  }
+}
+
+.pagination-ellipsis {
+  color: $pagination-ellipsis-color;
+  pointer-events: none;
+}
+
+@include respond-to('medium-down') {
+
+  .pagination {
+
+    .pagination-previous,
+    .pagination-next {
+      width: calc(50% - 10px);
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    &.paginate--both {
+      @include flex-wrap(wrap);
+
+      .pagination-previous,
+      .pagination-next {
+        order: 2;
+      }
+    }
+  }
+}
+
+
+@include respond-to('medium-up') {
+  .pagination-list {
+    @include flex-grow(1);
+    @include flex-shrink(1);
+    @include justify-content(flex-start);
+  }
+
+  .pagination {
+    @include justify-content(space-between);
+
+    &.is-center {
+      .pagination-previous {
+        order: 1;
+      }
+
+      .pagination-list {
+        @include justify-content(center);
+        order: 2;
+      }
+
+      .pagination-next {
+        order: 3;
+      }
+    }
+
+    &.is-right {
+      .pagination-previous {
+        order: 1;
+      }
+
+      .pagination-next {
+        order: 2;
+      }
+
+      .pagination-list {
+        @include justify-content(flex-end);
+        order: 3;
+      }
+    }
+  }
+}
+
+// Pagination types
+
+.pagination-button__infinite-scroll:not(.is-loading) {
+  display: none;
+}
+

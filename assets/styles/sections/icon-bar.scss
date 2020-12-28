@@ -1,0 +1,34 @@
+/* # Icon bar
+================================================== */
+
+.icon-bar__block {
+  padding: 0.5rem 0.75rem;
+
+  @include respond-to('medium-up') {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $body-size;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+  }
+
+  .icon-bar__text {
+    padding: 0 5px;
+  }
+}
+

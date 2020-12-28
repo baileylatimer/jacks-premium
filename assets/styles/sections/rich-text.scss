@@ -1,0 +1,24 @@
+/* # Rich text
+================================================== */
+
+.mobile-shrink-text span,
+.mobile-shrink-text p {
+  font-size: 1em;
+  display: block;
+
+  @include respond-to('medium-down') {
+    font-size: 0.8em;
+  }
+
+  @include respond-to('small-down') {
+    font-size: 0.5em;
+  }
+}
+
+.rich-text__content a.button {
+  max-width: 50%;
+
+  @include respond-to('medium-down') {
+    max-width: 100%;
+  }
+}

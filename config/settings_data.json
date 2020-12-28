@@ -1,11 +1,11 @@
 {
   "current": {
     "show_announcement_bar": true,
-    "show_popup": true,
+    "show_popup": false,
     "show_fixed_message": false,
     "header_layout": "classic",
     "footer_layout": "classic",
-    "product_layout": "sections",
+    "product_layout": "image_scroll",
     "image_loading_style": "blur-up",
     "logo_mobile": "shopify:\/\/shop_images\/icon--light.png",
     "mobile_logo_width": 80,
@@ -20,7 +20,7 @@
     "mobile_menu_opacity": 100,
     "mobile_menu_link_color": "rgba(0,0,0,0)",
     "mobile_menu_link_hover_color": "#eebe13",
-    "button_primary_padding": "large",
+    "button_primary_padding": "regular",
     "button_primary_bg_color": "#000000",
     "button_primary_bg_color_transparency": 100,
     "button_primary_border_color": "rgba(0,0,0,0)",
@@ -30,7 +30,7 @@
     "button_primary_border_color--highlight": "rgba(0,0,0,0)",
     "button_primary_text_color--highlight": "#ebeae4",
     "button_primary_border_radius": 0,
-    "button_secondary_padding": "large",
+    "button_secondary_padding": "regular",
     "button_secondary_bg_color": "rgba(0,0,0,0)",
     "button_secondary_bg_color_transparency": 0,
     "button_secondary_border_color": "#000000",
@@ -52,7 +52,7 @@
     "button_cart_border_color--highlight": "rgba(0,0,0,0)",
     "button_cart_text_color": "#ffffff",
     "button_cart_text_color--highlight": "#000000",
-    "button_cart_icon": "heart",
+    "button_cart_icon": "bag",
     "button_cart_icon_position": "left",
     "button_cart_border_radius": 2,
     "icon": "icon_outline",
@@ -60,7 +60,7 @@
     "social_media_share_style": "squared",
     "breadcrumb_capitalization": "none",
     "breadcrumb_separator": "arrow",
-    "breadcrumb_size": "regular",
+    "breadcrumb_size": "small",
     "dropdown_style": "vertical",
     "dropdown_position": "below-header",
     "dropdown_link_spacing": "medium",
@@ -105,11 +105,11 @@
     "dropdown_background_opacity": 100,
     "dropdown_link_color": "#636363",
     "dropdown_link_hover_color": "#000000",
-    "footer_background": "#000000",
+    "footer_background": "#ebeae4",
     "footer_border": "#000000",
-    "footer_link_color": "#c3c3c3",
-    "footer_link_hover_color": "#ffffff",
-    "footer_text_color": "#ffffff",
+    "footer_link_color": "#63625f",
+    "footer_link_hover_color": "#000000",
+    "footer_text_color": "#000000",
     "sale_color": "#ae3333",
     "was_price_color": "#a6a6a6",
     "product_hover_text_color": "#ae3333",
@@ -125,7 +125,7 @@
     "qty_background_color": "#ffffff",
     "qty_background_hover_color": "#ffffff",
     "regular__font": "helvetica_n4",
-    "regular_font_size": 15,
+    "regular_font_size": 16,
     "logo__font": "helvetica_n7",
     "logo_font_size": 20,
     "logo_font_style": "none",
@@ -137,11 +137,11 @@
     "dropdown_font_size": 18,
     "dropdown_letter_spacing": 0,
     "dropdown_font_style": "none",
-    "button__font": "open_sans_n4",
+    "button__font": "helvetica_n7",
     "button_letter_spacing": 0,
     "button_font_style": "none",
     "heading__font": "helvetica_n7",
-    "heading_size": 30,
+    "heading_size": 24,
     "heading_letter_spacing": 0,
     "heading_font_style": "none",
     "preheading_font": "helvetica_n4",
@@ -150,7 +150,7 @@
     "subheading_font": "helvetica_n4",
     "subheading_size": 15,
     "subheading_style": "none",
-    "banner_heading__font": "helvetica_n7",
+    "banner_heading__font": "memphis_n7",
     "banner_heading_size": 60,
     "banner_heading_style": "none",
     "banner_text__font": "helvetica_n4",
@@ -162,12 +162,12 @@
     "search_title": "Search",
     "search_placeholder": "What are you looking for?",
     "search_heading_color": "#000",
-    "search_display_style": "popup",
+    "search_display_style": "overlay",
     "search_popup_bg": "#fff",
     "search_menu": "",
     "enable_autocomplete": true,
     "search_to_display": 5,
-    "show_secondary_image": false,
+    "show_secondary_image": true,
     "display_vendor": false,
     "thumbnail_hover_enabled": false,
     "thumbnail_text_alignment": "left",
@@ -178,7 +178,7 @@
     "collection_swatches_shape": "square",
     "enable_shopify_review_comments": false,
     "enable_shopify_collection_badges": false,
-    "display_product_quantity": true,
+    "display_product_quantity": false,
     "limit_quantity": false,
     "display_inventory_left": false,
     "inventory_threshold": 10,
@@ -205,9 +205,9 @@
     "enable_thumbnail_slider": true,
     "quickshop_gallery_position": "left",
     "video_looping": false,
-    "cart_action": "redirect_cart",
+    "cart_action": "mini_cart",
     "show_lock_icon": true,
-    "cart_icon": "basket",
+    "cart_icon": "bag",
     "display_special_instructions": false,
     "display_tos_checkbox": false,
     "tos_page": "",
@@ -217,29 +217,29 @@
     "go_to_checkout": true,
     "enable_shipping_calculator": true,
     "shipping_calculator_default_country": "United States",
-    "currency_format": "money_with_currency_format",
+    "currency_format": "money_format",
     "show_multiple_currencies": false,
     "supported_currencies": "USD CAD INR GBP AUD EUR JPY",
     "default_currency": "USD",
     "disqus_enabled": false,
     "disqus_shortname": "",
-    "twitter_link": "https:\/\/twitter.com\/shopify",
-    "facebook_link": "https:\/\/facebook.com\/shopify",
-    "youtube_link": "https:\/\/youtube.com\/user\/shopify",
+    "twitter_link": "https:\/\/twitter.com\/jackspremium?lang=en",
+    "facebook_link": "https:\/\/www.facebook.com\/GreatDogFood\/",
+    "youtube_link": "https:\/\/www.youtube.com\/channel\/UC67-7bsMBV8NWSuSop_QDzw",
     "vimeo_link": "",
-    "pinterest_link": "https:\/\/pinterest.com\/shopify",
+    "pinterest_link": "https:\/\/www.pinterest.com\/Jacks_Premium\/_saved\/",
     "tumblr_link": "",
-    "instagram_link": "https:\/\/instagram.com\/shopify",
-    "snapchat_link": "https:\/\/www.snapchat.com\/add\/shopify",
+    "instagram_link": "https:\/\/www.instagram.com\/jacks_premium\/?hl=en",
+    "snapchat_link": "",
     "houzz_link": "",
     "linkedin_link": "",
     "dribbble_link": "",
     "behance_link": "",
     "flickr_link": "",
-    "email_link": "",
+    "email_link": "jackspremium@gmail.com",
     "favicon": "shopify:\/\/shop_images\/favicon.png",
     "checkout_header_image": "shopify:\/\/shop_images\/fresh__page--password-banner-01.jpg",
-    "checkout_logo_image": "shopify:\/\/shop_images\/fresh__logo-white.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/full_default.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
     "checkout_body_background_image": "",
@@ -351,12 +351,12 @@
         "settings": {
           "logo": "shopify:\/\/shop_images\/full--light.png",
           "logo_width": 130,
-          "main_linklist": "",
-          "menu_alignment": "start",
+          "main_linklist": "main-menu",
+          "menu_alignment": "center",
           "dropdown_click": false,
           "display_search": true,
           "icon_style": "icons",
-          "enable_overlay": false,
+          "enable_overlay": true,
           "show_text_shadow": false,
           "overlay_link_color": "rgba(0,0,0,0)",
           "overlay_link_hover_color": "rgba(0,0,0,0)",
@@ -366,7 +366,7 @@
           "enable_sticky": true,
           "sticky_background_opacity": 50,
           "scroll_logo_width": 80,
-          "width": "standard",
+          "width": "wide",
           "vertical_alignment": "center",
           "css_class": "",
           "custom_css": ""
@@ -500,21 +500,37 @@
           "footer-classic-1": {
             "type": "link_list",
             "settings": {
-              "menu": "",
+              "menu": "main-menu",
+              "social_icons_footer": false
+            }
+          },
+          "f46c80dd-8b79-4be6-99cd-a2244e4a9502": {
+            "type": "link_list",
+            "settings": {
+              "menu": "learn",
               "social_icons_footer": false
             }
           },
           "1559752958390": {
             "type": "link_list",
             "settings": {
-              "menu": "",
+              "menu": "footer",
               "social_icons_footer": false
+            }
+          },
+          "9800696f-cbc4-46d4-aea6-a7d27fb0d8a4": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/full_default.png",
+              "size": "small",
+              "text": "",
+              "social_icons_footer": true
             }
           },
           "1563557700911": {
             "type": "newsletter",
             "settings": {
-              "newsletter_title": "Sign up for our newsletter",
+              "newsletter_title": "Join the pack",
               "newsletter_richtext": "<p>Be the first to hear about new product releases and sales!<\/p>",
               "display_first_name": false,
               "display_last_name": false
@@ -523,7 +539,9 @@
         },
         "block_order": [
           "footer-classic-1",
+          "f46c80dd-8b79-4be6-99cd-a2244e4a9502",
           "1559752958390",
+          "9800696f-cbc4-46d4-aea6-a7d27fb0d8a4",
           "1563557700911"
         ],
         "settings": {
@@ -545,11 +563,9 @@
             "settings": {
               "promo_background": "#eeeeee",
               "promo_text": "#000000",
-              "promo_image": "",
               "richtext": "<p>Use this area for promotional information.<\/p>",
-              "promo_link": "",
               "button_label": "Shop now",
-              "button_style": "button--1"
+              "button_style": "button--primary"
             }
           },
           "product__sidebar-1": {
@@ -623,11 +639,32 @@
               "enable_product_lightbox": true,
               "slideshow_speed": 3,
               "slideshow_transition": "slide",
-              "thumbnail_position": "bottom-slider",
+              "thumbnail_position": "bottom-thumbnails",
               "enable_thumbnail_slider": true,
               "set_product_height": false,
               "product_height": 500,
-              "video_looping": false,
+              "video_looping": true,
+              "width": "half",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
+          "product-sections__main-1": {
+            "type": "product_info",
+            "settings": {
+              "display_vendor": false,
+              "display_sku": false,
+              "enable_shopify_product_badges": true,
+              "display_savings": true,
+              "display_collections": false,
+              "display_type": false,
+              "display_tags": true,
+              "display_social_buttons": false,
+              "product_description_position": "bottom",
+              "show_payment_button": false,
               "width": "half",
               "padding_top": 0,
               "padding_bottom": 0,
@@ -644,7 +681,7 @@
               "heading_color": "rgba(0,0,0,0)",
               "heading_alignment": "center",
               "heading_size": 30,
-              "text": "<p>Take some time to relax, unwind and recharge with our line of bath + body products. Inspired by nature, the ocean and of course &ndash; <em>you<\/em>. Fresh + natural ingredients <strong>only<\/strong> in all of our products. Designed to cleanse and nourish, suitable for all skin and hair types.&nbsp;<\/p>",
+              "text": "<p>Take some time to relax, unwind and recharge with our line of bath + body products. Inspired by nature, the ocean and of course – <em>you<\/em>. Fresh + natural ingredients <strong>only<\/strong> in all of our products. Designed to cleanse and nourish, suitable for all skin and hair types. <\/p>",
               "text_font": "helvetica_n4",
               "text_color": "rgba(0,0,0,0)",
               "text_alignment": "center",
@@ -653,32 +690,11 @@
               "button_label": "Read more",
               "button_link": "shopify:\/\/blogs\/news\/why-is-exfoliating-important",
               "button_alignment": "center",
-              "button_style": "button--1",
+              "button_style": "button--primary",
               "background": "#eeeeee",
               "gradient": "rgba(0,0,0,0)",
               "gradient_rotation": 0,
               "width": "half",
-              "padding_top": 0,
-              "padding_bottom": 0,
-              "padding_left": 0,
-              "padding_right": 0,
-              "animation": "none"
-            }
-          },
-          "product-sections__main-1": {
-            "type": "product_info",
-            "settings": {
-              "display_vendor": false,
-              "display_sku": false,
-              "enable_shopify_product_badges": false,
-              "display_savings": true,
-              "display_collections": false,
-              "display_type": false,
-              "display_tags": false,
-              "display_social_buttons": true,
-              "product_description_position": "top",
-              "show_payment_button": true,
-              "width": "standard",
               "padding_top": 0,
               "padding_bottom": 0,
               "padding_left": 0,
@@ -698,8 +714,6 @@
           "1569523664866": {
             "type": "image_with_overlay",
             "settings": {
-              "image": "shopify:\/\/shop_images\/fresh__productpage--iwto-01_865881c1-b55a-4c4c-bcd5-7b2639b5e302.jpg",
-              "link": "",
               "pretext": "",
               "title": "Everything you need for Selfcare Sundays",
               "subtitle": "",
@@ -736,8 +750,8 @@
         },
         "block_order": [
           "product-sections__main-2",
-          "product-sections__main-0",
           "product-sections__main-1",
+          "product-sections__main-0",
           "1564417741937",
           "1569523664866"
         ],
@@ -1169,48 +1183,6 @@
           "background_opacity": 77,
           "text_color": "#ffffff",
           "width": "wide",
-          "css_class": "",
-          "custom_css": ""
-        }
-      },
-      "1563907730137": {
-        "type": "index__video",
-        "disabled": true,
-        "settings": {
-          "aspect_ratio": "16:9",
-          "autoplay": false,
-          "autoloop": true,
-          "mute_video": false,
-          "controls": true,
-          "iframe_video": "https:\/\/www.youtube.com\/watch?v=tKYwaQgv0po&feature=youtu.be",
-          "html5_video": "",
-          "pretext": "",
-          "title": "",
-          "subtitle": "Handmade with love",
-          "pretext_color": "#000000",
-          "heading_color": "#000000",
-          "subheading_color": "#ffffff",
-          "horizontal_text_position": "left",
-          "vertical_text_position": "end",
-          "text_align": "left",
-          "button_label": "Play video",
-          "button_style": "button--link-style",
-          "overlay_style": "none",
-          "video_overlay_color": "#ffffff",
-          "gradient": "rgba(0,0,0,0)",
-          "gradient_rotation": 180,
-          "background_opacity": 40,
-          "text_width": 100,
-          "mobile_text_below_video": false,
-          "pretext_color_mobile": "rgba(0,0,0,0)",
-          "heading_color_mobile": "rgba(0,0,0,0)",
-          "subheading_color_mobile": "rgba(0,0,0,0)",
-          "width": "wide",
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "padding_left": 0,
-          "padding_right": 0,
-          "animation": "none",
           "css_class": "",
           "custom_css": ""
         }
@@ -1808,7 +1780,8 @@
           "page-contact__sections-0",
           "page-contact__sections-1"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "collection__banner": {
         "type": "collection__banner",
@@ -1830,31 +1803,20 @@
           "collection__sidebar-1": {
             "type": "menu",
             "settings": {
-              "menu": "menu"
-            }
-          },
-          "collection__sidebar-0": {
-            "type": "featured_promo",
-            "settings": {
-              "promo_background": "#eeeeee",
-              "promo_text": "#000000",
-              "richtext": "<p>Use this area for promotional information.<\/p>",
-              "button_label": "Shop now",
-              "button_style": "button--primary"
+              "menu": "sidebar"
             }
           },
           "71271882-6f8f-4527-a5de-747c36c8afc5": {
             "type": "tag_filter",
             "settings": {
               "title": "Filter by",
-              "filter_tags": "food, bully sticks, biscuits",
-              "enable_filter_swatches": true
+              "filter_tags": "Dry Kibble, Freeze Dried, Raw",
+              "enable_filter_swatches": false
             }
           }
         },
         "block_order": [
           "collection__sidebar-1",
-          "collection__sidebar-0",
           "71271882-6f8f-4527-a5de-747c36c8afc5"
         ],
         "settings": {
@@ -1869,7 +1831,7 @@
           "collection_breadcrumb": true,
           "collection_tags": true,
           "collection_sort": true,
-          "show_promo_banner": true,
+          "show_promo_banner": false,
           "image_darken": true,
           "promo_title": "Special sale on now!",
           "promo_text": "<p>Description of promotion with lots of details.<\/p>",
@@ -1877,7 +1839,7 @@
           "align_height": true,
           "collection_height": 200,
           "products_per_row": 3,
-          "mobile_products_per_row": "1",
+          "mobile_products_per_row": "2",
           "pagination_limit": 48,
           "pagination_type": "infinite_scroll",
           "width": "standard",
@@ -2064,31 +2026,28 @@
           "1589567078591-0": {
             "type": "logo_image",
             "settings": {
-              "icon_label": "truck",
-              "title": "Local delivery",
-              "text": "<p>While our brick &amp; mortar shop is closed, we&#x27;re pleased to offer local delivery.<\/p>",
-              "button_label": "Learn more",
-              "link": "shopify:\/\/pages\/frequently-asked-questions"
+              "icon_label": "heart",
+              "title": "Cooked in Texas",
+              "text": "<p>Family-owned, cooked in Dallas, Texas.<\/p>",
+              "button_label": ""
             }
           },
           "1589567078591-1": {
             "type": "logo_image",
             "settings": {
-              "icon_label": "box",
-              "title": "Curbside pick-up",
-              "text": "<p>Every Friday we&#x27;re offering curbside pickup at our brick &amp; mortar location.<\/p>",
-              "button_label": "Learn more",
-              "link": "shopify:\/\/pages\/frequently-asked-questions"
+              "icon_label": "leaf-2",
+              "title": "Quality ingredients",
+              "text": "<p>100% real food, no by-products or funky fillers.<\/p>",
+              "button_label": ""
             }
           },
           "1589567078591-2": {
             "type": "logo_image",
             "settings": {
-              "icon_label": "calendar",
-              "title": "Choose your delivery",
-              "text": "<p>Available for all local deliveries. Choose a date when you&#x27;re ready to checkout.<\/p>",
-              "button_label": "Learn more",
-              "link": "shopify:\/\/pages\/contact-us"
+              "icon_label": "box",
+              "title": "Delivered fresh",
+              "text": "<p>We gently cook our food in small batches and deliver it for free to your door.<\/p>",
+              "button_label": ""
             }
           }
         },
@@ -2266,27 +2225,28 @@
       "1608750030a7bd6578": {
         "type": "index__image-with-text-overlay",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Dog_in_field.jpg",
-          "pretext": "<p>Preheading<\/p>",
-          "title": "Image with Text Overlay",
-          "subtitle": "<p>Additional info in the subheading<\/p>",
-          "pretext_color": "#000000",
-          "heading_color": "#000000",
-          "subheading_color": "#000000",
-          "text_alignment": "center",
-          "text_horizontal_position": "center",
+          "image": "shopify:\/\/shop_images\/dog-field-right.jpg",
+          "pretext": "",
+          "title": "Feed them like family.",
+          "subtitle": "<p>Give your best friend the quality they deserve.<\/p>",
+          "pretext_color": "#ebeae4",
+          "heading_color": "#ebeae4",
+          "subheading_color": "#ebeae4",
+          "text_alignment": "left",
+          "text_horizontal_position": "left",
           "text_vertical_position": "middle",
           "background_color": "#ffffff",
-          "background_opacity": 77,
+          "background_opacity": 0,
           "border_color": "#ffffff",
           "border_width": 0,
           "text_width": 40,
-          "button_1": "Button 1",
-          "button_1_style": "button--secondary",
-          "button_2": "Button 2",
+          "button_1": "Shop now ➞",
+          "button_1_link": "shopify:\/\/collections\/food",
+          "button_1_style": "button--primary",
+          "button_2": "",
           "button_2_style": "button--secondary",
           "mobile_image_crop": "none",
-          "mobile_text_below_image": true,
+          "mobile_text_below_image": false,
           "pretext_color_mobile": "rgba(0,0,0,0)",
           "heading_color_mobile": "rgba(0,0,0,0)",
           "subheading_color_mobile": "rgba(0,0,0,0)",
@@ -2311,14 +2271,6 @@
               "button_label": ""
             }
           },
-          "1608757443132f4839-1": {
-            "type": "collection",
-            "settings": {
-              "feature_collection": "bully-sticks",
-              "title": "",
-              "button_label": ""
-            }
-          },
           "1608757443132f4839-2": {
             "type": "collection",
             "settings": {
@@ -2326,12 +2278,20 @@
               "title": "",
               "button_label": ""
             }
+          },
+          "1608757443132f4839-1": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "bully-sticks-for-dogs",
+              "title": "",
+              "button_label": ""
+            }
           }
         },
         "block_order": [
           "1608757443132f4839-0",
-          "1608757443132f4839-1",
-          "1608757443132f4839-2"
+          "1608757443132f4839-2",
+          "1608757443132f4839-1"
         ],
         "settings": {
           "collections_per_row": 3,
@@ -2340,7 +2300,7 @@
           "button_style": "button--secondary",
           "overlay_background": "#000000",
           "overlay_background_opacity": 40,
-          "overlay_text": "#FFFFFF",
+          "overlay_text": "#ffffff",
           "collection_title_below_image": false,
           "width": "standard",
           "show_gutter": true,
@@ -2355,7 +2315,7 @@
         "type": "index__blog-posts",
         "settings": {
           "title": "Recent blog posts",
-          "blog_widget_select": "",
+          "blog_widget_select": "news",
           "home_page_articles": 3,
           "blog_show_tags": false,
           "blog_author": false,
@@ -2397,6 +2357,163 @@
           "css_class": "",
           "custom_css": ""
         }
+      },
+      "product-image-scroll__main": {
+        "type": "product-image-scroll__main",
+        "blocks": {
+          "product-image-scroll__main-0": {
+            "type": "recommended_products",
+            "settings": {
+              "width": "wide",
+              "padding_top": 20,
+              "padding_bottom": 20,
+              "animation": "none"
+            }
+          }
+        },
+        "block_order": [
+          "product-image-scroll__main-0"
+        ],
+        "settings": {
+          "product_breadcrumb": false,
+          "enable_zoom": true,
+          "enable_product_lightbox": true,
+          "display_thumbnails": true,
+          "slideshow_speed": 0,
+          "slideshow_transition": "slide",
+          "enable_thumbnail_slider": true,
+          "display_vendor": false,
+          "display_sku": false,
+          "enable_shopify_product_badges": false,
+          "display_savings": true,
+          "display_collections": false,
+          "display_type": false,
+          "display_tags": false,
+          "display_social_buttons": true,
+          "product_description_position": "top",
+          "show_payment_button": true,
+          "product_images_position": "left",
+          "set_product_height": false,
+          "product_height": 500,
+          "video_looping": false,
+          "width": "standard",
+          "padding_top": 20,
+          "padding_bottom": 0,
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "footer-promotional": {
+        "type": "footer-promotional",
+        "blocks": {
+          "footer-promotional-0": {
+            "type": "logo",
+            "settings": {
+              "size": "small",
+              "alignment": "start"
+            }
+          },
+          "footer-promotional-1": {
+            "type": "link_list",
+            "settings": {
+              "menu_1": "main-menu",
+              "menu_2": "",
+              "menu_3": ""
+            }
+          },
+          "footer-promotional-2": {
+            "type": "text",
+            "settings": {
+              "title": "Title",
+              "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-promotional-0",
+          "footer-promotional-1",
+          "footer-promotional-2"
+        ],
+        "settings": {
+          "copyright_text": "",
+          "display_designed_by": true,
+          "display_shopify": true,
+          "display_payment_methods": true,
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "enable_promo": true,
+          "promo_background": "#EEEEEE",
+          "promo_text": "#000000",
+          "promo_position": "row-reverse",
+          "richtext": "<p>Use this area for promotional information.<\/p>",
+          "button_label": "Shop now",
+          "button_style": "button--primary",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1609097736434d65ce": {
+        "type": "index__social-gallery",
+        "blocks": {
+          "1609097736434d65ce-1": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/social-2.jpg",
+              "featured_product": "6-inch-bully-sticks",
+              "rating": 5,
+              "title": "Cooper",
+              "description": "Enjoying my @jacks_premium bone I got from the @dallasfarmersmarket today!! It’s so good, thanks mom and dad!!",
+              "handle": "cooper_tx_vizsla",
+              "activity": ""
+            }
+          },
+          "1609097736434d65ce-0": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/social-1.jpg",
+              "featured_product": "granola-bites",
+              "rating": 5,
+              "title": "Brodi",
+              "description": "A huge thanks to my friend @harleythefrench_ for recommending these yummy treats 😋",
+              "handle": "keepingupwith_brodi",
+              "activity": ""
+            }
+          },
+          "1609097736434d65ce-3": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/social-5.jpg",
+              "featured_product": "usa-beef-lung",
+              "rating": 1,
+              "title": "Tula",
+              "description": "Snackies for days! 🐮🐷🐠 #nomnom",
+              "handle": "tulathefrenchie",
+              "activity": ""
+            }
+          },
+          "1609097736434d65ce-2": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/social-3.jpg",
+              "featured_product": "braided-bully-stick",
+              "rating": 1,
+              "title": "Auggie",
+              "description": "Do I smell... SHNACKS??? Nothing better than a @jacks_premium Friday delivery!",
+              "handle": "auggieandpennysgoldentails",
+              "activity": ""
+            }
+          }
+        },
+        "block_order": [
+          "1609097736434d65ce-1",
+          "1609097736434d65ce-0",
+          "1609097736434d65ce-3",
+          "1609097736434d65ce-2"
+        ],
+        "settings": {
+          "title": "What our pack is barking about",
+          "hashtag": "jackspremium"
+        }
       }
     },
     "content_for_index": [
@@ -2404,7 +2521,7 @@
       "1589567078591",
       "16087578360dfa7e4c",
       "1608757443f59da99f",
-      "1563907730137",
+      "1609097736434d65ce",
       "1564170665573",
       "16087574862d8f058f"
     ]

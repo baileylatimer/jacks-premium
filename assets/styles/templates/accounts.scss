@@ -1,0 +1,36 @@
+/* # Accounts
+================================================== */
+
+.register__image img,
+.login__image img {
+  width: 100%;
+}
+
+.register__form img,
+.login__form img {
+  max-width: 200px;
+  margin: 0;
+}
+
+.or {
+  margin-left: 10px;
+}
+
+// Recover
+
+.login__recover {
+  display: none;
+}
+
+.recover-note {
+  margin: 0.75rem 0;
+}
+
+.action_bottom .button,
+.recover-options .button {
+  margin-right: 5px;
+}
+
+
+
+

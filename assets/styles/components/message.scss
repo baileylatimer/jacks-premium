@@ -1,0 +1,80 @@
+/* #Message
+================================================== */
+
+$message-radius: $radius !default;
+$message-header-padding: 0.75em 1em !default;
+$message-header-radius: 0 !default;
+
+$message-body-border-color: $border !default;
+$message-body-border-width: 0 0 0 4px !default;
+$message-body-padding: 1.25em 1.5em !default;
+$message-body-radius: $radius !default;
+
+$message-body-pre-background-color: $white !default;
+$message-body-pre-code-background-color: transparent !default;
+
+$message-header-body-border-width: 0 !default;
+
+.message {
+
+  font-size: $size-normal;
+
+  strong {
+    color: currentColor;
+  }
+
+  a:not(.button):not(.tag):not(.dropdown-item) {
+    color: currentColor;
+    text-decoration: underline;
+  }
+
+  // Sizes
+  &.is-small {
+    font-size: $size-small;
+  }
+
+  &.is-medium {
+    font-size: $size-medium;
+  }
+
+  &.is-large {
+    font-size: $size-large;
+  }
+}
+
+.message-header {
+  @include align-items(center);
+  @include flexbox();
+  @include justify-content(space-between);
+  line-height: 1.25;
+  padding: $message-header-padding;
+  position: relative;
+
+  .delete {
+    @include flex-grow(0);
+    @include flex-shrink(0);
+    margin-left: 0.75em;
+  }
+
+  & + .message-body {
+    border-width: $message-header-body-border-width;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.message-body {
+  border-radius: $message-body-radius;
+  border-style: solid;
+  border-width: $message-body-border-width;
+  padding: $message-body-padding;
+
+  code,
+  pre {
+    background-color: $message-body-pre-background-color;
+  }
+
+  pre code {
+    background-color: $message-body-pre-code-background-color;
+  }
+}

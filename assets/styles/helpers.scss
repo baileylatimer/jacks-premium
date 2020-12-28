@@ -301,7 +301,7 @@
   content: '';
   height: 0;
   width: calc(100% - #{$gutter});
-  border-top: thin solid {{ settings.border_color }};
+  border-top: 3px solid {{ settings.border_color }};
   position: absolute;
   top: 0;
   left: 0;
@@ -319,7 +319,7 @@
   content: '';
   height: 0;
   width: calc(100% - #{$gutter});
-  border-top: thin solid {{ settings.border_color }};
+  border-top: 3px solid {{ settings.border_color }};
   position: absolute;
   bottom: 0;
   left: 0;

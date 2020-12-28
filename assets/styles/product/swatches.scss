@@ -57,7 +57,7 @@ $swatch-label-size: 34px;
   }
 
   .swatch-element {
-    border: #e2e2e2 thin solid;
+    border: 3px solid;
     min-width: $swatch-element-size;
     min-height: $swatch-element-size;
     {% if settings.swatch_style != 'square' %}
@@ -74,7 +74,7 @@ $swatch-label-size: 34px;
     {% if settings.swatch_style != 'square' %}
       border-radius: 50%;
     {% endif %}
-    border: #e2e2e2 thin solid;
+    border: 3px solid;
   }
 
   .swatch-element.color label {

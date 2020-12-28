@@ -19,6 +19,7 @@ Descr: Container of information used as teaser for further content exploration
   height: 350px;
   transition: 0.3s;
   padding: $gutter;
+  @include border();
 
   &:hover {
     // box-shadow: $shadow-md;

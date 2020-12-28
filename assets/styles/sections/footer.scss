@@ -13,7 +13,7 @@ $footer_link_hover_color: {{ settings.footer_link_hover_color }};
 $link_color: {{ settings.link_color }};
 $link_hover_color: {{ settings.link_hover_color }};
 $regular_color: {{ settings.regular_color }};
-$footer_border: {% if footer_alpha != 0 %}thin solid {{ settings.footer_border }}{% else %}0{% endif %};
+$footer_border: {% if footer_alpha != 0 %}3px solid{{ settings.footer_border }}{% else %}0{% endif %};
 $shop_bg_color: {{ settings.shop_bg_color }};
 
 .footer__container {

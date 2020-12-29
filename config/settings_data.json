@@ -89,16 +89,16 @@
     "shop_bg_color": "#ebeae4",
     "border_color": "#d3d3d3",
     "regular_color": "#000000",
-    "link_color": "#636363",
+    "link_color": "#000000",
     "link_hover_color": "#000000",
     "heading_color": "#000000",
     "banner_heading_color": "#ffffff",
     "divider_color": "#000000",
     "logo_text": "#ffffff",
-    "header_background": "rgba(0,0,0,0)",
-    "header_link_color": "#c3c3c3",
-    "header_link_hover_color": "#ffffff",
-    "header_cart_badge_color": "#a58ced",
+    "header_background": "#ebeae4",
+    "header_link_color": "#000000",
+    "header_link_hover_color": "#000000",
+    "header_cart_badge_color": "#000000",
     "cart_background_color": "#fff",
     "show_dropdown_shadow": true,
     "dropdown_background": "#ffffff",
@@ -189,13 +189,13 @@
     "notify_me_description": "<p>Notify me when this product is available:<\/p>",
     "size_chart": "",
     "enable_quickshop": true,
-    "quickshop_button_style": "button--2",
+    "quickshop_button_style": "button--secondary",
     "quickshop_show_vendor": false,
     "quickshop_show_price_savings": true,
     "show_dynamic_checkout_button": false,
-    "quickshop_truncate_words": false,
-    "quickshop_truncate_words_limit": 20,
-    "qs_popup_color": "#fff",
+    "quickshop_truncate_words": true,
+    "quickshop_truncate_words_limit": 50,
+    "qs_popup_color": "#ebeae4",
     "show_product_gallery_thumbnails": false,
     "quickshop_arrows": true,
     "quickshop_magnify_images": false,
@@ -349,14 +349,14 @@
       "header-classic": {
         "type": "header-classic",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/full--light.png",
+          "logo": "shopify:\/\/shop_images\/full_default.png",
           "logo_width": 130,
           "main_linklist": "main-menu",
           "menu_alignment": "center",
           "dropdown_click": false,
           "display_search": true,
           "icon_style": "icons",
-          "enable_overlay": true,
+          "enable_overlay": false,
           "show_text_shadow": false,
           "overlay_link_color": "rgba(0,0,0,0)",
           "overlay_link_hover_color": "rgba(0,0,0,0)",
@@ -364,9 +364,9 @@
           "overlay_background_opacity": 0,
           "overlay_logo_width": 80,
           "enable_sticky": true,
-          "sticky_background_opacity": 50,
+          "sticky_background_opacity": 100,
           "scroll_logo_width": 80,
-          "width": "wide",
+          "width": "standard",
           "vertical_alignment": "center",
           "css_class": "",
           "custom_css": ""
@@ -531,7 +531,7 @@
             "type": "newsletter",
             "settings": {
               "newsletter_title": "Join the pack",
-              "newsletter_richtext": "<p>Be the first to hear about new product releases and sales!<\/p>",
+              "newsletter_richtext": "",
               "display_first_name": false,
               "display_last_name": false
             }
@@ -1820,7 +1820,7 @@
           "71271882-6f8f-4527-a5de-747c36c8afc5"
         ],
         "settings": {
-          "show_sidebar": true,
+          "show_sidebar": false,
           "css_class": "",
           "custom_css": ""
         }
@@ -1902,6 +1902,7 @@
       },
       "1564170665573": {
         "type": "index__slideshow-with-text",
+        "disabled": true,
         "blocks": {
           "1564170665573-0": {
             "type": "image",
@@ -1961,13 +1962,14 @@
         "type": "collection-subcollection__main",
         "settings": {
           "collection_breadcrumb": true,
+          "collection_tags": true,
+          "collection_sort": true,
           "show_promo_banner": false,
-          "image": "",
           "image_darken": true,
           "promo_title": "Special sale on now!",
           "promo_text": "<p>Description of promotion with lots of details.<\/p>",
           "banner_height": "medium",
-          "collections_per_row": 2,
+          "collections_per_row": 3,
           "mobile_collections_per_row": "1",
           "align_height": false,
           "collection_height": 400,
@@ -1975,7 +1977,12 @@
           "overlay_background": "#d3d3d3",
           "overlay_background_opacity": 0,
           "overlay_text": "#000000",
-          "collection_title_below_image": false,
+          "collection_title_below_image": true,
+          "products_per_row": 3,
+          "mobile_products_per_row": "1",
+          "align_thumbnail_height": false,
+          "thumbnail_height": 200,
+          "pagination_limit": 48,
           "width": "standard",
           "padding_top": 13,
           "padding_bottom": 0,
@@ -2005,14 +2012,14 @@
         "settings": {
           "collections_per_row": 3,
           "pagination_limit": 48,
-          "pagination_type": "basic_pagination",
+          "pagination_type": "infinite_load_more",
           "align_height": false,
           "collection_height": 400,
-          "button_style": "button--secondary",
+          "button_style": "button--link-style",
           "overlay_background": "#939393",
           "overlay_background_opacity": 0,
           "overlay_text": "#000000",
-          "collection_title_below_image": false,
+          "collection_title_below_image": true,
           "width": "standard",
           "padding_top": 40,
           "padding_bottom": 40,
@@ -2314,7 +2321,7 @@
       "16087574862d8f058f": {
         "type": "index__blog-posts",
         "settings": {
-          "title": "Recent blog posts",
+          "title": "The latest",
           "blog_widget_select": "news",
           "home_page_articles": 3,
           "blog_show_tags": false,
@@ -2369,13 +2376,22 @@
               "padding_bottom": 20,
               "animation": "none"
             }
+          },
+          "07598049-a715-4040-8143-8e44634617aa": {
+            "type": "product_reviews",
+            "settings": {
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "animation": "none"
+            }
           }
         },
         "block_order": [
-          "product-image-scroll__main-0"
+          "product-image-scroll__main-0",
+          "07598049-a715-4040-8143-8e44634617aa"
         ],
         "settings": {
-          "product_breadcrumb": false,
+          "product_breadcrumb": true,
           "enable_zoom": true,
           "enable_product_lightbox": true,
           "display_thumbnails": true,
@@ -2388,13 +2404,13 @@
           "display_savings": true,
           "display_collections": false,
           "display_type": false,
-          "display_tags": false,
-          "display_social_buttons": true,
-          "product_description_position": "top",
-          "show_payment_button": true,
+          "display_tags": true,
+          "display_social_buttons": false,
+          "product_description_position": "bottom",
+          "show_payment_button": false,
           "product_images_position": "left",
-          "set_product_height": false,
-          "product_height": 500,
+          "set_product_height": true,
+          "product_height": 400,
           "video_looping": false,
           "width": "standard",
           "padding_top": 20,
@@ -2458,13 +2474,12 @@
           "1609097736434d65ce-1": {
             "type": "product",
             "settings": {
-              "image": "shopify:\/\/shop_images\/social-2.jpg",
-              "featured_product": "6-inch-bully-sticks",
+              "image": "shopify:\/\/shop_images\/social-2_97511094-73fb-4517-b09f-d074cd244669.jpg",
+              "featured_product": "6-inch-bully-stick",
               "rating": 5,
               "title": "Cooper",
               "description": "Enjoying my @jacks_premium bone I got from the @dallasfarmersmarket today!! It’s so good, thanks mom and dad!!",
-              "handle": "cooper_tx_vizsla",
-              "activity": ""
+              "handle": "cooper_tx_vizsla"
             }
           },
           "1609097736434d65ce-0": {
@@ -2475,32 +2490,29 @@
               "rating": 5,
               "title": "Brodi",
               "description": "A huge thanks to my friend @harleythefrench_ for recommending these yummy treats 😋",
-              "handle": "keepingupwith_brodi",
-              "activity": ""
+              "handle": "keepingupwith_brodi"
             }
           },
           "1609097736434d65ce-3": {
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-5.jpg",
-              "featured_product": "usa-beef-lung",
+              "featured_product": "beef-lung",
               "rating": 1,
               "title": "Tula",
               "description": "Snackies for days! 🐮🐷🐠 #nomnom",
-              "handle": "tulathefrenchie",
-              "activity": ""
+              "handle": "tulathefrenchie"
             }
           },
           "1609097736434d65ce-2": {
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-3.jpg",
-              "featured_product": "braided-bully-stick",
+              "featured_product": "12-inch-braided-bully-stick",
               "rating": 1,
               "title": "Auggie",
               "description": "Do I smell... SHNACKS??? Nothing better than a @jacks_premium Friday delivery!",
-              "handle": "auggieandpennysgoldentails",
-              "activity": ""
+              "handle": "auggieandpennysgoldentails"
             }
           }
         },
@@ -2511,7 +2523,7 @@
           "1609097736434d65ce-2"
         ],
         "settings": {
-          "title": "What our pack is barking about",
+          "title": "Worth barking about",
           "hashtag": "jackspremium"
         }
       }

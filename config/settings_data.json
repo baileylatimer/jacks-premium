@@ -20,7 +20,7 @@
     "mobile_menu_opacity": 100,
     "mobile_menu_link_color": "rgba(0,0,0,0)",
     "mobile_menu_link_hover_color": "#eebe13",
-    "button_primary_padding": "regular",
+    "button_primary_padding": "large",
     "button_primary_bg_color": "#000000",
     "button_primary_bg_color_transparency": 100,
     "button_primary_border_color": "rgba(0,0,0,0)",
@@ -45,7 +45,7 @@
     "button_link_text_color--highlight": "#ccc",
     "button_link_underline_style": "solid",
     "button_link_underline_thickness": 1,
-    "button_cart_padding": "regular",
+    "button_cart_padding": "large",
     "button_cart_bg_color": "#000000",
     "button_cart_bg_color--highlight": "#ffffff",
     "button_cart_border_color": "rgba(0,0,0,0)",
@@ -54,7 +54,7 @@
     "button_cart_text_color--highlight": "#000000",
     "button_cart_icon": "bag",
     "button_cart_icon_position": "left",
-    "button_cart_border_radius": 2,
+    "button_cart_border_radius": 0,
     "icon": "icon_outline",
     "toggle_icon_style": "plus_and_minus",
     "social_media_share_style": "squared",
@@ -375,46 +375,49 @@
       "mega-menu-1": {
         "type": "mega-menu-1",
         "blocks": {
+          "1565195799064": {
+            "type": "featured_promo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/social-4.jpg",
+              "richtext": "",
+              "bgr_color": "#000000",
+              "text_color": "#000000",
+              "promo_link": "shopify:\/\/products\/jumbo-bully-stick",
+              "button_label": "Shop Jumbo Bully Stick ➞",
+              "button_style": "button--primary"
+            }
+          },
+          "1774ad02-9e7c-45c6-a4f7-faf683cae2cd": {
+            "type": "menu",
+            "settings": {
+              "menu_1": "best-sellers"
+            }
+          },
           "mega-menu-1-0": {
             "type": "menu",
             "settings": {
-              "menu_1": ""
+              "menu_1": "food",
+              "menu_1_link": "shopify:\/\/collections\/food"
             }
           },
           "1565195971169": {
             "type": "menu",
             "settings": {
-              "menu_1": ""
-            }
-          },
-          "1559012384367": {
-            "type": "menu",
-            "settings": {
-              "menu_1": ""
-            }
-          },
-          "1565195799064": {
-            "type": "featured_promo",
-            "settings": {
-              "richtext": "",
-              "bgr_color": "#eeeeee",
-              "text_color": "#000000",
-              "promo_link": "shopify:\/\/collections\/soaps",
-              "button_label": "Shop all soaps!",
-              "button_style": "button--primary"
+              "menu_1": "treats",
+              "menu_1_link": "shopify:\/\/collections\/treats"
             }
           }
         },
         "block_order": [
+          "1565195799064",
+          "1774ad02-9e7c-45c6-a4f7-faf683cae2cd",
           "mega-menu-1-0",
-          "1565195971169",
-          "1559012384367",
-          "1565195799064"
+          "1565195971169"
         ],
         "settings": {
-          "parent_link": "Shop",
+          "parent_link": "And More",
           "enable_mega_menu_border": false,
-          "mega_menu_background_color": "#f6f6f6",
+          "mega_menu_background_color": "#ebeae4",
           "mega_menu_text_color": "#404040",
           "show_mega_bottom_bar": false,
           "mega_bottom_bar_icon": "",
@@ -518,15 +521,6 @@
               "social_icons_footer": false
             }
           },
-          "9800696f-cbc4-46d4-aea6-a7d27fb0d8a4": {
-            "type": "logo",
-            "settings": {
-              "logo": "shopify:\/\/shop_images\/full_default.png",
-              "size": "small",
-              "text": "",
-              "social_icons_footer": true
-            }
-          },
           "1563557700911": {
             "type": "newsletter",
             "settings": {
@@ -541,7 +535,6 @@
           "footer-classic-1",
           "f46c80dd-8b79-4be6-99cd-a2244e4a9502",
           "1559752958390",
-          "9800696f-cbc4-46d4-aea6-a7d27fb0d8a4",
           "1563557700911"
         ],
         "settings": {

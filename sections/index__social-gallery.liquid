@@ -28,7 +28,7 @@
       {%- assign section_onboarding = false -%}
     {% endif %}
 
-    <a href="{{ product.url  }}" class="card-v9 card-v9--overlay-bg margin-y-md column {% cycle 'two-thirds', 'one-third', 'one-third', 'two-thirds' %} product-{{ product.id }} 
+    <a href="{{ product.url  }}" class="card-v9 card-v9--overlay-bg margin-y-md column medium-down--one-whole {% cycle 'two-thirds', 'one-third', 'one-third', 'two-thirds' %} product-{{ product.id }} 
     {% if block.settings.title != blank %} filter-bottom {% endif %}" aria-labelledby="card-title-1" style="background-image: url( {{ block.settings.image |  img_url: '600x' }} )" alt="{{ alt | escape }}"  itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
 
       {{ block.shopify_attributes }}

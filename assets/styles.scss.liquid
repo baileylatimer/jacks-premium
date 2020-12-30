@@ -5619,37 +5619,6 @@ Descr: Container of information used as teaser for further content exploration
   z-index: 2;
 }
 
-// .card-v9__btn {
-//   position: relative;
-//   display: inline-block;
-//   padding: 20px !important;
-
-//   box-shadow: none !important;
-//   opacity: 0;
-//   span {
-//     // button label
-//     position: relative;
-//     z-index: 2;
-//     color: $color-bg;
-//     opacity: 0;
-//     transition: opacity 0.3s;
-//   }
-
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     z-index: 1;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: alpha(($color-contrast-lower), 0.8);
-//     opacity: 0;
-//     transform: translateY(25%);
-//     transition: opacity 0.3s, transform 0.3s ease-out);
-//   }
-// }
-
 .card-v9:hover {
   // .card-v9__btn {
   //   span {
@@ -5677,6 +5646,9 @@ Descr: Container of information used as teaser for further content exploration
   }
   &:hover {
     backdrop-filter: blur(34px);
+    .reveal-content {
+      opacity: 1;
+    }
     &::before {
       // background: rgba(27, 53, 80, 0.5) !important;
       // background-blend-mode: multiply;
@@ -12974,6 +12946,15 @@ $banner-font-size: {{ settings.banner_text_size }}px;
     @include object-fit(cover, right);
   }
 
+
+  .image-with-text-overlay__container img {
+    height: 440px;
+    @media only screen and (max-width: 600px) {
+    height: 450px;
+  }
+}
+
+
   .pretext,
   .subtitle {
     font-size: $banner-font-size;
@@ -13130,13 +13111,20 @@ $banner-font-size: {{ settings.banner_text_size }}px;
   }
 }
 
+//Home hero height
+.image-with-text-overlay__banner > div:nth-child(1) > img:nth-child(1) {
+  @media only screen and (max-width: 600px) {
+    height: 450px;
+  }
+}
+
 .list-collection__thumbnail {
   overflow: hidden;
 
   .product-wrap {
     position: relative;
     overflow: hidden;
-    height: 300px;
+    // height: 300px;
     background: $color-white;
 
     &:hover img,

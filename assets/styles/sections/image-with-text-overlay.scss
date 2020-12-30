@@ -109,6 +109,15 @@ $banner-font-size: {{ settings.banner_text_size }}px;
     @include object-fit(cover, right);
   }
 
+
+  .image-with-text-overlay__container img {
+    height: 440px;
+    @media only screen and (max-width: 600px) {
+    height: 450px;
+  }
+}
+
+
   .pretext,
   .subtitle {
     font-size: $banner-font-size;

@@ -44,7 +44,7 @@
 
 {% endstyle %}
 
-<div class="mega-menu {{ css_class }} mega-menu--header-{{ settings.header_layout }}" data-parent-link="{{ section.settings.parent_link | downcase | replace: ' ', '-' }}">
+<div class="mega-menu {{ css_class }} mega-menu--header-{{ settings.header_layout }}   border" data-parent-link="{{ section.settings.parent_link | downcase | replace: ' ', '-' }}">
 
   <div class="container has-no-side-gutter">
     {% for block in section.blocks %}

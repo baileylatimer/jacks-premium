@@ -34,9 +34,14 @@ $color-primary: hsl(41, 44%, 37%);
 }
 
 // Style
+
+.border {
+  border: 3px solid $color-black;
+}
 .blend {
   mix-blend-mode: difference;
 }
+
 .noise {
   top: 0;
   left: 0;

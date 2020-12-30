@@ -147,7 +147,7 @@
         </div>
       {% endif %}
 
-      <div class="footer__credits {% if section.settings.display_payment_methods %}two-thirds {% else %} one-whole {% endif %} column small-down--one-whole">
+      <div class="footer__credits two-thirds{% if section.settings.display_payment_methods %} {% else %} one-whole {% endif %} column small-down--one-whole">
         <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: '/' }}.</p>
         {{ section.settings.copyright_text }}
         {% if section.settings.display_designed_by %}
@@ -164,6 +164,10 @@
               {{ type | payment_type_svg_tag: class:'payment-icon' }}
             {% endfor %}
           </div>
+        </div>
+        {% else %}
+        <div class="one-third column small-down--one-whole is-flex is-justify-end is-flex-wrap">
+        {% render 'social-icons' %}
         </div>
       {% endif %}
     </div>

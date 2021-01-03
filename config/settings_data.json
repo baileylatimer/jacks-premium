@@ -188,8 +188,8 @@
     "notify_me_form": true,
     "notify_me_description": "<p>Notify me when this product is available:<\/p>",
     "size_chart": "",
-    "enable_quickshop": true,
-    "quickshop_button_style": "button--secondary",
+    "enable_quickshop": false,
+    "quickshop_button_style": "button--primary",
     "quickshop_show_vendor": false,
     "quickshop_show_price_savings": true,
     "show_dynamic_checkout_button": false,
@@ -208,7 +208,7 @@
     "cart_action": "mini_cart",
     "show_lock_icon": true,
     "cart_icon": "bag",
-    "display_special_instructions": false,
+    "display_special_instructions": true,
     "display_tos_checkbox": false,
     "tos_page": "",
     "display_savings": true,
@@ -436,42 +436,42 @@
             "type": "text",
             "settings": {
               "icon": "bunny",
-              "text": "CRUELTY FREE"
+              "text": "Cruelty Free"
             }
           },
           "footer__icon-bar-0": {
             "type": "text",
             "settings": {
               "icon": "cloud",
-              "text": "INSPIRED BY YOU"
+              "text": "Inspired By You"
             }
           },
           "footer__icon-bar-1": {
             "type": "text",
             "settings": {
               "icon": "shield",
-              "text": "ETHICALLY SOURCED"
+              "text": "Ethically Sourced"
             }
           },
           "footer__icon-bar-2": {
             "type": "text",
             "settings": {
               "icon": "leaf-2",
-              "text": "100% NATURAL"
+              "text": "100% Natural"
             }
           },
           "footer__icon-bar-3": {
             "type": "text",
             "settings": {
               "icon": "heart",
-              "text": "MADE LOCALLY"
+              "text": "Made Locally"
             }
           },
           "1559011765495": {
             "type": "text",
             "settings": {
               "icon": "recycle",
-              "text": "RESPONSIBLE PACKAGING"
+              "text": "Responsible Packaging"
             }
           }
         },
@@ -488,7 +488,7 @@
           "alignment": "center",
           "icon_position": "row",
           "size": "medium",
-          "background": "#ebeae4",
+          "background": "#dddbd2",
           "link_color": "#ffffff",
           "link_hover_color": "#000000",
           "text_color": "#000000",
@@ -1185,10 +1185,10 @@
         "settings": {
           "show_product_recommendations": true,
           "product_recommendations_style": "grid",
-          "product_recommendations_heading": "You may also like",
-          "products_per": 3,
-          "recommended_products_limit": 3,
-          "align_height": false,
+          "product_recommendations_heading": "Customers also bought",
+          "products_per": 4,
+          "recommended_products_limit": 4,
+          "align_height": true,
           "collection_height": 200
         }
       },
@@ -2037,7 +2037,7 @@
             "settings": {
               "icon_label": "leaf-2",
               "title": "Quality ingredients",
-              "text": "<p>100% real food, no by-products or funky fillers.<\/p>",
+              "text": "<p>100% real food, no by-products or fillers.<\/p>",
               "button_label": ""
             }
           },
@@ -2046,7 +2046,7 @@
             "settings": {
               "icon_label": "box",
               "title": "Delivered fresh",
-              "text": "<p>We gently cook our food in small batches and deliver it for free to your door.<\/p>",
+              "text": "<p>We thoughtfully cook our food in small portions and deliver it to your door.<\/p>",
               "button_label": ""
             }
           }
@@ -2068,12 +2068,12 @@
           "gradient_rotation": 0,
           "width": "standard",
           "show_gutter": true,
-          "padding_top": 0,
+          "padding_top": 20,
           "padding_bottom": 20,
           "padding_left": 0,
           "padding_right": 0,
           "animation": "none",
-          "css_class": "",
+          "css_class": "bg-contrast-low",
           "custom_css": ""
         }
       },
@@ -2305,17 +2305,16 @@
           "width": "standard",
           "show_gutter": true,
           "padding_top": 20,
-          "padding_bottom": 20,
-          "animation": "fadeInDown",
+          "padding_bottom": 60,
+          "animation": "none",
           "css_class": "",
           "custom_css": ""
         }
       },
       "16087574862d8f058f": {
         "type": "index__blog-posts",
-        "disabled": true,
         "settings": {
-          "title": "The latest",
+          "title": "Stories",
           "blog_widget_select": "news",
           "home_page_articles": 3,
           "blog_show_tags": false,
@@ -2323,20 +2322,21 @@
           "read_time": false,
           "blog_date": false,
           "blog_comment_count": false,
-          "blog_show_excerpt": false,
-          "show-border": false,
+          "blog_show_excerpt": true,
+          "show-border": true,
           "button_label": "Read more",
           "button_type": "button--link-style",
           "width": "standard",
-          "padding_top": 20,
-          "padding_bottom": 0,
-          "animation": "fadeInDown",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "animation": "none",
           "css_class": "",
           "custom_css": ""
         }
       },
       "16087578360dfa7e4c": {
         "type": "index__heading",
+        "disabled": true,
         "settings": {
           "preheading": "",
           "title": "Explore by category",
@@ -2350,7 +2350,7 @@
           "heading_alignment": "center",
           "vertical_spacing": "medium",
           "width": "standard",
-          "padding_top": 20,
+          "padding_top": 0,
           "padding_bottom": 20,
           "padding_left": 0,
           "padding_right": 0,
@@ -2517,8 +2517,194 @@
           "1609097736434d65ce-2"
         ],
         "settings": {
-          "title": "Worth barking about",
-          "hashtag": "jackspremium"
+          "title": "Quality worth barking about",
+          "hashtag": "jackspack"
+        }
+      },
+      "160970417005dfcaa1": {
+        "type": "index__newsletter",
+        "settings": {
+          "display_first_name": false,
+          "display_last_name": false,
+          "newsletter_title": "Join the pack",
+          "newsletter_richtext": "",
+          "newsletter_section_text_align": "left",
+          "background_color": "#000000",
+          "text_color": "#dddbd2",
+          "image_darken": false,
+          "image": "shopify:\/\/shop_images\/two-dogs.jpg",
+          "image_cropping": "center",
+          "image_position": "left",
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1609709220b5c5d541": {
+        "type": "index__image-with-text-overlay",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/girl-dog-2.jpg",
+          "pretext": "",
+          "title": "From our Texas farm to your doorstep.",
+          "subtitle": "<p>We craft with all-natural ingredients that pups love and parents trust.<\/p>",
+          "pretext_color": "#ebeae4",
+          "heading_color": "#ebeae4",
+          "subheading_color": "#ebeae4",
+          "text_alignment": "left",
+          "text_horizontal_position": "left",
+          "text_vertical_position": "middle",
+          "background_color": "#ffffff",
+          "background_opacity": 0,
+          "border_color": "#ffffff",
+          "border_width": 0,
+          "text_width": 40,
+          "button_1": "Learn more ➞",
+          "button_1_style": "button--primary",
+          "button_2": "",
+          "button_2_style": "button--secondary",
+          "mobile_image_crop": "none",
+          "mobile_text_below_image": true,
+          "pretext_color_mobile": "rgba(0,0,0,0)",
+          "heading_color_mobile": "rgba(0,0,0,0)",
+          "subheading_color_mobile": "rgba(0,0,0,0)",
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "16097092531813fb3e": {
+        "type": "index__image-with-text",
+        "disabled": true,
+        "blocks": {
+          "16097092531813fb3e-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/girl-dog.jpg",
+              "image_crop": "center"
+            }
+          },
+          "16097092531813fb3e-2": {
+            "type": "text",
+            "settings": {
+              "title": "From our Texas farm to your doorstep.",
+              "heading_size": "regular",
+              "text": "<p>Jacks Premium provides a hand-selected collection of desirable pet favorites for discriminating pet parents who seek better options for their loved ones from a trusted source.<\/p>",
+              "button_label": "Our story ➞",
+              "link": "shopify:\/\/pages\/about",
+              "button_style": "button--secondary",
+              "background": "rgba(0,0,0,0)",
+              "text_color": "rgba(0,0,0,0)",
+              "alignment": "left",
+              "vertical_position": "center"
+            }
+          }
+        },
+        "block_order": [
+          "16097092531813fb3e-1",
+          "16097092531813fb3e-2"
+        ],
+        "settings": {
+          "width": "wide",
+          "show_gutter": true,
+          "padding_top": 20,
+          "padding_bottom": 20,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "16097093473ec341ac": {
+        "type": "index__divider",
+        "settings": {
+          "divider_style": "vertical",
+          "divider_width": 0,
+          "divider_color": "rgba(0,0,0,0)",
+          "alignment": "center",
+          "width": "standard",
+          "padding_top": 0,
+          "padding_bottom": 10,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "1609710282f79e03ce": {
+        "type": "index__image-with-text-overlay",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/girl-dog.jpg",
+          "pretext": "",
+          "title": "",
+          "subtitle": "",
+          "pretext_color": "rgba(0,0,0,0)",
+          "heading_color": "#000000",
+          "subheading_color": "#000000",
+          "text_alignment": "center",
+          "text_horizontal_position": "center",
+          "text_vertical_position": "middle",
+          "background_color": "#FFFFFF",
+          "background_opacity": 0,
+          "border_color": "#FFFFFF",
+          "border_width": 0,
+          "text_width": 40,
+          "button_1": "",
+          "button_1_style": "button--secondary",
+          "button_2": "",
+          "button_2_style": "button--secondary",
+          "mobile_image_crop": "none",
+          "mobile_text_below_image": true,
+          "pretext_color_mobile": "rgba(0,0,0,0)",
+          "heading_color_mobile": "rgba(0,0,0,0)",
+          "subheading_color_mobile": "rgba(0,0,0,0)",
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "16097130289b49de35": {
+        "type": "index__image-with-text",
+        "blocks": {
+          "16097130289b49de35-2": {
+            "type": "text",
+            "settings": {
+              "title": "From our Texas farm to your doorstep.",
+              "heading_size": "large",
+              "text": "<p>We craft with all-natural ingredients that pups love and parents trust.<\/p>",
+              "button_label": "Learn more ➞",
+              "button_style": "button--secondary",
+              "background": "rgba(0,0,0,0)",
+              "text_color": "rgba(0,0,0,0)",
+              "alignment": "center",
+              "vertical_position": "center"
+            }
+          }
+        },
+        "block_order": [
+          "16097130289b49de35-2"
+        ],
+        "settings": {
+          "width": "standard",
+          "show_gutter": true,
+          "padding_top": 20,
+          "padding_bottom": 20,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
         }
       }
     },
@@ -2527,9 +2713,15 @@
       "1589567078591",
       "16087578360dfa7e4c",
       "1608757443f59da99f",
+      "1609710282f79e03ce",
+      "16097130289b49de35",
+      "16097093473ec341ac",
       "1609097736434d65ce",
+      "16097092531813fb3e",
+      "1609709220b5c5d541",
       "1564170665573",
-      "16087574862d8f058f"
+      "16087574862d8f058f",
+      "160970417005dfcaa1"
     ]
   }
 }

@@ -1267,6 +1267,7 @@ $drop-down-menu-letter-spacing: {{ settings.dropdown_letter_spacing }}px !defaul
 // Media 
 @mixin border {
   border: 3px solid $color-black;
+  transition: 0.3s;
   &:hover {
     box-shadow: 6px 6px $color-black;
   }
@@ -5653,7 +5654,7 @@ Descr: Container of information used as teaser for further content exploration
       // background: rgba(27, 53, 80, 0.5) !important;
       // background-blend-mode: multiply;
       background: $color-primary-lighter;
-      @include border();
+      // @include border();
       padding: 20px;
     }
   }
@@ -11282,8 +11283,8 @@ $shop_bg_color: {{ settings.shop_bg_color }};
   // Centered layout
 
   .footer__content {
-    border-bottom: $footer_border;
-    border-top: $footer_border;
+    // border-bottom: $footer_border;
+    // border-top: $footer_border;
   }
 
   .footer__menu {
@@ -15350,6 +15351,13 @@ $blog-border: 3px solid $border !default;
   @include respond-to('medium-down') {
     margin-bottom: 20px;
   }
+  @include border();
+  &:hover {
+    background-color: $color-white;
+    .truncation-fade {
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $color-white) !important;
+    }
+  }
 
   &.show-border-false {
     border: none;
@@ -15372,7 +15380,7 @@ $blog-border: 3px solid $border !default;
   }
 
   .image-element__wrap {
-
+    height: 200px;
     @include respond-to('medium-up') {
       max-height: 15rem;
     }
@@ -16462,6 +16470,33 @@ $color-primary: hsl(41, 44%, 37%);
 .margin-y-md {
   margin-top: $half-gutter;
   margin-bottom: $half-gutter;
+}
+
+.padding-y-xl {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.padding-bottom-xl {
+  padding-bottom: 60px;
+}
+
+.bg-contrast-lower,
+#shopify-section-1609097736434d65ce {
+  background-color: $color-contrast-lower !important;
+}
+
+// --------------------------------
+
+// Cursor
+
+// --------------------------------
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
 }
 
 // Style

@@ -61,7 +61,7 @@
   <div class="container">
     {% if blog_widget_select != blank %}
       {% for article in blogs[blog_widget_select].articles limit: home_page_articles %}
-          <div class="featured-article blog-card {% render 'column-width', value: object.settings.home_page_articles %} columns article card show-border-{{ object.settings.show-border }} medium-down--one-whole has-margin-bottom ">
+          <div onclick="window.open('{{ article.url }}',  '_self')" title="{{ article.title | escape }}"class="featured-article blog-card cursor-pointer {% render 'column-width', value: object.settings.home_page_articles %} columns article card show-border-{{ object.settings.show-border }} medium-down--one-whole has-margin-bottom ">
 
             {% if article.image %}
               <div class="card-image blog-card__image">

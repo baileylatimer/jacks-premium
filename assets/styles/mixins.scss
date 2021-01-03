@@ -735,6 +735,7 @@
 // Media 
 @mixin border {
   border: 3px solid $color-black;
+  transition: 0.3s;
   &:hover {
     box-shadow: 6px 6px $color-black;
   }

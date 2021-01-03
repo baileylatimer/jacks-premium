@@ -69,6 +69,13 @@ $blog-border: 3px solid $border !default;
   @include respond-to('medium-down') {
     margin-bottom: 20px;
   }
+  @include border();
+  &:hover {
+    background-color: $color-white;
+    .truncation-fade {
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $color-white) !important;
+    }
+  }
 
   &.show-border-false {
     border: none;
@@ -91,7 +98,7 @@ $blog-border: 3px solid $border !default;
   }
 
   .image-element__wrap {
-
+    height: 200px;
     @include respond-to('medium-up') {
       max-height: 15rem;
     }

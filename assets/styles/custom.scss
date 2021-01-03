@@ -33,6 +33,33 @@ $color-primary: hsl(41, 44%, 37%);
   margin-bottom: $half-gutter;
 }
 
+.padding-y-xl {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.padding-bottom-xl {
+  padding-bottom: 60px;
+}
+
+.bg-contrast-lower,
+#shopify-section-1609097736434d65ce {
+  background-color: $color-contrast-lower !important;
+}
+
+// --------------------------------
+
+// Cursor
+
+// --------------------------------
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+
 // Style
 
 .border {

@@ -103,8 +103,8 @@ $shop_bg_color: {{ settings.shop_bg_color }};
   // Centered layout
 
   .footer__content {
-    border-bottom: $footer_border;
-    border-top: $footer_border;
+    // border-bottom: $footer_border;
+    // border-top: $footer_border;
   }
 
   .footer__menu {

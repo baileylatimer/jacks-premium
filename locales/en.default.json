@@ -268,12 +268,12 @@
       "or": "or"
     },
     "login": {
-      "title": "Customer Login",
+      "title": "Member Login",
       "returning_customers": "Returning Customers",
-      "new_customers": "New Customers",
+      "new_customers": "New Member",
       "forgot_password": "Forgot your password?",
       "sign_up_html": "Sign up",
-      "new_customer_label": "New Customer?",
+      "new_customer_label": "Not a Member?",
       "sign_in": "Login",
       "cancel": "Return to Store",
       "guest_title_html": "Continue as a Guest &rarr;",

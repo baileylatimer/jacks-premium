@@ -87,6 +87,13 @@
   {% render 'social-meta-info' %}
   {% if collection.previous_product %}<link rel="prev" href="{{ collection.previous_product }}">{% endif %}
   {% if collection.next_product %}<link rel="next" href="{{ collection.next_product }}">{% endif %}
+
+  <!-- Third-party scripts / START  -->
+  <script type="text/javascript">
+  // YOTPO Reviews
+  (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/AjlnS8JEjAtRTQPtvGRtYLUycrAXOeyWSnT0egp3/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+  </script>
+    <!-- Third-party scripts / END  -->
 </head>
 
 {% if template.name == 'index' %}

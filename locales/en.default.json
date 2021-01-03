@@ -139,8 +139,8 @@
       "no_matches": "No products found in this collection",
       "link_title": "Browse {{ title }}",
       "all_collection_title": "All {{ title }}",
-      "quick_shop": "Quick View",
-      "pagination_button": "Load More Products",
+      "quick_shop": "See more +",
+      "pagination_button": "Load more",
       "new": "New",
       "coming_soon": "Coming Soon",
       "best_seller": "Best Seller",
@@ -182,7 +182,7 @@
       "sold_out": "Sold Out",
       "unavailable": "Unavailable",
       "quantity": "Qty",
-      "add_to_cart": "Add to cart",
+      "add_to_cart": "Add to bag",
       "add_to_cart_success": "Added",
       "vendor": "Vendor",
       "related_items": "Related Items",
@@ -321,10 +321,10 @@
       "subtotal": "Subtotal"
     },
     "register": {
-      "title": "Create Account",
-      "sign_up": "Sign Up",
+      "title": "Join the pack",
+      "sign_up": "Join now",
       "cancel": "Return to Store",
-      "returning_customer_label": "Returning Customer?",
+      "returning_customer_label": "Already a member?",
       "sign_in_html": "Login",
       "first_name": "First name",
       "last_name": "Last name",
@@ -368,7 +368,7 @@
   },
   "cart": {
     "general": {
-      "title": "Shopping Cart",
+      "title": "Doggy Bag",
       "products": "Products",
       "remove": "Remove",
       "price": "Price",
@@ -376,7 +376,7 @@
       "total": "Total",
       "item": "Item",
       "uploaded_file": "uploaded file",
-      "continue_browsing_html": "There are no items in your cart.",
+      "continue_browsing_html": "Your bag is empty :(",
       "continue_shopping_link_html": "Continue Shopping",
       "excluding_tax_shipping": "Excluding tax & shipping",
       "orders_processed_in_currency_html": "Orders will be processed in {{ currency }}.",
@@ -414,12 +414,12 @@
   "layout": {
     "general": {
       "menu": "Menu",
-      "cart": "Cart",
-      "edit_cart": "Edit Cart",
-      "go_to_cart": "Go to cart",
+      "cart": "Bag",
+      "edit_cart": "Edit Bag",
+      "go_to_cart": "Go to bag",
       "checkout": "Checkout",
       "continue_shopping": "Continue",
-      "empty_cart": "Your Cart is Empty",
+      "empty_cart": "Your Doggy Bag Is Empty :(",
       "cart_note": "Order Notes",
       "subtotal": "Subtotal",
       "savings": "Total Savings",
@@ -444,7 +444,7 @@
       "log_out": "Logout",
       "log_in": "Login",
       "my_account": "Account",
-      "create_account": "Create an account"
+      "create_account": "Join the pack"
     },
     "counts": {
       "items": {

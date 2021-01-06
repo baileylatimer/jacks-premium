@@ -1366,11 +1366,10 @@
         "type": "blog__banner",
         "settings": {
           "show_banner": false,
-          "image": "",
           "image_darken": false,
           "subtitle": "Subheading",
           "width": "wide",
-          "banner_height": "medium",
+          "banner_height": "small",
           "padding_top": 0,
           "padding_bottom": 0,
           "css_class": "",
@@ -1380,49 +1379,24 @@
       "blog__sidebar": {
         "type": "blog__sidebar",
         "blocks": {
-          "blog__sidebar-2": {
-            "type": "text",
-            "settings": {
-              "title": "THE LATEST",
-              "text": "<p>Catch up on our latest articles and join in on the conversation!<\/p>"
-            }
-          },
           "1564173257081": {
             "type": "search",
             "settings": {
-              "title": "SEARCH",
-              "search_results": "search_everything"
+              "title": "What are you looking for?",
+              "search_results": "product,page,article"
             }
           },
           "1564173213695": {
             "type": "post_tags",
             "settings": {
-              "title": "CATEGORIES",
+              "title": "Filter by type",
               "blog": "news"
-            }
-          },
-          "blog__sidebar-1": {
-            "type": "menu",
-            "settings": {
-              "menu": "explore"
-            }
-          },
-          "1564173250193": {
-            "type": "newsletter",
-            "settings": {
-              "newsletter_title": "SUBSCRIBE",
-              "newsletter_richtext": "<p>Be the first to hear about new product releases and sales!&nbsp;<\/p>",
-              "display_first_name": false,
-              "display_last_name": false
             }
           }
         },
         "block_order": [
-          "blog__sidebar-2",
           "1564173257081",
-          "1564173213695",
-          "blog__sidebar-1",
-          "1564173250193"
+          "1564173213695"
         ],
         "settings": {
           "show_sidebar": true,
@@ -1435,15 +1409,15 @@
         "type": "blog__main",
         "settings": {
           "blog_tags": false,
-          "blog_posts_per_row": 3,
+          "blog_posts_per_row": 2,
           "blog_posts_per_page": 12,
           "pagination_type": "basic_pagination",
           "blog_author": false,
           "blog_date": true,
           "read_time": true,
-          "blog_comment_count": true,
+          "blog_comment_count": false,
           "blog_show_tags": true,
-          "blog_show_excerpt": false,
+          "blog_show_excerpt": true,
           "show_border": true,
           "button_label": "Read more",
           "button_type": "button--link-style",
@@ -1644,7 +1618,8 @@
       "page-contact__banner": {
         "type": "page-contact__banner",
         "settings": {
-          "show_banner": false,
+          "show_banner": true,
+          "image": "shopify:\/\/shop_images\/fresh__page--contact-us-banner-01.jpg",
           "image_darken": false,
           "subtitle": "We love to hear from you!",
           "width": "wide",
@@ -1703,22 +1678,76 @@
           "page-contact__main-2"
         ],
         "settings": {
+          "content_image": "shopify:\/\/shop_images\/fresh__page--contact-us-01.jpg",
           "title": "Need to get in touch?",
-          "content_text": "<p>We&#x27;re always happy to chat and help answer any questions you may have! Please note, we try our best to respond to all inquiries within 48 hours, Monday - Friday.<\/p>",
+          "content_text": "<p>We're always happy to chat and help answer any questions you may have! Please note, we try our best to respond to all inquiries within 48 hours, Monday - Friday.<\/p>",
           "social_enable": true,
           "text_alignment": "left",
-          "background": "rgba(0,0,0,0)",
-          "text_color": "#000000",
+          "background": "#000000",
+          "text_color": "#ffffff",
           "form_position": "right",
           "width": "standard",
-          "padding_top": 80,
-          "padding_bottom": 80,
+          "padding_top": 40,
+          "padding_bottom": 40,
           "css_class": "",
           "custom_css": ""
         }
       },
       "page-contact__sections": {
         "type": "page-contact__sections",
+        "blocks": {
+          "page-contact__sections-0": {
+            "type": "rich_text",
+            "settings": {
+              "title": "Come and visit",
+              "heading_font": "helvetica_n7",
+              "heading_color": "#ffffff",
+              "heading_alignment": "left",
+              "heading_size": 50,
+              "text": "<p>Stop by one of our locations!&nbsp;<\/p>\n<p>Mon-Fri: 9:00am - 6:00pm<br>Sat: 10:00am - 3:00pm<br>Sun: Closed<\/p>",
+              "text_font": "helvetica_n4",
+              "text_color": "#ffffff",
+              "text_alignment": "left",
+              "text_size": 16,
+              "columns": 1,
+              "button_label": "",
+              "button_link": "",
+              "button_alignment": "center",
+              "button_style": "button--primary",
+              "background": "#000000",
+              "gradient": "rgba(0,0,0,0)",
+              "gradient_rotation": 180,
+              "width": "half",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
+          "page-contact__sections-1": {
+            "type": "map",
+            "settings": {
+              "map_address": "Bath, England",
+              "map_height": 400,
+              "zoom_level": 11,
+              "map_image": "",
+              "api_key": "",
+              "show_pin": false,
+              "map_style": "silver",
+              "width": "half",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          }
+        },
+        "block_order": [
+          "page-contact__sections-0",
+          "page-contact__sections-1"
+        ],
         "settings": {
         }
       },
@@ -2077,10 +2106,10 @@
         "type": "article__banner",
         "settings": {
           "show_banner": true,
-          "image_darken": false,
-          "width": "wide",
-          "banner_height": "medium",
-          "padding_top": 0,
+          "image_darken": true,
+          "width": "standard",
+          "banner_height": "small",
+          "padding_top": 20,
           "padding_bottom": 0,
           "css_class": "",
           "custom_css": ""
@@ -2094,9 +2123,7 @@
             "settings": {
               "promo_background": "#eeeeee",
               "promo_text": "#000000",
-              "promo_image": "",
               "richtext": "<p>Use this area for promotional information.<\/p>",
-              "promo_link": "",
               "button_label": "Shop now",
               "button_style": "button--primary"
             }
@@ -2129,13 +2156,40 @@
       },
       "article__main": {
         "type": "article__main",
+        "blocks": {
+          "5300b677-069a-48f1-8ced-332b3d42d528": {
+            "type": "author_share",
+            "settings": {
+              "blog_author": false,
+              "display_social_buttons": true
+            }
+          },
+          "bd4912a7-155d-4f86-b309-0799f2316a3f": {
+            "type": "related_posts",
+            "settings": {
+              "show_border": true,
+              "blog_show_excerpt": true,
+              "blog_show_tags": true,
+              "blog_author": true,
+              "blog_date": true,
+              "read_time": true,
+              "blog_comment_count": true,
+              "button_label": "Read more ➞",
+              "button_type": "button--link-style"
+            }
+          }
+        },
+        "block_order": [
+          "5300b677-069a-48f1-8ced-332b3d42d528",
+          "bd4912a7-155d-4f86-b309-0799f2316a3f"
+        ],
         "settings": {
           "show_breadcrumb": true,
           "blog_author": true,
           "blog_date": true,
           "read_time": true,
           "blog_comment_count": true,
-          "show_tags": false,
+          "show_tags": true,
           "show_featured_image": false,
           "width": "standard",
           "padding_top": 40,
@@ -2150,7 +2204,7 @@
           "image": "shopify:\/\/shop_images\/dog-field-right.jpg",
           "pretext": "",
           "title": "Feed them like family.",
-          "subtitle": "",
+          "subtitle": "<p>Give your best friend the quality they deserve.<\/p>",
           "pretext_color": "#ebeae4",
           "heading_color": "#ebeae4",
           "subheading_color": "#ebeae4",
@@ -2391,7 +2445,7 @@
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-2_97511094-73fb-4517-b09f-d074cd244669.jpg",
-              "featured_product": "6-inch-bully-stick",
+              "featured_product": "6-inch-braided-bully-stick",
               "rating": 5,
               "title": "Cooper",
               "description": "Enjoying my @jacks_premium bone I got from the @dallasfarmersmarket today!! It’s so good, thanks mom and dad!!",
@@ -2424,7 +2478,7 @@
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-3.jpg",
-              "featured_product": "12-inch-braided-bully-stick",
+              "featured_product": "12-inch-bully-stick-bull",
               "rating": 1,
               "title": "Auggie",
               "description": "Do I smell... SHNACKS??? Nothing better than a @jacks_premium Friday delivery!",

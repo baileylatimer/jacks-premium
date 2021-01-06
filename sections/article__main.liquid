@@ -320,7 +320,7 @@
                 {% assign skip_article = true %}
               {% endif %}
               {% unless skip_article %}
-                <div class="one-third columns article blog-card card show-border-{{ block.settings.show_border }} medium-down--one-whole">
+                <div onclick="window.open('{{ article.url }}',  '_self')" title="{{ article.title | escape }}" class="one-third columns article blog-card card show-border-{{ block.settings.show_border }} medium-down--one-whole">
                   {% if a.image %}
                     <div class="card-image blog-card__image">
                       <figure class="image">

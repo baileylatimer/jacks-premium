@@ -103,7 +103,7 @@
       </div>
     {% endif %}
     {% for article in blog.articles %}
-      <div onclick="window.open('{{ article.url }}',  '_self')" title="{{ article.title | escape }}" class="featured-article blog-card {% render 'column-width', value: section.settings.blog_posts_per_row %} columns article card show-border-{{ section.settings.show_border }} medium-down--one-half small-down--one-whole has-margin-bottom {% if section.settings.blog_posts_per_row == 1 %}is-horizontal{% endif %}" {% if section.settings.pagination_type != 'basic_pagination' %}data-load-more--grid-item{% endif %}>
+      <div onclick="window.open('{{ article.url }}',  '_self')" title="{{ article.title | escape }}" class="cursor-pointer featured-article blog-card {% render 'column-width', value: section.settings.blog_posts_per_row %} columns article card show-border-{{ section.settings.show_border }} medium-down--one-half small-down--one-whole has-margin-bottom {% if section.settings.blog_posts_per_row == 1 %}is-horizontal{% endif %}" {% if section.settings.pagination_type != 'basic_pagination' %}data-load-more--grid-item{% endif %}>
         {% if article.image %}
           <div class="card-image blog-card__image">
             <figure class="image">

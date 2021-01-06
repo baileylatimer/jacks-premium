@@ -105,7 +105,7 @@
     "dropdown_background_opacity": 100,
     "dropdown_link_color": "#636363",
     "dropdown_link_hover_color": "#000000",
-    "footer_background": "#ebeae4",
+    "footer_background": "#dddbd2",
     "footer_border": "#000000",
     "footer_link_color": "#63625f",
     "footer_link_hover_color": "#000000",
@@ -114,12 +114,12 @@
     "was_price_color": "#a6a6a6",
     "product_hover_text_color": "#ae3333",
     "product_hover_bg_color": "#ffffff",
-    "banner_bestseller": "#ff80c1",
+    "banner_bestseller": "#000000",
     "banner_comingsoon": "#ff8002",
     "banner_new": "#ebd62b",
     "banner_preorder": "#1aa8d5",
     "banner_sale": "#88ad44",
-    "banner_staffpick": "#a58ced",
+    "banner_staffpick": "#000000",
     "qty_icon_color": "#000000",
     "qty_icon_hover_color": "#000000",
     "qty_background_color": "#ffffff",
@@ -215,7 +215,7 @@
     "display_ajax_quantity_box": false,
     "cart_message": "",
     "go_to_checkout": true,
-    "enable_shipping_calculator": true,
+    "enable_shipping_calculator": false,
     "shipping_calculator_default_country": "United States",
     "currency_format": "money_format",
     "show_multiple_currencies": false,
@@ -375,24 +375,6 @@
       "mega-menu-1": {
         "type": "mega-menu-1",
         "blocks": {
-          "1565195799064": {
-            "type": "featured_promo",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/social-4.jpg",
-              "richtext": "",
-              "bgr_color": "#000000",
-              "text_color": "#000000",
-              "promo_link": "shopify:\/\/products\/jumbo-bully-stick",
-              "button_label": "Shop Jumbo Bully Stick ➞",
-              "button_style": "button--primary"
-            }
-          },
-          "1774ad02-9e7c-45c6-a4f7-faf683cae2cd": {
-            "type": "menu",
-            "settings": {
-              "menu_1": "best-sellers"
-            }
-          },
           "mega-menu-1-0": {
             "type": "menu",
             "settings": {
@@ -406,24 +388,43 @@
               "menu_1": "treats",
               "menu_1_link": "shopify:\/\/collections\/treats"
             }
+          },
+          "319d524b-3c7c-4acc-ae5b-7e5ae9bcc845": {
+            "type": "menu",
+            "settings": {
+              "menu_1": "best-sellers"
+            }
+          },
+          "1565195799064": {
+            "type": "featured_promo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/social-4.jpg",
+              "richtext": "<p>Loved by pups of all sizes.<\/p>",
+              "bgr_color": "#dddbd2",
+              "text_color": "#000000",
+              "promo_link": "shopify:\/\/products\/pig-ear",
+              "button_label": "Shop Pig Ear ➞",
+              "button_style": "button--secondary"
+            }
           }
         },
         "block_order": [
-          "1565195799064",
-          "1774ad02-9e7c-45c6-a4f7-faf683cae2cd",
           "mega-menu-1-0",
-          "1565195971169"
+          "1565195971169",
+          "319d524b-3c7c-4acc-ae5b-7e5ae9bcc845",
+          "1565195799064"
         ],
         "settings": {
           "parent_link": "And More",
           "enable_mega_menu_border": false,
           "mega_menu_background_color": "#ebeae4",
           "mega_menu_text_color": "#404040",
-          "show_mega_bottom_bar": false,
+          "show_mega_bottom_bar": true,
           "mega_bottom_bar_icon": "",
-          "mega_bottom_bar_text": "Add your deal, information or promotional text",
+          "mega_bottom_bar_text": "<b>See all products ➞<\/b>",
+          "mega_bottom_bar_link": "shopify:\/\/collections",
           "size": "regular",
-          "bottom_banner_bg": "#007ace",
+          "bottom_banner_bg": "#000000",
           "bottom_banner_text": "#efefef",
           "css_class": "",
           "custom_css": ""
@@ -1643,8 +1644,7 @@
       "page-contact__banner": {
         "type": "page-contact__banner",
         "settings": {
-          "show_banner": true,
-          "image": "shopify:\/\/shop_images\/fresh__page--contact-us-banner-01.jpg",
+          "show_banner": false,
           "image_darken": false,
           "subtitle": "We love to hear from you!",
           "width": "wide",
@@ -1703,76 +1703,22 @@
           "page-contact__main-2"
         ],
         "settings": {
-          "content_image": "shopify:\/\/shop_images\/fresh__page--contact-us-01.jpg",
           "title": "Need to get in touch?",
-          "content_text": "<p>We're always happy to chat and help answer any questions you may have! Please note, we try our best to respond to all inquiries within 48 hours, Monday - Friday.<\/p>",
+          "content_text": "<p>We&#x27;re always happy to chat and help answer any questions you may have! Please note, we try our best to respond to all inquiries within 48 hours, Monday - Friday.<\/p>",
           "social_enable": true,
           "text_alignment": "left",
-          "background": "#000000",
-          "text_color": "#ffffff",
+          "background": "rgba(0,0,0,0)",
+          "text_color": "#000000",
           "form_position": "right",
           "width": "standard",
-          "padding_top": 40,
-          "padding_bottom": 40,
+          "padding_top": 80,
+          "padding_bottom": 80,
           "css_class": "",
           "custom_css": ""
         }
       },
       "page-contact__sections": {
         "type": "page-contact__sections",
-        "blocks": {
-          "page-contact__sections-0": {
-            "type": "rich_text",
-            "settings": {
-              "title": "Come and visit",
-              "heading_font": "helvetica_n7",
-              "heading_color": "#ffffff",
-              "heading_alignment": "left",
-              "heading_size": 50,
-              "text": "<p>Stop by one of our locations!&nbsp;<\/p>\n<p>Mon-Fri: 9:00am - 6:00pm<br>Sat: 10:00am - 3:00pm<br>Sun: Closed<\/p>",
-              "text_font": "helvetica_n4",
-              "text_color": "#ffffff",
-              "text_alignment": "left",
-              "text_size": 16,
-              "columns": 1,
-              "button_label": "",
-              "button_link": "",
-              "button_alignment": "center",
-              "button_style": "button--primary",
-              "background": "#000000",
-              "gradient": "rgba(0,0,0,0)",
-              "gradient_rotation": 180,
-              "width": "half",
-              "padding_top": 0,
-              "padding_bottom": 0,
-              "padding_left": 0,
-              "padding_right": 0,
-              "animation": "none"
-            }
-          },
-          "page-contact__sections-1": {
-            "type": "map",
-            "settings": {
-              "map_address": "Bath, England",
-              "map_height": 400,
-              "zoom_level": 11,
-              "map_image": "",
-              "api_key": "",
-              "show_pin": false,
-              "map_style": "silver",
-              "width": "half",
-              "padding_top": 0,
-              "padding_bottom": 0,
-              "padding_left": 0,
-              "padding_right": 0,
-              "animation": "none"
-            }
-          }
-        },
-        "block_order": [
-          "page-contact__sections-0",
-          "page-contact__sections-1"
-        ],
         "settings": {
         }
       },
@@ -1846,7 +1792,6 @@
         "type": "cart__banner",
         "settings": {
           "show_banner": false,
-          "image": "",
           "image_darken": false,
           "subtitle": "Subheading",
           "width": "wide",
@@ -1859,29 +1804,6 @@
       },
       "cart__main": {
         "type": "cart__main",
-        "blocks": {
-          "1564171735975": {
-            "type": "featured_collection",
-            "settings": {
-              "title": "Current favourites",
-              "collection": "hair",
-              "products_per": 5,
-              "mobile_products_per_row": "1",
-              "products_limit": 5,
-              "align_height": false,
-              "collection_height": 200,
-              "collection_style": "grid",
-              "width": "wide",
-              "show_gutter": true,
-              "padding_top": 20,
-              "padding_bottom": 20,
-              "animation": "none"
-            }
-          }
-        },
-        "block_order": [
-          "1564171735975"
-        ],
         "settings": {
           "display_product_quantity_cart": true,
           "display_savings": true,
@@ -2228,7 +2150,7 @@
           "image": "shopify:\/\/shop_images\/dog-field-right.jpg",
           "pretext": "",
           "title": "Feed them like family.",
-          "subtitle": "<p>Give your best friend the quality they deserve.<\/p>",
+          "subtitle": "",
           "pretext_color": "#ebeae4",
           "heading_color": "#ebeae4",
           "subheading_color": "#ebeae4",
@@ -2529,8 +2451,8 @@
           "newsletter_title": "Join the pack",
           "newsletter_richtext": "",
           "newsletter_section_text_align": "left",
-          "background_color": "#000000",
-          "text_color": "#dddbd2",
+          "background_color": "#deceab",
+          "text_color": "#000000",
           "image_darken": false,
           "image": "shopify:\/\/shop_images\/two-dogs.jpg",
           "image_cropping": "center",
@@ -2652,9 +2574,9 @@
           "text_alignment": "center",
           "text_horizontal_position": "center",
           "text_vertical_position": "middle",
-          "background_color": "#FFFFFF",
+          "background_color": "#ffffff",
           "background_opacity": 0,
-          "border_color": "#FFFFFF",
+          "border_color": "#ffffff",
           "border_width": 0,
           "text_width": 40,
           "button_1": "",
@@ -2682,10 +2604,11 @@
           "16097130289b49de35-2": {
             "type": "text",
             "settings": {
-              "title": "From our Texas farm to your doorstep.",
+              "title": "From our Texas farms to your doorstep.",
               "heading_size": "large",
               "text": "<p>We craft with all-natural ingredients that pups love and parents trust.<\/p>",
               "button_label": "Learn more ➞",
+              "link": "shopify:\/\/pages\/about",
               "button_style": "button--secondary",
               "background": "rgba(0,0,0,0)",
               "text_color": "rgba(0,0,0,0)",

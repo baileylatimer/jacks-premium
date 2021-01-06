@@ -601,9 +601,9 @@ $btn-add-to-cart-border-color-highlight: {{ settings.button_cart_border_color--h
 
   &:hover,
   &.is-hovered {
-    color: $btn-add-to-cart-text-color-highlight;
-    border-color: $btn-add-to-cart-border-color-highlight !important;
-    background-color: $btn-add-to-cart-bg-color-highlight;
+    color: $color-contrast-lower;
+    border-color: $color-contrast-high !important;
+    background-color: $color-contrast-high;
   }
 
   &:focus,

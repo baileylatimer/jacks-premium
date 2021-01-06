@@ -3871,9 +3871,9 @@ $btn-add-to-cart-border-color-highlight: {{ settings.button_cart_border_color--h
 
   &:hover,
   &.is-hovered {
-    color: $btn-add-to-cart-text-color-highlight;
-    border-color: $btn-add-to-cart-border-color-highlight !important;
-    background-color: $btn-add-to-cart-bg-color-highlight;
+    color: $color-contrast-lower;
+    border-color: $color-contrast-high !important;
+    background-color: $color-contrast-high;
   }
 
   &:focus,
@@ -12951,7 +12951,7 @@ $banner-font-size: {{ settings.banner_text_size }}px;
 
 
   .image-with-text-overlay__container img {
-    height: 440px;
+    height: 600px;
     @media only screen and (max-width: 600px) {
     height: 450px;
   }
@@ -16687,3 +16687,19 @@ $color-primary: hsl(41, 44%, 37%);
 //     --color-o: 0.9;
 //   }
 // }
+
+// Product form options
+
+.product-form-container .select {
+  width: 100%;
+  select {
+    width: 100%;
+    font-weight: 600;
+    background: $color-white;
+  }
+}
+
+// Apps
+#trustedsite-tm-image {
+  display: none !important;
+}

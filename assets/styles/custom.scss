@@ -248,3 +248,19 @@ $color-primary: hsl(41, 44%, 37%);
 //     --color-o: 0.9;
 //   }
 // }
+
+// Product form options
+
+.product-form-container .select {
+  width: 100%;
+  select {
+    width: 100%;
+    font-weight: 600;
+    background: $color-white;
+  }
+}
+
+// Apps
+#trustedsite-tm-image {
+  display: none !important;
+}

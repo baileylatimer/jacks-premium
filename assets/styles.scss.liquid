@@ -13698,14 +13698,15 @@ $banner-font-size: {{ settings.banner_text_size }}px;
 
 .mega-menu {
   display: none;
-  left: 0;
+  right: 0;
   font-size: $drop-down-menu-font-size;
   letter-spacing: $drop-down-menu-letter-spacing;
   text-transform: $drop-down-menu-font-style;
   position: absolute;
   top: 100%;
-  width: 100%;
-  min-width: 100%;
+  padding: $gutter;
+  // width: 100%;
+  // min-width: 100%;
   z-index: 20;
   box-shadow: 0 8px 8px rgba($black, 0.1);
 
@@ -16570,6 +16571,12 @@ $color-primary: hsl(41, 44%, 37%);
 .image-element__wrap img {
   max-height: 600px;
   object-fit: cover;
+}
+
+// Collection thumbnail
+.product-wrap img {
+  max-height: 200px;
+  object-fit: contain;
 }
 
 body {

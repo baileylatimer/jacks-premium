@@ -133,6 +133,12 @@ $color-primary: hsl(41, 44%, 37%);
   object-fit: cover;
 }
 
+// Collection thumbnail
+.product-wrap img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
 body {
   // font rendering
   -webkit-font-smoothing: antialiased;

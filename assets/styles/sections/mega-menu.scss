@@ -18,14 +18,15 @@
 
 .mega-menu {
   display: none;
-  left: 0;
+  right: 0;
   font-size: $drop-down-menu-font-size;
   letter-spacing: $drop-down-menu-letter-spacing;
   text-transform: $drop-down-menu-font-style;
   position: absolute;
   top: 100%;
-  width: 100%;
-  min-width: 100%;
+  padding: $gutter;
+  // width: 100%;
+  // min-width: 100%;
   z-index: 20;
   box-shadow: 0 8px 8px rgba($black, 0.1);
 

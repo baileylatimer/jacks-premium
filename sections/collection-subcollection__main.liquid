@@ -16,6 +16,7 @@
 {% comment %} Advanced {% endcomment %}
 {% assign css_class = section.settings.css_class %}
 {% assign custom_css = section.settings.custom_css %}
+{% assign show_collection_products = section.settings.show_collection_products %}
 
 {% comment %} Is the color set to transparent? {% endcomment %}
 {% assign overlay_alpha = overlay_background | color_extract: 'alpha' %}
@@ -118,7 +119,7 @@
     </div>
   {% endif %}
 
-  <div class="list-collection-wrapper container">
+  <div class="list-collection-wrapper container {% unless section.settings.show_collections_products %} padding-y-xl {% endunless %}">
     {% assign menu = linklists[collection.handle] %}
     {% for link in menu.links %}
       {% assign collection = link.object %}
@@ -186,37 +187,39 @@
     {% endfor %}
   </div>
 
-  <div class="collection__filtering one-whole column">
-    {% comment %} Collection filters {% endcomment %}
-    <div class="collection__filters text-align-right">
-      {% render 'collection__filters' %}
-    </div>
-  </div>
-
-  {% paginate collection.products by section.settings.pagination_limit %}
-    <div class="subcollection__featured-collection {{ css_class }}" data-collection-main>
-      {% if collection.products.size > 0 %}
-        <div class="collection-matrix__wrapper">
-          <div class="container collection-matrix">
-            {%- assign products_per_row = section.settings.products_per_row -%}
-            {% render 'product-loop',
-                    products: products,
-                    products_per_row: products_per_row,
-                    limit: section.settings.pagination_limit,
-                    align_height: section.settings.align_thumbnail_height,
-                    height: section.settings.thumbnail_height
-            %}
-          </div>
-        </div>
-      {% endif %}
-
-      <div class="container container--pagination">
-        <div class="one-whole column text-align-center">
-          {% render 'pagination', paginate: paginate %}
-        </div>
+  {% if section.settings.show_collections_products %}
+    <div class="collection__filtering one-whole column">
+      {% comment %} Collection filters {% endcomment %}
+      <div class="collection__filters text-align-right">
+        {% render 'collection__filters' %}
       </div>
     </div>
-  {% endpaginate %}
+
+    {% paginate collection.products by section.settings.pagination_limit %}
+      <div class="subcollection__featured-collection {{ css_class }}" data-collection-main>
+        {% if collection.products.size > 0 %}
+          <div class="collection-matrix__wrapper">
+            <div class="container collection-matrix">
+              {%- assign products_per_row = section.settings.products_per_row -%}
+              {% render 'product-loop',
+                      products: products,
+                      products_per_row: products_per_row,
+                      limit: section.settings.pagination_limit,
+                      align_height: section.settings.align_thumbnail_height,
+                      height: section.settings.thumbnail_height
+              %}
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="container container--pagination">
+          <div class="one-whole column text-align-center">
+            {% render 'pagination', paginate: paginate %}
+          </div>
+        </div>
+      </div>
+    {% endpaginate %}
+  {% endif %}
 </main>
 
 {% comment %} JavaScript {% endcomment %}
@@ -243,6 +246,12 @@
       "id": "collection_breadcrumb",
       "label": "Show breadcrumbs",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_products",
+      "label": "Show products",
+      "default": false
     },
     {
       "type": "checkbox",

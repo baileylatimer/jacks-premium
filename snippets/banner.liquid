@@ -19,7 +19,7 @@
   {% assign subtitle = section.settings.subtitle %}
 {% elsif context == 'collection' %}
   {% assign title = collection.title %}
-  {% assign subtitle = section.settings.subtitle %}
+  {% assign subtitle = collection.description %}
   {%- if collection.image -%}
     {% assign image = collection.image %}
   {%- elsif section.settings.image -%}

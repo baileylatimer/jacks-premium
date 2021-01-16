@@ -10882,7 +10882,7 @@ $swatch-label-size: 34px;
   font-family: {{ settings.banner_text__font.family }}, {{ settings.banner_text__font.fallback_families }};
   font-weight: {{ settings.banner_text__font.weight }};
   font-style: {{ settings.banner_text__font.style }};
-  font-size: {{ settings.banner_text_size }}px;
+  // font-size: {{ settings.banner_text_size }}px;
   letter-spacing: {{ settings.banner_text_letter_spacing }}px;
   color: {{ settings.banner_heading_color }};
 }
@@ -16460,6 +16460,12 @@ $subtotal-bg-color: #F2F2F2;
 ================================================== */
 
 $color-primary: hsl(41, 44%, 37%);
+
+.banner__subheading {
+  @include respond-to("medium-up") {
+    font-size: 30px;
+  }
+}
 
 // Layout
 .b10 {

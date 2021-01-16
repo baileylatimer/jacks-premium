@@ -21,6 +21,12 @@
 
 $color-primary: hsl(41, 44%, 37%);
 
+.banner__subheading {
+  @include respond-to("medium-up") {
+    font-size: 30px;
+  }
+}
+
 // Layout
 .b10 {
   position: absolute;

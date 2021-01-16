@@ -21,10 +21,10 @@
       >
   {% form 'product', product %}
 
-  <div class="flex  is-justify-space-between">
+  <div class="">
     {% if product.variants.size > 1 %}
       {% if product.options.size > 1 %}
-        <div class="select-container width-75% margin-right-sm">
+        <div class="select-container margin-right-sm">
             {% if context == 'quickshop' %}
               <div class="select">
             {% endif %}
@@ -38,7 +38,7 @@
             {% endif %}
         </div>
       {% elsif product.options.size == 1 and product.variants.size > 1 or product.options.size == 1 and product.options[0] != "Title" %}
-        <div class="select-container width-75% margin-right-sm">
+        <div class="select-container margin-right-sm">
           <!--rm <label class="label">{{ product.options[0] }}</label> -->
           <div>
             {% if context == 'quickshop' %}
@@ -60,7 +60,7 @@
     {% endif %}
 
     {% if settings.display_product_quantity %}
-    <div class="purchase-details__quantity product-quantity-box quantity-box--{{ settings.qty_box_style }} width-25%">
+    <div class="purchase-details__quantity product-quantity-box quantity-box--{{ settings.qty_box_style }}">
       {% render 'quantity-box' %}
     </div>
     {% endif %}

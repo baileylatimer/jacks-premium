@@ -23,7 +23,8 @@ $input-border-color: {{ settings.border_color }};
 $input-border-radius: {{ settings.qty_border_radius }}px;
 
 $quantity-background-color: {{ settings.qty_background_color }} !default;
-$quantity-background-color-disabled: {{ settings.qty_background_color | color_modify: 'alpha', 0.5 }} !default;
+$quantity-background-color-disabled: {{ settings.qty_background_color }} !default;
+// $quantity-background-color-disabled: {{ settings.qty_background_color | color_modify: 'alpha', 0.5 }} !default;
 $quantity-background-hover-color: {{ settings.qty_background_hover_color }} !default;
 
 $quantity-box-stacked-control-width: 48px;
@@ -48,7 +49,8 @@ $quantity-box-control-width: 44px;
 .selector-wrapper {
   margin-bottom: 10px;
   @include flexbox();
-  @include align-items(center);
+  flex-direction: column;
+  @include align-items(start);
 
   &:last-of-type {
     margin-bottom: 1.5rem;
@@ -78,9 +80,11 @@ $quantity-box-control-width: 44px;
 
 // Quantity box
 .quantity-wrapper {
+  border: 3px solid $color-black;
 
   .quantity-element {
     min-height: $atc-button-height;
+    border: none !important;
   }
 
   .quantity-input {
@@ -355,7 +359,7 @@ button.shopify-payment-button__more-options {
 
 .product-quantity-box.purchase-details__quantity {
   margin-right: 10px;
-  width: calc(50% - 12px);
+  // width: calc(50% - 12px);
 
   @include respond-to('small-down') {
     width: 100%;
@@ -420,7 +424,7 @@ button.shopify-payment-button__more-options {
 
     @include respond-to('widescreen-up') {
       @include flex(1 0 calc(50% - 12px));
-      max-width: calc(50% - 12px);
+      //rm max-width: calc(50% - 12px);
     }
   }
   .action_button.action_button--secondary {
@@ -436,7 +440,7 @@ button.shopify-payment-button__more-options {
 
     @include respond-to('widescreen-up'){
       @include flex(1 0 calc(50% - 12px));
-      max-width: calc(50% - 12px);
+      //rm max-width: calc(50% - 12px);
       margin-right: 8px;
     }
 
@@ -527,7 +531,7 @@ button.shopify-payment-button__more-options {
 
   .purchase-details__spb--false {
     height: $atc-button-height;
-    margin: 12px 0 0;
+    margin: 24px 0 0;
     display: inline-block;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -545,7 +549,7 @@ button.shopify-payment-button__more-options {
   }
 
   &.has-quantity-box .purchase-details__spb--false {
-    max-width: 50%;
+    //rm max-width: 50%;
 
     @include respond-to('medium-down') {
       max-width: 100%;

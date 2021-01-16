@@ -81,7 +81,7 @@ Shopify.theme.jsProduct = {
     if (Shopify.theme_settings.product_form_style === "swatches") {
       this.enableProductSwatches();
     } else if (Shopify.theme_settings.product_form_style === "dropdown") {
-      $('.selector-wrapper select', $section).wrap('<span class="select" data-dropdown-form-style></span>');
+      $('.selector-wrapper select', $section).wrap('<span class="select is-multiple" data-dropdown-form-style></span>');
       this.findSelectedVariantImage();
     }
 

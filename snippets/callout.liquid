@@ -1,0 +1,89 @@
+{% if context == 'blog' %}
+  {% assign title = blog.title %}
+  {% assign image = section.settings.image %}
+{% elsif context =='cart' %}
+  {%- capture title -%}
+    {{'cart.general.title' | t }}
+  {%- endcapture -%}
+  {% assign subtitle = section.settings.subtitle %}
+  {% assign image = section.settings.image %}
+{% elsif context == 'article' %}
+  {% assign title = article.title %}
+  {% assign image = article.image %}
+{% elsif context == 'page' %}
+  {% assign title = page.title %}
+  {% assign image = section.settings.image %}
+{% elsif context == 'contact' %}
+  {% assign title = page.title %}
+  {% assign image = section.settings.image %}
+  {% assign subtitle = section.settings.subtitle %}
+{% elsif context == 'default' %}
+  {% assign title = section.settings.title %}
+  {% assign image = section.settings.image %}
+  {% assign subtitle = section.settings.subtitle %}
+  {% assign link_url = section.settings.link_url %}
+  {% assign link_title = section.settings.link_title %}
+{% elsif context == 'collection' %}
+  {% assign title = collection.title %}
+  {% assign subtitle = collection.description %}
+  {%- if collection.image -%}
+    {% assign image = collection.image %}
+  {%- elsif section.settings.image -%}
+    {% assign image = section.settings.image %}
+  {%- else %}
+    {% assign image = collection.products.first.featured_image %}
+  {% endif %}
+{% elsif context == '404' %}
+  {% capture title %}
+    {{ 'general.404.title' | t }}
+  {% endcapture %}
+  {% assign image = section.settings.image %}
+{% endif %}
+
+<style>
+  .hide-when-banner-enabled {
+    display: none;
+  }
+</style>
+
+<section class="section
+                {{ css_class }}
+                is-width-{{ width }} ">
+  <div class="container
+              {% if width == 'wide' %}
+                equal-columns--outside-trim
+              {% endif %}">
+    <div class="bg-primary-lighter callout-banner 
+                one-whole
+                column
+                dark-overlay-{{ section.settings.image_darken }}
+                is-{{ banner_height }} flex is-flex-wrap  is-align-center overflow-hidden">
+
+
+      <div class="card-content one-half
+      small-down--one-whole">
+        <div class="banner__text">
+          <h3 class="title">{{ title }}</h3>
+          {% if subtitle != blank %}
+            <p class="subtitle">{{ subtitle }}</p>
+          {% endif %}
+          {% if link_url != blank %}
+            <a class="subtitle link padding-top-lg scribble-text-fx scribble-text-fx--v5 color-inherit" href={{ link_url}}><span class="scribble-text-fx__label">{{ link_title }}</span>  <svg class="scribble-text-fx__decoration" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.693,9.52c.214-1.812.414-1.788.628-3.6s.154-1.819.368-3.631" /><path d="M11.02,11.4c1.24-1.452.966-1.686,2.205-3.139s1.206-1.485,2.448-2.94,1.426-1.3,2.668-2.752"/><path d="M15.6,17.185c2.183-.243,2.184-.232,4.367-.475"/></svg></a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class=" one-half small-down--one-whole">
+        {% if image != blank %}
+        <div class="callout-img">
+          {% render 'image-element',
+                  image: image,
+                  alt: image.alt,
+                  stretch_width: false
+          %}
+          {% endif %}
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>

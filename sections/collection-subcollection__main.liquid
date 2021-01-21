@@ -172,15 +172,20 @@
         </div>
         {% if section.settings.collection_title_below_image != blank %}
           <a class="collection-info__caption-wrapper collection-info__caption--below-image" href="{{ collection.url }}">
-            <span class="title">
+            <span class="title margin-bottom-xs">
               {{ collection.title }}
             </span>
+            <span class="description margin-bottom-md">
+              {{ collection.description }}
+            </span>
             {% assign view_products = 'collections.general.view_all' | t %}
-            {% render 'button',
-                    label: view_products,
-                    href: collection.url,
-                    style: section.settings.button_style
-            %}
+            {% if section.settings.show_button %}
+              {% render 'button',
+                      label: view_products,
+                      href: collection.url,
+                      style: section.settings.button_style
+              %}
+            {% endif %}
           </a>
         {% endif %}
       </div>
@@ -383,6 +388,12 @@
           "label": "Link"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button",
+      "default": true
     },
     {
       "type": "color",

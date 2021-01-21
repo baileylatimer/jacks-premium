@@ -1863,6 +1863,7 @@
           "align_height": true,
           "collection_height": 250,
           "button_style": "button--primary",
+          "show_button": false,
           "overlay_background": "#d3d3d3",
           "overlay_background_opacity": 0,
           "overlay_text": "#000000",
@@ -2625,6 +2626,24 @@
           "padding_top": 20,
           "padding_bottom": 20,
           "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "collection__callout": {
+        "type": "collection__callout",
+        "settings": {
+          "show_callout": true,
+          "image": "shopify:\/\/shop_images\/ingredient--grain_202f0a39-6b86-4162-8564-a91e91048952.png",
+          "image_darken": false,
+          "title": "Are grains good for dogs?",
+          "subtitle": "Grains are an excellent source of fiber, antioxidants, vitamins, and minerals. Grains support healthy skin, hair, and offer immune support. Dogs need carbs for digestion and energy. The best carbs you can give your dog's can come from whole grains.",
+          "link_title": "Learn more ➞",
+          "link_url": "shopify:\/\/blogs\/news\/the-best-herbs-for-dogs",
+          "width": "wide",
+          "banner_height": "medium",
+          "padding_top": 0,
+          "padding_bottom": 60,
           "css_class": "",
           "custom_css": ""
         }

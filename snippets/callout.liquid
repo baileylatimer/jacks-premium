@@ -23,6 +23,12 @@
   {% assign subtitle = section.settings.subtitle %}
   {% assign link_url = section.settings.link_url %}
   {% assign link_title = section.settings.link_title %}
+  {% elsif context == 'block' %}
+  {% assign title = block.settings.title %}
+  {% assign image = block.settings.image %}
+  {% assign subtitle = block.settings.subtitle %}
+  {% assign link_url = block.settings.link_url %}
+  {% assign link_title = block.settings.link_title %}
 {% elsif context == 'collection' %}
   {% assign title = collection.title %}
   {% assign subtitle = collection.description %}

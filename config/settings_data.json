@@ -6,7 +6,7 @@
     "header_layout": "classic",
     "footer_layout": "classic",
     "product_layout": "image_scroll",
-    "image_loading_style": "blur-up",
+    "image_loading_style": "color",
     "logo_mobile": "shopify:\/\/shop_images\/icon--light.png",
     "mobile_logo_width": 80,
     "logo_mobile_position": "center",
@@ -1848,7 +1848,21 @@
       },
       "collection-subcollection__main": {
         "type": "collection-subcollection__main",
+        "blocks": {
+          "01c9c558-8356-4a78-8d02-8a98c40ed980": {
+            "type": "video_by_coll",
+            "settings": {
+              "coll_video_collectionhandle": "food",
+              "coll_video_url": "https:\/\/www.youtube.com\/watch?v=6Cly2dCZJ1A&ab_channel=JacksPremium"
+            }
+          }
+        },
+        "block_order": [
+          "01c9c558-8356-4a78-8d02-8a98c40ed980"
+        ],
         "settings": {
+          "banner_video_autoplay": false,
+          "banner_video_hidecontrols": false,
           "collection_breadcrumb": true,
           "show_collection_products": false,
           "collection_tags": true,
@@ -2633,17 +2647,47 @@
       "collection__callout": {
         "type": "collection__callout",
         "settings": {
-          "show_callout": true,
-          "image": "shopify:\/\/shop_images\/ingredient--grain_202f0a39-6b86-4162-8564-a91e91048952.png",
-          "image_darken": false,
-          "title": "Are grains good for dogs?",
-          "subtitle": "Grains are an excellent source of fiber, antioxidants, vitamins, and minerals. Grains support healthy skin, hair, and offer immune support. Dogs need carbs for digestion and energy. The best carbs you can give your dog's can come from whole grains.",
-          "link_title": "Learn more ➞",
-          "link_url": "shopify:\/\/blogs\/news\/the-best-herbs-for-dogs",
+        }
+      },
+      "16112723251415db46": {
+        "type": "index__logo-list",
+        "blocks": {
+          "16112723251415db46-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dog-food-advisor.png"
+            }
+          },
+          "16112723251415db46-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/amazon.png"
+            }
+          },
+          "16112723251415db46-4": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/world-pet-association.png"
+            }
+          }
+        },
+        "block_order": [
+          "16112723251415db46-2",
+          "16112723251415db46-3",
+          "16112723251415db46-4"
+        ],
+        "settings": {
+          "logos_per_row": 3,
+          "logo_size": "medium",
+          "background": "#deddd8",
+          "gradient": "rgba(0,0,0,0)",
+          "gradient_rotation": 0,
           "width": "wide",
-          "banner_height": "medium",
-          "padding_top": 0,
-          "padding_bottom": 60,
+          "padding_top": 40,
+          "padding_bottom": 0,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
           "css_class": "",
           "custom_css": ""
         }
@@ -2657,6 +2701,7 @@
       "1609710282f79e03ce",
       "16097130289b49de35",
       "16097093473ec341ac",
+      "16112723251415db46",
       "1609097736434d65ce",
       "16097092531813fb3e",
       "1609709220b5c5d541",

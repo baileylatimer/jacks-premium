@@ -47,7 +47,7 @@
 {% endstyle %}
 
   {% render 'callout',
-          context: 'default',
+          context: 'block',
           width: width,
           banner_height: banner_height,
           subtitle: section.settings.subtitle
@@ -61,123 +61,62 @@
   "name": "Callout banner",
   "class": "banner collection-banner overlaid-header-option",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_callout",
-      "label": "Show callout",
-      "default": true
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image",
-      "info": "1800 x 800px recommended"
-    },
-    {
-      "type": "checkbox",
-      "id": "image_darken",
-      "label": "Darken banner image",
-      "default": false
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Heading"
-    },
-    {
-      "type": "text",
-      "id": "subtitle",
-      "label": "Subheading",
-      "default": "Subheading"
-    },
-    {
-      "type": "text",
-      "id": "link_title",
-      "label": "Link title",
-      "default": "Learn more ➞"
-    },
-    {
-      "type": "url",
-      "id": "link_url",
-      "label": "Your link"
-    },
-    {
-      "type": "header",
-      "content": "Layout"
-    },
-    {
-      "type": "select",
-      "id": "width",
-      "label": "Width",
-      "default": "wide",
-      "options": [
-        {
-          "value": "standard",
-          "label": "Standard"
-        },
-        {
-          "value": "wide",
-          "label": "Wide"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "banner_height",
-      "label": "Banner height",
-      "default": "medium",
-      "options": [
-        {
-          "value": "small",
-          "label": "Small"
-        },
-        {
-          "value": "medium",
-          "label": "Medium"
-        },
-        {
-          "value": "large",
-          "label": "Large"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Top spacing",
-      "min": 0,
-      "max": 80,
-      "default": 0,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Bottom spacing",
-      "min": 0,
-      "max": 80,
-      "default": 0,
-      "unit": "px"
-    },
-    {
-      "type": "header",
-      "content": "Advanced"
-    },
-    {
-      "type": "paragraph",
-      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
-    },
-    {
-      "type": "text",
-      "id": "css_class",
-      "label": "CSS Class"
-    },
-    {
-      "type": "textarea",
-      "id": "custom_css",
-      "label": "Custom CSS"
-    }
+  ],
+  "blocks": [
+  {
+    "name": "Callout banner",
+    "type": "callout",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_callout",
+        "label": "Show callout",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "300 x 300px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "link_title",
+        "label": "Link title",
+        "default": "Learn more ➞"
+      },
+      {
+        "type": "url",
+        "id": "link_url",
+        "label": "Your link"
+      },
+  
+      {
+        "type": "header",
+        "content": "Advanced"
+      },
+      {
+        "type": "paragraph",
+        "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_css",
+        "label": "Custom CSS"
+      }
+    ]
+  }
   ]
 }
 

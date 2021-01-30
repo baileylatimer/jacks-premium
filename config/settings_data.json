@@ -103,11 +103,11 @@
     "show_dropdown_shadow": true,
     "dropdown_background": "#ffffff",
     "dropdown_background_opacity": 100,
-    "dropdown_link_color": "#636363",
+    "dropdown_link_color": "#000000",
     "dropdown_link_hover_color": "#000000",
     "footer_background": "#dddbd2",
     "footer_border": "#000000",
-    "footer_link_color": "#63625f",
+    "footer_link_color": "#000000",
     "footer_link_hover_color": "#000000",
     "footer_text_color": "#000000",
     "sale_color": "#ae3333",
@@ -125,7 +125,7 @@
     "qty_background_color": "rgba(0,0,0,0)",
     "qty_background_hover_color": "#ffffff",
     "regular__font": "helvetica_n4",
-    "regular_font_size": 16,
+    "regular_font_size": 17,
     "logo__font": "helvetica_n7",
     "logo_font_size": 20,
     "logo_font_style": "none",
@@ -141,14 +141,14 @@
     "button_letter_spacing": 0,
     "button_font_style": "none",
     "heading__font": "helvetica_n7",
-    "heading_size": 24,
+    "heading_size": 20,
     "heading_letter_spacing": 0,
     "heading_font_style": "none",
     "preheading_font": "helvetica_n4",
     "preheading_size": 15,
     "preheading_style": "none",
     "subheading_font": "helvetica_n4",
-    "subheading_size": 15,
+    "subheading_size": 20,
     "subheading_style": "none",
     "banner_heading__font": "memphis_n7",
     "banner_heading_size": 60,
@@ -156,8 +156,8 @@
     "banner_text__font": "helvetica_n4",
     "banner_text_size": 30,
     "banner_text_letter_spacing": 1,
-    "footer_heading_font_size": 18,
-    "footer_font_size": 14,
+    "footer_heading_font_size": 20,
+    "footer_font_size": 20,
     "search_option": "everything",
     "search_title": "Search",
     "search_placeholder": "What are you looking for?",
@@ -426,11 +426,11 @@
       "footer__icon-bar": {
         "type": "footer__icon-bar",
         "blocks": {
-          "1559011704063": {
+          "footer__icon-bar-1": {
             "type": "text",
             "settings": {
-              "icon": "bunny",
-              "text": "Cruelty Free"
+              "icon": "leaf-2",
+              "text": "Quality ingredients"
             }
           },
           "footer__icon-bar-0": {
@@ -440,41 +440,25 @@
               "text": "Inspired By You"
             }
           },
-          "footer__icon-bar-1": {
-            "type": "text",
-            "settings": {
-              "icon": "shield",
-              "text": "Ethically Sourced"
-            }
-          },
           "footer__icon-bar-2": {
             "type": "text",
             "settings": {
-              "icon": "leaf-2",
-              "text": "100% Natural"
-            }
-          },
-          "footer__icon-bar-3": {
-            "type": "text",
-            "settings": {
               "icon": "heart",
-              "text": "Made Locally"
+              "text": "Cooked in Texas"
             }
           },
           "1559011765495": {
             "type": "text",
             "settings": {
-              "icon": "recycle",
-              "text": "Responsible Packaging"
+              "icon": "box",
+              "text": "Delivered fresh"
             }
           }
         },
         "block_order": [
-          "1559011704063",
-          "footer__icon-bar-0",
           "footer__icon-bar-1",
+          "footer__icon-bar-0",
           "footer__icon-bar-2",
-          "footer__icon-bar-3",
           "1559011765495"
         ],
         "settings": {
@@ -1644,23 +1628,6 @@
               "label": "Email"
             }
           },
-          "1564170182418": {
-            "type": "checkbox",
-            "settings": {
-              "label": "Subject",
-              "required": false,
-              "options_1": "Product Inquiry",
-              "options_2": "Order Inquiry",
-              "options_3": "Other",
-              "options_4": "",
-              "options_5": "",
-              "options_6": "",
-              "options_7": "",
-              "options_8": "",
-              "options_9": "",
-              "options_10": ""
-            }
-          },
           "page-contact__main-2": {
             "type": "textarea",
             "settings": {
@@ -1672,7 +1639,6 @@
         "block_order": [
           "page-contact__main-0",
           "page-contact__main-1",
-          "1564170182418",
           "page-contact__main-2"
         ],
         "settings": {
@@ -1848,18 +1814,6 @@
       },
       "collection-subcollection__main": {
         "type": "collection-subcollection__main",
-        "blocks": {
-          "01c9c558-8356-4a78-8d02-8a98c40ed980": {
-            "type": "video_by_coll",
-            "settings": {
-              "coll_video_collectionhandle": "food",
-              "coll_video_url": "https:\/\/www.youtube.com\/watch?v=6Cly2dCZJ1A&ab_channel=JacksPremium"
-            }
-          }
-        },
-        "block_order": [
-          "01c9c558-8356-4a78-8d02-8a98c40ed980"
-        ],
         "settings": {
           "banner_video_autoplay": false,
           "banner_video_hidecontrols": false,
@@ -1934,21 +1888,30 @@
       "1589567078591": {
         "type": "index__icon-with-text-column",
         "blocks": {
-          "1589567078591-0": {
-            "type": "logo_image",
-            "settings": {
-              "icon_label": "heart",
-              "title": "Cooked in Texas",
-              "text": "<p>Family-owned, cooked in Dallas, Texas.<\/p>",
-              "button_label": ""
-            }
-          },
           "1589567078591-1": {
             "type": "logo_image",
             "settings": {
               "icon_label": "leaf-2",
               "title": "Quality ingredients",
               "text": "<p>100% real food, no by-products or fillers.<\/p>",
+              "button_label": ""
+            }
+          },
+          "05869f1b-1040-4122-b753-9957df660a11": {
+            "type": "logo_image",
+            "settings": {
+              "icon_label": "cloud",
+              "title": "Inspired by you",
+              "text": "<p>Personalized food for your special pal<\/p>",
+              "button_label": ""
+            }
+          },
+          "1589567078591-0": {
+            "type": "logo_image",
+            "settings": {
+              "icon_label": "heart",
+              "title": "Cooked in Texas",
+              "text": "<p>Family-owned, cooked in Dallas, Texas.<\/p>",
               "button_label": ""
             }
           },
@@ -1963,12 +1926,13 @@
           }
         },
         "block_order": [
-          "1589567078591-0",
           "1589567078591-1",
+          "05869f1b-1040-4122-b753-9957df660a11",
+          "1589567078591-0",
           "1589567078591-2"
         ],
         "settings": {
-          "icons_per_row": 3,
+          "icons_per_row": 4,
           "icon_size": "small",
           "align_text": "center",
           "button_style": "button--link-style",
@@ -2176,7 +2140,7 @@
           "border_color": "#ffffff",
           "border_width": 0,
           "text_width": 40,
-          "button_1": "Shop now ➞",
+          "button_1": "Explore the menu ➞",
           "button_1_link": "shopify:\/\/collections\/shop-all",
           "button_1_style": "button--primary",
           "button_2": "",
@@ -2199,14 +2163,6 @@
       "1608757443f59da99f": {
         "type": "index__collection-list",
         "blocks": {
-          "1608757443132f4839-0": {
-            "type": "collection",
-            "settings": {
-              "feature_collection": "food",
-              "title": "",
-              "button_label": ""
-            }
-          },
           "1608757443132f4839-2": {
             "type": "collection",
             "settings": {
@@ -2222,12 +2178,20 @@
               "title": "",
               "button_label": ""
             }
+          },
+          "1608757443132f4839-0": {
+            "type": "collection",
+            "settings": {
+              "feature_collection": "food",
+              "title": "",
+              "button_label": ""
+            }
           }
         },
         "block_order": [
-          "1608757443132f4839-0",
           "1608757443132f4839-2",
-          "1608757443132f4839-1"
+          "1608757443132f4839-1",
+          "1608757443132f4839-0"
         ],
         "settings": {
           "collections_per_row": 3,
@@ -2298,6 +2262,14 @@
       "product-image-scroll__main": {
         "type": "product-image-scroll__main",
         "blocks": {
+          "07598049-a715-4040-8143-8e44634617aa": {
+            "type": "product_reviews",
+            "settings": {
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "animation": "none"
+            }
+          },
           "product-image-scroll__main-0": {
             "type": "recommended_products",
             "settings": {
@@ -2306,19 +2278,11 @@
               "padding_bottom": 20,
               "animation": "none"
             }
-          },
-          "07598049-a715-4040-8143-8e44634617aa": {
-            "type": "product_reviews",
-            "settings": {
-              "padding_top": 0,
-              "padding_bottom": 0,
-              "animation": "none"
-            }
           }
         },
         "block_order": [
-          "product-image-scroll__main-0",
-          "07598049-a715-4040-8143-8e44634617aa"
+          "07598049-a715-4040-8143-8e44634617aa",
+          "product-image-scroll__main-0"
         ],
         "settings": {
           "product_breadcrumb": true,
@@ -2618,10 +2582,10 @@
           "16097130289b49de35-2": {
             "type": "text",
             "settings": {
-              "title": "From our Texas farms to your doorstep.",
+              "title": "From our Texas ranches to your doorstep.",
               "heading_size": "large",
-              "text": "<p>We craft with all-natural ingredients that pups love and parents trust.<\/p>",
-              "button_label": "Learn more ➞",
+              "text": "",
+              "button_label": "Who we are ➞",
               "link": "shopify:\/\/pages\/about",
               "button_style": "button--secondary",
               "background": "rgba(0,0,0,0)",
@@ -2655,41 +2619,53 @@
           "16112723251415db46-2": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/dog-food-advisor.png"
+              "image": "shopify:\/\/shop_images\/dog-food-advisor_28a624fd-7bd3-422e-a2ef-7f06c50682f5.png"
             }
           },
           "16112723251415db46-3": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/amazon.png"
+              "image": "shopify:\/\/shop_images\/amazon_28c272bf-3ae1-4464-b199-da849810b785.png"
+            }
+          },
+          "604be91a-c554-471d-89c8-1451d0390480": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/google_f5a2d857-2a8c-4833-b822-7313022b8669.png"
             }
           },
           "16112723251415db46-4": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/world-pet-association.png"
+              "image": "shopify:\/\/shop_images\/world-pet-association_d4c5e9e3-dc7f-4a0f-9615-56e280032741.png"
             }
           }
         },
         "block_order": [
           "16112723251415db46-2",
           "16112723251415db46-3",
+          "604be91a-c554-471d-89c8-1451d0390480",
           "16112723251415db46-4"
         ],
         "settings": {
-          "logos_per_row": 3,
-          "logo_size": "medium",
-          "background": "#deddd8",
+          "logos_per_row": 4,
+          "logo_size": "small",
+          "background": "rgba(0,0,0,0)",
           "gradient": "rgba(0,0,0,0)",
           "gradient_rotation": 0,
           "width": "wide",
-          "padding_top": 40,
-          "padding_bottom": 0,
+          "padding_top": 30,
+          "padding_bottom": 60,
           "padding_left": 0,
           "padding_right": 0,
           "animation": "none",
           "css_class": "",
           "custom_css": ""
+        }
+      },
+      "product__reviews": {
+        "type": "product__reviews",
+        "settings": {
         }
       }
     },
@@ -2701,8 +2677,8 @@
       "1609710282f79e03ce",
       "16097130289b49de35",
       "16097093473ec341ac",
-      "16112723251415db46",
       "1609097736434d65ce",
+      "16112723251415db46",
       "16097092531813fb3e",
       "1609709220b5c5d541",
       "1564170665573",

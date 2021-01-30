@@ -54,6 +54,7 @@ h1,
 h2,
 .h2 {
   @include headline-style(floor($headline-font-size*0.9));
+  font-size: 30px !important
 }
 
 h3,

@@ -95,9 +95,8 @@
 {%- endstyle -%}
 
 
-<!-- callout + video section start -->
+<!-- Custom Sections - START -->
         {% assign banner_video_url_id = '' %}
-  
         {% assign callout_title = '' %}
         {% assign callout_subtitle = '' %}
         {% assign callout_image = '' %}
@@ -137,9 +136,7 @@
           allowfullscreen></iframe>
           </div>
         {%- endif %}
-        
 
-        <!-- video section end -->
         {%- if callout_title != blank -%}
           <section class="
           {{ css_class }}
@@ -175,6 +172,7 @@
             </div>
           </section>
         {%- endif %}
+<!-- Custom Sections - END -->
 
   {% if section.settings.show_promo_banner %}
     <div class="collection-promo-banner container">

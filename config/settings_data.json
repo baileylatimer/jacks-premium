@@ -1705,6 +1705,80 @@
       },
       "collection__main": {
         "type": "collection__main",
+        "blocks": {
+          "a61ee21f-6df7-4395-9636-744fcfc129ce": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "bully-sticks-for-dogs",
+              "callout_image": "shopify:\/\/shop_images\/6inthick.png",
+              "callout_title": "Are bully sticks good for my dog?",
+              "callout_subtitle": "Yes! Bully sticks are an all natural chew. High in protein, low in fat, and 100% digestible. There is no bone in bully sticks and they are not rawhide. It is a single ingredient treat free from preservatives, grains, and artificial flavors.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "shopify:\/\/blogs\/news\/the-best-herbs-for-dogs",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "5cd9f5ae-0c8e-468f-adff-ecdcf0f4ed80": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "small-batch-natural-dog-food",
+              "callout_image": "shopify:\/\/shop_images\/dog-fresh-food.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "shopify:\/\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "250abff3-571d-4c34-b087-a36953cffffd": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "bones-bully-sticks-natural-chews",
+              "callout_image": "shopify:\/\/shop_images\/6inthick.png",
+              "callout_title": "Are bully sticks good for my dog?",
+              "callout_subtitle": "Yes! Bully sticks are an all natural chew. High in protein, low in fat, and 100% digestible. There is no bone in bully sticks and they are not rawhide. It is a single ingredient treat free from preservatives, grains, and artificial flavors.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "shopify:\/\/blogs\/news\/are-bully-sticks-good-for-dogs",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "eb9a6a26-4db7-484c-b90c-eee1abebc05d": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "fresh-freeze-dried-food",
+              "callout_image": "shopify:\/\/shop_images\/dog-fresh-food.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "If you are interested in raw or fresh meals, but do not want to incur the cost or mess, freeze dried is a terrific option. You can see the whole pieces of food too.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "shopify:\/\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "17a409c9-926c-4453-9a9e-cfab6ff81211": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "freeze-dried-treats",
+              "callout_image": "shopify:\/\/shop_images\/dog-fresh-food.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "If you are interested in raw or fresh meals, but do not want to incur the cost or mess, freeze dried is a terrific option. You can see the whole pieces of food too.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "shopify:\/\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          }
+        },
+        "block_order": [
+          "a61ee21f-6df7-4395-9636-744fcfc129ce",
+          "5cd9f5ae-0c8e-468f-adff-ecdcf0f4ed80",
+          "250abff3-571d-4c34-b087-a36953cffffd",
+          "eb9a6a26-4db7-484c-b90c-eee1abebc05d",
+          "17a409c9-926c-4453-9a9e-cfab6ff81211"
+        ],
         "settings": {
           "collection_breadcrumb": true,
           "collection_tags": true,
@@ -1821,7 +1895,7 @@
               "callout_collectionhandle": "food",
               "callout_image": "shopify:\/\/shop_images\/ingredient--grain_202f0a39-6b86-4162-8564-a91e91048952.png",
               "callout_title": "Are grains good for my dog?",
-              "callout_subtitle": "",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
               "callout_link_title": "Learn more ➞",
               "callout_link_url": "shopify:\/\/blogs\/news\/the-best-herbs-for-dogs",
               "css_class": "",

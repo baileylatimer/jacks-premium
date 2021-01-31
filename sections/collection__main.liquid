@@ -132,6 +132,88 @@
       %}
     </div>
   </div>
+
+  <!-- Custom Sections - START -->
+  {% assign banner_video_url_id = '' %}
+  {% assign callout_title = '' %}
+  {% assign callout_subtitle = '' %}
+  {% assign callout_image = '' %}
+  {% assign callout_link_title = '' %}
+  {% assign callout_link_url = '' %}
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'video_by_coll' -%}
+      {%- comment -%} A separate 'if' avoids parallel execution of both conditions. Don't combine with 'and' operator.{%- endcomment -%}
+      {%- if collection.handle == block.settings.coll_video_collectionhandle -%}
+        {%- assign banner_video_url_id = block.settings.coll_video_url.id -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if block.type == 'callout' -%}
+      {%- if collection.handle == block.settings.callout_collectionhandle -%}
+        {%- assign callout_title = block.settings.callout_title -%}
+        {%- assign callout_subtitle = block.settings.callout_subtitle -%}
+        {%- assign callout_image = block.settings.callout_image -%}
+        {%- assign callout_link_url = block.settings.callout_link_url -%}
+        {%- assign callout_link_title = block.settings.callout_link_title -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if banner_video_url_id != blank -%}
+    {%- capture ytparam -%}
+      {%- if section.settings.banner_video_autoplay -%}&amp;autoplay=1{%- endif -%}
+      {%- if section.settings.banner_video_hidecontrols -%}&amp;controls=0{%- endif -%}
+    {%- endcapture -%}
+    <div style="position: relative; overflow: hidden; width: 100%; padding-top: 10%;">
+    <iframe style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" type="text/html"
+    src="https://www.youtube.com/embed/{{ banner_video_url_id }}?modestbranding=1{{ ytparam }}"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+    </div>
+  {%- endif %}
+
+  {%- if callout_title != blank -%}
+    <section class="
+    {{ css_class }}
+    is-width-{{ width }} margin-bottom-xl margin-top-lg order-2">
+      <div class="container
+      {% if width == 'wide' %}
+      equal-columns--outside-trim
+      {% endif %}">
+        <div class="bg-primary-lighter callout-banner 
+        one-whole
+        column
+        is-{{ banner_height }} flex is-flex-wrap  is-align-center overflow-hidden">
+          <div class="card-content one-half
+            small-down--one-whole">
+            <div class="banner__text">
+            <h3 class="title">{{ callout_title }}</h3>
+            {% if callout_subtitle != blank %}
+            <p class="subtitle">{{ callout_subtitle }}</p>
+            {% endif %}
+            {% if callout_link_url != blank %}
+            <a class="subtitle link padding-top-lg scribble-text-fx scribble-text-fx--v5 color-inherit" href={{ callout_link_url}}><span class="scribble-text-fx__label">{{ callout_link_title }}</span>  <svg class="scribble-text-fx__decoration" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.693,9.52c.214-1.812.414-1.788.628-3.6s.154-1.819.368-3.631" /><path d="M11.02,11.4c1.24-1.452.966-1.686,2.205-3.139s1.206-1.485,2.448-2.94,1.426-1.3,2.668-2.752"/><path d="M15.6,17.185c2.183-.243,2.184-.232,4.367-.475"/></svg></a>
+            {% endif %}
+            </div>
+          </div>
+          <div class=" one-half small-down--one-whole">
+            {% if callout_image != blank %}
+            <div class="callout-img  flex is-justify-end">
+              <img src="{{ callout_image | img_url: 'medium' }}">
+            {% endif %}
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+  {%- endif %}
+<!-- Custom Sections - END -->
+
+
+
 </div>
 
 {% comment %} JavaScript {% endcomment %}
@@ -362,6 +444,83 @@
       "type": "textarea",
       "id": "custom_css",
       "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_by_coll",
+      "name": "Video by Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "coll_video_collectionhandle",
+          "label": "Collection to apply"
+        },
+        {
+          "type": "video_url",
+          "id": "coll_video_url",
+          "label": "YouTube video URL",
+          "accept": ["youtube"],
+          "info": "To disable the video, leave this blank."
+        }
+      ]
+    },
+    {
+      "name": "Callout banner",
+      "type": "callout",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "callout_collectionhandle",
+          "label": "Collection to apply"
+        },
+        {
+          "type": "image_picker",
+          "id": "callout_image",
+          "label": "Image",
+          "info": "300 x 300px recommended"
+        },
+        {
+          "type": "text",
+          "id": "callout_title",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "callout_subtitle",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "callout_link_title",
+          "label": "Link title",
+          "default": "Learn more ➞"
+        },
+        {
+          "type": "url",
+          "id": "callout_link_url",
+          "label": "Your link"
+        },
+    
+        {
+          "type": "header",
+          "content": "Advanced"
+        },
+        {
+          "type": "paragraph",
+          "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+        },
+        {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_css",
+          "label": "Custom CSS"
+        }
+      ]
     }
   ]
 }

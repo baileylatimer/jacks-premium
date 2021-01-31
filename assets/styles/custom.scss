@@ -27,6 +27,26 @@ $color-primary: hsl(41, 44%, 37%);
   }
 }
 
+.callout-banner {
+  order: 2;
+}
+
+// --------------------------------
+
+// Order
+
+// --------------------------------
+
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+
 // Layout
 .b10 {
   position: absolute;
@@ -47,6 +67,9 @@ $color-primary: hsl(41, 44%, 37%);
 }
 .margin-bottom-md {
   margin-bottom: 24px;
+}
+.margin-bottom-xl {
+  margin-bottom: 40px;
 }
 
 .margin-y-md {

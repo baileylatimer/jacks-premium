@@ -3,7 +3,7 @@
 - Template section
 {% endcomment %}
 
-{% if section.settings.show_callout %}
+{%- if callout_title != blank -%}
 
 {% comment %}Assign object as block or section{% endcomment %}
 {% if type == 'block' %}
@@ -87,9 +87,8 @@
       },
       {
         "type": "text",
-        "id": "link_title",
-        "label": "Link title",
-        "default": "Learn more ➞"
+        "id": "description",
+        "label": "Description",
       },
       {
         "type": "url",

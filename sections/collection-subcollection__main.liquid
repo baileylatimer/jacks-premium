@@ -94,15 +94,15 @@
   %}
 {%- endstyle -%}
 
-<main class="{{ css_class }}">
-<!-- video section start -->
+
+<!-- callout + video section start -->
         {% assign banner_video_url_id = '' %}
-        {% assign callout_url_id = '' %}
-        {% assign callout_title = block.settings.callout_title %}
-        {% assign callout_subtitle = block.settings.callout_description %}
-        {% assign callout_image = block.settings.callout_image %}
-        {% assign callout_link_title = block.settings.callout_image %}
-        {% assign callout_link_url = block.settings.callout_image %}
+  
+        {% assign callout_title = '' %}
+        {% assign callout_subtitle = '' %}
+        {% assign callout_image = '' %}
+        {% assign callout_link_title = '' %}
+        {% assign callout_link_url = '' %}
 
         {%- for block in section.blocks -%}
           {%- if block.type == 'video_by_coll' -%}
@@ -115,7 +115,11 @@
 
           {%- if block.type == 'callout' -%}
             {%- if collection.handle == block.settings.callout_collectionhandle -%}
-              {%- assign callout_title = block.settings.callout_title.id -%}
+              {%- assign callout_title = block.settings.callout_title -%}
+              {%- assign callout_subtitle = block.settings.callout_subtitle -%}
+              {%- assign callout_image = block.settings.callout_image -%}
+              {%- assign callout_link_url = block.settings.callout_link_url -%}
+              {%- assign callout_link_title = block.settings.callout_link_title -%}
               {%- break -%}
             {%- endif -%}
           {%- endif -%}
@@ -132,84 +136,45 @@
           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
           </div>
+        {%- endif %}
+        
 
-          <section class="section
+        <!-- video section end -->
+        {%- if callout_title != blank -%}
+          <section class="
           {{ css_class }}
-          is-width-{{ width }} ">
-            <div class="container">
+          is-width-{{ width }} margin-bottom-xl order-2">
+            <div class="container
+            {% if width == 'wide' %}
+            equal-columns--outside-trim
+            {% endif %}">
               <div class="bg-primary-lighter callout-banner 
-              one-whole column flex is-flex-wrap  is-align-center overflow-hidden">
-                <div class="card-content one-half small-down--one-whole">
+              one-whole
+              column
+              is-{{ banner_height }} flex is-flex-wrap  is-align-center overflow-hidden">
+                <div class="card-content one-half
+                  small-down--one-whole">
                   <div class="banner__text">
-                    <h3 class="title">{{ callout_title }}</h3>
-                    {% if callout_subtitle != blank %}
-                    <p class="subtitle">{{ callout_subtitle }}</p>
-                    {% endif %}
-                    {% if callout_link_url != blank %}
-                    <a class="subtitle link padding-top-lg scribble-text-fx scribble-text-fx--v5 color-inherit" href={{ callout_link_url}}><span class="scribble-text-fx__label">{{ callout_link_title }}</span>  <svg class="scribble-text-fx__decoration" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.693,9.52c.214-1.812.414-1.788.628-3.6s.154-1.819.368-3.631" /><path d="M11.02,11.4c1.24-1.452.966-1.686,2.205-3.139s1.206-1.485,2.448-2.94,1.426-1.3,2.668-2.752"/><path d="M15.6,17.185c2.183-.243,2.184-.232,4.367-.475"/></svg></a>
-                    {% endif %}
+                  <h3 class="title">{{ callout_title }}</h3>
+                  {% if callout_subtitle != blank %}
+                  <p class="subtitle">{{ callout_subtitle }}</p>
+                  {% endif %}
+                  {% if callout_link_url != blank %}
+                  <a class="subtitle link padding-top-lg scribble-text-fx scribble-text-fx--v5 color-inherit" href={{ callout_link_url}}><span class="scribble-text-fx__label">{{ callout_link_title }}</span>  <svg class="scribble-text-fx__decoration" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.693,9.52c.214-1.812.414-1.788.628-3.6s.154-1.819.368-3.631" /><path d="M11.02,11.4c1.24-1.452.966-1.686,2.205-3.139s1.206-1.485,2.448-2.94,1.426-1.3,2.668-2.752"/><path d="M15.6,17.185c2.183-.243,2.184-.232,4.367-.475"/></svg></a>
+                  {% endif %}
                   </div>
                 </div>
                 <div class=" one-half small-down--one-whole">
                   {% if callout_image != blank %}
-                  <div class="callout-img">
-                    <img src="{{ callout_image }}">
-                  {% render 'image-element',
-                    image: image,
-                    alt: image.alt,
-                    stretch_width: false
-                  %}
+                  <div class="callout-img  flex is-justify-end">
+                    <img src="{{ callout_image | img_url: 'medium' }}">
                   {% endif %}
                   </div>
                 </div>  
               </div>
             </div>
           </section>
-
         {%- endif %}
-        
-
-<!-- video section end -->
-{%- if callout_title != blank -%}
-  <section class="section
-  {{ css_class }}
-  is-width-{{ width }} ">
-    <div class="container
-    {% if width == 'wide' %}
-    equal-columns--outside-trim
-    {% endif %}">
-      <div class="bg-primary-lighter callout-banner 
-      one-whole
-      column
-      is-{{ banner_height }} flex is-flex-wrap  is-align-center overflow-hidden">
-        <div class="card-content one-half
-          small-down--one-whole">
-          <div class="banner__text">
-          <h3 class="title">{{ callout_title }}</h3>
-          {% if callout_subtitle != blank %}
-          <p class="subtitle">{{ callout_subtitle }}</p>
-          {% endif %}
-          {% if callout_link_url != blank %}
-          <a class="subtitle link padding-top-lg scribble-text-fx scribble-text-fx--v5 color-inherit" href={{ link_url}}><span class="scribble-text-fx__label">{{ link_title }}</span>  <svg class="scribble-text-fx__decoration" viewBox="0 0 22 22" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3.693,9.52c.214-1.812.414-1.788.628-3.6s.154-1.819.368-3.631" /><path d="M11.02,11.4c1.24-1.452.966-1.686,2.205-3.139s1.206-1.485,2.448-2.94,1.426-1.3,2.668-2.752"/><path d="M15.6,17.185c2.183-.243,2.184-.232,4.367-.475"/></svg></a>
-          {% endif %}
-          </div>
-        </div>
-        <div class=" one-half small-down--one-whole">
-          {% if callout_image != blank %}
-          <div class="callout-img">
-            <img src="{{ callout_image }}">
-          {% render 'image-element',
-            image: image,
-            alt: image.alt,
-            stretch_width: false
-          %}
-          {% endif %}
-          </div>
-        </div>  
-      </div>
-    </div>
-  </section>
-{%- endif %}
 
   {% if section.settings.show_promo_banner %}
     <div class="collection-promo-banner container">
@@ -370,7 +335,7 @@
 
 {
   "name": "Sub collection",
-  "class": "sub-collection-main has-sidebar-option jsCollection",
+  "class": "sub-collection-main flex flex-column has-sidebar-option jsCollection",
   "settings": [
   {
     "type": "header",
@@ -710,12 +675,6 @@
           "label": "Collection to apply"
         },
         {
-          "type": "checkbox", 
-          "id": "show_callout",
-          "label": "Show callout",
-          "default": true
-        },
-        {
           "type": "image_picker",
           "id": "callout_image",
           "label": "Image",
@@ -725,6 +684,11 @@
           "type": "text",
           "id": "callout_title",
           "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "callout_subtitle",
+          "label": "Description"
         },
         {
           "type": "text",

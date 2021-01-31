@@ -1814,6 +1814,38 @@
       },
       "collection-subcollection__main": {
         "type": "collection-subcollection__main",
+        "blocks": {
+          "ff8a1f6f-b7c3-4356-b5ee-1f65a50069cf": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "food",
+              "callout_image": "shopify:\/\/shop_images\/ingredient--grain_202f0a39-6b86-4162-8564-a91e91048952.png",
+              "callout_title": "Are grains good for my dog?",
+              "callout_subtitle": "",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "shopify:\/\/blogs\/news\/the-best-herbs-for-dogs",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "42ec38db-88d8-427b-8bcf-23f88b016e2b": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "treats",
+              "callout_image": "shopify:\/\/shop_images\/6inthick.png",
+              "callout_title": "Which treat is right for my dog?",
+              "callout_subtitle": "We offer a variety of options so no matter what you can find something your dog will love. All our treat options will give you a peace of mind knowing that your dog is enjoying not a delicious treat, but something that is natural, limited ingredient, and supports your dog’s overall health and well-being.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "shopify:\/\/blogs\/news\/the-best-herbs-for-dogs",
+              "css_class": "",
+              "custom_css": ""
+            }
+          }
+        },
+        "block_order": [
+          "ff8a1f6f-b7c3-4356-b5ee-1f65a50069cf",
+          "42ec38db-88d8-427b-8bcf-23f88b016e2b"
+        ],
         "settings": {
           "banner_video_autoplay": false,
           "banner_video_hidecontrols": false,

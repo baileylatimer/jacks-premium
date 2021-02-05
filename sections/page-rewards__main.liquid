@@ -93,7 +93,9 @@
 
           {% include 'include-rich-text', type: 'block' %}
           
+        {% elsif block.type == 'logo_image' %}
 
+          {% include 'include-icon-with-text-column', type: 'block' %}
 
         {% elsif block.type == 'sign_up' %}
         <div class="">
@@ -138,208 +140,75 @@
     }
   ],
   "blocks": [
-
-
   {
-    "type": "sign_up",
-    "name": "Sign up",
+    "type": "logo_image",
+    "name": "Value props",
     "settings": [
       {
-          "type": "image_picker",
-          "id": "img",
-          "label": "Image 1",
-          "info": "800 x 800px recommended"
-        },
-        {
-          "type": "url",
-          "id": "link1",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "hide1",
-          "label": "Hide image",
-          "default": false
-        },
-        {
-          "type": "image_picker",
-          "id": "image2",
-          "label": "Image 2",
-          "info": "800 x 800px recommended"
-        },
-        {
-          "type": "url",
-          "id": "link2",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "hide2",
-          "label": "Hide image",
-          "default": false
-        },
-        {
-          "type": "image_picker",
-          "id": "image3",
-          "label": "Image 3",
-          "info": "800 x 800px recommended"
-        },
-        {
-          "type": "url",
-          "id": "link3",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "hide3",
-          "label": "Hide image",
-          "default": false
-        },
-        {
-          "type": "image_picker",
-          "id": "image4",
-          "label": "Image 4",
-          "info": "800 x 800px recommended"
-        },
-        {
-          "type": "url",
-          "id": "link4",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "hide4",
-          "label": "Hide image",
-          "default": false
-        },
-        {
-          "type": "image_picker",
-          "id": "image5",
-          "label": "Image 5",
-          "info": "800 x 800px recommended"
-        },
-        {
-          "type": "url",
-          "id": "link5",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "hide5",
-          "label": "Hide image",
-          "default": true
-        },
-        {
-          "type": "header",
-          "content": "Gallery style"
-        },
-        {
-          "type": "select",
-          "id": "gallery_type",
-          "label": "Gallery style",
-          "default": "classic",
-          "options": [
-            {
-              "value": "classic",
-              "label": "Classic"
-            },
-            {
-              "value": "horizontal-masonry",
-              "label": "Horizontal masonry"
-            },
-            {
-              "value": "masonry",
-              "label": "Vertical masonry"
-            }
-          ]
-        },
-        {
-          "type": "checkbox",
-          "id": "crop_images",
-          "label": "Crop images",
-          "default": false,
-          "info": "Applies to classic only."
-        },
-        {
-          "type": "range",
-          "id": "images_per_row",
-          "label": "Images per row",
-          "min": 2,
-          "max": 5,
-          "step": 1,
-          "default": 4
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_lightbox",
-          "label": "Enable lightbox",
-          "default": true
-        },
-        {
-          "type": "header",
-          "content": "Colors"
-        },
-        {
-          "type": "color",
-          "id": "overlay_color",
-          "label": "Overlay",
-          "default": "#000000"
-        },
-        {
-          "type": "color",
-          "id": "link_color",
-          "label": "Icons",
-          "default": "#FFFFFF"
-        },
-        {
-          "type": "header",
-          "content": "Layout"
-        },
-        {
-          "type": "select",
-          "id": "width",
-          "label": "Width",
-          "default": "standard",
-          "options": [
-            {
-              "value": "standard",
-              "label": "Standard"
-            },
-            {
-              "value": "wide",
-              "label": "Wide"
-            }
-          ]
-        },
-        {
-          "type": "checkbox",
-          "id": "show_gutter",
-          "label": "Show gutter",
-          "default": true
-        },
-        {
-          "type": "range",
-          "id": "padding_top",
-          "label": "Top spacing",
-          "min": 0,
-          "max": 80,
-          "default": 20,
-          "unit": "px"
-        },
-        {
-          "type": "range",
-          "id": "padding_bottom",
-          "label": "Bottom spacing",
-          "min": 0,
-          "max": 80,
-          "default": 20,
-          "unit": "px"
-        },
-       
+        "type": "text",
+        "id": "icon_label_1",
+        "label": "Icon 1",
+        "placeholder": "Enter icon name",
+        "info": "[Icon list](https://help.outofthesandbox.com/hc/en-us/articles/360021570294)",
+        "default": "truck"
+      },
+      {
+        "type": "text",
+        "id": "title_1",
+        "label": "Heading 1",
+        "default": "Icon with text"
+      },
+
+      {
+        "type": "richtext",
+        "id": "text_1",
+        "label": "Text 1",
+        "default": "<p>Describe the feature, service or product that this icon represents.</p>"
+      },
+      {
+        "type": "text",
+        "id": "icon_label_2",
+        "label": "Icon 2",
+        "placeholder": "Enter icon name",
+        "info": "[Icon list](https://help.outofthesandbox.com/hc/en-us/articles/360021570294)",
+        "default": "truck"
+      },
+      {
+        "type": "text",
+        "id": "title_2",
+        "label": "Heading 2",
+        "default": "Icon with text"
+      },
+
+      {
+        "type": "richtext",
+        "id": "text_2",
+        "label": "Text 2",
+        "default": "<p>Describe the feature, service or product that this icon represents.</p>"
+      },
+      {
+        "type": "text",
+        "id": "icon_label_3",
+        "label": "Icon 3",
+        "placeholder": "Enter icon name",
+        "info": "[Icon list](https://help.outofthesandbox.com/hc/en-us/articles/360021570294)",
+        "default": "truck"
+      },
+      {
+        "type": "text",
+        "id": "title_3",
+        "label": "Heading 3",
+        "default": "Icon with text"
+      },
+
+      {
+        "type": "richtext",
+        "id": "text_3",
+        "label": "Text 3",
+        "default": "<p>Describe the feature, service or product that this icon represents.</p>"
+      }
     ]
-
   },
-
 
     {
       "type": "blog",

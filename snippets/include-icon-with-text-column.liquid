@@ -1,0 +1,189 @@
+{% comment %}
+** Icon with text column - dynamic **
+- Draggable section
+- Uses sections
+{% endcomment %}
+
+{% assign id = section.id %}
+{% comment %}Colors{% endcomment %}
+{% assign text_color = section.settings.text_color %}
+{% assign icon_color = section.settings.icon_color %}
+{% assign background = section.settings.background %}
+{% assign gradient = section.settings.gradient %}
+{% assign gradient_rotation = section.settings.gradient_rotation %}
+{% comment %}Layout{% endcomment %}
+{% assign show_gutter = section.settings.show_gutter %}
+{% assign width = section.settings.width %}
+{% assign padding_top = section.settings.padding_top %}
+{% assign padding_bottom = section.settings.padding_bottom %}
+{% assign padding_left = section.settings.padding_left %}
+{% assign padding_right = section.settings.padding_right %}
+{% assign animation = section.settings.animation %}
+{% comment %} Advanced {% endcomment %}
+{% assign css_class = section.settings.css_class %}
+{% assign custom_css = section.settings.custom_css %}
+
+{% comment %} Is the color set to transparent? {% endcomment %}
+{% assign text_alpha = text_color | color_extract: 'alpha' %}
+{% assign icon_alpha = icon_color | color_extract: 'alpha' %}
+{% assign background_alpha = background | color_extract: 'alpha' %}
+{% assign gradient_alpha = gradient | color_extract: 'alpha' %}
+
+{% comment %} Section specific CSS {% endcomment %}
+{% capture section_css -%}
+
+  .icon-with-text-column__column {
+    background-image: linear-gradient({{ gradient_rotation }}deg, rgba(255,255,255,0), {{ gradient }});
+    background-color: {%- if background_alpha != 0 -%}{{ background }}{%- endif -%};
+  }
+
+  .icon-column__title {
+    color: {%- if text_alpha != 0 -%}{{ section.settings.text_color }}{%- endif -%};
+    margin-bottom: 0;
+  }
+
+  .icon {
+    fill: {%- if icon_alpha != 0 -%}{{ section.settings.icon_color }}{%- endif -%};
+  }
+
+  .icon-column__text {
+    color: {%- if text_alpha != 0 -%}{{ section.settings.text_color }}{%- endif -%};
+  }
+
+{%- endcapture -%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+    padding-left: {{ padding_left }}px;
+    padding-right: {{ padding_right }}px;
+    {% if width == 'wide' %}
+      width: 100%;
+    {% elsif width == 'half' %}
+      width: 50%;
+    {% endif %}
+  }
+  {% render 'css-loop',
+          css: section_css,
+          id: id
+  %}
+  {% render 'css-loop',
+          css: custom_css,
+          id: id
+  %}
+{% endstyle %}
+
+<section class="section
+                {{ css_class }}
+                is-width-{{ width }}
+                {% if show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if section.sections.size > section.settings.icons_per_row %}
+                  has-multirow-sections
+                {% endif %}
+                {% if width == 'wide' %}
+                  equal-columns--outside-trim
+                {% endif %}"
+                {% if animation != "none" %}
+                  data-scroll-class="{{ animation }}"
+                {% endif %}>
+  <div class="container is-justify-center">
+  
+      <div class="icon-with-text-column__column
+                  {% if show_gutter %}
+                    has-gutter
+                  {% endif %}
+                  column
+                  has-padding
+                  {% render 'column-width', value: section.settings.icons_per_row %}
+                  text-align-{{ section.settings.align_text }}
+                  medium-down--one-whole">
+
+        {%- capture icon_size -%}
+          is-{{ section.settings.icon_size }}
+        {%- endcapture -%}
+
+        {% assign icon = section.settings.icon_label_1 | downcase %}
+
+        {% render 'icon',
+                name: icon,
+                icon_class: icon_size
+        %}
+
+        {% if section.settings.title_1 != blank or section.settings.text_1 != blank %}
+          <div class="icon-column__text ">
+            <h3 class="icon-column__title title">{{ section.settings.title_1 }}</h3>
+            {{ section.settings.text_1 }}
+          </div>
+        {% endif %}
+
+      </div>
+
+      <div class="icon-with-text-column__column
+        {% if show_gutter %}
+          has-gutter
+        {% endif %}
+        column
+        has-padding
+        {% render 'column-width', value: section.settings.icons_per_row %}
+        text-align-{{ section.settings.align_text }}
+        medium-down--one-whole">
+
+          {%- capture icon_size -%}
+          is-{{ section.settings.icon_size }}
+          {%- endcapture -%}
+
+          {% assign icon = section.settings.icon_label_2 | downcase %}
+
+          {% render 'icon',
+              name: icon,
+              icon_class: icon_size
+          %}
+
+          {% if section.settings.title_2 != blank or section.settings.text_2 != blank %}
+          <div class="icon-column__text ">
+          <h3 class="icon-column__title title">{{ section.settings.title_2 }}</h3>
+          {{ section.settings.text_2 }}
+          </div>
+          {% endif %}
+
+      </div>
+
+      <div class="icon-with-text-column__column
+      {% if show_gutter %}
+        has-gutter
+      {% endif %}
+      column
+      has-padding
+      {% render 'column-width', value: section.settings.icons_per_row %}
+      text-align-{{ section.settings.align_text }}
+      medium-down--one-whole">
+
+        {%- capture icon_size -%}
+        is-{{ section.settings.icon_size }}
+        {%- endcapture -%}
+
+        {% assign icon = section.settings.icon_label_3 | downcase %}
+
+        {% render 'icon',
+            name: icon,
+            icon_class: icon_size
+        %}
+
+        {% if section.settings.title_3 != blank or section.settings.text_3 != blank %}
+        <div class="icon-column__text ">
+        <h3 class="icon-column__title title">{{ section.settings.title_3 }}</h3>
+        {{ section.settings.text_3 }}
+        </div>
+        {% endif %}
+
+    </div>
+
+  </div>
+</section>
+ 

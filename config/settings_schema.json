@@ -2482,6 +2482,21 @@
     ]
   },
   {
+    "name": "App buttons",
+    "settings": [
+      {
+        "type": "text",
+        "id": "app_store_link",
+        "label": "App Store link"
+      },
+      {
+        "type": "text",
+        "id": "google_play_link",
+        "label": "Google Play link"
+      }
+    ]
+  },
+  {
     "name": "Social media",
     "settings": [
       {

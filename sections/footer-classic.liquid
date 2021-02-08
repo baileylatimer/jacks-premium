@@ -64,6 +64,12 @@
                   {% render 'social-icons' %}
                 </div>
               {% endif %}
+
+              {% if block.settings.app_buttons_footer %}
+                <div class="has-padding-bottom has-padding-top">
+                  {% render 'app-buttons' %}
+                </div>
+              {% endif %}
             </div>
 
           {% elsif block.type == 'html' %}
@@ -77,6 +83,12 @@
             {% if block.settings.social_icons_footer %}
               <div class="has-padding-bottom has-padding-top">
                 {% render 'social-icons' %}
+              </div>
+            {% endif %}
+
+            {% if block.settings.app_buttons_footer %}
+              <div class="has-padding-bottom has-padding-top">
+                {% render 'app-buttons' %}
               </div>
             {% endif %}
 
@@ -114,6 +126,13 @@
                       display_first_name: block.settings.display_first_name,
                       display_last_name: block.settings.display_last_name
               %}
+
+              {% if block.settings.app_buttons_footer %}
+                <div class="has-padding-bottom has-padding-top">
+                  {% render 'app-buttons' %}
+                </div>
+              {% endif %}
+
 
               {% if block.settings.social_icons_footer %}
                 <div class="has-padding-bottom has-padding-top">
@@ -302,6 +321,12 @@
           "id": "social_icons_footer",
           "label": "Show social media icons",
           "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "app_buttons_footer",
+          "label": "Show app buttons",
+          "default": false
         }
       ]
     },
@@ -320,6 +345,12 @@
           "type": "checkbox",
           "id": "social_icons_footer",
           "label": "Show social media icons",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "app_buttons_footer",
+          "label": "Show app buttons",
           "default": false
         }
       ]
@@ -350,6 +381,18 @@
           "type": "checkbox",
           "id": "display_last_name",
           "label": "Show last name"
+        },
+        {
+          "type": "checkbox",
+          "id": "social_icons_footer",
+          "label": "Show social media icons",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "app_buttons_footer",
+          "label": "Show app buttons",
+          "default": false
         }
       ]
     },
@@ -373,6 +416,12 @@
           "type": "checkbox",
           "id": "social_icons_footer",
           "label": "Show social media icons",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "app_buttons_footer",
+          "label": "Show app buttons",
           "default": false
         }
       ]

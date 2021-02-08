@@ -1,4 +1,4 @@
-
+<section class="section is-width-standard padding-bottom-xl">
   <div class="container">
     <!-- YOTPO Reviews / START -->
     <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}" data-price="{{ variant.price | money_without_currency }}"
@@ -27,7 +27,7 @@
       console.log("✅ Added style to Yotpo buttons")
     });
   </script>
-
+</section>
 
 
 {% schema %}

@@ -29,6 +29,7 @@
 {% comment %} Is the color set to transparent? {% endcomment %}
 {% assign background_alpha = background_color | color_extract: 'alpha' %}
 {% assign text_alpha = text_color | color_extract: 'alpha' %}
+{% assign bg_color = section.settings.bg_color %}
 
 {% comment %}Section specific CSS{% endcomment %}
 {% capture section_css -%}
@@ -93,7 +94,7 @@
                   is-flex
                   is-flex-wrap
                   is-justify-{{ object.settings.alignment }}
-                  is-align-{{ object.settings.vertical_position }}">
+                  is-align-{{ object.settings.vertical_position }}" {% if bg_color != '' %}style="background-color: {{ bg_color }}" {% endif %}>
         <div class="image-with-text__wrapper">
           {% if object.settings.title != blank %}
             <h3 class="image-with-text__heading text-align-{{ object.settings.alignment }} is-{{ object.settings.heading_size }}" >

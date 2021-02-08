@@ -223,6 +223,8 @@
     "default_currency": "USD",
     "disqus_enabled": false,
     "disqus_shortname": "",
+    "app_store_link": "https:\/\/apps.apple.com\/us\/app\/jacks-premium\/id752047888",
+    "google_play_link": "https:\/\/play.google.com\/store\/apps\/details?id=com.ordersnapp.jackspremium&hl=en_US&gl=US",
     "twitter_link": "https:\/\/twitter.com\/jackspremium?lang=en",
     "facebook_link": "https:\/\/www.facebook.com\/GreatDogFood\/",
     "youtube_link": "https:\/\/www.youtube.com\/channel\/UC67-7bsMBV8NWSuSop_QDzw",
@@ -408,7 +410,7 @@
           "1565195799064"
         ],
         "settings": {
-          "parent_link": "And More",
+          "parent_link": "",
           "enable_mega_menu_border": false,
           "mega_menu_background_color": "#ebeae4",
           "mega_menu_text_color": "#404040",
@@ -482,21 +484,24 @@
             "type": "link_list",
             "settings": {
               "menu": "shop-all",
-              "social_icons_footer": false
+              "social_icons_footer": false,
+              "app_buttons_footer": false
             }
           },
           "f46c80dd-8b79-4be6-99cd-a2244e4a9502": {
             "type": "link_list",
             "settings": {
               "menu": "learn",
-              "social_icons_footer": false
+              "social_icons_footer": false,
+              "app_buttons_footer": false
             }
           },
           "1559752958390": {
             "type": "link_list",
             "settings": {
               "menu": "footer",
-              "social_icons_footer": false
+              "social_icons_footer": false,
+              "app_buttons_footer": false
             }
           },
           "1563557700911": {
@@ -505,7 +510,9 @@
               "newsletter_title": "Join the pack",
               "newsletter_richtext": "",
               "display_first_name": false,
-              "display_last_name": false
+              "display_last_name": false,
+              "social_icons_footer": false,
+              "app_buttons_footer": true
             }
           }
         },
@@ -847,45 +854,33 @@
           "mega-menu-3-0": {
             "type": "menu",
             "settings": {
-              "menu_1": ""
+              "menu_1": "food"
             }
           },
-          "1559748521869": {
-            "type": "featured_promo",
+          "19c67d88-b5bd-4a57-87c3-3043715fc876": {
+            "type": "menu",
             "settings": {
-              "richtext": "<p>Get luscious locks now!<\/p>",
-              "bgr_color": "#eeeeee",
-              "text_color": "#000000",
-              "promo_link": "shopify:\/\/collections\/hair",
-              "button_label": "Shop Hair",
-              "button_style": "button--primary"
+              "menu_1": "treats",
+              "menu_1_link": "shopify:\/\/collections\/treats"
             }
           },
-          "mega-menu-3-5": {
-            "type": "featured_product",
+          "347a10ea-ad8a-40e4-a5da-dfbfe7392a36": {
+            "type": "menu",
             "settings": {
-              "featured_product": "shampoo-bar-2",
-              "richtext_bottom": ""
-            }
-          },
-          "1559747814769": {
-            "type": "featured_product",
-            "settings": {
-              "featured_product": "shampoo-bar-1",
-              "richtext_bottom": ""
+              "menu_1": "cats",
+              "menu_1_link": "shopify:\/\/collections\/cats"
             }
           }
         },
         "block_order": [
           "mega-menu-3-0",
-          "1559748521869",
-          "mega-menu-3-5",
-          "1559747814769"
+          "19c67d88-b5bd-4a57-87c3-3043715fc876",
+          "347a10ea-ad8a-40e4-a5da-dfbfe7392a36"
         ],
         "settings": {
-          "parent_link": "Hair",
+          "parent_link": "And More",
           "enable_mega_menu_border": false,
-          "mega_menu_background_color": "#f6f6f6",
+          "mega_menu_background_color": "#ebeae4",
           "mega_menu_text_color": "#404040",
           "show_mega_bottom_bar": false,
           "mega_bottom_bar_icon": "",
@@ -1939,11 +1934,24 @@
               "css_class": "",
               "custom_css": ""
             }
+          },
+          "cbe47b03-68b5-466b-bd1a-8c4799293b21": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "cats",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my cat?",
+              "callout_subtitle": "Cats are obligate carnivores, meaning they must eat mainly meat and animal organs to thrive.",
+              "callout_link_title": "Learn more ➞",
+              "css_class": "",
+              "custom_css": ""
+            }
           }
         },
         "block_order": [
           "ff8a1f6f-b7c3-4356-b5ee-1f65a50069cf",
-          "42ec38db-88d8-427b-8bcf-23f88b016e2b"
+          "42ec38db-88d8-427b-8bcf-23f88b016e2b",
+          "cbe47b03-68b5-466b-bd1a-8c4799293b21"
         ],
         "settings": {
           "banner_video_autoplay": false,
@@ -2256,6 +2264,7 @@
       "1608750030a7bd6578": {
         "type": "index__image-with-text-overlay",
         "settings": {
+          "bg_color": "",
           "image": "shopify:\/\/shop_images\/dog-field-right.jpg",
           "pretext": "",
           "title": "Feed them like family.",
@@ -2264,7 +2273,7 @@
           "heading_color": "#ebeae4",
           "subheading_color": "#ebeae4",
           "text_alignment": "left",
-          "text_horizontal_position": "left",
+          "text_horizontal_position": "center",
           "text_vertical_position": "middle",
           "background_color": "#ffffff",
           "background_opacity": 0,
@@ -2580,6 +2589,7 @@
         "type": "index__image-with-text-overlay",
         "disabled": true,
         "settings": {
+          "bg_color": "",
           "image": "shopify:\/\/shop_images\/girl-dog-2.jpg",
           "pretext": "",
           "title": "From our Texas farm to your doorstep.",
@@ -2646,6 +2656,7 @@
           "16097092531813fb3e-2"
         ],
         "settings": {
+          "bg_color": "",
           "width": "wide",
           "show_gutter": true,
           "padding_top": 20,
@@ -2673,6 +2684,7 @@
       "1609710282f79e03ce": {
         "type": "index__image-with-text-overlay",
         "settings": {
+          "bg_color": "",
           "image": "shopify:\/\/shop_images\/girl-dog.jpg",
           "pretext": "",
           "title": "",
@@ -2730,6 +2742,7 @@
           "16097130289b49de35-2"
         ],
         "settings": {
+          "bg_color": "",
           "width": "standard",
           "show_gutter": true,
           "padding_top": 20,
@@ -3037,6 +3050,102 @@
           "css_class": "",
           "custom_css": ""
         }
+      },
+      "161281928048957952": {
+        "type": "index__image-with-text",
+        "blocks": {
+          "6d3c048b-ca04-4b56-a243-2c3ecfe4e36a": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "heading_size": "regular",
+              "text": "",
+              "button_label": "",
+              "button_style": "button--primary",
+              "background": "rgba(0,0,0,0)",
+              "text_color": "rgba(0,0,0,0)",
+              "alignment": "left",
+              "vertical_position": "center"
+            }
+          },
+          "161281928048957952-2": {
+            "type": "text",
+            "settings": {
+              "title": "Hand-selected, all-natural ingredients from Texas.",
+              "heading_size": "large",
+              "text": "",
+              "button_label": "",
+              "button_style": "button--primary",
+              "background": "rgba(0,0,0,0)",
+              "text_color": "rgba(0,0,0,0)",
+              "alignment": "left",
+              "vertical_position": "center"
+            }
+          },
+          "161281928048957952-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dog-texas-fade.png",
+              "image_crop": "none"
+            }
+          }
+        },
+        "block_order": [
+          "6d3c048b-ca04-4b56-a243-2c3ecfe4e36a",
+          "161281928048957952-2",
+          "161281928048957952-0"
+        ],
+        "settings": {
+          "bg_color": "#deceab",
+          "width": "wide",
+          "show_gutter": true,
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "animation": "none",
+          "css_class": "custom-block",
+          "custom_css": "background-color: black !important;"
+        }
+      },
+      "161282305721bc9bf4": {
+        "type": "index__image-with-text",
+        "blocks": {
+          "161282305721bc9bf4-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cat-stack.png",
+              "image_crop": "none"
+            }
+          },
+          "161282305721bc9bf4-2": {
+            "type": "text",
+            "settings": {
+              "title": "Don't leave meow't.",
+              "heading_size": "large",
+              "text": "<p>All-natural, high protein meals made for your furry friend.<\/p>",
+              "button_label": "Shop Cats ➞",
+              "link": "shopify:\/\/collections\/cats",
+              "button_style": "button--primary",
+              "background": "rgba(0,0,0,0)",
+              "text_color": "rgba(0,0,0,0)",
+              "alignment": "left",
+              "vertical_position": "center"
+            }
+          }
+        },
+        "block_order": [
+          "161282305721bc9bf4-0",
+          "161282305721bc9bf4-2"
+        ],
+        "settings": {
+          "bg_color": "rgba(0,0,0,0)",
+          "width": "standard",
+          "show_gutter": true,
+          "padding_top": 20,
+          "padding_bottom": 20,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
       }
     },
     "content_for_index": [
@@ -3047,11 +3156,13 @@
       "1609710282f79e03ce",
       "16097130289b49de35",
       "16097093473ec341ac",
-      "1609097736434d65ce",
       "16112723251415db46",
+      "1609097736434d65ce",
       "16097092531813fb3e",
       "1609709220b5c5d541",
       "1564170665573",
+      "161281928048957952",
+      "161282305721bc9bf4",
       "16087574862d8f058f",
       "160970417005dfcaa1"
     ]

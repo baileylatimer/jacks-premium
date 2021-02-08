@@ -27,6 +27,10 @@ $color-primary: hsl(41, 44%, 37%);
   }
 }
 
+.faqPlusAppFaq {
+  @include border();
+}
+
 .callout-banner {
   order: 2;
 }

@@ -14,6 +14,7 @@
 {% comment %} Advanced {% endcomment %}
 {% assign css_class = section.settings.css_class %}
 {% assign custom_css = section.settings.custom_css %}
+{% assign bg_color = section.settings.bg_color %}
 
 {% comment %} Section specific CSS {% endcomment %}
 {% style %}
@@ -31,7 +32,7 @@
 {% endstyle %}
 
 {% comment %} HTML markup {% endcomment %}
-<section class="section
+<section class="section 
                 {{ css_class }}
                 is-width-{{ width }}
                 {% if show_gutter == false %}
@@ -46,7 +47,7 @@
                 "
                 {% if animation != "none" %}
                   data-scroll-class="{{ animation }}"
-                {% endif %}>
+                {% endif %} {% if bg_color != '' %}style="background-color: {{ bg_color }}" {% endif %}>
   <div class="container
               ">
     {% if section.blocks.size > 0 %}
@@ -164,6 +165,11 @@
   "class": "image-with-text image-with-text-1",
   "max_blocks": 3,
   "settings": [
+  {
+    "type": "color",
+    "id": "bg_color",
+    "label": "Backgroud color"
+  },
     {
       "type": "header",
       "content": "Layout"

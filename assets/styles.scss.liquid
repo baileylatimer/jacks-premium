@@ -11572,8 +11572,7 @@ $shop_bg_color: {{ settings.shop_bg_color }};
 }
 
 .has-gutter-enabled .gallery__item {
-
-  @include respond-to('medium-down') {
+  @include respond-to("medium-down") {
     margin-bottom: 20px;
   }
 }
@@ -11589,6 +11588,7 @@ $shop_bg_color: {{ settings.shop_bg_color }};
 
 .gallery__item {
   position: relative;
+  @include border();
 
   &:hover .gallery-item__overlay {
     opacity: 1;
@@ -16476,6 +16476,10 @@ $color-primary: hsl(41, 44%, 37%);
   @include respond-to("medium-up") {
     font-size: 30px;
   }
+}
+
+.faqPlusAppFaq {
+  @include border();
 }
 
 .callout-banner {

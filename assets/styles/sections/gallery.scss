@@ -11,8 +11,7 @@
 }
 
 .has-gutter-enabled .gallery__item {
-
-  @include respond-to('medium-down') {
+  @include respond-to("medium-down") {
     margin-bottom: 20px;
   }
 }
@@ -28,6 +27,7 @@
 
 .gallery__item {
   position: relative;
+  @include border();
 
   &:hover .gallery-item__overlay {
     opacity: 1;

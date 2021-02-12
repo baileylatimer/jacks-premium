@@ -61,6 +61,7 @@ $button-static-border-color: $grey-lighter !default;
 }
 
 .button {
+  
   @extend %control;
   @extend %unselectable;
   font-family: $button-font, $button-font-fallback;
@@ -80,7 +81,7 @@ $button-static-border-color: $grey-lighter !default;
   text-align: center;
   text-transform: $button-font-capitalization;
   transition: background 0.2s ease-in-out;
-  white-space: nowrap;
+  white-space: nowrap !important;
 
   strong {
     color: inherit;

@@ -3332,6 +3332,7 @@ $button-static-border-color: $grey-lighter !default;
 }
 
 .button {
+  
   @extend %control;
   @extend %unselectable;
   font-family: $button-font, $button-font-fallback;
@@ -3351,7 +3352,7 @@ $button-static-border-color: $grey-lighter !default;
   text-align: center;
   text-transform: $button-font-capitalization;
   transition: background 0.2s ease-in-out;
-  white-space: nowrap;
+  white-space: nowrap !important;
 
   strong {
     color: inherit;
@@ -13758,6 +13759,9 @@ $banner-font-size: {{ settings.banner_text_size }}px;
     display: inline-block;
     padding: 0.5em 0;
     line-height: 1;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .mega-menu__image {
@@ -16540,6 +16544,9 @@ $color-primary: hsl(41, 44%, 37%);
 }
 .margin-top-lg {
   margin-top: $gutter;
+}
+.margin-top-xxl {
+  margin-top: 2.5em;
 }
 
 .padding-y-xl {

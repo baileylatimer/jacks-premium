@@ -99,7 +99,7 @@
     "header_link_color": "#000000",
     "header_link_hover_color": "#000000",
     "header_cart_badge_color": "#000000",
-    "cart_background_color": "#fff",
+    "cart_background_color": "#ebeae4",
     "show_dropdown_shadow": true,
     "dropdown_background": "#ffffff",
     "dropdown_background_opacity": 100,

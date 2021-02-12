@@ -13,7 +13,10 @@ $product-hover-bg: {{ settings.product_hover_bg_color | color_modify: 'alpha', 0
 
 
 .product__thumbnail {
-  padding: 20px 0 20px 20px;
+  padding: $gutter;
+  @include respond-to('medium-down') {
+    padding: $half-gutter;
+  }
 }
 
 // Hover effects

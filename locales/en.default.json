@@ -138,6 +138,7 @@
       "title": "Product Collections",
       "no_matches_title": "You're here early.",
       "no_matches_desc": "We’ll be adding more products soon. Keep your ears perked up!",
+      "navigation_title": "More to explore",
       "link_title": "Browse {{ title }}",
       "all_collection_title": "All {{ title }}",
       "quick_shop": "See more +",

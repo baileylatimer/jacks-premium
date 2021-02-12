@@ -101,7 +101,11 @@
   {% if collection.products.size == 0 %}
     <div class="container container--no-products-in-collection text-align-center has-padding-bottom has-padding-top">
       <div class="one-whole column">
-        <p>{{ 'collections.general.no_matches' | t }}</p>
+        <h2>{{ 'collections.general.no_matches_title' | t }}</h2>
+        <p class="margin-bottom-md">{{ 'collections.general.no_matches_desc' | t }}</p>
+
+        {% include 'svg' with 'dog-follow' %}
+        
       </div>
     </div>
   {% else %}
@@ -210,6 +214,8 @@
       </div>
     </section>
   {%- endif %}
+
+
 <!-- Custom Sections - END -->
 
 

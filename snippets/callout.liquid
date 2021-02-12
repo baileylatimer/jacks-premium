@@ -79,6 +79,20 @@
         </div>
       </div>
 
+      {% if video != blank %}
+        <div id="play" class="video-wrapper" data-media-id="{{ media.id }}">
+          <div class="btn-wrap">
+              <div class="play-btn">
+                <div class="play-icon"></div>
+              </div>
+              <div class="play-btn-pulse"></div>
+          </div>
+          <div class='overlay-bottom'><p class="text-bold text-md color-white">{{ text }}</p></div>
+          <img loading="lazy"  id="video-cover" src='{{ image | img_url: '600x600' }}' alt="Video title">
+          {{ media | external_video_tag:  id: "player"}}
+        </div>
+      {% endif %}
+      
       <div class=" one-half small-down--one-whole">
         {% if image != blank %}
         <div class="callout-img">

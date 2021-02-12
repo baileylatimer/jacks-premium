@@ -1,0 +1,47 @@
+<section class="bg-contrast-lower width-100 padding-xxl  margin-top-xxl">
+  <h2 class="center">More to explore.</h2>
+  <!-- Previous/Next Links -->
+  <ul class="pn-links grid  margin-top-md text-md">
+    {% for link in linklists['collection-nav'].links %}
+      {% if link.url == currentCollection %}
+        {% assign currentIndex = forloop.index %}
+        {% assign previousIndex = currentIndex | minus:1 %}
+        {% assign nextIndex = currentIndex | plus:1 %}
+      {% endif %}
+      {% endfor %}
+      {% for link in linklists['collection-nav'].links %}
+        {% if forloop.index == previousIndex %}
+        <li class="pn-links__item col-6@md">
+          <a class="pn-links__link justify-center justify-between@md" href="{{ link.url }}">
+            <svg class="pn-links__icon icon icon--lg flip-x" viewBox="0 0 48 48">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="37" y1="14" x2="47" y2="24" />
+                <line x1="47" y1="24" x2="37" y2="34" />
+                <line x1="47" y1="24" x2="1.5" y2="24" />
+              </g>
+            </svg>
+            <span class="margin-left-sm">
+              <i class="sr-only">Previous: </i>{{ link.title }}
+            </span>
+          </a>
+        </li>
+        {% elsif forloop.index == nextIndex %}
+        <li class="pn-links__item col-6@md">
+          <a class="pn-links__link justify-center justify-between@md" href="{{ link.url }}">
+            <span class="margin-right-sm">
+              <i class="sr-only">Previous: </i>{{ link.title }}
+            </span>
+            <svg class="pn-links__icon icon icon--lg" viewBox="0 0 48 48">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="37" y1="14" x2="47" y2="24" />
+                <line x1="47" y1="24" x2="37" y2="34" />
+                <line x1="47" y1="24" x2="1.5" y2="24" />
+              </g>
+            </svg>
+          </a>
+        </li>
+        {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+</span>

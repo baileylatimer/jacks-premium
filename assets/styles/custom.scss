@@ -1,23 +1,44 @@
-/* # Font-Face
-================================================== */
-/*  This is the proper syntax for an @font-face file.
-    Upload your font files to Assets and then
-    copy your FontName into code below and remove
-    comment brackets */
-
-/*  @font-face {
-      font-family: 'FontName';
-      src: url('FontName.eot');
-      src: url('FontName.eot?iefix') format('eot'),
-           url('FontName.woff') format('woff'),
-           url('FontName.ttf') format('truetype'),
-           url('FontName.svg#webfontZam02nTh') format('svg');
-      font-weight: normal;
-      font-style: normal; }
-*/
-
 /* # Custom Styles
 ================================================== */
+
+.bg-media {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  min-height: 250px;
+  position: relative;
+  @include respond-to("medium-up") {
+    min-height: 350px;
+  }
+  border-radius: var(--radius-md);
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  -ms-border-radius: var(--radius-md);
+  -o-border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .bg-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .bg-video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.overlay::before {
+  content: "";
+  background-color: rgba(27, 53, 80, 0.5);
+  mix-blend-mode: multiply;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
 $color-primary: hsl(41, 44%, 37%);
 

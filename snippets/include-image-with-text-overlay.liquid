@@ -12,6 +12,8 @@
 
 {% assign id = object.id %}
 {% assign image = object.settings.image %}
+{% assign overlay = object.settings.overlay %}
+{% assign media_loop = object.settings.media_loop %}
 {% assign mobile_image = object.settings.mobile_image %}
 {% assign link = object.settings.link %}
 {% comment %} Text {% endcomment %}
@@ -156,7 +158,7 @@
               {% if width == 'wide' or width == 'half' %}
                 equal-columns--outside-trim
               {% endif %}">
-    <div class="image-with-text-overlay__banner columns one-whole image-crop-{{ mobile_text_crop }}">
+    <div class="image-with-text-overlay__banner columns one-whole image-crop-{{ mobile_text_crop }} {% if overlay %} overlay {% endif %}">
 
       {% if mobile_image != blank %}
         {% assign hide_mobile = 'is-hidden-mobile-only' %}
@@ -169,6 +171,8 @@
                 stretch_width: true,
                 additional_classes: hide_mobile
         %}
+      {% elsif media_loop != blank %}
+        <video class="bg-video" src="{{ media_loop }}" muted autoplay loop playsinline></video>
       {% else %}
         {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
       {% endif %}

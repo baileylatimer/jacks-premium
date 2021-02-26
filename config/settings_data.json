@@ -445,7 +445,7 @@
           "footer__icon-bar-2": {
             "type": "text",
             "settings": {
-              "icon": "heart",
+              "icon": "texas",
               "text": "Cooked in Texas"
             }
           },
@@ -2003,7 +2003,7 @@
           "1589567078591-0": {
             "type": "logo_image",
             "settings": {
-              "icon_label": "heart",
+              "icon_label": "texas",
               "title": "Cooked in Texas",
               "text": "<p>Family-owned, cooked in Dallas, Texas.<\/p>",
               "button_label": ""
@@ -3008,6 +3008,7 @@
       },
       "161281928048957952": {
         "type": "index__image-with-text",
+        "disabled": true,
         "blocks": {
           "6d3c048b-ca04-4b56-a243-2c3ecfe4e36a": {
             "type": "text",
@@ -3105,19 +3106,19 @@
       "page-landing__main": {
         "type": "page-landing__main",
         "blocks": {
-          "fe9884cf-d9bb-491d-a991-c7d0b7226f0a": {
+          "29be824d-799f-4cf2-a768-debb29831e6f": {
             "type": "image_with_overlay",
             "settings": {
-              "image": "shopify:\/\/shop_images\/hero-desktop_99e18883-5f83-419a-8551-0e3798238cab.jpg",
-              "mobile_image": "shopify:\/\/shop_images\/full-feature_472fe269-518b-4f83-a005-ba42fbd56329.jpg",
+              "overlay": true,
+              "media_loop": "https:\/\/cdn.shopify.com\/s\/files\/1\/1915\/7635\/files\/Fire_KneeCaps--min.mp4?v=1614373063",
               "pretext": "",
-              "title": "Hand-selected, all natural treats from Texas.",
+              "title": "Slow-roasted, delicious Texan flavor your pup will love.",
               "subtitle": "",
               "pretext_color": "#ebeae4",
-              "heading_color": "#000000",
+              "heading_color": "#ebeae4",
               "subheading_color": "#ebeae4",
               "text_alignment": "left",
-              "text_horizontal_position": "left",
+              "text_horizontal_position": "center",
               "text_vertical_position": "middle",
               "background_color": "#ffffff",
               "background_opacity": 0,
@@ -3129,8 +3130,8 @@
               "button_1_style": "button--primary",
               "button_2": "",
               "button_2_style": "button--secondary",
-              "mobile_image_crop": "center",
-              "mobile_text_below_image": true,
+              "mobile_image_crop": "none",
+              "mobile_text_below_image": false,
               "pretext_color_mobile": "rgba(0,0,0,0)",
               "heading_color_mobile": "rgba(0,0,0,0)",
               "subheading_color_mobile": "rgba(0,0,0,0)",
@@ -3139,32 +3140,6 @@
               "padding_bottom": 0,
               "padding_left": 0,
               "padding_right": 0,
-              "animation": "none"
-            }
-          },
-          "17ab59bb-fc00-43a9-a89d-eef31e1e78c7": {
-            "type": "image_with_text",
-            "settings": {
-              "reverse_order": false,
-              "padding_y": false,
-              "image_position": "left",
-              "image": "shopify:\/\/shop_images\/chews-assorted.png",
-              "show_border": false,
-              "image_crop": "none",
-              "title": "Which chews are best for my dog?",
-              "heading_size": "large",
-              "text": "",
-              "button_label": "Buy Beef Knee Caps ➞",
-              "link": "shopify:\/\/products\/beef-knee-cap",
-              "button_style": "button--primary",
-              "alignment": "left",
-              "vertical_position": "center",
-              "background": "rgba(0,0,0,0)",
-              "text_color": "rgba(0,0,0,0)",
-              "width": "standard",
-              "show_gutter": true,
-              "padding_top": 60,
-              "padding_bottom": 60,
               "animation": "none"
             }
           },
@@ -3186,7 +3161,7 @@
               "link_color": "#ffffff",
               "width": "standard",
               "show_gutter": true,
-              "padding_top": 20,
+              "padding_top": 60,
               "padding_bottom": 20,
               "animation": "none"
             }
@@ -3237,7 +3212,7 @@
               "gradient": "",
               "gradient_rotation": 180,
               "width": "wide",
-              "padding_top": 20,
+              "padding_top": 0,
               "padding_bottom": 20,
               "padding_left": 0,
               "padding_right": 0,
@@ -3270,6 +3245,42 @@
               "animation": "none"
             }
           },
+          "d8ca977f-7454-4a4e-8a0a-9d4434cdc89f": {
+            "type": "image_with_overlay",
+            "settings": {
+              "overlay": false,
+              "media_loop": "https:\/\/cdn.shopify.com\/s\/files\/1\/1915\/7635\/files\/Chew_KneeCaps--min.mp4?v=1614375094",
+              "pretext": "",
+              "title": "",
+              "subtitle": "",
+              "pretext_color": "#EBEAE4",
+              "heading_color": "#EBEAE4",
+              "subheading_color": "#EBEAE4",
+              "text_alignment": "left",
+              "text_horizontal_position": "center",
+              "text_vertical_position": "middle",
+              "background_color": "#FFFFFF",
+              "background_opacity": 0,
+              "border_color": "",
+              "border_width": 0,
+              "text_width": 40,
+              "button_1": "",
+              "button_1_style": "button--secondary",
+              "button_2": "",
+              "button_2_style": "button--secondary",
+              "mobile_image_crop": "none",
+              "mobile_text_below_image": false,
+              "pretext_color_mobile": "rgba(0,0,0,0)",
+              "heading_color_mobile": "rgba(0,0,0,0)",
+              "subheading_color_mobile": "rgba(0,0,0,0)",
+              "width": "wide",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
           "ceb25f45-6924-468f-aeeb-eb949482c5ce": {
             "type": "image_with_text",
             "settings": {
@@ -3295,16 +3306,56 @@
               "padding_bottom": 60,
               "animation": "none"
             }
+          },
+          "fe9884cf-d9bb-491d-a991-c7d0b7226f0a": {
+            "type": "image_with_overlay",
+            "settings": {
+              "overlay": false,
+              "media_loop": "",
+              "image": "shopify:\/\/shop_images\/hero-desktop_99e18883-5f83-419a-8551-0e3798238cab.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/full-feature_472fe269-518b-4f83-a005-ba42fbd56329.jpg",
+              "pretext": "",
+              "title": "Hand-selected, all natural ingredients from Texas.",
+              "subtitle": "",
+              "pretext_color": "#ebeae4",
+              "heading_color": "#000000",
+              "subheading_color": "#ebeae4",
+              "text_alignment": "left",
+              "text_horizontal_position": "left",
+              "text_vertical_position": "middle",
+              "background_color": "#ffffff",
+              "background_opacity": 0,
+              "border_color": "",
+              "border_width": 0,
+              "text_width": 40,
+              "button_1": "Buy Beef Knee Caps ➞",
+              "button_1_link": "shopify:\/\/products\/beef-knee-cap",
+              "button_1_style": "button--primary",
+              "button_2": "",
+              "button_2_style": "button--secondary",
+              "mobile_image_crop": "center",
+              "mobile_text_below_image": true,
+              "pretext_color_mobile": "rgba(0,0,0,0)",
+              "heading_color_mobile": "rgba(0,0,0,0)",
+              "subheading_color_mobile": "rgba(0,0,0,0)",
+              "width": "wide",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
           }
         },
         "block_order": [
-          "fe9884cf-d9bb-491d-a991-c7d0b7226f0a",
-          "17ab59bb-fc00-43a9-a89d-eef31e1e78c7",
+          "29be824d-799f-4cf2-a768-debb29831e6f",
           "7be307a7-845d-44de-9872-26d852a83526",
           "1dccca19-8d74-4532-acba-0a1733de2e0a",
           "ef1d04af-ad41-40c3-81fe-1a5e1b4b396d",
           "2efcdbaa-f9f9-4d30-a53a-71c8d3cb7669",
-          "ceb25f45-6924-468f-aeeb-eb949482c5ce"
+          "d8ca977f-7454-4a4e-8a0a-9d4434cdc89f",
+          "ceb25f45-6924-468f-aeeb-eb949482c5ce",
+          "fe9884cf-d9bb-491d-a991-c7d0b7226f0a"
         ],
         "settings": {
           "css_class": "",
@@ -3345,6 +3396,45 @@
           "title": "Flavor worth barking about",
           "hashtag": "jackspack"
         }
+      },
+      "1614372097dada721d": {
+        "type": "index__image-with-text-overlay",
+        "settings": {
+          "bg_color": "#eebe13",
+          "image": "shopify:\/\/shop_images\/hero-desktop_99e18883-5f83-419a-8551-0e3798238cab.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/full-feature_472fe269-518b-4f83-a005-ba42fbd56329.jpg",
+          "pretext": "",
+          "title": "Hand-selected, all-natural ingredients from Texas.",
+          "subtitle": "",
+          "pretext_color": "#000000",
+          "heading_color": "#000000",
+          "subheading_color": "#EBEAE4",
+          "text_alignment": "left",
+          "text_horizontal_position": "left",
+          "text_vertical_position": "bottom",
+          "background_color": "",
+          "background_opacity": 0,
+          "border_color": "",
+          "border_width": 0,
+          "text_width": 40,
+          "button_1": "",
+          "button_1_style": "button--secondary",
+          "button_2": "",
+          "button_2_style": "button--secondary",
+          "mobile_image_crop": "none",
+          "mobile_text_below_image": true,
+          "pretext_color_mobile": "rgba(0,0,0,0)",
+          "heading_color_mobile": "rgba(0,0,0,0)",
+          "subheading_color_mobile": "rgba(0,0,0,0)",
+          "width": "wide",
+          "padding_top": 0,
+          "padding_bottom": 30,
+          "padding_left": 0,
+          "padding_right": 0,
+          "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
       }
     },
     "content_for_index": [
@@ -3361,6 +3451,7 @@
       "1609709220b5c5d541",
       "1564170665573",
       "161281928048957952",
+      "1614372097dada721d",
       "161282305721bc9bf4",
       "16087574862d8f058f",
       "160970417005dfcaa1"

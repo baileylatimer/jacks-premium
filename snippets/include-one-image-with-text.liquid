@@ -12,6 +12,8 @@
 
 {% assign id = object.id %}
 {% assign image_position = object.settings.image_position %}
+{% assign reverse_order = object.settings.reverse_order %}
+{% assign padding_y = object.settings.padding_y %}
 {% assign image_crop = object.settings.image_crop %}
 {% comment %} Layout {% endcomment %}
 {% assign show_gutter = object.settings.show_gutter %}
@@ -81,7 +83,7 @@
                 {% endif %}>
   <div class="container">
     <div class="image-with-text__container
-                is-flex {% if image_position == 'left' %}is-flex-row-reverse{% endif %}
+                is-flex {% if image_position == 'left' %}is-flex-row-reverse{% endif %}{% if reverse_order %}is-flex-column-reverse-mobile{% endif %} {% if padding_y %} has-large-padding-top has-large-padding-bottom {% endif %}
                 is-flex-wrap">
       <div class="image-with-text__text-column
                   image-with-text__column
@@ -133,17 +135,21 @@
                   is-flex-wrap
                   is-align-center">
         {% if object.settings.image_link %}
-          <a href="{{ object.settings.image_link }}">
+          <a  href="{{ object.settings.image_link }}">
         {% endif %}
-        {% if object.settings.image != blank %}
+
+        <span style="width: 100%" {% if object.settings.show_border %} class="border" {% endif %}>
+          {% if object.settings.image != blank %}
+        
             {% render 'image-element',
                     image: object.settings.image,
                     alt: object.settings.image.alt,
                     stretch_width: true
             %}
-        {% else %}
-          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-        {% endif %}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        </span>
         {% if object.settings.image_link %}
           </a>
         {% endif %}

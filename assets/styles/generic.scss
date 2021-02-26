@@ -38,6 +38,7 @@ html {
 
 main {
   min-height: 30vh; // Make sure header and footer aren't stuck together
+  width: 100%; // For Barba.js transitions
 }
 
 article,

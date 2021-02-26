@@ -135,14 +135,16 @@
   </script>
 {% endif %}
 
-<body class="{%- if template == '404' -%}
-              error-404
-            {% else -%}
-              {{ template | replace: '.', '-' | handle }}
-            {%- endif -%}
-            {% if settings.header_layout == 'vertical' -%}
-              has-vertical-header
-            {%- endif -%}"
+<body data-barba="wrapper"
+    class="
+      {%- if template == '404' -%}
+        error-404
+      {% else -%}
+        {{ template | replace: '.', '-' | handle }}
+      {%- endif -%}
+      {% if settings.header_layout == 'vertical' -%}
+        has-vertical-header
+      {%- endif -%}"
       data-money-format="
         {%- if settings.currency_format == 'money_with_currency_format' -%}
           {{ shop.money_with_currency_format | strip_html }}
@@ -154,9 +156,12 @@
 
       <div class="noise"></div>
 
+
+{% unless template == 'page.landing' %}
   {%- if settings.show_announcement_bar -%}
     {% section 'announcement-bar' %}
   {%- endif -%}
+{% endunless %}
 
   {%- if settings.header_layout == "classic" -%}
     {% section 'header__top-bar' %}
@@ -171,10 +176,14 @@
     {% section 'header-search-focus' %}
   {%- endif -%}
 
+
+{% unless template == 'page.landing' %}
   {%- if settings.cart_action == 'drawer' -%}
     {% render 'ajax-cart' %}
   {%- endif -%}
+{% endunless %}
 
+{% unless template == 'page.landing' %}
   {% if settings.mega_menu_1 == true %}
     {% section 'mega-menu-1' %}
   {% endif %}
@@ -205,13 +214,16 @@
   {% if settings.mega_menu_10 == true %}
     {% section 'mega-menu-10' %}
   {% endif %}
+{% endunless %}
 
   {% if settings.header_layout == "vertical" %}
     <div class="is-beside-vertical-header">
   {% endif %}
 
-  {{ content_for_layout }}
-
+  <main  data-barba="container" data-barba-namespace="{{ handle }}">
+      {{ content_for_layout }}
+  </main> 
+  
   {% if settings.footer_layout == "centered" %}
     {% section 'footer__icon-bar' %}
     {% section 'footer-centered' %}
@@ -253,7 +265,36 @@
   {% endif %}
 
 
+
+<!-- START / Third-party scripts / Added by Latimer Design -->
+    <!-- Barba.js / Page transitions -->
+    <!-- <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+    <!-- GSAP / Animations -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> -->
+
+    <!-- <script>
+      barba.init({
+        sync: true,
+        transitions: [{
+          name: 'opacity-transition',
+          leave(data) {
+            return gsap.to(data.current.container, {
+              opacity: 0
+            });
+          },
+          enter(data) {
+            return gsap.from(data.next.container, {
+              opacity: 0
+            });
+          }
+        }]
+      });
+    </script> -->
+
   <!--Gorgias Chat Widget Start--><script>!function(_){_.GORGIAS_CHAT_APP_ID="2026",_.GORGIAS_CHAT_BASE_URL="us-east1-898b.production.gorgias.chat",_.GORGIAS_API_BASE_URL="config.gorgias.chat";var e=new XMLHttpRequest;e.open("GET","https://config.gorgias.chat/applications/2026",!0),e.onload=function(n){if(4===e.readyState)if(200===e.status){var t=JSON.parse(e.responseText);if(!t.application||!t.bundleVersion)throw new Error("Missing fields in the response body - https://config.gorgias.chat/applications/2026");if(_.GORGIAS_CHAT_APP=t.application,_.GORGIAS_CHAT_BUNDLE_VERSION=t.bundleVersion,t&&t.texts&&(_.GORGIAS_CHAT_TEXTS=t.texts),!document.getElementById("gorgias-chat-container")){var o=document.createElement("div");o.id="gorgias-chat-container",document.body.appendChild(o);var r=document.createElement("script");r.setAttribute("defer",!0),r.src="https://storage.googleapis.com/gorgias-chat-production-client-builds/{bundleVersion}/static/js/main.js".replace("{bundleVersion}",t.bundleVersion),document.body.appendChild(r)}}else console.error("Failed request GET - https://config.gorgias.chat/applications/2026")},e.onerror=function(_){console.error(_)},e.send()}(window||{});</script><!--Gorgias Chat Widget End-->
+
+<!-- END / Third-party scripts / Added by Latimer Design -->
 
 </body>
 </html>

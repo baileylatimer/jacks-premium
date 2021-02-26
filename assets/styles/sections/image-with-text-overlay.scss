@@ -113,9 +113,9 @@ $banner-font-size: {{ settings.banner_text_size }}px;
   .image-with-text-overlay__container img {
     height: 600px;
     @media only screen and (max-width: 600px) {
-    height: 450px;
+    max-height: 420px !important;
   }
-}
+} 
 
 
   .pretext,

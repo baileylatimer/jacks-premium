@@ -30,12 +30,15 @@
 
 {% comment %} HTML markup {% endcomment %}
 <footer class="footer__container {{ css_class }}">
+{% unless template == 'page.landing' %}
   <section class="footer__content
                   section
                   is-width-wide
                   has-background
                   has-padding-top
                   has-padding-bottom">
+
+ 
     <div class="container has-limit is-justify-space-between">
       {% for block in section.blocks %}
         <div id="shopify-section-{{ block.id }}" class="footer__block block__{{ block.id }} block__{{ block.type | downcase | replace: '_', '-' }}
@@ -144,6 +147,7 @@
       {% endfor %}
     </div>
   </section>
+{% endunless %}
   <section class="footer__extra-content section">
     <div class="container has-padding-top has-padding-bottom">
       {% if locale_selector or currency_selector or settings.show_multiple_currencies == true %}

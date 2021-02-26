@@ -161,6 +161,8 @@
               {% endif %}
             {% endif %}
           </div>
+
+        {% unless template == 'page.landing' %}
           <div class="header__menu is-justify-{{ section.settings.menu_alignment }}">
             <nav class="header__menu-items is-flex is-flex-wrap is-justify-{{ section.settings.menu_alignment }} header__dropdown--{{ settings.dropdown_position }}" role="navigation" aria-label="main navigation">
               {% assign main_menu = linklists[section.settings.main_linklist] %}
@@ -193,6 +195,7 @@
                   display_search: section.settings.display_search,
                   icon_style: section.settings.icon_style
           %}
+        {% endunless %}
         </div>
       </div>
     </section>

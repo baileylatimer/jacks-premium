@@ -5,7 +5,8 @@
   background-size: cover;
   height: 100%;
   width: 100%;
-  min-height: 250px;
+  min-height: 500px;
+  object-fit: cover;
   position: relative;
   @include respond-to("medium-up") {
     min-height: 350px;
@@ -20,12 +21,18 @@
 
 @media (min-aspect-ratio: 16/9) {
   .bg-video {
+    min-height: 500px;
+    max-height: 750px;
+    object-fit: cover;
     width: 100%;
     height: auto;
   }
 }
 @media (max-aspect-ratio: 16/9) {
   .bg-video {
+    min-height: 500px;
+    max-height: 750px;
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }

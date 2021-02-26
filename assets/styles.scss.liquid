@@ -3488,7 +3488,7 @@ $button-letter-spacing: {{ settings.button_letter_spacing }}px;
 $button-font-capitalization: {{ settings.button_font_style }};
 $button-font-style: {{ settings.button__font.style }};
 
-$button-padding-vertical: calc(0.375em - #{$button-border-width}) !default;
+$button-padding-vertical: calc(1em - #{$button-border-width}) !default;
 $button-padding-horizontal: 1em !default;
 
 $button-hover-color: $link-hover !default;
@@ -3496,7 +3496,7 @@ $button-hover-border-color: $link-hover-border !default;
 
 $button-focus-color: $link-focus !default;
 $button-focus-border-color: $link-focus-border !default;
-$button-focus-box-shadow-size: 0 0 0 0.125em !default;
+$button-focus-box-shadow-size: 0 0 0 0.125em !default; 
 $button-focus-box-shadow-color: rgba($link, 0.25) !default;
 
 $button-active-color: $link-active !default;
@@ -16666,7 +16666,8 @@ $subtotal-bg-color: #F2F2F2;
   background-size: cover;
   height: 100%;
   width: 100%;
-  min-height: 250px;
+  min-height: 500px;
+  object-fit: cover;
   position: relative;
   @include respond-to("medium-up") {
     min-height: 350px;
@@ -16681,12 +16682,18 @@ $subtotal-bg-color: #F2F2F2;
 
 @media (min-aspect-ratio: 16/9) {
   .bg-video {
+    min-height: 500px;
+    max-height: 750px;
+    object-fit: cover;
     width: 100%;
     height: auto;
   }
 }
 @media (max-aspect-ratio: 16/9) {
   .bg-video {
+    min-height: 500px;
+    max-height: 750px;
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }

@@ -14,7 +14,7 @@ $button-letter-spacing: {{ settings.button_letter_spacing }}px;
 $button-font-capitalization: {{ settings.button_font_style }};
 $button-font-style: {{ settings.button__font.style }};
 
-$button-padding-vertical: calc(0.375em - #{$button-border-width}) !default;
+$button-padding-vertical: calc(1em - #{$button-border-width}) !default;
 $button-padding-horizontal: 1em !default;
 
 $button-hover-color: $link-hover !default;
@@ -22,7 +22,7 @@ $button-hover-border-color: $link-hover-border !default;
 
 $button-focus-color: $link-focus !default;
 $button-focus-border-color: $link-focus-border !default;
-$button-focus-box-shadow-size: 0 0 0 0.125em !default;
+$button-focus-box-shadow-size: 0 0 0 0.125em !default; 
 $button-focus-box-shadow-color: rgba($link, 0.25) !default;
 
 $button-active-color: $link-active !default;

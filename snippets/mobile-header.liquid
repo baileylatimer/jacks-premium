@@ -1,3 +1,4 @@
+
 {% comment %} Is the color set to transparent? {% endcomment %}
 {%- assign mobile_menu_background_color = settings.mobile_menu_background_color | color_extract: 'alpha' -%}
 {%- assign mobile_menu_link_color = settings.mobile_menu_link_color | color_extract: 'alpha' -%}
@@ -37,6 +38,7 @@
               mobile-layout--{{ settings.logo_menu_position }}
               mobile-logo__position--{{ settings.logo_mobile_position }}
               header__icon-style-{{ settings.icon_style | replace: '_', '-' }}">
+  {% unless template == 'page.landing' %}
     <div class="mobile-dropdown mobile-dropdown__position--{{ settings.logo_menu_position }}">
       <div class="mobile-menu__toggle-icon">
         <div class="mobile-header__open-menu">
@@ -48,6 +50,7 @@
       </div>
       {% render 'mobile-menu', nav_blocks: nav_blocks %}
     </div>
+    {% endunless %}
     <div class="mobile-logo">
       {% if settings.logo_mobile != blank %}
         <a class="mobile-header__logo header__link primary-logo" href="{{ shop.url }}" title="{{ shop.name }}">
@@ -71,6 +74,7 @@
         </a>
       {% endif %}
     </div>
+    {% unless template == 'page.landing' %}
     <div class="mobile-icons {% if settings.show_search_icon_mobile == false %}has-one-icon{% endif %}">
       {% if settings.show_search_icon_mobile %}
         {% comment %} Search icon {% endcomment %}
@@ -108,6 +112,7 @@
       </div>
 
     </div>
+    {% endunless %}
   </div>
 
   {% if settings.logo_mobile_position == 'below' %}

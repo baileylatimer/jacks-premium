@@ -3143,6 +3143,34 @@
               "animation": "none"
             }
           },
+          "4719cc01-7a17-4df3-97fd-553ef13334c3": {
+            "type": "rich_text",
+            "settings": {
+              "title": "Not all chews are made equally.",
+              "heading_font": "open_sans_n7",
+              "heading_color": "rgba(0,0,0,0)",
+              "heading_alignment": "center",
+              "heading_size": 30,
+              "text": "",
+              "text_font": "open_sans_n4",
+              "text_color": "rgba(0,0,0,0)",
+              "text_alignment": "left",
+              "text_size": 24,
+              "columns": 2,
+              "button_label": "",
+              "button_alignment": "center",
+              "button_style": "button--primary",
+              "background": "",
+              "gradient": "",
+              "gradient_rotation": 180,
+              "width": "wide",
+              "padding_top": 60,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
           "7be307a7-845d-44de-9872-26d852a83526": {
             "type": "gallery",
             "settings": {
@@ -3349,6 +3377,7 @@
         },
         "block_order": [
           "29be824d-799f-4cf2-a768-debb29831e6f",
+          "4719cc01-7a17-4df3-97fd-553ef13334c3",
           "7be307a7-845d-44de-9872-26d852a83526",
           "1dccca19-8d74-4532-acba-0a1733de2e0a",
           "ef1d04af-ad41-40c3-81fe-1a5e1b4b396d",

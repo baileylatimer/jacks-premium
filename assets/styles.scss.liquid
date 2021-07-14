@@ -833,7 +833,7 @@ $drop-down-menu-letter-spacing: {{ settings.dropdown_letter_spacing }}px !defaul
 
 @mixin headline-style($font-size: $font-size-header) {
   font-family: {{ settings.heading__font.family }}, {{ settings.heading__font.fallback_families }};
-  font-weight: {{ settings.heading__font.weight }};
+  font-weight: 600;
   font-style: {{ settings.heading__font.style }};
   font-size: $font-size * 1px;
   text-transform: {{ settings.heading_font_style }};
@@ -3483,7 +3483,7 @@ $button-border-width: $control-border-width !default;
 
 $button-font: {{ settings.button__font.family }};
 $button-font-fallback: {{ settings.button__font.fallback_families }};
-$button-font-weight: {{ settings.button__font.weight }};
+$button-font-weight: 600;
 $button-letter-spacing: {{ settings.button_letter_spacing }}px;
 $button-font-capitalization: {{ settings.button_font_style }};
 $button-font-style: {{ settings.button__font.style }};
@@ -3807,7 +3807,7 @@ $button-static-border-color: $grey-lighter !default;
   $btn-primary-line-height: inherit;
   $btn-primary-width: auto;
 {% else %}
-  $btn-primary-font-size: 1.25rem;
+  $btn-primary-font-size: 1rem;
   $btn-primary-line-height: 1.25;
   $btn-primary-width: 100%;
 {% endif %}
@@ -3829,7 +3829,7 @@ $btn-primary-border-color-highlight: {{ settings.button_primary_border_color--hi
   $btn-secondary-line-height: inherit;
   $btn-secondary-width: auto;
 {% else %}
-  $btn-secondary-font-size: 1.25rem;
+  $btn-secondary-font-size: 1rem;
   $btn-secondary-line-height: 1.25;
   $btn-secondary-width: 100%;
 {% endif %}
@@ -3849,7 +3849,7 @@ $btn-secondary-border-color-highlight: {{ settings.button_secondary_border_color
   $btn-link-style-font-size: 1rem;
   $btn-link-style-line-height: inherit;
 {% else %}
-  $btn-link-style-font-size: 1.25rem;
+  $btn-link-style-font-size: 1rem;
   $btn-link-style-line-height: 1.25;
 {% endif %}
 
@@ -3865,7 +3865,7 @@ $btn-link-style-text-color-highlight: {{ settings.button_link_text_color--highli
   $btn-add-to-cart-line-height: inherit;
   $btn-add-to-cart-width: 100%;
 {% else %}
-  $btn-add-to-cart-font-size: 1.25rem;
+  $btn-add-to-cart-font-size: 1rem;
   $btn-add-to-cart-width: 100% !important;
   $btn-add-to-cart-line-height: 1.25;
 {% endif %}
@@ -8915,7 +8915,7 @@ ul.tabs {
 ================================================== */
 
 {% if settings.button_cart_padding == 'small' %}
-  $atc-button-height: 35px;
+  $atc-button-height: 3591px;
   $atc-button-width: calc(50% - 12px);
   $atc-button-margin: 0 6px 0 0;
   $atc-button-spb-margin: 0 0 0 6px;
@@ -8945,7 +8945,8 @@ $quantity-box-control-width: 44px;
 
 // Size chart
 .product__size-chart {
-  float: right;
+  float: right; 
+  //zoz
 }
 
 // Notify form
@@ -8993,7 +8994,7 @@ $quantity-box-control-width: 44px;
 
 // Quantity box
 .quantity-wrapper {
-  border: 3px solid $color-black;
+  // border: 3px solid $color-black;
 
   .quantity-element {
     min-height: $atc-button-height;
@@ -9444,7 +9445,7 @@ button.shopify-payment-button__more-options {
 
   .purchase-details__spb--false {
     height: $atc-button-height;
-    margin: 24px 0 0;
+    // margin: 24px 0 0;
     display: inline-block;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -10731,13 +10732,13 @@ $swatch-label-size: 34px;
     min-width: $swatch-element-size;
     height: $swatch-element-size;
     margin: 0;
-    font-size: 13px;
+    font-size: $btn-primary-font-size;
     text-align: center;
     line-height: $swatch-element-size;
     white-space: nowrap;
-    text-transform: uppercase;
     cursor: pointer;
     padding: 0 10px;
+    font-weight: 600;
   }
 
   .swatch .color label {
@@ -10778,8 +10779,10 @@ $swatch-label-size: 34px;
   }
 
   .swatch_options input:checked + .swatch-element {
-    border-color: black ;
-    box-shadow: 0px 0px 0px 2px rgba(255,255,255,1);
+    background-color: $color-contrast-higher;
+    label {
+      color: hsl(50, 13%, 91%) !important;
+    } 
   }
 
   .swatch .swatch-element {
@@ -10790,6 +10793,8 @@ $swatch-label-size: 34px;
     margin: 0px 8px 8px 0;
     position: relative;
     outline: none;
+    justify-content: center;
+    display: flex;
   }
 
   .crossed-out {
@@ -10830,7 +10835,7 @@ $swatch-label-size: 34px;
     display: block;
     position: absolute;
     width: 120px;
-    font-size: 13px;
+  
     left: {{ 30 | divided_by: 2 | minus: 50 }}px;
     margin-bottom: 15px;
     opacity: 0;
@@ -16935,6 +16940,10 @@ input {
   background: $color-contrast-higher;
 }
 
+.yotpo-main-title {
+  color: black !important;
+}
+
 // --------------------------------
 
 // Flexbox
@@ -16942,7 +16951,7 @@ input {
 // --------------------------------
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 .inline-flex {
   display: inline-flex;

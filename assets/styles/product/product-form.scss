@@ -2,7 +2,7 @@
 ================================================== */
 
 {% if settings.button_cart_padding == 'small' %}
-  $atc-button-height: 35px;
+  $atc-button-height: 3591px;
   $atc-button-width: calc(50% - 12px);
   $atc-button-margin: 0 6px 0 0;
   $atc-button-spb-margin: 0 0 0 6px;
@@ -32,7 +32,8 @@ $quantity-box-control-width: 44px;
 
 // Size chart
 .product__size-chart {
-  float: right;
+  float: right; 
+  //zoz
 }
 
 // Notify form
@@ -80,7 +81,7 @@ $quantity-box-control-width: 44px;
 
 // Quantity box
 .quantity-wrapper {
-  border: 3px solid $color-black;
+  // border: 3px solid $color-black;
 
   .quantity-element {
     min-height: $atc-button-height;
@@ -531,7 +532,7 @@ button.shopify-payment-button__more-options {
 
   .purchase-details__spb--false {
     height: $atc-button-height;
-    margin: 24px 0 0;
+    // margin: 24px 0 0;
     display: inline-block;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

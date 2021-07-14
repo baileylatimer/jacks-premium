@@ -39,7 +39,7 @@
               {% endif %}
               class="swatch--{{ value | handle }}"id="swatch-{{ option_index }}-{{ value | handle }}-{{ product.id }}" type="radio" aria-label="{{ value | escape }}" tabindex="0" name="option-{{ option_index }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %}/>
 
-      <div aria-label="{{ value | escape }}" tabindex="0" data-value="{{ value | escape }}" data-value-handle="{{ value | handle }}" class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
+      <div aria-label="{{ value | escape }}" tabindex="0" data-value="{{ value | escape }}" data-value-handle="{{ value | handle }}" class="swatch-element flex-grow {% if is_color %}color {% endif %}{{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
         {% if is_color %}
           <div class="tooltip">{{ value }}</div>
         {% endif %}
@@ -51,7 +51,7 @@
                   {% elsif variant.featured_image %}
                     data-image="{{ variant.featured_image | img_url: '400x' }}"
                   {% endif %}
-            for="swatch-{{ option_index }}-{{ value | handle }}-{{ product.id }}" style="background-color: {{ value | split: ' ' | last | handle }};">
+            for="swatch-{{ option_index }}-{{ value | handle }}-{{ product.id }}" style="background-color: {{ value | split: ' ' | last | handle }};" class="flex-grow">
 
             {% assign image_name = value | handle | append: '.' | append: file_extension %}
             {% assign swatch = images[image_name] %}
@@ -61,7 +61,7 @@
             <span class="crossed-out" aria-label="{{ 'products.product.sold_out' | t }}" alt="{{ 'products.product.sold_out' | t }}"></span>
           </label>
         {% else %}
-          <label for="swatch-{{ option_index }}-{{ value | handle }}-{{ product.id }}">
+          <label class="flex-grow" for="swatch-{{ option_index }}-{{ value | handle }}-{{ product.id }}">
             {{ value }}
             <span class="crossed-out" aria-label="{{ 'products.product.sold_out' | t }}" alt="{{ 'products.product.sold_out' | t }}"></span>
           </label>

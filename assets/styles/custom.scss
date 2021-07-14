@@ -274,6 +274,10 @@ input {
   background: $color-contrast-higher;
 }
 
+.yotpo-main-title {
+  color: black !important;
+}
+
 // --------------------------------
 
 // Flexbox
@@ -281,7 +285,7 @@ input {
 // --------------------------------
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 .inline-flex {
   display: inline-flex;

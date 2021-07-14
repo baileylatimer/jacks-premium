@@ -1745,6 +1745,18 @@
               "css_class": "",
               "custom_css": ""
             }
+          },
+          "d2658fd0-0e55-4061-b9df-c3b1d4ab7a53": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "texas-taffy",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "Why Texas Taffy is the best.",
+              "callout_subtitle": "Lorem ipsum",
+              "callout_link_title": "Learn more ➞",
+              "css_class": "",
+              "custom_css": ""
+            }
           }
         },
         "block_order": [
@@ -1752,7 +1764,8 @@
           "5cd9f5ae-0c8e-468f-adff-ecdcf0f4ed80",
           "250abff3-571d-4c34-b087-a36953cffffd",
           "eb9a6a26-4db7-484c-b90c-eee1abebc05d",
-          "17a409c9-926c-4453-9a9e-cfab6ff81211"
+          "17a409c9-926c-4453-9a9e-cfab6ff81211",
+          "d2658fd0-0e55-4061-b9df-c3b1d4ab7a53"
         ],
         "settings": {
           "collection_breadcrumb": true,
@@ -2814,7 +2827,7 @@
               "heading_color": "rgba(0,0,0,0)",
               "heading_alignment": "center",
               "heading_size": 30,
-              "text": "<p><strong>Sign up<\/strong><\/p><p>Sign up for a free account today to start earning rewards.<\/p><p><strong>Start earning <\/strong> <\/p><p>Earn 5 Pack Points for every $1 you spend at gosun.co and even more for sharing on social media.<\/p><p><strong>Unlock rewards  <\/strong><\/p><p>Redeem your Pack Points to earn to unlock discounts at checkout and exclusive gear.<\/p>",
+              "text": "<p><strong>Sign up<\/strong><\/p><p>Sign up for a free account today to start earning rewards.<\/p><p><strong>Start earning <\/strong> <\/p><p>Earn 5 Pack Points for every $1 you spend at Jack&#x27;s Premium and even more for sharing on social media.<\/p><p><strong>Unlock rewards  <\/strong><\/p><p>Redeem your Pack Points to earn to unlock discounts at checkout and exclusive gear.<\/p>",
               "text_font": "open_sans_n4",
               "text_color": "rgba(0,0,0,0)",
               "text_alignment": "left",
@@ -3437,7 +3450,7 @@
           "subtitle": "",
           "pretext_color": "#000000",
           "heading_color": "#000000",
-          "subheading_color": "#EBEAE4",
+          "subheading_color": "#ebeae4",
           "text_alignment": "left",
           "text_horizontal_position": "left",
           "text_vertical_position": "bottom",
@@ -3461,6 +3474,111 @@
           "padding_left": 0,
           "padding_right": 0,
           "animation": "none",
+          "css_class": "",
+          "custom_css": ""
+        }
+      },
+      "page-landing-cats__main": {
+        "type": "page-landing-cats__main",
+        "blocks": {
+          "page-landing-cats__main-0": {
+            "type": "image_with_overlay",
+            "settings": {
+              "overlay": true,
+              "media_loop": "",
+              "image": "shopify:\/\/shop_images\/smile-cover--blank.jpg",
+              "pretext": "",
+              "title": "Cats",
+              "subtitle": "<p>Lorem ipsum<\/p>",
+              "pretext_color": "#EBEAE4",
+              "heading_color": "#EBEAE4",
+              "subheading_color": "#EBEAE4",
+              "text_alignment": "left",
+              "text_horizontal_position": "center",
+              "text_vertical_position": "middle",
+              "background_color": "#FFFFFF",
+              "background_opacity": 0,
+              "border_color": "",
+              "border_width": 0,
+              "text_width": 40,
+              "button_1": "Buy Cat Food ➞",
+              "button_1_link": "shopify:\/\/products\/feline",
+              "button_1_style": "button--primary",
+              "button_2": "",
+              "button_2_style": "button--secondary",
+              "mobile_image_crop": "none",
+              "mobile_text_below_image": false,
+              "pretext_color_mobile": "rgba(0,0,0,0)",
+              "heading_color_mobile": "rgba(0,0,0,0)",
+              "subheading_color_mobile": "rgba(0,0,0,0)",
+              "width": "wide",
+              "padding_top": 0,
+              "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
+          "07bb743b-2dac-47b9-926f-4dd823c7e1e4": {
+            "type": "image_with_text",
+            "settings": {
+              "reverse_order": false,
+              "padding_y": false,
+              "image_position": "left",
+              "image": "shopify:\/\/shop_images\/cat-stack.png",
+              "show_border": false,
+              "image_crop": "none",
+              "title": "Show love to your furry friend.",
+              "heading_size": "large",
+              "text": "",
+              "button_label": "Show some love ➞",
+              "button_style": "button--primary",
+              "alignment": "left",
+              "vertical_position": "center",
+              "background": "rgba(0,0,0,0)",
+              "text_color": "rgba(0,0,0,0)",
+              "width": "standard",
+              "show_gutter": true,
+              "padding_top": 20,
+              "padding_bottom": 20,
+              "animation": "none"
+            }
+          },
+          "page-landing-cats__main-2": {
+            "type": "rich_text",
+            "settings": {
+              "title": "Why you should buy",
+              "heading_font": "open_sans_n4",
+              "heading_color": "#ebeae4",
+              "heading_alignment": "center",
+              "heading_size": 30,
+              "text": "<p>100% delicious<\/p><p>100% natural<\/p><p>100% organic<\/p>",
+              "text_font": "open_sans_n4",
+              "text_color": "#ebeae4",
+              "text_alignment": "left",
+              "text_size": 24,
+              "columns": 3,
+              "button_label": "",
+              "button_alignment": "center",
+              "button_style": "button--primary",
+              "background": "#000000",
+              "gradient": "",
+              "gradient_rotation": 180,
+              "width": "wide",
+              "padding_top": 60,
+              "padding_bottom": 60,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          }
+        },
+        "block_order": [
+          "page-landing-cats__main-0",
+          "07bb743b-2dac-47b9-926f-4dd823c7e1e4",
+          "page-landing-cats__main-2"
+        ],
+        "settings": {
           "css_class": "",
           "custom_css": ""
         }

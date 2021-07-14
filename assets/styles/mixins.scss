@@ -301,7 +301,7 @@
 
 @mixin headline-style($font-size: $font-size-header) {
   font-family: {{ settings.heading__font.family }}, {{ settings.heading__font.fallback_families }};
-  font-weight: {{ settings.heading__font.weight }};
+  font-weight: 600;
   font-style: {{ settings.heading__font.style }};
   font-size: $font-size * 1px;
   text-transform: {{ settings.heading_font_style }};

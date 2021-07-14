@@ -9,7 +9,7 @@ $button-border-width: $control-border-width !default;
 
 $button-font: {{ settings.button__font.family }};
 $button-font-fallback: {{ settings.button__font.fallback_families }};
-$button-font-weight: {{ settings.button__font.weight }};
+$button-font-weight: 600;
 $button-letter-spacing: {{ settings.button_letter_spacing }}px;
 $button-font-capitalization: {{ settings.button_font_style }};
 $button-font-style: {{ settings.button__font.style }};
@@ -333,7 +333,7 @@ $button-static-border-color: $grey-lighter !default;
   $btn-primary-line-height: inherit;
   $btn-primary-width: auto;
 {% else %}
-  $btn-primary-font-size: 1.25rem;
+  $btn-primary-font-size: 1rem;
   $btn-primary-line-height: 1.25;
   $btn-primary-width: 100%;
 {% endif %}
@@ -355,7 +355,7 @@ $btn-primary-border-color-highlight: {{ settings.button_primary_border_color--hi
   $btn-secondary-line-height: inherit;
   $btn-secondary-width: auto;
 {% else %}
-  $btn-secondary-font-size: 1.25rem;
+  $btn-secondary-font-size: 1rem;
   $btn-secondary-line-height: 1.25;
   $btn-secondary-width: 100%;
 {% endif %}
@@ -375,7 +375,7 @@ $btn-secondary-border-color-highlight: {{ settings.button_secondary_border_color
   $btn-link-style-font-size: 1rem;
   $btn-link-style-line-height: inherit;
 {% else %}
-  $btn-link-style-font-size: 1.25rem;
+  $btn-link-style-font-size: 1rem;
   $btn-link-style-line-height: 1.25;
 {% endif %}
 
@@ -391,7 +391,7 @@ $btn-link-style-text-color-highlight: {{ settings.button_link_text_color--highli
   $btn-add-to-cart-line-height: inherit;
   $btn-add-to-cart-width: 100%;
 {% else %}
-  $btn-add-to-cart-font-size: 1.25rem;
+  $btn-add-to-cart-font-size: 1rem;
   $btn-add-to-cart-width: 100% !important;
   $btn-add-to-cart-line-height: 1.25;
 {% endif %}

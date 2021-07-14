@@ -86,9 +86,9 @@ $swatch-label-size: 34px;
   }
 
   .swatch_options input:checked + .swatch-element {
-    background-color: $color-contrast-higher;
+    background-color: #deceab !important;
     label {
-      color: hsl(50, 13%, 91%) !important;
+      // color: hsl(50, 13%, 91%) !important;
     } 
   }
 

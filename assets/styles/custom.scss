@@ -278,6 +278,38 @@ input {
   color: black !important;
 }
 
+.yotpo-product-image {
+  // @include filter-bg();
+}
+
+.yotpo-promoted-product {
+  padding: var(--space-md) !important;
+  color: black !important;
+}
+
+.yotpo-product-name {
+  font-size: larger !important;
+  font-weight: 600;
+  font-family: "roc-grotesk" !important;
+}
+
+/* widget.css | https://staticw2.yotpo.com/AjlnS8JEjAtRTQPtvGRtYLUycrAXOeyWSnT0egp3/widget.css?widget_version=2021-07-12_07-45-44 */
+
+.yotpo .yotpo-review .yotpo-main .content-review,
+.yotpo .yotpo-comment .yotpo-main .content-review,
+.yotpo .yotpo-question .yotpo-main .content-review,
+.yotpo .yotpo-onsite-upload .yotpo-main .content-review,
+.yotpo .y-label,
+.yotpo span.y-label,
+.content-title {
+  /* color: #6B6D76; */
+  color: #000 !important;
+}
+
+.yotpo-default-button {
+  text-transform: capitalize !important;
+}
+
 // --------------------------------
 
 // Flexbox

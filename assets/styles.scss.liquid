@@ -1653,7 +1653,7 @@ table {
         //   font-weight: 300;
         //   font-style: normal; }
 
-          h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, #nav li a, div.title a, .headline, .subtitle, a, span, p, body, .button, select { font-family: 'roc-grotesk' !important; }
+          h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a, #nav li a, div.title a, .headline, .subtitle, a, span, p, body, .button, select, .yotpo-product-name { font-family: 'roc-grotesk' !important; }
 
 body {
   font-family: {{ settings.regular__font.family }}, {{ settings.regular__font.fallback_families }};
@@ -9969,7 +9969,7 @@ $product-hover-bg: {{ settings.product_hover_bg_color | color_modify: 'alpha', 0
 }
 
 // Hover effects
-.product__thumbnail, .list-collection__thumbnail {
+.product__thumbnail, .list-collection__thumbnail,  .yotpo-promoted-product {
   @include filter-bg();
   @include border;
   &:hover {
@@ -10779,9 +10779,9 @@ $swatch-label-size: 34px;
   }
 
   .swatch_options input:checked + .swatch-element {
-    background-color: $color-contrast-higher;
+    background-color: #deceab !important;
     label {
-      color: hsl(50, 13%, 91%) !important;
+      // color: hsl(50, 13%, 91%) !important;
     } 
   }
 
@@ -16942,6 +16942,38 @@ input {
 
 .yotpo-main-title {
   color: black !important;
+}
+
+.yotpo-product-image {
+  // @include filter-bg();
+}
+
+.yotpo-promoted-product {
+  padding: var(--space-md) !important;
+  color: black !important;
+}
+
+.yotpo-product-name {
+  font-size: larger !important;
+  font-weight: 600;
+  font-family: "roc-grotesk" !important;
+}
+
+/* widget.css | https://staticw2.yotpo.com/AjlnS8JEjAtRTQPtvGRtYLUycrAXOeyWSnT0egp3/widget.css?widget_version=2021-07-12_07-45-44 */
+
+.yotpo .yotpo-review .yotpo-main .content-review,
+.yotpo .yotpo-comment .yotpo-main .content-review,
+.yotpo .yotpo-question .yotpo-main .content-review,
+.yotpo .yotpo-onsite-upload .yotpo-main .content-review,
+.yotpo .y-label,
+.yotpo span.y-label,
+.content-title {
+  /* color: #6B6D76; */
+  color: #000 !important;
+}
+
+.yotpo-default-button {
+  text-transform: capitalize !important;
 }
 
 // --------------------------------

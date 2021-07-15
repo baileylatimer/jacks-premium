@@ -156,7 +156,7 @@
           </div>
           {% if section.settings.collection_title_below_image != blank %}
             <a class="collection-info__caption-wrapper collection-info__caption--below-image" href="{{ collection.url }}">
-              <span class="title">
+              <h4 class="title">
                 {% if block.settings.title != blank %}
                   {{ block.settings.title }}
                 {% elsif collection != blank %}
@@ -164,7 +164,7 @@
                 {% else %}
                   {{ "homepage.onboarding.collection_title" | t }}
                 {% endif %}
-              </span>
+              </h4>
               {% render 'button',
                       label: block.settings.button_label,
                       href: collection.url,

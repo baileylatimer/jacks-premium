@@ -241,9 +241,9 @@
           <a class="collection-info__caption" href="{{ collection.url }}">
             {% if section.settings.collection_title_below_image == blank %}
               <div class="collection-info__caption-wrapper">
-                <span class="title">
+                <h4 class="title">
                   {{ collection.title }}
-                </span>
+                </h4>
                 {% assign view_products = 'collections.general.view_all' | t %}
                 {% render 'button',
                         label: view_products,

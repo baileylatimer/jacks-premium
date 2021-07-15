@@ -50,6 +50,7 @@
 $color-primary: hsl(41, 44%, 37%);
 
 .banner__subheading {
+  color: white;
   @include respond-to("medium-up") {
     font-size: 30px;
   }
@@ -120,12 +121,12 @@ $color-primary: hsl(41, 44%, 37%);
 }
 
 .padding-y-xl {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .padding-bottom-xl {
-  padding-bottom: 60px;
+  padding-bottom: var(--space-xl);
 }
 
 .bg-contrast-lower,

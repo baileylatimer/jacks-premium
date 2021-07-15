@@ -1,11 +1,21 @@
 /* # Icon with text column
 ================================================== */
 
-.icon-with-text-column {
+@include respond-to("medium-down") {
+  .icon-with-text-column__column {
+    padding: var(--space-sm);
+    display: flex;
+  }
+  .icon-column__text {
+    text-align: left !important;
+    margin-left: var(--space-lg);
+  }
+}
 
+.icon-with-text-column {
   .icon {
     margin-bottom: 20px;
-    @include respond-to('medium-down') {
+    @include respond-to("medium-down") {
       margin-bottom: 0;
       margin-top: 20px;
     }

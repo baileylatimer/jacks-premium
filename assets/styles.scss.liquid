@@ -1797,7 +1797,7 @@ blockquote {
 
 $title-color: {{ settings.heading_color }} !default;
 $title-size: {{ settings.heading_size }}px !default;
-$title-weight: {{ settings.heading__font.weight }} !default;
+$title-weight: 600 !default;
 $title-line-height: 1.125 !default;
 $title-strong-color: inherit !default;
 $title-strong-weight: inherit !default;
@@ -1838,7 +1838,7 @@ $subtitle-negative-margin: -1.25rem !default;
 
 .title {
   color: $title-color;
-  font-size: $title-size;
+  // font-size: $title-size;
   font-weight: $title-weight;
   line-height: $title-line-height;
 
@@ -11078,6 +11078,12 @@ $swatch-label-size: 34px;
   margin: auto;
   z-index: 3;
   width: 100%;
+  p {
+    @include respond-to("medium-up") {
+      font-size: 30px;
+    }
+    color: white;
+  }
 }
 
 .banner__text {
@@ -12951,11 +12957,21 @@ h1.header__logo-text > a {
 /* # Icon with text column
 ================================================== */
 
-.icon-with-text-column {
+@include respond-to("medium-down") {
+  .icon-with-text-column__column {
+    padding: var(--space-sm);
+    display: flex;
+  }
+  .icon-column__text {
+    text-align: left !important;
+    margin-left: var(--space-lg);
+  }
+}
 
+.icon-with-text-column {
   .icon {
     margin-bottom: 20px;
-    @include respond-to('medium-down') {
+    @include respond-to("medium-down") {
       margin-bottom: 0;
       margin-top: 20px;
     }
@@ -16716,6 +16732,7 @@ $subtotal-bg-color: #F2F2F2;
 $color-primary: hsl(41, 44%, 37%);
 
 .banner__subheading {
+  color: white;
   @include respond-to("medium-up") {
     font-size: 30px;
   }
@@ -16786,12 +16803,12 @@ $color-primary: hsl(41, 44%, 37%);
 }
 
 .padding-y-xl {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .padding-bottom-xl {
-  padding-bottom: 60px;
+  padding-bottom: var(--space-xl);
 }
 
 .bg-contrast-lower,

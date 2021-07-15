@@ -174,7 +174,7 @@ blockquote {
 
 $title-color: {{ settings.heading_color }} !default;
 $title-size: {{ settings.heading_size }}px !default;
-$title-weight: {{ settings.heading__font.weight }} !default;
+$title-weight: 600 !default;
 $title-line-height: 1.125 !default;
 $title-strong-color: inherit !default;
 $title-strong-weight: inherit !default;
@@ -215,7 +215,7 @@ $subtitle-negative-margin: -1.25rem !default;
 
 .title {
   color: $title-color;
-  font-size: $title-size;
+  // font-size: $title-size;
   font-weight: $title-weight;
   line-height: $title-line-height;
 

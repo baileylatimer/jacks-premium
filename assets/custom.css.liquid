@@ -614,8 +614,8 @@
     padding-bottom: var(--space-lg);
   }
   .padding-y-xl {
-    padding-top: var(--space-xl);
-    padding-bottom: var(--space-xl);
+    padding-top: var(--space-xl) !important;
+    padding-bottom: var(--space-xl) !important;
   }
   .padding-y-xxl {
     padding-top: var(--space-xxl);
@@ -2396,11 +2396,11 @@
     --max-width-xxxl:  120rem;
     --max-width-xxxxl: 150rem; }
   
-  .container {
+  /* .container {
     width: calc(100% - 2*var(--component-padding));
     margin-left: auto;
     margin-right: auto; }
-  
+   */
   .max-width-xxxxs {
     max-width: var(--max-width-xxxxs); }
   
@@ -2469,9 +2469,9 @@
     --offset: var(--gap);
     display: flex;
     flex-wrap: wrap; }
-    .grid > * {
+    /* .grid > * {
       flex-basis: 100%;
-      max-width: 100%; }
+      max-width: 100%; } */
     @supports (--css: variables) {
       .grid > *[class*="offset-"] {
         margin-left: var(--offset); } }
@@ -3093,7 +3093,7 @@
   
   :root {
   
-    --text-base-size: 1.1rem;
+    --text-base-size: 0.8rem;
     --text-scale-ratio: 1.2;
     --text-xs: calc((1.25rem / var(--text-scale-ratio)) / var(--text-scale-ratio));
     --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
@@ -3111,7 +3111,7 @@
     --font-primary-capital-letter: 1; }
     @media (min-width: 64rem) {
       :root {
-        --text-base-size: 1.25rem;
+        --text-base-size: 1rem;
         --text-scale-ratio: 1.25; } }
   
   body {

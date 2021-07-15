@@ -52,6 +52,12 @@
   margin: auto;
   z-index: 3;
   width: 100%;
+  p {
+    @include respond-to("medium-up") {
+      font-size: 30px;
+    }
+    color: white;
+  }
 }
 
 .banner__text {

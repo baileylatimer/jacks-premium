@@ -1277,6 +1277,10 @@ $drop-down-menu-letter-spacing: {{ settings.dropdown_letter_spacing }}px !defaul
 @mixin filter-bg {
   filter: brightness(.9) sepia(.08);
 }
+@mixin filter-contrast-low {
+  filter: brightness(.87) sepia(.08);
+  -webkit-filter: brightness(.87) sepia(.08);
+}
 /* # Reset
 ================================================== */
 
@@ -8462,7 +8466,7 @@ ul.tabs {
 .product-gallery__image {
   width: 100%;
   height: auto;
-  @include filter-bg();
+  @include filter-contrast-low();
 
   img {
     width: 100%;
@@ -16974,6 +16978,21 @@ input {
   font-size: larger !important;
   font-weight: 600;
   font-family: "roc-grotesk" !important;
+}
+
+main .yotpo .promoted-products-box .promoted-products .yotpo-promoted-product {
+  width: 200px;
+  margin-right: var(--space-xs);
+  margin-left: var(--space-xs);
+}
+
+main
+  .yotpo
+  .promoted-products-box
+  .promoted-products
+  .yotpo-promoted-product
+  .yotpo-product-name {
+  color: #000 !important;
 }
 
 /* widget.css | https://staticw2.yotpo.com/AjlnS8JEjAtRTQPtvGRtYLUycrAXOeyWSnT0egp3/widget.css?widget_version=2021-07-12_07-45-44 */

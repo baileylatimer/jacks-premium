@@ -294,6 +294,21 @@ input {
   font-family: "roc-grotesk" !important;
 }
 
+main .yotpo .promoted-products-box .promoted-products .yotpo-promoted-product {
+  width: 200px;
+  margin-right: var(--space-xs);
+  margin-left: var(--space-xs);
+}
+
+main
+  .yotpo
+  .promoted-products-box
+  .promoted-products
+  .yotpo-promoted-product
+  .yotpo-product-name {
+  color: #000 !important;
+}
+
 /* widget.css | https://staticw2.yotpo.com/AjlnS8JEjAtRTQPtvGRtYLUycrAXOeyWSnT0egp3/widget.css?widget_version=2021-07-12_07-45-44 */
 
 .yotpo .yotpo-review .yotpo-main .content-review,

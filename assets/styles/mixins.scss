@@ -745,3 +745,7 @@
 @mixin filter-bg {
   filter: brightness(.9) sepia(.08);
 }
+@mixin filter-contrast-low {
+  filter: brightness(.87) sepia(.08);
+  -webkit-filter: brightness(.87) sepia(.08);
+}

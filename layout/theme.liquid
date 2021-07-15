@@ -37,6 +37,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script defer src="{{ 'vendors.js' | asset_url }}"></script>
   <script defer src="{{ 'utilities.js' | asset_url }}"></script>
+
   <script defer src="{{ 'app.js' | asset_url }}"></script>
 
   {%- if settings.show_multiple_currencies or shop.enabled_currencies.size > 1 -%}
@@ -296,6 +297,8 @@
   {% unless template == 'page.landing' %}
   <!--Gorgias Chat Widget Start--><script>!function(_){_.GORGIAS_CHAT_APP_ID="2026",_.GORGIAS_CHAT_BASE_URL="us-east1-898b.production.gorgias.chat",_.GORGIAS_API_BASE_URL="config.gorgias.chat";var e=new XMLHttpRequest;e.open("GET","https://config.gorgias.chat/applications/2026",!0),e.onload=function(n){if(4===e.readyState)if(200===e.status){var t=JSON.parse(e.responseText);if(!t.application||!t.bundleVersion)throw new Error("Missing fields in the response body - https://config.gorgias.chat/applications/2026");if(_.GORGIAS_CHAT_APP=t.application,_.GORGIAS_CHAT_BUNDLE_VERSION=t.bundleVersion,t&&t.texts&&(_.GORGIAS_CHAT_TEXTS=t.texts),!document.getElementById("gorgias-chat-container")){var o=document.createElement("div");o.id="gorgias-chat-container",document.body.appendChild(o);var r=document.createElement("script");r.setAttribute("defer",!0),r.src="https://storage.googleapis.com/gorgias-chat-production-client-builds/{bundleVersion}/static/js/main.js".replace("{bundleVersion}",t.bundleVersion),document.body.appendChild(r)}}else console.error("Failed request GET - https://config.gorgias.chat/applications/2026")},e.onerror=function(_){console.error(_)},e.send()}(window||{});</script><!--Gorgias Chat Widget End-->
   {% endunless %}
+
+  <script defer src="{{ 'custom.js' | asset_url }}"></script>
 
 <!-- END / Third-party scripts / Added by Latimer Design -->
 

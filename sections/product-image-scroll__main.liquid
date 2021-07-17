@@ -185,11 +185,11 @@
 
           {% comment %} Description - top {% endcomment %}
           {% if object.settings.product_description_position == "top" %}
-            {% if product.description != blank %}
+            <!-- {% if product.description != blank %}
               <div class="description content">
                 {{ product.description }}
               </div>
-            {% endif %}
+            {% endif %} -->
           {% endif %}
 
         
@@ -210,6 +210,114 @@
             {% endunless %}
           </div>
 
+          
+
+        <ul class="accordion margin-top-md">
+          {% if product.metafields.custom_fields["product_specs"] != blank %}
+          <li class="border-bottom">
+            <a class="toggle flex justify-between" href="javascript:void(0);">
+              <h4>Overview</h4>
+              <div>
+                <div class="circle-plus closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+                <div class="circle-plus-two closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+              </div>
+            
+            
+            </a>
+            <div class="inner-0">
+              <ul>
+              {% if product.metafields.custom_fields["product_specs"] != blank %}
+              {% assign data_attr = shop.metafields._cf_products["product_specs"].data_attr %}
+                {% for item in product.metafields.custom_fields["product_specs"] %}
+                  <div class="flex is-justify-space-between border-bottom padding-y-md" data-index="{{ forloop.index0 }}">
+                    <div class="cf-accordion-title text-bold">
+                      {{ item.title }}
+                    </div>
+                    <div class="inner">
+                      <div class="inner-padding">
+                          {% if item.body != blank %}
+                            {{ item.body }}
+                          {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+              {% endif %}
+              </ul>
+              {% if product.description != blank %}
+              <div class="description content padding-y-sm">
+                {{ product.description }}
+              </div>
+            {% endif %}
+            </div>
+    
+
+          </li>
+          {% endif %}
+
+        {% if product.metafields.custom_fields["recipe_details"] != blank %}
+          <li class="border-bottom">
+            <a class="toggle flex justify-between" href="javascript:void(0);">
+              <h4>Recipe Details</h4>
+              <div>
+                <div class="circle-plus closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+                <div class="circle-plus-two closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="inner-0 list">
+              {{ product.metafields.custom_fields["recipe_details"] }}
+            </div>
+          </li>
+          {% endif %}
+
+          {% if product.metafields.custom_fields["guaranteed_analysis"] != blank %}
+          <li class="border-bottom">
+            <a class="toggle flex justify-between" href="javascript:void(0);">
+              <h4>Guaranteed Analysis</h4>
+              <div>
+                <div class="circle-plus closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+                <div class="circle-plus-two closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="inner-0 list">
+              {{ product.metafields.custom_fields["guaranteed_analysis"] }}
+            </div>
+          </li>
+          {% endif %}
+        
+        </ul>
+        
+<!-- 
           {% comment %} Description - bottom {% endcomment %}
           {% if object.settings.product_description_position == "bottom" %}
             {% if product.description != blank %}
@@ -217,7 +325,7 @@
                 {{ product.description }}
               </div>
             {% endif %}
-          {% endif %}
+          {% endif %} -->
 
           {% comment %} Collections, type, tags {% endcomment %}
           {% if object.settings.display_collections or object.settings.display_tags or object.settings.display_type %}

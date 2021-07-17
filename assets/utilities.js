@@ -1,5 +1,23 @@
 "use strict";
 
+
+$('.toggle').click(function (e) {
+  e.preventDefault();
+  var $this = $(this);
+
+  if ($this.next().hasClass('show')) {
+    $this.next().removeClass('show');
+    $this.next().slideUp(350);
+    $this.find('.circle-plus').removeClass('opened');
+  } else {
+    $this.parent().parent().find('li .inner-0').removeClass('show');
+    $this.parent().parent().find('li .inner-0').slideUp(350);
+    $this.next().toggleClass('show');
+    $this.next().slideToggle(350);
+    $this.find('.circle-plus').addClass('opened');
+  }
+});
+
 Shopify.contentCreator.accordion = {
   init: function init() {
     var $accordionHeading = $('.accordion > dt > a, [data-cc-accordion] > dt > a');

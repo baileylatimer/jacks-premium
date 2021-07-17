@@ -391,6 +391,94 @@ select.rc_select {
   margin-top: var(--space-md);
 }
 
+/* Custom Fields
+========================== */
+
+.accordion {
+  list-style: none;
+  padding: 0;
+
+  .inner-0 {
+    padding-left: 1em;
+    overflow: hidden;
+    display: none;
+
+    &.show {
+      /*display: block;*/
+    }
+  }
+
+  li {
+    margin: 0.5em 0;
+
+    a.toggle {
+      width: 100%;
+      display: flex;
+      padding: 0.75em;
+      transition: background 0.3s ease;
+      background: transparent;
+      &:hover {
+      }
+    }
+  }
+}
+
+.closed {
+  .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+  }
+  .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+}
+
+.opened {
+  opacity: 1;
+  .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+  }
+  .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.circle-plus .circle {
+  position: relative;
+  width: 2.55em;
+  height: 2.5em;
+}
+.circle-plus .circle .horizontal {
+  position: absolute;
+  background-color: black;
+  width: 30px;
+  height: 5px;
+  left: 50%;
+  margin-left: -15px;
+  top: 50%;
+  margin-top: -2.5px;
+}
+.circle-plus .circle .vertical {
+  position: absolute;
+  background-color: black;
+  width: 5px;
+  height: 30px;
+  left: 50%;
+  margin-left: -2.5px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.list ul {
+  list-style: circle;
+  padding-left: var(--space-xs);
+}
+
 // --------------------------------
 
 // Flexbox

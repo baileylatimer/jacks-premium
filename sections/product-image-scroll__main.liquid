@@ -136,7 +136,7 @@
           {% endif %}
 
           {% comment %} Price {% endcomment %}
-          <p class="modal_price subtitle">
+          <p class="modal_price subtitle margin-0">
             {% if collection_handles contains 'coming-soon' %}
               {% if settings.stickers_enabled == false %}{{ 'collections.general.coming_soon' | t }}{% endif %}
             {% else %}
@@ -191,6 +191,8 @@
               </div>
             {% endif %}
           {% endif %}
+
+        
 
           {% comment %} Purchase form {% endcomment %}
           <div class="product-form-container">

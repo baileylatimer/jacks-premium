@@ -16936,7 +16936,6 @@ input {
   font-weight: 600;
   background: transparent;
   transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  &:hover,
   &:active,
   &:focus {
     background: $color-white;
@@ -17010,6 +17009,72 @@ main
 
 .yotpo-default-button {
   text-transform: capitalize !important;
+}
+
+/* ReCharge Subscriptions - Product Page
+-------------------------------------------//
+
+/* rcWidget.css | https://rechargeassets-bootstrapheroes-rechargeapps.netdna-ssl.com/static/css/rcWidget.css */
+
+img.rc_popup__badge {
+  display: none;
+}
+
+select.rc_select {
+  // font-weight: 600;
+  padding: var(--space-sm);
+}
+
+div.rc_block__type {
+  font-weight: 600;
+}
+
+div.rc_block {
+  margin: 0;
+  padding: 0;
+  white-space: normal !important;
+}
+
+div.rc_block__type--active label.rc_label {
+  font-weight: 600;
+}
+
+div.rc_block__type--active {
+  border: 3px solid black;
+  margin-top: var(--space-md);
+}
+
+label.rc_label__deliver_every {
+  padding: 0 !important;
+}
+
+.rc_block__type__options {
+  margin-top: var(--space-md) !important;
+}
+
+.rc_popup {
+  display: none !important;
+}
+
+input.rc_radio {
+  height: 0px;
+}
+
+.rc_block__type__autodeliver {
+  padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-sm) !important;
+}
+
+label.rc_label__deliver_every,
+select.rc_select {
+  width: 100%;
+}
+
+// Account page
+.rc_layout__container {
+  padding: var(--space-xl) 0;
+}
+.rc_form__group {
+  margin-top: var(--space-md);
 }
 
 // --------------------------------

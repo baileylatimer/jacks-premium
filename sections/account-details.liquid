@@ -44,6 +44,9 @@
   <div class="container">
     <aside class="one-fourth medium-down--one-whole column account-sidebar">
       <div class="account-sidebar__content has-padding-top">
+
+  
+
         <h4><a href="{{ routes.account_url }}" title="{{ 'layout.customer.my_account' | t }}">{{ customer.name }}</a></h4>
         <p class="account-sidebar__email">{{ customer.email }}</p>
         <h4 class="has-padding-top">Primary Address</h4>
@@ -103,6 +106,10 @@
             {% endfor %}
           </tbody>
         </table>
+
+        <!-- Begin Recharge code -->
+        <p><a href="/tools/recurring/login/">Manage Subscriptions</a></p>
+        <!-- End Recharge code -->
         {% else %}
           <p>{{ 'customer.orders.none' | t }}</p>
         {% endif %}
@@ -110,6 +117,8 @@
         <div class="one-whole column text-align-center">
           {% render 'pagination', paginate: paginate %}
         </div>
+
+        
       </div>
     </main>
   </div>

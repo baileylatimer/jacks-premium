@@ -9,8 +9,15 @@
   --color-contrast-high: #000 !important;
   
   --color-contrast-higher: hsl(0, 0%, 0%) !important;
+
+  --color-primary-darker: hsl(41, 44%, 37%);
+  --color-primary-dark: hsl(41, 44%, 47%);
+  --color-primary: hsl(41, 44%, 57%);
+  --color-primary-light: hsl(41, 44%, 67%);
+  --color-primary-lighter: hsl(41, 44%, 77%) 
   }
   
+
   
   :root {
     --ticker-animation-duration: 10s;
@@ -61,7 +68,7 @@
     margin: auto;
   }
   .margin-0 {
-    margin: 0;
+    margin: 0 !important;
   }
   
   .margin-top-xxxxs {
@@ -345,10 +352,10 @@
     padding: var(--space-xs);
   }
   .padding-sm {
-    padding: var(--space-sm);
+    padding: var(--space-sm) !important;
   }
   .padding-md {
-    padding: var(--space-md);
+    padding: var(--space-md) !important;
   }
   .padding-lg {
     padding: var(--space-lg);
@@ -3457,7 +3464,7 @@
       a.btn--primary:hover,
       a.btn--primary:focus,
       a.btn--primary:active {
-        background-color: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) * 1.15)) !important; }
+        background-color: var(--color-primary-dark) }
     .btn--accent,
     a.btn--accent {
       background-color: var(--color-accent) !important;

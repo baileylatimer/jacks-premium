@@ -183,7 +183,7 @@
     "display_inventory_left": false,
     "inventory_threshold": 10,
     "free_price_text": "Free",
-    "product_form_style": "dropdown",
+    "product_form_style": "swatches",
     "swatch_style": "square",
     "notify_me_form": true,
     "notify_me_description": "<p>Notify me when this product is available:<\/p>",
@@ -299,6 +299,7 @@
           "alignment": "center",
           "size": "regular",
           "button_label": "",
+          "link": "",
           "button_style": "button--primary",
           "background": "#000000",
           "text_color": "#ebeae4",
@@ -432,28 +433,32 @@
             "type": "text",
             "settings": {
               "icon": "leaf-2",
-              "text": "Quality ingredients"
+              "text": "Quality ingredients",
+              "link": ""
             }
           },
           "footer__icon-bar-0": {
             "type": "text",
             "settings": {
               "icon": "cloud",
-              "text": "Inspired By You"
+              "text": "Inspired By You",
+              "link": ""
             }
           },
           "footer__icon-bar-2": {
             "type": "text",
             "settings": {
               "icon": "texas",
-              "text": "Cooked in Texas"
+              "text": "Cooked in Texas",
+              "link": ""
             }
           },
           "1559011765495": {
             "type": "text",
             "settings": {
               "icon": "box",
-              "text": "Delivered fresh"
+              "text": "Delivered fresh",
+              "link": ""
             }
           }
         },
@@ -854,7 +859,8 @@
           "mega-menu-3-0": {
             "type": "menu",
             "settings": {
-              "menu_1": "food"
+              "menu_1": "food",
+              "menu_1_link": ""
             }
           },
           "19c67d88-b5bd-4a57-87c3-3043715fc876": {
@@ -885,6 +891,7 @@
           "show_mega_bottom_bar": false,
           "mega_bottom_bar_icon": "",
           "mega_bottom_bar_text": "Add your deal, information or promotional text",
+          "mega_bottom_bar_link": "",
           "size": "regular",
           "bottom_banner_bg": "#007ace",
           "bottom_banner_text": "#efefef",
@@ -938,6 +945,7 @@
           "show_mega_bottom_bar": false,
           "mega_bottom_bar_icon": "",
           "mega_bottom_bar_text": "Add your deal, information or promotional text",
+          "mega_bottom_bar_link": "",
           "size": "regular",
           "bottom_banner_bg": "#007ace",
           "bottom_banner_text": "#efefef",
@@ -1754,6 +1762,7 @@
               "callout_title": "Why Texas Taffy is the best.",
               "callout_subtitle": "Lorem ipsum",
               "callout_link_title": "Learn more ➞",
+              "callout_link_url": "",
               "css_class": "",
               "custom_css": ""
             }
@@ -1826,7 +1835,8 @@
               "pretext": "<p>Inspired by you<\/p>",
               "title": "Natural Ingredients Only",
               "text": "<p>We only add the good stuff. All of our products are safe for all skin types, with no added dyes or fillers. Paraben + sulfate free. <\/p>",
-              "button_label": ""
+              "button_label": "",
+              "button_link": ""
             }
           },
           "1564170665573-1": {
@@ -2001,7 +2011,8 @@
               "icon_label": "leaf-2",
               "title": "Quality ingredients",
               "text": "<p>100% real food, no by-products or fillers.<\/p>",
-              "button_label": ""
+              "button_label": "",
+              "link": ""
             }
           },
           "05869f1b-1040-4122-b753-9957df660a11": {
@@ -2010,7 +2021,8 @@
               "icon_label": "cloud",
               "title": "Inspired by you",
               "text": "<p>Personalized food for your special pal<\/p>",
-              "button_label": ""
+              "button_label": "",
+              "link": ""
             }
           },
           "1589567078591-0": {
@@ -2019,7 +2031,8 @@
               "icon_label": "texas",
               "title": "Cooked in Texas",
               "text": "<p>Family-owned, cooked in Dallas, Texas.<\/p>",
-              "button_label": ""
+              "button_label": "",
+              "link": ""
             }
           },
           "1589567078591-2": {
@@ -2028,7 +2041,8 @@
               "icon_label": "box",
               "title": "Delivered fresh",
               "text": "<p>We thoughtfully cook our food in small portions and deliver it to your door.<\/p>",
-              "button_label": ""
+              "button_label": "",
+              "link": ""
             }
           }
         },
@@ -2233,6 +2247,7 @@
         "type": "index__image-with-text-overlay",
         "settings": {
           "bg_color": "",
+          "link": "",
           "image": "shopify:\/\/shop_images\/dog-field-right.jpg",
           "pretext": "",
           "title": "Feed them like family.",
@@ -2252,6 +2267,7 @@
           "button_1_link": "shopify:\/\/collections\/shop-all",
           "button_1_style": "button--primary",
           "button_2": "",
+          "button_2_link": "",
           "button_2_style": "button--secondary",
           "mobile_image_crop": "none",
           "mobile_text_below_image": false,
@@ -2307,7 +2323,7 @@
           "collection_height": 240,
           "button_style": "button--link-style",
           "overlay_background": "#000000",
-          "overlay_background_opacity": 40,
+          "overlay_background_opacity": 0,
           "overlay_text": "#ffffff",
           "collection_title_below_image": true,
           "width": "standard",
@@ -2477,7 +2493,7 @@
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-2_97511094-73fb-4517-b09f-d074cd244669.jpg",
-              "featured_product": "6-inch-natural-bully-stick",
+              "featured_product": "6-natural-bully-stick",
               "rating": 5,
               "title": "Cooper",
               "description": "Enjoying my @jacks_premium bone I got from the @dallasfarmersmarket today!! It’s so good, thanks mom and dad!!",
@@ -2499,7 +2515,7 @@
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-5.jpg",
-              "featured_product": "beef-lung",
+              "featured_product": "beef-lung-dehydrated",
               "rating": 1,
               "title": "Tula",
               "description": "Snackies for days! 🐮🐷🐠 #nomnom",
@@ -2510,7 +2526,7 @@
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-3.jpg",
-              "featured_product": "12-inch-natural-bully-stick",
+              "featured_product": "12-natural-bully-stick",
               "rating": 1,
               "title": "Auggie",
               "description": "Do I smell... SHNACKS??? Nothing better than a @jacks_premium Friday delivery!",
@@ -2558,6 +2574,7 @@
         "disabled": true,
         "settings": {
           "bg_color": "",
+          "link": "",
           "image": "shopify:\/\/shop_images\/girl-dog-2.jpg",
           "pretext": "",
           "title": "From our Texas farm to your doorstep.",
@@ -2574,8 +2591,10 @@
           "border_width": 0,
           "text_width": 40,
           "button_1": "Learn more ➞",
+          "button_1_link": "",
           "button_1_style": "button--primary",
           "button_2": "",
+          "button_2_link": "",
           "button_2_style": "button--secondary",
           "mobile_image_crop": "none",
           "mobile_text_below_image": true,
@@ -2600,7 +2619,8 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/girl-dog.jpg",
-              "image_crop": "center"
+              "image_crop": "center",
+              "image_link": ""
             }
           },
           "16097092531813fb3e-2": {
@@ -2653,6 +2673,7 @@
         "type": "index__image-with-text-overlay",
         "settings": {
           "bg_color": "",
+          "link": "",
           "image": "shopify:\/\/shop_images\/girl-dog.jpg",
           "pretext": "",
           "title": "",
@@ -2669,8 +2690,10 @@
           "border_width": 0,
           "text_width": 40,
           "button_1": "",
+          "button_1_link": "",
           "button_1_style": "button--secondary",
           "button_2": "",
+          "button_2_link": "",
           "button_2_style": "button--secondary",
           "mobile_image_crop": "none",
           "mobile_text_below_image": true,
@@ -2731,25 +2754,29 @@
           "16112723251415db46-2": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/dog-food-advisor_28a624fd-7bd3-422e-a2ef-7f06c50682f5.png"
+              "image": "shopify:\/\/shop_images\/dog-food-advisor_28a624fd-7bd3-422e-a2ef-7f06c50682f5.png",
+              "link": ""
             }
           },
           "16112723251415db46-3": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/amazon_28c272bf-3ae1-4464-b199-da849810b785.png"
+              "image": "shopify:\/\/shop_images\/amazon_28c272bf-3ae1-4464-b199-da849810b785.png",
+              "link": ""
             }
           },
           "604be91a-c554-471d-89c8-1451d0390480": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/google_f5a2d857-2a8c-4833-b822-7313022b8669.png"
+              "image": "shopify:\/\/shop_images\/google_f5a2d857-2a8c-4833-b822-7313022b8669.png",
+              "link": ""
             }
           },
           "16112723251415db46-4": {
             "type": "logo_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/world-pet-association_d4c5e9e3-dc7f-4a0f-9615-56e280032741.png"
+              "image": "shopify:\/\/shop_images\/world-pet-association_d4c5e9e3-dc7f-4a0f-9615-56e280032741.png",
+              "link": ""
             }
           }
         },
@@ -2766,8 +2793,8 @@
           "gradient": "rgba(0,0,0,0)",
           "gradient_rotation": 0,
           "width": "wide",
-          "padding_top": 30,
-          "padding_bottom": 60,
+          "padding_top": 0,
+          "padding_bottom": 0,
           "padding_left": 0,
           "padding_right": 0,
           "animation": "none",
@@ -3030,6 +3057,7 @@
               "heading_size": "regular",
               "text": "",
               "button_label": "",
+              "link": "",
               "button_style": "button--primary",
               "background": "rgba(0,0,0,0)",
               "text_color": "rgba(0,0,0,0)",
@@ -3044,6 +3072,7 @@
               "heading_size": "large",
               "text": "",
               "button_label": "",
+              "link": "",
               "button_style": "button--primary",
               "background": "rgba(0,0,0,0)",
               "text_color": "rgba(0,0,0,0)",
@@ -3055,7 +3084,8 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/dog-texas-fade.png",
-              "image_crop": "none"
+              "image_crop": "none",
+              "image_link": ""
             }
           }
         },
@@ -3082,7 +3112,8 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/cat-stack.png",
-              "image_crop": "none"
+              "image_crop": "none",
+              "image_link": ""
             }
           },
           "161282305721bc9bf4-2": {
@@ -3443,6 +3474,7 @@
         "type": "index__image-with-text-overlay",
         "settings": {
           "bg_color": "#eebe13",
+          "link": "",
           "image": "shopify:\/\/shop_images\/hero-desktop_99e18883-5f83-419a-8551-0e3798238cab.jpg",
           "mobile_image": "shopify:\/\/shop_images\/full-feature_472fe269-518b-4f83-a005-ba42fbd56329.jpg",
           "pretext": "",
@@ -3460,8 +3492,10 @@
           "border_width": 0,
           "text_width": 40,
           "button_1": "",
+          "button_1_link": "",
           "button_1_style": "button--secondary",
           "button_2": "",
+          "button_2_link": "",
           "button_2_style": "button--secondary",
           "mobile_image_crop": "none",
           "mobile_text_below_image": true,
@@ -3474,111 +3508,6 @@
           "padding_left": 0,
           "padding_right": 0,
           "animation": "none",
-          "css_class": "",
-          "custom_css": ""
-        }
-      },
-      "page-landing-cats__main": {
-        "type": "page-landing-cats__main",
-        "blocks": {
-          "page-landing-cats__main-0": {
-            "type": "image_with_overlay",
-            "settings": {
-              "overlay": true,
-              "media_loop": "",
-              "image": "shopify:\/\/shop_images\/smile-cover--blank.jpg",
-              "pretext": "",
-              "title": "Cats",
-              "subtitle": "<p>Lorem ipsum<\/p>",
-              "pretext_color": "#EBEAE4",
-              "heading_color": "#EBEAE4",
-              "subheading_color": "#EBEAE4",
-              "text_alignment": "left",
-              "text_horizontal_position": "center",
-              "text_vertical_position": "middle",
-              "background_color": "#FFFFFF",
-              "background_opacity": 0,
-              "border_color": "",
-              "border_width": 0,
-              "text_width": 40,
-              "button_1": "Buy Cat Food ➞",
-              "button_1_link": "shopify:\/\/products\/feline",
-              "button_1_style": "button--primary",
-              "button_2": "",
-              "button_2_style": "button--secondary",
-              "mobile_image_crop": "none",
-              "mobile_text_below_image": false,
-              "pretext_color_mobile": "rgba(0,0,0,0)",
-              "heading_color_mobile": "rgba(0,0,0,0)",
-              "subheading_color_mobile": "rgba(0,0,0,0)",
-              "width": "wide",
-              "padding_top": 0,
-              "padding_bottom": 0,
-              "padding_left": 0,
-              "padding_right": 0,
-              "animation": "none"
-            }
-          },
-          "07bb743b-2dac-47b9-926f-4dd823c7e1e4": {
-            "type": "image_with_text",
-            "settings": {
-              "reverse_order": false,
-              "padding_y": false,
-              "image_position": "left",
-              "image": "shopify:\/\/shop_images\/cat-stack.png",
-              "show_border": false,
-              "image_crop": "none",
-              "title": "Show love to your furry friend.",
-              "heading_size": "large",
-              "text": "",
-              "button_label": "Show some love ➞",
-              "button_style": "button--primary",
-              "alignment": "left",
-              "vertical_position": "center",
-              "background": "rgba(0,0,0,0)",
-              "text_color": "rgba(0,0,0,0)",
-              "width": "standard",
-              "show_gutter": true,
-              "padding_top": 20,
-              "padding_bottom": 20,
-              "animation": "none"
-            }
-          },
-          "page-landing-cats__main-2": {
-            "type": "rich_text",
-            "settings": {
-              "title": "Why you should buy",
-              "heading_font": "open_sans_n4",
-              "heading_color": "#ebeae4",
-              "heading_alignment": "center",
-              "heading_size": 30,
-              "text": "<p>100% delicious<\/p><p>100% natural<\/p><p>100% organic<\/p>",
-              "text_font": "open_sans_n4",
-              "text_color": "#ebeae4",
-              "text_alignment": "left",
-              "text_size": 24,
-              "columns": 3,
-              "button_label": "",
-              "button_alignment": "center",
-              "button_style": "button--primary",
-              "background": "#000000",
-              "gradient": "",
-              "gradient_rotation": 180,
-              "width": "wide",
-              "padding_top": 60,
-              "padding_bottom": 60,
-              "padding_left": 0,
-              "padding_right": 0,
-              "animation": "none"
-            }
-          }
-        },
-        "block_order": [
-          "page-landing-cats__main-0",
-          "07bb743b-2dac-47b9-926f-4dd823c7e1e4",
-          "page-landing-cats__main-2"
-        ],
-        "settings": {
           "css_class": "",
           "custom_css": ""
         }

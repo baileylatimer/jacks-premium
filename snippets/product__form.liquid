@@ -1,3 +1,5 @@
+
+
 {% if show_payment_button == true %}
   {% assign show_payment_button = true %}
 {% else %}
@@ -19,7 +21,9 @@
       {% endif %}
       data-product-id="{{ product.id }}"
       >
-  {% form 'product', product %}
+  {% form 'product', product, data-productid: product.id %}
+
+  {% if product.available %}{% render 'subscription-product' %}{% endif %} 
 
   <div class="">
     {% if product.variants.size > 1 %}
@@ -28,7 +32,7 @@
             {% if context == 'quickshop' %}
               <div class="select">
             {% endif %}
-            <select id="product-select-{{ product.id }}{{ product-form }}{{ object.id }}{{ block.id }}" name="id" class="multi_select" data-variant-selector>
+            <select id="product-select-{{ product.id }}{{ product-form }}{{ object.id }}{{ block.id }}" name="id"  data-productid="{{product.id}}" class="multi_select" data-variant-selector>
               {% for v in product.variants %}
                 <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-image-id="{{ v.featured_media.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
               {% endfor %}

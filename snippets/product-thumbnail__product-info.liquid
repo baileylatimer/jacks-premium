@@ -4,7 +4,7 @@
   {% endif %}
 
   <a href="{{ product.url   }}" class="product-thumbnail__title text-is-large font-semibold">{{ product.title }}</a>
-
+  <!-- <p>{{ product.metafields.custom_fields["card_description"] }}</p> -->
   {% if collection_handles contains 'coming-soon' %}
     {% if settings.stickers_enabled == false %}
       {{ 'collections.general.coming_soon' | t }}

@@ -66,10 +66,12 @@
   margin-y-md
   product__grid-item
   thumbnail__hover-overlay--{{ hover_enabled }}
-  has-padding-bottom"
+  has-padding-bottom position-relative"
   {% if section.settings.pagination_type != 'basic_pagination' %}
     data-load-more--grid-item
   {% endif %}>
+  <span class="padding-xs bg-primary-light inline-block margin-bottom-md" style="background-color: #d0b886 !important;position: absolute;top: 0;left: 0;z-index: 1;"> <p class="text-xs" style="font-weight: 600;">{{ product.metafields.custom_fields["card_description"] }}</p></span>
+
   <div class="product-wrap">
 
       <div class="product-image__wrapper">
@@ -118,7 +120,7 @@
         {% if hover_enabled or settings.enable_quickshop %}
           <div class="thumbnail-overlay__container">
             <a class="hidden-product-link" href="{{ product.url   }}">{{ product.title }}</a>
-
+            <p>{{ product.metafields.custom_fields["card_description"] }}</p>
             {% if hover_enabled %}
               <div class="quick-shop__info animated fadeInDown">
                 <div class="thumbnail-overlay">
@@ -128,7 +130,7 @@
                     {% endif %}
 
                     <p class="product-thumbnail__title text-is-large font-semibold">{{ product.title }}</p>
-
+                    <p>{{ product.metafields.custom_fields["card_description"] }}</p>
                     {% if collection_handles contains 'coming-soon' %}
                       <span>{{ 'collections.general.coming_soon' | t }}</span>
                     {% else %}

@@ -70,7 +70,10 @@
   {% if section.settings.pagination_type != 'basic_pagination' %}
     data-load-more--grid-item
   {% endif %}>
-  <span class="padding-xs bg-primary-light inline-block margin-bottom-md" style="background-color: #d0b886 !important;position: absolute;top: 0;left: 0;z-index: 1;"> <p class="text-xs" style="font-weight: 600;">{{ product.metafields.custom_fields["card_description"] }}</p></span>
+
+  {% if product.metafields.custom_fields["card_description"] != blank %}
+    <span class="padding-xs bg-primary-light inline-block margin-bottom-md" style="background-color: #d0b886 !important;position: absolute;top: 0;left: 0;z-index: 1;"> <p class="text-xs" style="font-weight: 600;">{{ product.metafields.custom_fields["card_description"] }}</p></span>
+  {% endif %} 
 
   <div class="product-wrap">
 

@@ -299,6 +299,16 @@
   {% endunless %}
 
   <script defer src="{{ 'custom.js' | asset_url }}"></script>
+  <script type="text/javascript">
+
+
+
+$(window).load(function() {
+    $('.ajax-cart__line-item').text(function () {
+    return $(this).text().replace('shipping_interval_unit_type:', '');
+  });
+});
+  </script>
 
 <!-- END / Third-party scripts / Added by Latimer Design -->
 

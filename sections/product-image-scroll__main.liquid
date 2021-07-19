@@ -115,10 +115,12 @@
             </p>
           {% endif %}
 
+          {% if product.type != blank %}
           {% comment %} Name {% endcomment %}
           <span class="padding-xs bg-primary-light inline-block margin-bottom-md" style="background-color: #d0b886 !important;">
             <p class="text-xs" style="font-weight: 600;">{{ product.type }}</p>
           </span>
+          {% endif %}
           <h1 class="product_name">{{ product.title }}</h1>
 
           
@@ -311,6 +313,33 @@
             </a>
             <div class="inner-0 list">
               {{ product.metafields.custom_fields["guaranteed_analysis"] }}
+            </div>
+          </li>
+          {% endif %}
+
+       
+
+          {% if product.metafields.custom_fields["feeding_guidelines"] != blank %}
+          <li class="border-bottom">
+            <a class="toggle flex justify-between" href="javascript:void(0);">
+              <h4>Feeding Guidelines</h4>
+              <div>
+                <div class="circle-plus closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+                <div class="circle-plus-two closed">
+                  <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="inner-0 list">
+              {{ product.metafields.custom_fields["feeding_guidelines"] }}
             </div>
           </li>
           {% endif %}

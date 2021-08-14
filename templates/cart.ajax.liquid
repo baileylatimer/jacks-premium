@@ -37,7 +37,7 @@
             {% if item.product.media %}
               {% if item.product.featured_media.preview_image %}
                 <a href="{{ item.url }}">
-                  <img src="{{ item.image | img_url: '320x' }}" alt="{{ item.title | escape }}" />
+                  <img src="{{ item.image | img_url: '320x' }}" alt="{{ item.title | escape }}" /> 
                 </a>
               {% endif %}
             {% else %}
@@ -49,7 +49,7 @@
             {% endif %}
           </figure>
           <div class="ajax-cart__product-content media-content">
-            <div class="ajax-cart__product-title">
+            <div class="ajax-cart__product-title font-bold">
               <a href="{{ item.url }}">
                 {{ item.product.title }}
                 {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}

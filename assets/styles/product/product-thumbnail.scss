@@ -29,10 +29,15 @@ $product-hover-bg: {{ settings.product_hover_bg_color | color_modify: 'alpha', 0
     background: $color-white;
     .product-image__wrapper, .product-wrap {
       filter: unset;
-      -webkit-filter: unset;
+      -webkit-filter: unset; 
 }
-  }
+  } 
+} 
+
+.ajax-cart__product-image img, .filter-bg {
+  @include filter-bg();
 }
+
 
 
 

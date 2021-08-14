@@ -170,7 +170,7 @@
                 {% if link.links == blank %}
                   <div class="navbar-item header__item {% if link.active or link.child_active %}is-active{% endif %}" data-navlink-handle="{{ link.title | handleize }}">
                     <a href="{{ link.url }}" class="navbar-link header__link scribble-text-fx scribble-text-fx--v2 color-inherit {% if link.active %}is-active{% endif %} is-arrowless">
-                      <span class="scribble-text-fx__label">{{ link.title }}</span>
+                      <span class="scribble-text-fx__label font-bold">{{ link.title }}</span>
                       <svg class="scribble-text-fx__decoration" viewBox="0 0 155 9" preserveAspectRatio="none" aria-hidden="true"><polyline points="0.387 7.866 18.936 5.338 37.579 3.675 56.285 2.984 74.997 3.966 88.905 2.374 102.853 2.033 119.917 4.786 137.157 3.308 154.201 6.539" fill="none" stroke="currentColor" stroke-miterlimit="10"/></svg>
                       
                     </a>

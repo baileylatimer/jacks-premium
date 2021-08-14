@@ -1,9 +1,10 @@
 {% comment %}Assign object as block or section{% endcomment %}
 {% if type == 'block' %}
-  {% assign object = block %}
+  {%- assign object = block -%}
 {% else %}
-  {% assign object = section %}
+  {%- assign object = section -%}
 {% endif %}
+{%- assign icon = settings.icon -%}
 
 {%- assign locale_selector = false -%}
 {%- assign currency_selector = false -%}
@@ -33,10 +34,7 @@
   {% if object.settings.display_search or header_icon_class == 'header__icons--sticky' %}
     {% comment %} Search icon {% endcomment %}
     <a class="header__link action-area__link" data-show-search-trigger tabindex="0">
-      {% render 'icon',
-              name: 'search',
-              icon_class: 'header__icon'
-      %}
+      <i class="material-icons-outlined icon--md">search</i>
       <span class="icon-caption">{{ 'general.search.title' | t | escape }}</span>
     </a>
   {% endif %}
@@ -46,19 +44,13 @@
     {% if customer %}
       {% comment %} Logout {% endcomment %}
       <a href="{{ routes.account_url }}" class="header__link action-area__link" >
-          {% render 'icon',
-                  name: 'avatar',
-                  icon_class: 'header__icon'
-          %}
+          <i class="material-icons-outlined icon--md">account_circle</i>
           <span class="icon-caption">{{ 'layout.customer.my_account' | t | escape }}</span>
       </a>
     {% else %}
       {% comment %} Login {% endcomment %}
       <a href="{{ routes.account_login_url }}" class="header__link action-area__link" >
-          {% render 'icon',
-                  name: 'avatar',
-                  icon_class: 'header__icon'
-          %}
+          <i class="material-icons-outlined icon--md">account_circle</i>
           <span class="icon-caption">{{ 'layout.customer.log_in' | t | escape }}</span>
       </a>
     {% endif %}
@@ -68,10 +60,7 @@
   <div class="header-cart action-area__link {% if cart.item_count != 0 %}has-cart-count{% endif %}" data-ajax-cart-trigger>
     <a class="header__link" href="{{ routes.cart_url }}" >
       <span class="header-cart__icon">
-        {% render 'icon',
-                name: settings.cart_icon,
-                icon_class: 'header__icon'
-        %}
+        <i class="material-icons-outlined icon--md">shopping_bag</i>
         <span class="header-cart__count header-cart__count--badge badge" data-bind="itemCount">
           {{ cart.item_count }}
         </span>

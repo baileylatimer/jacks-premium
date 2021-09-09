@@ -151,7 +151,7 @@
 
               {% comment %} Current price {% endcomment %}
               <span class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
-                <span class="current_price {% if product.available == false %}hidden{% endif %}">
+                <h2 class="current_price {% if product.available == false %}hidden{% endif %}">
                   {% if variant.price > 0 %}
                     <span class="money">
                       {% render 'price-element', price: variant.price %}
@@ -159,7 +159,7 @@
                   {% else %}
                     {{ settings.free_price_text }}
                   {% endif %}
-                </span>
+                </h2>
               </span>
 
               {% comment %} Compare at (original) price {% endcomment %}
@@ -267,6 +267,7 @@
         {% endif %}
 
         {% render 'product-accordion' %}
+        {% render 'gorgias-chat' %}
 
       </div>
     </div>

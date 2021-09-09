@@ -51,35 +51,10 @@
   </li> -->
   {% endif %}
 
-{% if product.metafields.custom_fields["recipe_details"] != blank %}
-  <li class="border-bottom">
-    <a class="toggle flex justify-between" href="javascript:void(0);">
-      <h4>Recipe Details</h4>
-      <div>
-        <div class="circle-plus closed">
-          <div class="circle">
-            <div class="horizontal"></div>
-            <div class="vertical"></div>
-          </div>
-        </div>
-        <div class="circle-plus-two closed">
-          <div class="circle">
-            <div class="horizontal"></div>
-            <div class="vertical"></div>
-          </div>
-        </div>
-      </div>
-    </a>
-    <div class="inner-0 list">
-      {{ product.metafields.custom_fields["recipe_details"] }}
-    </div>
-  </li>
-  {% endif %}
 
-  {% if product.metafields.custom_fields["guaranteed_analysis"] != blank %}
   <li class="border-bottom">
     <a class="toggle flex justify-between" href="javascript:void(0);">
-      <h4>Guaranteed Analysis</h4>
+      <h4>Features</h4>
       <div>
         <div class="circle-plus closed">
           <div class="circle">
@@ -96,10 +71,43 @@
       </div>
     </a>
     <div class="inner-0 list">
-      {{ product.metafields.custom_fields["guaranteed_analysis"] }}
+      {% if product.metafields.custom_fields["recipe_details"] != blank %}
+      {{ product.metafields.custom_fields["recipe_details"] }}
+      {% else %}
+      <p>We're working on this, check back soon :)</p>
+      {% endif %}
     </div>
   </li>
-  {% endif %}
+
+
+  
+  <li class="border-bottom">
+    <a class="toggle flex justify-between" href="javascript:void(0);">
+      <h4>Ingredients</h4>
+      <div>
+        <div class="circle-plus closed">
+          <div class="circle">
+            <div class="horizontal"></div>
+            <div class="vertical"></div>
+          </div>
+        </div>
+        <div class="circle-plus-two closed">
+          <div class="circle">
+            <div class="horizontal"></div>
+            <div class="vertical"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="inner-0 list">
+      {% if product.metafields.custom_fields["guaranteed_analysis"] != blank %}
+      {{ product.metafields.custom_fields["guaranteed_analysis"] }}
+      {% else %}
+      <p>We're working on this, check back soon.</p>
+      {% endif %}
+    </div>
+  </li>
+ 
 
 
 

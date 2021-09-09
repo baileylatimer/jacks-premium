@@ -118,8 +118,13 @@
 
         <div>
 
+          {% if product.type != blank %}
           {% comment %} Name {% endcomment %}
-          <h1 class="product_name title">{{ product.title }}</h1>
+          <span class="padding-xs bg-primary-light inline-block margin-bottom-md" style="background-color: #d0b886 !important;">
+            <p class="text-xs" style="font-weight: 600;">{{ product.type }}</p>
+          </span>
+          {% endif %}
+          <h1 class="product_name">{{ product.title }}</h1>
 
           {% for tag in product.tags %}
             {% if tag contains 'meta-size-chart-' %}
@@ -134,7 +139,7 @@
           {% endif %}
 
           {% comment %} Price {% endcomment %}
-          <p class="modal_price subtitle">
+          <p class="modal_price subtitle margin-0">
             {% if collection_handles contains 'coming-soon' %}
               {% if settings.stickers_enabled == false %}
                 {{ 'collections.general.coming_soon' | t }}
@@ -261,8 +266,13 @@
           </div>
         {% endif %}
 
+        {% render 'product-accordion' %}
+
       </div>
     </div>
+
+
+    
 
     {% comment %} Description - split {% endcomment %}
     {% if product.description contains "<!-- split -->"  %}
@@ -306,6 +316,46 @@
   </script>
 {% endif %}
 
+
+          {% comment %} Product reviews {% endcomment %}
+          {% include 'include-reviews', type: 'block' %}
+          <section class="section is-width-standard padding-bottom-xl">
+            <div class="container margin-y-xl">
+              <!-- YOTPO Reviews / START -->
+              <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}" data-price="{{ variant.price | money_without_currency }}"
+              data-currency=“{{ shop.currency }}” data-description=“{{ product.description | escape }}“>
+              {%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+                {%- assign time_now = 'now' | date: '%s' %}
+                {%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+                {%- assign diff_seconds_from_live = time_now | minus: yotpo_live_time %}
+                {%- assign yotpo_main_widget_last_updated = product.metafields.yotpo.main_widget_update_time | date: '%s' %}
+                {%- assign diff_seconds_from_last_main_widget_update = time_now | minus: yotpo_main_widget_last_updated %}
+                {%- if yotpo_live_time and diff_seconds_from_live < 86400 or yotpo_main_widget_last_updated and diff_seconds_from_last_main_widget_update < 86400 -%}
+                  {%- assign yotpo_main_widget_obsolete = false %}
+                {%- else %}
+                  {%- assign yotpo_main_widget_obsolete = true %}
+                {%- endif %}
+                {%- if yotpo_offload_content == 'yes' and yotpo_main_widget_obsolete != true -%}
+                  {%- for field in product.metafields.yotpo_reviews -%}
+                    {{ field | last }}
+                  {%- endfor -%}
+                {%- endif %}
+              </div>
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function() {
+                $('.yotpo-default-button').addClass('button button--primary');
+                console.log('✅ Added style to Yotpo buttons')
+            
+                $(".yotpo-main-title").text(function () {
+                  return $(this).text().replace('Other top rated products', 'Even more to love'); 
+                });​​​​​
+
+                $('.promoted-products-box').after( '<h1>Worth barking about</h1>');
+              });
+            </script>
+          </section>
+
 {% if section.blocks.size > 0 %}
 
   <div class="product__blocks dynamic-blocks is-flex is-flex-wrap is-justify-center" data-check-for-order="true">
@@ -325,7 +375,10 @@
         {% elsif block.type == 'video' %}
           jsVideo
         {% endif %}">
+        
         {% if block.type == 'product_reviews' %}
+
+
           {% comment %} Product reviews {% endcomment %}
           {% include 'include-reviews', type: 'block' %}
           

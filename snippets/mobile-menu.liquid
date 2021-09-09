@@ -33,9 +33,9 @@
               {% if settings.icon_style != 'text' %}
                 {% render 'icon', name: 'avatar' %}
               {% endif %}
-              <span class="icon-caption">
+              <!-- <span class="icon-caption">
                 {{ 'layout.customer.my_account' | t | escape }}
-              </span>
+              </span> -->
             </a>
           {% else %}
             {% comment %} Login {% endcomment %}
@@ -43,9 +43,9 @@
               {% if settings.icon_style != 'text' %}
                 {% render 'icon', name: 'avatar' %}
               {% endif %}
-              <span class="icon-caption">
+              <!-- <span class="icon-caption">
                 {{ 'layout.customer.log_in' | t | escape }}
-              </span>
+              </span> -->
             </a>
           {% endif %}
         </li>

@@ -116,9 +116,9 @@
         %}
 
         {% if block.settings.title != blank or block.settings.text != blank %}
-          <div class="icon-column__text ">
+          <div class="icon-column__text flex flex-column justify-center">
             <h4 class="icon-column__title title">{{ block.settings.title }}</h4>
-            {{ block.settings.text }}
+           <div class=" is-hidden">{{ block.settings.text }}</div> 
           </div>
         {% endif %}
 

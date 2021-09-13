@@ -5,7 +5,7 @@
     "show_fixed_message": false,
     "header_layout": "classic",
     "footer_layout": "classic",
-    "product_layout": "image_scroll",
+    "product_layout": "classic",
     "image_loading_style": "color",
     "logo_mobile": "shopify:\/\/shop_images\/icon--light.png",
     "mobile_logo_width": 80,
@@ -512,8 +512,8 @@
           "1563557700911": {
             "type": "newsletter",
             "settings": {
-              "newsletter_title": "Join the pack",
-              "newsletter_richtext": "",
+              "newsletter_title": "Join our family",
+              "newsletter_richtext": "<p>Sign up to be the first to know about product launches, promotions, and more<\/p>",
               "display_first_name": false,
               "display_last_name": false,
               "social_icons_footer": false,
@@ -547,6 +547,7 @@
               "promo_background": "#eeeeee",
               "promo_text": "#000000",
               "richtext": "<p>Use this area for promotional information.<\/p>",
+              "promo_link": "",
               "button_label": "Shop now",
               "button_style": "button--primary"
             }
@@ -595,9 +596,9 @@
           "display_collections": false,
           "display_type": false,
           "display_tags": false,
-          "display_social_buttons": true,
-          "product_description_position": "top",
-          "show_payment_button": true,
+          "display_social_buttons": false,
+          "product_description_position": "bottom",
+          "show_payment_button": false,
           "product_images_position": "left",
           "set_product_height": false,
           "product_height": 500,
@@ -860,7 +861,7 @@
             "type": "menu",
             "settings": {
               "menu_1": "food",
-              "menu_1_link": ""
+              "menu_1_link": "shopify:\/\/collections\/food"
             }
           },
           "19c67d88-b5bd-4a57-87c3-3043715fc876": {
@@ -1697,7 +1698,7 @@
               "callout_title": "Are bully sticks good for my dog?",
               "callout_subtitle": "Yes! Bully sticks are an all natural chew. High in protein, low in fat, and 100% digestible. There is no bone in bully sticks and they are not rawhide. It is a single ingredient treat free from preservatives, grains, and artificial flavors.",
               "callout_link_title": "Learn more ➞",
-              "callout_link_url": "shopify:\/\/blogs\/news\/the-best-herbs-for-dogs",
+              "callout_link_url": "shopify:\/\/blogs\/news\/are-bully-sticks-good-for-dogs",
               "css_class": "",
               "custom_css": ""
             }
@@ -1766,6 +1767,110 @@
               "css_class": "",
               "custom_css": ""
             }
+          },
+          "91b52234-5bcd-42b5-a7c8-f4abd3e78e94": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "biscuits",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "5109ba8d-d1cd-4e72-a0d3-2b8048e14107": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "enhance-superfoods-for-dogs",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "a92c262d-8162-42ad-ab1a-2f265139cf94": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "food",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "6d099eaa-19fc-42c1-bf9b-d19789b3d20c": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "treats",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "532c5296-0046-451c-b85b-4556922c342a": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "and-more",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "375a5dc8-fcb8-430e-9560-306e6012b1ae": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "jerky-and-training",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "f67f3ce1-3058-47bc-ac91-0b23298172d2": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "bones-and-chews",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
+          },
+          "69736c22-1dc4-4b7b-bc9b-7df9daf280f7": {
+            "type": "callout",
+            "settings": {
+              "callout_collectionhandle": "antlers",
+              "callout_image": "shopify:\/\/shop_images\/cat-fish.png",
+              "callout_title": "What should I feed my dog?",
+              "callout_subtitle": "We know dogs who have lived long happy healthy lives on all options. Not only are your dog’s needs different, but as a parent what works best for you had to be taken into consideration.",
+              "callout_link_title": "Learn more ➞",
+              "callout_link_url": "https:\/\/jackspremium.com\/blogs\/news\/what-should-i-feed-my-dog",
+              "css_class": "",
+              "custom_css": ""
+            }
           }
         },
         "block_order": [
@@ -1774,12 +1879,20 @@
           "250abff3-571d-4c34-b087-a36953cffffd",
           "eb9a6a26-4db7-484c-b90c-eee1abebc05d",
           "17a409c9-926c-4453-9a9e-cfab6ff81211",
-          "d2658fd0-0e55-4061-b9df-c3b1d4ab7a53"
+          "d2658fd0-0e55-4061-b9df-c3b1d4ab7a53",
+          "91b52234-5bcd-42b5-a7c8-f4abd3e78e94",
+          "5109ba8d-d1cd-4e72-a0d3-2b8048e14107",
+          "a92c262d-8162-42ad-ab1a-2f265139cf94",
+          "6d099eaa-19fc-42c1-bf9b-d19789b3d20c",
+          "532c5296-0046-451c-b85b-4556922c342a",
+          "375a5dc8-fcb8-430e-9560-306e6012b1ae",
+          "f67f3ce1-3058-47bc-ac91-0b23298172d2",
+          "69736c22-1dc4-4b7b-bc9b-7df9daf280f7"
         ],
         "settings": {
-          "collection_breadcrumb": true,
-          "collection_tags": true,
-          "collection_sort": true,
+          "collection_breadcrumb": false,
+          "collection_tags": false,
+          "collection_sort": false,
           "show_promo_banner": false,
           "image_darken": true,
           "promo_title": "Special sale on now!",
@@ -2070,7 +2183,7 @@
           "padding_left": 0,
           "padding_right": 0,
           "animation": "none",
-          "css_class": "bg-contrast-low",
+          "css_class": "",
           "custom_css": ""
         }
       },
@@ -2264,8 +2377,8 @@
           "border_color": "#ffffff",
           "border_width": 0,
           "text_width": 40,
-          "button_1": "Explore the menu ➞",
-          "button_1_link": "shopify:\/\/collections\/shop-all",
+          "button_1": "Shop Natural Food ➞",
+          "button_1_link": "shopify:\/\/collections\/food",
           "button_1_style": "button--primary",
           "button_2": "",
           "button_2_link": "",
@@ -2551,8 +2664,8 @@
         "settings": {
           "display_first_name": false,
           "display_last_name": false,
-          "newsletter_title": "Join the pack",
-          "newsletter_richtext": "",
+          "newsletter_title": "Join our family",
+          "newsletter_richtext": "<p>Sign up to be the first to know about product launches, promotions, and more<\/p>",
           "newsletter_section_text_align": "left",
           "background_color": "#deceab",
           "text_color": "#000000",

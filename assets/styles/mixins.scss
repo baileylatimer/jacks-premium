@@ -305,7 +305,7 @@
   font-style: {{ settings.heading__font.style }};
   font-size: $font-size * 1px;
   text-transform: {{ settings.heading_font_style }};
-  line-height: 1.5;
+  line-height: 107%;
   color: {{ settings.heading_color }};
   display: block;
   letter-spacing: {{ settings.heading_letter_spacing }}px;

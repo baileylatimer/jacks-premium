@@ -1,5 +1,6 @@
 "use strict";
 
+
 Shopify.contentCreator.accordion = {
   init: function init() {
     var $accordionHeading = $('.accordion > dt > a, [data-cc-accordion] > dt > a');

@@ -837,7 +837,7 @@ $drop-down-menu-letter-spacing: {{ settings.dropdown_letter_spacing }}px !defaul
   font-style: {{ settings.heading__font.style }};
   font-size: $font-size * 1px;
   text-transform: {{ settings.heading_font_style }};
-  line-height: 1.5;
+  line-height: 107%;
   color: {{ settings.heading_color }};
   display: block;
   letter-spacing: {{ settings.heading_letter_spacing }}px;
@@ -7027,7 +7027,7 @@ $textarea-with-secondary-btn-style: {{ settings.button_secondary_border_radius |
 
   @include respond-to('small-down') {
     max-width: 100%;
-    padding: 40px;
+    padding: var(--space-lg);
   }
 }
 
@@ -13143,7 +13143,7 @@ $banner-font-size: {{ settings.banner_text_size }}px;
 
       &.has-background .caption-content,
       &.has-border .caption-content {
-        padding: 30px;
+        // padding: 30px;
       }
     }
 
@@ -14978,7 +14978,7 @@ $search-item-border: {{ settings.border_color }};
 
 .text-slideshow__heading {
   padding-bottom: 20px;
-  line-height: 1.5;
+  line-height: 107%;
   margin: 0;
 
   &.subtitle {

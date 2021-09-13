@@ -141,7 +141,7 @@
 
         {% if block.settings.pretext != blank or block.settings.title != blank or block.settings.subtitle != blank or button_1 != blank or button_2 != blank %}
           <div class="caption text-align-{{ block.settings.text_horizontal_position }}">
-            <div class="caption-content text-align-{{ block.settings.text_alignment }}">
+            <div class="caption-content section text-align-{{ block.settings.text_alignment }}">
               {% if block.settings.pretext != blank %}
                 <div class="slideshow-classic__preheading pretext">
                   {{ block.settings.pretext }}

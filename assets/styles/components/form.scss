@@ -1078,7 +1078,7 @@ $textarea-with-secondary-btn-style: {{ settings.button_secondary_border_radius |
 
   @include respond-to('small-down') {
     max-width: 100%;
-    padding: 40px;
+    padding: var(--space-lg);
   }
 }
 

@@ -111,11 +111,7 @@
     }
   }
 
-  @media only screen and (min-width: 480px) {
-    #shopify-section-{{ id }} .caption-content {
-      width: {{ text_width }}%;
-    }
-  }
+
 
   #shopify-section-{{ id }} {
     padding-top: {{ padding_top }}px;
@@ -193,7 +189,7 @@
 
       {% if pretext != blank or title != blank or subtitle != blank or button_1 != blank or button_2 != blank %}
         <div class="caption text-align-{{ text_horizontal_position }} align-{{ text_vertical_position }}">
-          <div class="caption-content text-align-{{ text_alignment }}">
+          <div class="caption-content section text-align-{{ text_alignment }}">
             {% if pretext != blank %}
               <div class="image-with-text-overlay__preheading banner__subheading pretext subtitle">
                 {{ pretext }}

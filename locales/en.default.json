@@ -270,13 +270,13 @@
       "or": "or"
     },
     "login": {
-      "title": "Member Login",
-      "returning_customers": "Returning Customers",
-      "new_customers": "New Member",
+      "title": "Your account for everything Jack's Premium.",
+      "returning_customers": "Already a member?",
+      "new_customers": "Become a Jack's Premium member.",
       "forgot_password": "Forgot your password?",
       "sign_up_html": "Sign up",
-      "new_customer_label": "Not a Member?",
-      "sign_in": "Login",
+      "new_customer_label": "Not a member?",
+      "sign_in": "Sign in",
       "cancel": "Return to Store",
       "guest_title_html": "Continue as a Guest &rarr;",
       "first_name": "First name",

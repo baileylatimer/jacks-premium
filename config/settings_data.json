@@ -2460,7 +2460,7 @@
           "read_time": false,
           "blog_date": false,
           "blog_comment_count": false,
-          "blog_show_excerpt": true,
+          "blog_show_excerpt": false,
           "show-border": true,
           "button_label": "Read more",
           "button_type": "button--link-style",
@@ -2661,6 +2661,7 @@
       },
       "160970417005dfcaa1": {
         "type": "index__newsletter",
+        "disabled": true,
         "settings": {
           "display_first_name": false,
           "display_last_name": false,
@@ -2835,7 +2836,7 @@
               "text": "",
               "button_label": "Who we are ➞",
               "link": "shopify:\/\/pages\/about",
-              "button_style": "button--secondary",
+              "button_style": "button--primary",
               "background": "rgba(0,0,0,0)",
               "text_color": "rgba(0,0,0,0)",
               "alignment": "center",

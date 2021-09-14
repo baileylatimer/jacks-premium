@@ -39,7 +39,7 @@
               {% endif %}
               class="swatch--{{ value | handle }}"id="swatch-{{ option_index }}-{{ value | handle }}-{{ product.id }}" type="radio" aria-label="{{ value | escape }}" tabindex="0" name="option-{{ option_index }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %}/>
 
-      <div aria-label="{{ value | escape }}" tabindex="0" data-value="{{ value | escape }}" data-value-handle="{{ value | handle }}" class="swatch-element flex-grow {% if is_color %}color {% endif %}{{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
+      <div aria-label="{{ value | escape }}" tabindex="0" data-value="{{ value | escape }}" data-value-handle="{{ value | handle }}" class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
         {% if is_color %}
           <div class="tooltip">{{ value }}</div>
         {% endif %}

@@ -668,6 +668,7 @@ a.button--link-style.button {
 .button--add-to-cart,
 a.button--add-to-cart.button {
   @include btn-add-to-cart;
+  min-height:60px;
 }
 
 .shopify-challenge__button {

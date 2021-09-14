@@ -4146,6 +4146,7 @@ a.button--link-style.button {
 .button--add-to-cart,
 a.button--add-to-cart.button {
   @include btn-add-to-cart;
+  min-height:60px;
 }
 
 .shopify-challenge__button {
@@ -10762,6 +10763,7 @@ $swatch-label-size: 34px;
     border: 3px solid;
     min-width: $swatch-element-size;
     min-height: $swatch-element-size;
+    width: 47%;
     {% if settings.swatch_style != 'square' %}
       border-radius: 3px;
     {% endif %}
@@ -14559,7 +14561,7 @@ $search-item-border: {{ settings.border_color }};
   form {
     background-color: white;
     margin: 0;
-    padding: 10px 20px 0;
+    padding: var(--space-xl) var(--space-md) 0;
     position: relative;
     min-height: 70vh;
     width: 100%;
@@ -14578,7 +14580,8 @@ $search-item-border: {{ settings.border_color }};
   }
 
   .control .icon {
-    top: 4px;
+    top: 6px;
+    margin: 10px;
     transform: none;
     padding: 0;
     pointer-events: initial;
@@ -16963,6 +16966,10 @@ input {
   max-width: 400px;
   text-transform: capitalize;
   background: $color-contrast-higher;
+}
+
+.promoted-products-box {
+  display: none !important;
 }
 
 .yotpo-main-title {

@@ -322,7 +322,7 @@ $search-item-border: {{ settings.border_color }};
   form {
     background-color: white;
     margin: 0;
-    padding: 10px 20px 0;
+    padding: var(--space-xl) var(--space-md) 0;
     position: relative;
     min-height: 70vh;
     width: 100%;
@@ -341,7 +341,8 @@ $search-item-border: {{ settings.border_color }};
   }
 
   .control .icon {
-    top: 4px;
+    top: 6px;
+    margin: 10px;
     transform: none;
     padding: 0;
     pointer-events: initial;

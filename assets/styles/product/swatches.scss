@@ -60,6 +60,7 @@ $swatch-label-size: 34px;
     border: 3px solid;
     min-width: $swatch-element-size;
     min-height: $swatch-element-size;
+    width: 47%;
     {% if settings.swatch_style != 'square' %}
       border-radius: 3px;
     {% endif %}

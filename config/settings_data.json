@@ -2363,6 +2363,7 @@
           "bg_color": "",
           "link": "",
           "image": "shopify:\/\/shop_images\/dog-field-right.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/mobile--hero_372c64f2-5d84-4f8c-b753-51d6adb8ab5b.jpg",
           "pretext": "",
           "title": "Feed them like family.",
           "subtitle": "",
@@ -2607,7 +2608,7 @@
             "type": "product",
             "settings": {
               "image": "shopify:\/\/shop_images\/social-2_97511094-73fb-4517-b09f-d074cd244669.jpg",
-              "featured_product": "6-natural-bully-stick",
+              "featured_product": "5-8-natural-bully-sticks",
               "rating": 5,
               "title": "Cooper",
               "description": "Enjoying my @jacks_premium bone I got from the @dallasfarmersmarket today!! It’s so good, thanks mom and dad!!",

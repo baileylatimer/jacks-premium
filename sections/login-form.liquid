@@ -33,7 +33,7 @@
     {%- capture title -%}{{ 'customer.login.title' | t }}{%- endcapture -%}
     {% render 'heading',
             title: title,
-            heading_tag: 'h1',
+            heading_tag: 'h3',
             context: 'login',
             text_alignment: 'left'
     %}
@@ -67,7 +67,7 @@
           </p>
 
           <div class="recover-options is-flex is-align-center is-justify-space-between">
-            <input class="button button--secondary" type="submit" value="{{ 'customer.recover_password.submit' | t }}" />
+            <input class="button button--primary" type="submit" value="{{ 'customer.recover_password.submit' | t }}" />
             <span class="has-margin-left"><a href="#" class="cancel-recover-password">{{ 'customer.recover_password.cancel' | t }}</a></span>
           </div>
         {% endform %}
@@ -117,7 +117,7 @@
           </div>
 
           <div class="is-flex is-justify-space-between  is-align-center">
-            <input class="button button--secondary" type="submit" value="{{ 'customer.login.sign_in' | t }}" style="margin-bottom: 5px !important" tabindex="3" />
+            <input class="button button--primary" type="submit" value="{{ 'customer.login.sign_in' | t }}" style="margin-bottom: 5px !important" tabindex="3" />
             <small class="right has-margin-left"><a class="js-recover-password" href="#">{{ 'customer.login.forgot_password' | t }}</a></small>
           </div>
 
@@ -131,7 +131,7 @@
         {% if shop.checkout.guest_login %}
           <span class="has-padding-top"> {{ 'customer.login.or' | t }} </span>
           {% form 'guest_login' %}
-            <input class="button button--secondary" type="submit" value="{{ 'customer.login.guest_title_html' | t }}" />
+            <input class="button button--primary" type="submit" value="{{ 'customer.login.guest_title_html' | t }}" />
           {% endform %}
         {% endif %}
       </div>

@@ -5,8 +5,9 @@
       <div class="mobile-menu__first-level has-no-submenu" data-mobile-menu-has-toggle="false">
         <input class="visuallyhidden submenu__input" type="checkbox" id="mobile-submenu-{{ link.title | handleize }}">
         <label class="submenu__label {% if link.url == 'http://' or link.url == '' or link.url == '/' or link.url == 'https://' or link.url == '#' %}has-no-link{% endif %}" for="mobile-submenu-{{ link.title | handleize }}">
-          <a class="mobile-menu__item {% if link.active %}is-active{% endif %}" href="{{ link.url }}" >
+          <a class="mobile-menu__item {% if link.active %}is-active{% endif %}" href="{{ link.url }}" ><h4>
             {{ link.title }}
+          </h4>
           </a>
         </label>
       </div>

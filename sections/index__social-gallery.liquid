@@ -1,21 +1,9 @@
 <section class="section is-width-wide padding-bottom-xl" style="">
 <div class="container section is-width-standard">
   <div class="one-whole column">
-    <div class="heading-section__content
-                is-flex
-                is-flex-column
-                is-align-{{ heading_alignment }}
-                text-align-{{ heading_alignment }}
-                vertical-spacing-{{ vertical_spacing }}">
-                  <div class="heading-section__content
-                  is-flex
-                  is-flex-column
-                  is-align-center
-                  text-align-center
-                  vertical-spacing-medium"> 
-                    <h2 class="heading-section__heading title"> {{ section.settings.title }} <a href="{{ settings.instagram_link }}" target="_blank"><span class="color-gradient-accent">#{{ section.settings.hashtag }}</span></a></h2>
-    </div>
-  </div>
+
+      <h2 class="heading-section__heading title text-center margin-top-md margin-bottom-0"> {{ section.settings.title }} <a href="{{ settings.instagram_link }}" target="_blank"><span class="color-gradient-accent">#{{ section.settings.hashtag }}</span></a></h2>
+
   <div class="grid gap-sm padding-top-md container">
   {% if section.blocks.size > 0 %}
   {% for block in section.blocks %}

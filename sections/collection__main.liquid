@@ -74,20 +74,19 @@
       <div class="banner__wrapper
                   one-whole
                   column
-                  dark-overlay-{{ object.settings.image_darken }}
-                  is-{{ object.settings.banner_height }}
-                  has-margin-bottom">
+  
+                  has-margin-bottom  bg-accent-lighter">
         {% if object.settings.image != blank %}
-          {% render 'image-element',
+          <!-- {% render 'image-element',
                   image: object.settings.image,
                   alt: object.settings.image.alt,
                   stretch_width: true
-          %}
+          %} -->
         {% else %}
-          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          <!-- {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }} -->
         {% endif %}
         <div class="banner__content card-content">
-          <div class="banner__text text-align-center">
+          <div class="banner__text text-align-center color-contrast-higher">
             <h1 class="banner__heading title">{{ object.settings.promo_title }}</h1>
             {% if object.settings.promo_text != blank %}
               <div class="banner__subheading subtitle">{{ object.settings.promo_text }}</div>

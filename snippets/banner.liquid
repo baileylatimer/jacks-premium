@@ -47,12 +47,11 @@
               {% if width == 'wide' %}
                 equal-columns--outside-trim
               {% endif %}">
-    <div class="banner__wrapper
+    <div class="banner__wrapper bg-accent-light
                 one-whole
                 column
-                dark-overlay-{{ section.settings.image_darken }}
-                is-{{ banner_height }}">
-      {% if image != blank %}
+                is-{{ banner_height }}" style="min-height: 200px;">
+      <!-- {% if image != blank %}
         {% render 'image-element',
                 image: image,
                 alt: image.alt,
@@ -60,8 +59,8 @@
         %}
       {% else %}
         {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-      {% endif %}
-      <div class="banner__content card-content">
+      {% endif %} -->
+      <div class="banner__content card-content color-contrast-higher">
         <div class="banner__text text-align-center">
           <h1 class="banner__heading title">{{ title }}</h1>
           {% if subtitle != blank %}

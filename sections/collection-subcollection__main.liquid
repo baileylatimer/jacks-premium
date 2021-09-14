@@ -152,7 +152,7 @@
                 <div class="card-content one-half
                   small-down--one-whole">
                   <div class="banner__text">
-                  <h3 class="title">{{ callout_title }}</h3>
+                  <h4 class="title">{{ callout_title }}</h4>
                   {% if callout_subtitle != blank %}
                   <p class="subtitle">{{ callout_subtitle }}</p>
                   {% endif %}
@@ -173,6 +173,8 @@
           </section>
         {%- endif %}
 <!-- Custom Sections - END -->
+
+
 
   {% if section.settings.show_promo_banner %}
     <div class="collection-promo-banner container">
@@ -256,12 +258,12 @@
         </div>
         {% if section.settings.collection_title_below_image != blank %}
           <a class="collection-info__caption-wrapper collection-info__caption--below-image" href="{{ collection.url }}">
-            <span class="title margin-bottom-xs">
+            <h4 class="title margin-bottom-lg">
               {{ collection.title }}
-            </span>
-            <span class="description margin-bottom-md">
+            </h4>
+            <p class="subtitle margin-bottom-md">
               {{ collection.description }}
-            </span>
+            </p>
             {% assign view_products = 'collections.general.view_all' | t %}
             {% if section.settings.show_button %}
               {% render 'button',

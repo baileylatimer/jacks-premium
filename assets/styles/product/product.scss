@@ -103,6 +103,8 @@
   position: relative;
   border: 2px solid #ccc;
   margin: 0 var(--space-xs) !important;
+  @include filter-bg();
+  padding: var(--space-sm);
 
   &.is-nav-selected {
     opacity: 1;

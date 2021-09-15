@@ -181,7 +181,7 @@ button.shopify-payment-button__more-options {
 
   .product-quantity-box.purchase-details__quantity {
     @include respond-to('medium-down') {
-      width: 100%;
+      width: 40%;
       margin-right: 0;
 
       .input.quantity {
@@ -363,7 +363,7 @@ button.shopify-payment-button__more-options {
   // width: calc(50% - 12px);
 
   @include respond-to('small-down') {
-    width: 100%;
+    width: 40%;
     margin-right: 0;
   }
 

@@ -188,8 +188,8 @@
       {% endif %}
 
       {% if pretext != blank or title != blank or subtitle != blank or button_1 != blank or button_2 != blank %}
-        <div class="caption text-align-{{ text_horizontal_position }} align-{{ text_vertical_position }}">
-          <div class="caption-content section text-align-{{ text_alignment }}">
+        <div class="caption  section text-align-{{ text_horizontal_position }} align-{{ text_vertical_position }}">
+          <div class="caption-content text-align-{{ text_alignment }}">
             {% if pretext != blank %}
               <div class="image-with-text-overlay__preheading banner__subheading pretext subtitle">
                 {{ pretext }}
@@ -206,7 +206,7 @@
               </div>
             {% endif %}
             {% if button_1 != blank or button_2 != blank %}
-              <div class="image-with-text-overlay__buttons buttons {% unless buttons == true %}is-justify-{{ text_alignment }}{% endunless %}">
+              <div class="image-with-text-overlay__buttons buttons flex flex-column {% unless buttons == true %}is-justify-{{ text_alignment }}{% endunless %}">
 
               {% if button_1 != blank %}
                 {% render 'button',

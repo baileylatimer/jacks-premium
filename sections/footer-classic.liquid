@@ -170,7 +170,7 @@
         </div>
       {% endif %}
 
-      <div class="footer__credits two-thirds{% if section.settings.display_payment_methods %} {% else %} one-whole {% endif %} column small-down--one-whole">
+      <div class="footer__credits padding-y-sm two-thirds{% if section.settings.display_payment_methods %} {% else %} one-whole {% endif %} column small-down--one-whole">
         <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: '/' }}.</p>
         {{ section.settings.copyright_text }}
         {% if section.settings.display_designed_by %}

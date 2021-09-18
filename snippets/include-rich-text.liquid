@@ -68,7 +68,7 @@
   }
 
   .rich-text__text {
-    font-size: {{ text_size }}px;
+    font-size: var(--text-sm);
     color: {%- if text_alpha != 0 -%}{{ text_color }}{%- else -%}{{ settings.regular_color }}{%- endif -%};
     font-family: {{ text_font.family }}, {{ text_font.fallback_families }};
     font-weight: {{ text_font.weight }};

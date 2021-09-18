@@ -542,14 +542,15 @@ $btn-add-to-cart-border-color-highlight: {{ settings.button_cart_border_color--h
 @mixin btn-link-style {
   font-size: $btn-link-style-font-size;
   border: none;
-  border-bottom: {% if settings.button_link_underline_thickness == 1 %}thin{% else %}{{ settings.button_link_underline_thickness }}px{% endif %} {{ settings.button_link_underline_style }};
+  // border-bottom: {% if settings.button_link_underline_thickness == 1 %}thin{% else %}{{ settings.button_link_underline_thickness }}px{% endif %} {{ settings.button_link_underline_style }};
   height: auto;
   line-height: $btn-link-style-line-height;
   padding: 0;
   transition: $transition-speed linear;
   background: transparent;
   max-width: 100%;
-  white-space: normal;
+  white-space: normal; 
+  color: #ebeae4 !important;
 
   // States
   &,

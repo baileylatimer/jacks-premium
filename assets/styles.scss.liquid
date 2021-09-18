@@ -4028,14 +4028,15 @@ $btn-add-to-cart-border-color-highlight: {{ settings.button_cart_border_color--h
 @mixin btn-link-style {
   font-size: $btn-link-style-font-size;
   border: none;
-  border-bottom: {% if settings.button_link_underline_thickness == 1 %}thin{% else %}{{ settings.button_link_underline_thickness }}px{% endif %} {{ settings.button_link_underline_style }};
+  // border-bottom: {% if settings.button_link_underline_thickness == 1 %}thin{% else %}{{ settings.button_link_underline_thickness }}px{% endif %} {{ settings.button_link_underline_style }};
   height: auto;
   line-height: $btn-link-style-line-height;
   padding: 0;
   transition: $transition-speed linear;
   background: transparent;
   max-width: 100%;
-  white-space: normal;
+  white-space: normal; 
+  color: #ebeae4 !important;
 
   // States
   &,
@@ -11536,7 +11537,7 @@ $shop_bg_color: {{ settings.shop_bg_color }};
 }
 
 .footer__credits {
-  font-size: smaller;
+  // font-size: smaller;
 }
 
 .footer__credits p {
@@ -13117,7 +13118,7 @@ h1.header__logo-text > a {
 
 $banner-font-family: {{ settings.banner_text__font.family }}, {{ settings.regular__font.fallback_families }};
 $banner-font-weight: {{ settings.banner_text__font.weight }};
-$banner-font-size: {{ settings.banner_text_size }}px;
+$banner-font-size: var(--text-sm);
 $banner-letter-spacing: {{ settings.banner_text_letter_spacing }}px;
 
 $banner-heading-font-family: {{ settings.banner_heading__font.family }}, {{ settings.regular__font.fallback_families }};
@@ -13125,10 +13126,6 @@ $banner-heading-font-weight: {{ settings.banner_heading__font.weight }};
 $banner-heading-style: {{ settings.banner_heading_style }};
 $banner-heading-font-size: {{ settings.banner_heading_size }}px;
 
-$banner-font-family: {{ settings.banner_text__font.family }}, {{ settings.regular__font.fallback_families }};
-$banner-font-weight: {{ settings.banner_text__font.weight }};
-$banner-spacing: {{ settings.banner_text_letter_spacing }};
-$banner-font-size: {{ settings.banner_text_size }}px;
 
 .block__image-with-overlay,
 .image-with-text-overlay,
@@ -13140,10 +13137,10 @@ $banner-font-size: {{ settings.banner_text_size }}px;
 
   .caption-content {
     padding: 30px;
-    min-width: 350px;
+    width: 550px;
 
     @include respond-to('small-down') {
-      min-width: auto;
+      width: auto;
     }
   }
 

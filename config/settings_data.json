@@ -2422,6 +2422,7 @@
             "type": "collection",
             "settings": {
               "feature_collection": "food",
+              "image": "shopify:\/\/shop_images\/bigstock-Cane-Corso-Puppy-7127200_1.jpg",
               "title": "",
               "button_label": ""
             }
@@ -2930,16 +2931,18 @@
             "type": "image_with_overlay",
             "settings": {
               "image": "shopify:\/\/shop_images\/smile-cover--blank.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/banner--rewards_b25f0c3c-81d5-408d-9232-d2ad6f2b4f60.jpg",
+              "link": "",
               "pretext": "",
-              "title": "JACK'S PACK",
-              "subtitle": "<p>Loyalty rewarded.<\/p>",
-              "pretext_color": "#000000",
+              "title": "Jack's Pack",
+              "subtitle": "<p>Join our free loyalty program and start earning today.<\/p>",
+              "pretext_color": "#ebeae4",
               "heading_color": "#ebeae4",
-              "subheading_color": "#dddbd2",
-              "text_alignment": "center",
+              "subheading_color": "#ebeae4",
+              "text_alignment": "left",
               "text_horizontal_position": "center",
               "text_vertical_position": "middle",
-              "background_color": "#ffffff",
+              "background_color": "#deceab",
               "background_opacity": 0,
               "border_color": "#ffffff",
               "border_width": 0,
@@ -2947,16 +2950,29 @@
               "button_1": "Join the pack ➞",
               "button_1_link": "\/account\/register",
               "button_1_style": "button--primary",
-              "button_2": "",
-              "button_2_style": "button--secondary",
+              "button_2": "Already a member? Log in",
+              "button_2_link": "https:\/\/jackspremium.com\/account\/login",
+              "button_2_style": "button--link-style",
               "mobile_image_crop": "none",
-              "mobile_text_below_image": true,
+              "mobile_text_below_image": false,
               "pretext_color_mobile": "rgba(0,0,0,0)",
               "heading_color_mobile": "rgba(0,0,0,0)",
               "subheading_color_mobile": "rgba(0,0,0,0)",
               "width": "wide",
               "padding_top": 0,
               "padding_bottom": 0,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
+          },
+          "4d207cfa-bddf-4788-b3e9-305133b124e8": {
+            "type": "custom_html",
+            "settings": {
+              "html_content": "<div class=\"container is-flex is-justify-center padding-top-lg\"><h2 class=\"title\">How it works<\/h2><\/div>",
+              "width": "standard",
+              "padding_top": 20,
+              "padding_bottom": 20,
               "padding_left": 0,
               "padding_right": 0,
               "animation": "none"
@@ -2970,13 +2986,14 @@
               "heading_color": "rgba(0,0,0,0)",
               "heading_alignment": "center",
               "heading_size": 30,
-              "text": "<p><strong>Sign up<\/strong><\/p><p>Sign up for a free account today to start earning rewards.<\/p><p><strong>Start earning <\/strong> <\/p><p>Earn 5 Pack Points for every $1 you spend at Jack&#x27;s Premium and even more for sharing on social media.<\/p><p><strong>Unlock rewards  <\/strong><\/p><p>Redeem your Pack Points to earn to unlock discounts at checkout and exclusive gear.<\/p>",
+              "text": "<p><strong>Join<\/strong><\/p><p>Sign up for a free account today to start earning rewards.<\/p><p><strong>Earn<\/strong><\/p><p>Earn 5 Pack Points for every $1 you spend at Jack's Premium and even more for sharing on social media.<\/p><p><strong>Redeem<\/strong><\/p><p>Redeem your Pack Points to earn to unlock discounts at checkout and exclusive gear.<\/p>",
               "text_font": "open_sans_n4",
               "text_color": "rgba(0,0,0,0)",
               "text_alignment": "left",
               "text_size": 20,
               "columns": 3,
               "button_label": "",
+              "button_link": "",
               "button_alignment": "center",
               "button_style": "button--primary",
               "background": "#ebeae4",
@@ -2990,8 +3007,23 @@
               "animation": "none"
             }
           },
+          "b3fb2456-2c98-4e91-bfcd-0010b9b66929": {
+            "type": "logo_image",
+            "settings": {
+              "icon_label_1": "truck",
+              "title_1": "Icon with text",
+              "text_1": "<p>Describe the feature, service or product that this icon represents.<\/p>",
+              "icon_label_2": "truck",
+              "title_2": "Icon with text",
+              "text_2": "<p>Describe the feature, service or product that this icon represents.<\/p>",
+              "icon_label_3": "truck",
+              "title_3": "Icon with text",
+              "text_3": "<p>Describe the feature, service or product that this icon represents.<\/p>"
+            }
+          },
           "3e65a817-2113-4df2-926a-d194958e1330": {
             "type": "logo_image",
+            "disabled": true,
             "settings": {
               "icon_label_1": "truck",
               "title_1": "Icon with text",
@@ -3008,13 +3040,14 @@
             "type": "image_with_text",
             "settings": {
               "image_position": "left",
-              "image": "shopify:\/\/shop_images\/create-account.jpg",
+              "image": "shopify:\/\/shop_images\/dog-4415649_1920.jpg",
               "image_crop": "none",
-              "title": "Getting started is easy.",
+              "image_link": "",
+              "title": "Start earning.",
               "heading_size": "large",
-              "text": "<p>Signing up is easy and fast. Just enter your email and you’re ready to go.<\/p>",
-              "button_label": "Create my account ➞",
-              "link": "\/account\/register",
+              "text": "<p>Earn Pack Points by signing up, placing orders, following us on social, and more.<\/p>",
+              "button_label": "See ways to earn ➞",
+              "link": "#smile-points-activity-rules",
               "button_style": "button--primary",
               "alignment": "left",
               "vertical_position": "center",
@@ -3029,6 +3062,7 @@
           },
           "f519f612-24a0-4047-a171-bc2dfe9e84ba": {
             "type": "rich_text",
+            "disabled": true,
             "settings": {
               "title": "Earn 5 Pack Points for every $1 spent",
               "heading_font": "open_sans_n4",
@@ -3042,14 +3076,15 @@
               "text_size": 14,
               "columns": 2,
               "button_label": "",
+              "button_link": "",
               "button_alignment": "center",
               "button_style": "button--primary",
               "background": "#000000",
               "gradient": "rgba(0,0,0,0)",
               "gradient_rotation": 180,
               "width": "half",
-              "padding_top": 60,
-              "padding_bottom": 60,
+              "padding_top": 0,
+              "padding_bottom": 0,
               "padding_left": 0,
               "padding_right": 0,
               "animation": "none"
@@ -3057,6 +3092,7 @@
           },
           "bd8406c8-2339-4beb-b691-253e34e48bb3": {
             "type": "rich_text",
+            "disabled": true,
             "settings": {
               "title": "50 Pack Points = $1 off your order",
               "heading_font": "open_sans_n4",
@@ -3070,6 +3106,7 @@
               "text_size": 14,
               "columns": 2,
               "button_label": "",
+              "button_link": "",
               "button_alignment": "center",
               "button_style": "button--primary",
               "background": "#000000",
@@ -3087,13 +3124,14 @@
             "type": "image_with_text",
             "settings": {
               "image_position": "right",
-              "image": "shopify:\/\/shop_images\/referral-program.jpg",
+              "image": "shopify:\/\/shop_images\/friends-1149841_1920.jpg",
               "image_crop": "none",
+              "image_link": "",
               "title": "Spread the love.",
               "heading_size": "large",
               "text": "<p>Give your friends a reward and claim your own when they make a purchase.<\/p>",
-              "button_label": "Get started ➞",
-              "link": "\/account\/register",
+              "button_label": "Refer now ➞",
+              "link": "#smile-referral-program-details",
               "button_style": "button--primary",
               "alignment": "left",
               "vertical_position": "center",
@@ -3108,6 +3146,7 @@
           },
           "22a9797b-09b0-4422-b6fe-c4d0f06a236e": {
             "type": "divider",
+            "disabled": true,
             "settings": {
               "divider_style": "long",
               "divider_width": 5,
@@ -3121,16 +3160,22 @@
           },
           "8bb2776a-7f0f-415d-aa34-67b42afd4e01": {
             "type": "gallery",
+            "disabled": true,
             "settings": {
               "image1": "shopify:\/\/shop_images\/social-2_97511094-73fb-4517-b09f-d074cd244669.jpg",
+              "link1": "",
               "hide1": false,
               "image2": "shopify:\/\/shop_images\/social-4.jpg",
+              "link2": "",
               "hide2": false,
               "image3": "shopify:\/\/shop_images\/social-5.jpg",
+              "link3": "",
               "hide3": false,
               "image4": "shopify:\/\/shop_images\/social-1.jpg",
+              "link4": "",
               "hide4": false,
               "image5": "shopify:\/\/shop_images\/social-3.jpg",
+              "link5": "",
               "hide5": true,
               "gallery_type": "masonry",
               "crop_images": true,
@@ -3144,18 +3189,33 @@
               "padding_bottom": 20,
               "animation": "none"
             }
+          },
+          "0c3fb14b-7ba8-4948-a223-055b2e860664": {
+            "type": "custom_html",
+            "settings": {
+              "html_content": "<div class=\"container is-flex is-justify-center\"><h2 class=\"title\">FAQ<\/h2><\/div>",
+              "width": "standard",
+              "padding_top": 20,
+              "padding_bottom": 20,
+              "padding_left": 0,
+              "padding_right": 0,
+              "animation": "none"
+            }
           }
         },
         "block_order": [
           "page-rewards__main-0",
+          "4d207cfa-bddf-4788-b3e9-305133b124e8",
           "page-rewards__main-2",
+          "b3fb2456-2c98-4e91-bfcd-0010b9b66929",
           "3e65a817-2113-4df2-926a-d194958e1330",
           "6ff85e5d-828d-45a8-98bf-3b5af2226a88",
           "f519f612-24a0-4047-a171-bc2dfe9e84ba",
           "bd8406c8-2339-4beb-b691-253e34e48bb3",
           "9dfe1d22-c12c-4262-a738-374902978ab1",
           "22a9797b-09b0-4422-b6fe-c4d0f06a236e",
-          "8bb2776a-7f0f-415d-aa34-67b42afd4e01"
+          "8bb2776a-7f0f-415d-aa34-67b42afd4e01",
+          "0c3fb14b-7ba8-4948-a223-055b2e860664"
         ],
         "settings": {
           "css_class": "",
@@ -3626,6 +3686,22 @@
           "animation": "none",
           "css_class": "",
           "custom_css": ""
+        }
+      },
+      "custom-fields-pages": {
+        "type": "custom-fields-pages",
+        "blocks": {
+          "ef355735-cb96-49dc-a301-92625a22a034": {
+            "type": "cf_w_acc",
+            "settings": {
+              "key": "faq"
+            }
+          }
+        },
+        "block_order": [
+          "ef355735-cb96-49dc-a301-92625a22a034"
+        ],
+        "settings": {
         }
       }
     },

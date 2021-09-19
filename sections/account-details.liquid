@@ -44,11 +44,12 @@
   <div class="container">
     <aside class="one-fourth medium-down--one-whole column account-sidebar">
       <div class="account-sidebar__content has-padding-top">
-
-  
+        {% if customer %}  {% endif %}
+        
 
         <h4><a href="{{ routes.account_url }}" title="{{ 'layout.customer.my_account' | t }}">{{ customer.name }}</a></h4>
         <p class="account-sidebar__email">{{ customer.email }}</p>
+        <h4 class="margin-top-md">Your Points Balance: <span class="sweettooth-points-balance"></span></h4>
         <h4 class="has-padding-top">Primary Address</h4>
         <div class="account-sidebar__address">
           {% if customer.default_address != nil %}

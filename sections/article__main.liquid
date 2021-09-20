@@ -80,7 +80,7 @@
 
 {% if section.settings.show_breadcrumb %}
   <div class="container breadcrumb__container">
-    <div class="one-whole column is-flex is-justify-space-between is-flex-column-reverse-mobile breadcrumb is-{{ settings.breadcrumb_size }} is-{{ settings.breadcrumb_capitalization }}">
+    <div class="one-whole column is-flex is-justify-space-between is-flex-column-reverse-mobile breadcrumb ">
       <div class="breadcrumb__wrapper">
         {% render 'breadcrumb', context: 'article' %}
       </div>
@@ -104,7 +104,7 @@
   </div>
 {% endif %}
 
-  <div class="container hide-when-banner-enabled">
+  <div class="container hide-when-banner-enabled padding-top-md">
     {% render 'heading',
             title: article.title,
             heading_tag: 'h1',
@@ -114,7 +114,7 @@
   </div>
 
   <div class="container blog-meta">
-    <div class="one-whole column meta-info is-small">
+    <div class="one-whole column meta-info is-small flex justify-center justify-start@md">
       {% render 'meta-info-list',
               blog_author: section.settings.blog_author,
               blog_date: section.settings.blog_date,
@@ -122,7 +122,7 @@
               blog_comment_count: section.settings.blog_comment_count %}
 
       {% if section.settings.show_tags and article.tags.size > 0 %}
-        <ul class="meta-tag-list tags has-padding-top">
+        <ul class="meta-tag-list tags margin-left-sm">
         {% for tag in article.tags %}
           <li class="tag tag--{{ settings.tag_style}}">
             <a href="{{ shop.url}}/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}" title="{{ blog.title }} {{ 'blogs.general.tagged' | t }} {{ tag | escape }}">
@@ -136,7 +136,7 @@
   </div>
 
   <div class="container article-content has-padding-top has-padding-bottom">
-    <div class="one-whole column content">
+    <h3 class="one-whole column content">
       {% if article.image and section.settings.show_featured_image %}
         <p>
           {% render 'image-element',
@@ -147,7 +147,21 @@
         </p>
       {% endif %}
 
+
+      {% assign postexcerpt = a.excerpt | size %}
+      {% if postexcerpt > 150 %}
+        {% assign excerptlength = 'lg' %}
+      {% elsif postexcerpt <= 150 %}
+        {% assign excerptlength = 'sm' %}
+      {% endif %}
+
+      <h3 class="margin-bottom-md">
+        {{ article.excerpt }}
+      </h3>
+
+    <div style="max-width: 720px; margin: 0 auto;">
       {{ article.content }}
+    </div>
     </div>
   </div>
 
@@ -303,9 +317,9 @@
     {% elsif block.type == 'related_posts' %}
       {% comment %} Related blog posts {% endcomment %}
       {% if blog.articles_count > 1 %}
-        <div class="container related-blogs has-padding-bottom" {{ block.shopify_attributes }}>
+        <div class="container related-blogs padding-top-lg margin-top-lg border-top has-padding-bottom" {{ block.shopify_attributes }}>
           <div class="one-whole column related-blogs--title has-margin-bottom has-margin-top">
-            <h4 class="title">{{ 'blogs.article.additional_articles' | t: title: blog.title }}</h4>
+            <h2 class="title">{{ 'blogs.article.additional_articles' | t: title: blog.title }}</h2>
           </div>
 
           <div class="one-whole column related-blogs--content equal-columns--outside-trim field is-grouped is-flex-wrap">
@@ -320,7 +334,7 @@
                 {% assign skip_article = true %}
               {% endif %}
               {% unless skip_article %}
-                <div onclick="window.open('{{ article.url }}',  '_self')" title="{{ article.title | escape }}" class="cursor-pointer one-third columns article blog-card card show-border-{{ block.settings.show_border }} medium-down--one-whole">
+                <div class="one-third columns article blog-card card show-border-{{ block.settings.show_border }} medium-down--one-whole">
                   {% if a.image %}
                     <div class="card-image blog-card__image">
                       <figure class="image">
@@ -347,9 +361,9 @@
                     {% if a.excerpt != blank and block.settings.blog_show_excerpt %}
                       {% assign postexcerpt = a.excerpt | size %}
                       {% if postexcerpt > 150 %}
-                           {% assign excerptlength = 'lg' %}
+                        {% assign excerptlength = 'lg' %}
                       {% elsif postexcerpt <= 150 %}
-                           {% assign excerptlength = 'sm' %}
+                        {% assign excerptlength = 'sm' %}
                       {% endif %}
 
                       <div class="excerpt excerpt-length-{{ excerptlength }} has-margin-bottom">
@@ -494,11 +508,8 @@
     },
     {
       "type": "header",
-      "content": "Advanced"
-    },
-    {
-      "type": "paragraph",
-      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      "content": "Advanced",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
     },
     {
       "type": "text",

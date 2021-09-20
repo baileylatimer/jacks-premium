@@ -11,7 +11,6 @@ $breadcrumb-item-padding-horizontal: 0.75em !default;
 $breadcrumb-item-separator-color: $link !default;
 
 .breadcrumb {
-
   @extend %unselectable;
 
   font-size: $size-normal;
@@ -56,7 +55,7 @@ $breadcrumb-item-separator-color: $link !default;
     @include flex-wrap(wrap);
     @include justify-content(flex-start);
 
-    @include respond-to('small-down') {
+    @include respond-to("small-down") {
       @include justify-content(center);
     }
   }
@@ -88,11 +87,11 @@ $breadcrumb-item-separator-color: $link !default;
 
   // Sizes
   &.is-small {
-    font-size: $size-small;
-    .icon {
-      height: $size-small;
-      width: $size-small;
-    }
+    // font-size: $size-small;
+    // .icon {
+    //   height: $size-small;
+    //   width: $size-small;
+    // }
   }
 
   &.is-regular {
@@ -120,7 +119,7 @@ $breadcrumb-item-separator-color: $link !default;
   @include flexbox();
   @include align-items(center);
 
-  @include respond-to('small-down') {
+  @include respond-to("small-down") {
     @include justify-content(center);
     text-align: center;
     width: 100%;
@@ -138,7 +137,7 @@ $breadcrumb-item-separator-color: $link !default;
 }
 
 .breadcrumb__container {
-  @include respond-to('small-down') {
+  @include respond-to("small-down") {
     @include flex-direction(column-reverse);
     @include flex-wrap(wrap);
     padding-bottom: 20px;

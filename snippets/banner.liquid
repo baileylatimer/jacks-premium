@@ -40,14 +40,17 @@
   }
 </style>
 
-<section class="section
+
+  
+
+<section {% if template == 'article' %} style="margin-top: -20px"{% endif %}class="{% if template != 'article' %} section
                 {{ css_class }}
-                is-width-{{ width }}">
+                is-width-{{ width }} {% endif %}">
   <div class="container
               {% if width == 'wide' %}
                 equal-columns--outside-trim
               {% endif %}">
-    <div class="banner__wrapper bg-accent-light
+    <div class="banner__wrapper bg-accent-light flex flex-column justify-center items-center
                 one-whole
                 column
                 is-{{ banner_height }}" style="min-height: 200px;">

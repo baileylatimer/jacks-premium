@@ -400,7 +400,7 @@ $size-2: 2.5rem !default;
 $size-3: 2rem !default;
 $size-4: 1.5rem !default;
 $size-5: 1.25rem !default;
-$size-6: 1rem !default;
+$size-6: var(--text-base-size) !default;
 $size-7: 0.75rem !default;
 $size-8: 0.5rem !default;
 
@@ -5569,7 +5569,6 @@ $breadcrumb-item-padding-horizontal: 0.75em !default;
 $breadcrumb-item-separator-color: $link !default;
 
 .breadcrumb {
-
   @extend %unselectable;
 
   font-size: $size-normal;
@@ -5614,7 +5613,7 @@ $breadcrumb-item-separator-color: $link !default;
     @include flex-wrap(wrap);
     @include justify-content(flex-start);
 
-    @include respond-to('small-down') {
+    @include respond-to("small-down") {
       @include justify-content(center);
     }
   }
@@ -5646,11 +5645,11 @@ $breadcrumb-item-separator-color: $link !default;
 
   // Sizes
   &.is-small {
-    font-size: $size-small;
-    .icon {
-      height: $size-small;
-      width: $size-small;
-    }
+    // font-size: $size-small;
+    // .icon {
+    //   height: $size-small;
+    //   width: $size-small;
+    // }
   }
 
   &.is-regular {
@@ -5678,7 +5677,7 @@ $breadcrumb-item-separator-color: $link !default;
   @include flexbox();
   @include align-items(center);
 
-  @include respond-to('small-down') {
+  @include respond-to("small-down") {
     @include justify-content(center);
     text-align: center;
     width: 100%;
@@ -5696,7 +5695,7 @@ $breadcrumb-item-separator-color: $link !default;
 }
 
 .breadcrumb__container {
-  @include respond-to('small-down') {
+  @include respond-to("small-down") {
     @include flex-direction(column-reverse);
     @include flex-wrap(wrap);
     padding-bottom: 20px;
@@ -11106,10 +11105,10 @@ $swatch-label-size: 34px;
 }
 
 .banner__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  @include prefix(transform, translate(-50%, -50%), ms webkit spec);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // @include prefix(transform, translate(-50%, -50%), ms webkit spec);
   margin: auto;
   z-index: 3;
   width: 100%;

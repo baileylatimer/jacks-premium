@@ -48,6 +48,17 @@
       </div>
       {% render 'mobile-menu', nav_blocks: nav_blocks %}
     </div>
+
+    <div class="flex "
+      {% if settings.show_search_icon_mobile %}
+        {% comment %} Search icon {% endcomment %}
+        <a class="header__link action-area__link z-index-3" style="z-index: 99999;" data-show-search-trigger>
+          <i class="material-icons-outlined">search</i>
+          <!-- <span class="icon-caption">{{ 'general.search.title' | t | escape }}</span> -->
+        </a>
+      {% endif %}
+    </div>
+
     <div class="mobile-logo">
       {% if settings.logo_mobile != blank %}
         <a class="mobile-header__logo header__link primary-logo" href="{{ shop.url }}" title="{{ shop.name }}">
@@ -74,13 +85,7 @@
       {% endif %}
     </div>
     <div class="mobile-icons {% if settings.show_search_icon_mobile == false %}has-one-icon{% endif %}">
-      {% if settings.show_search_icon_mobile %}
-        {% comment %} Search icon {% endcomment %}
-        <a class="header__link action-area__link z-index-3" style="z-index: 99999;" data-show-search-trigger>
-          <i class="material-icons-outlined">search</i>
-          <!-- <span class="icon-caption">{{ 'general.search.title' | t | escape }}</span> -->
-        </a>
-      {% endif %}
+
 
 
 

@@ -74,6 +74,13 @@
   }
 }
 
+.material-icons-outlined {
+  @include respond-to('medium-down') {
+    scale: 1.2;
+  }
+}
+
+
 .mobile-layout--left {
 
   .mobile-logo {
@@ -82,7 +89,7 @@
 
   .mobile-dropdown,
   .mobile-icons {
-    width: calc(25% - 10px);
+    width: calc(19% - 10px);
   }
 
   .mobile-icons {

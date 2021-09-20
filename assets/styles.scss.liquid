@@ -12754,7 +12754,7 @@ h1.header__logo-text > a {
   @include flexbox();
   @include flex-direction(column);
   @include align-items(center);
-  padding: 1rem 5px;
+  padding: 1rem var(--space-sm);
   height: 100%;
 
   &:last-child {
@@ -13557,6 +13557,13 @@ $banner-heading-font-size: {{ settings.banner_heading_size }}px;
   }
 }
 
+.material-icons-outlined {
+  @include respond-to('medium-down') {
+    scale: 1.2;
+  }
+}
+
+
 .mobile-layout--left {
 
   .mobile-logo {
@@ -13565,7 +13572,7 @@ $banner-heading-font-size: {{ settings.banner_heading_size }}px;
 
   .mobile-dropdown,
   .mobile-icons {
-    width: calc(25% - 10px);
+    width: calc(19% - 10px);
   }
 
   .mobile-icons {
